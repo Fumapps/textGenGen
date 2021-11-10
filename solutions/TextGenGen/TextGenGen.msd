@@ -4,7 +4,7 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="/Users/vaclav/work/mps_projects/textGenGen/java_src/EditorToText_IDEA" type="java_source_stubs">
+    <modelRoot contentPath="/Users/mariofuksa/workspaces/mps/textGenGen/java_src/EditorToText_IDEA" type="java_source_stubs">
       <sourceRoot location="src" />
     </modelRoot>
   </models>
@@ -14,7 +14,7 @@
     </facet>
   </facets>
   <sourcePath>
-    <source path="/Users/vaclav/work/mps_projects/textGenGen/java_src/EditorToText_IDEA/src" />
+    <source path="/Users/mariofuksa/workspaces/mps/textGenGen/java_src/EditorToText_IDEA/src" />
   </sourcePath>
   <dependencies>
     <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
@@ -45,7 +45,7 @@
     <language slang="l:28f9e497-3b42-4291-aeba-0a1039153ab1:jetbrains.mps.lang.plugin" version="5" />
     <language slang="l:ef7bf5ac-d06c-4342-b11d-e42104eb9343:jetbrains.mps.lang.plugin.standalone" version="0" />
     <language slang="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" version="5" />
-    <language slang="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" version="18" />
+    <language slang="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" version="19" />
     <language slang="l:b83431fe-5c8f-40bc-8a36-65e25f4dd253:jetbrains.mps.lang.textGen" version="1" />
     <language slang="l:9ded098b-ad6a-4657-bfd9-48636cfe8bc3:jetbrains.mps.lang.traceable" version="0" />
   </languageVersions>
