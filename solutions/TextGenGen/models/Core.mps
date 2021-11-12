@@ -4473,7 +4473,7 @@
                               <node concept="liA8E" id="5IWrBH9H$p2" role="2OqNvi">
                                 <ref role="37wK5l" node="7rLNIDEew4a" resolve="appendLineComment" />
                                 <node concept="Xl_RD" id="5IWrBH9HIMq" role="37wK5m">
-                                  <property role="Xl_RC" value="horizontal child collection: insert spaces between the elmeents" />
+                                  <property role="Xl_RC" value="horizontal child collection: insert spaces between the elements" />
                                 </node>
                               </node>
                             </node>
@@ -8929,18 +8929,16 @@
           </node>
         </node>
         <node concept="3clFbF" id="1NoKjFbg1$$" role="3cqZAp">
-          <node concept="2OqwBi" id="1NoKjFbg1$_" role="3clFbG">
-            <node concept="2OqwBi" id="1NoKjFbg1$A" role="2Oq$k0">
+          <node concept="37vLTI" id="1u45$viTJk2" role="3clFbG">
+            <node concept="37vLTw" id="1u45$viTTjB" role="37vLTx">
+              <ref role="3cqZAo" node="1NoKjFbg1$p" resolve="commentLine" />
+            </node>
+            <node concept="2OqwBi" id="1NoKjFbg1$A" role="37vLTJ">
               <node concept="37vLTw" id="1NoKjFbg1$B" role="2Oq$k0">
                 <ref role="3cqZAo" node="1NoKjFbg1$j" resolve="commentStatement" />
               </node>
-              <node concept="3Tsc0h" id="63aHLoD4df9" role="2OqNvi">
-                <ref role="3TtcxE" to="tpee:1aWAmJ5y2W$" resolve="text" />
-              </node>
-            </node>
-            <node concept="TSZUe" id="1NoKjFbg1$D" role="2OqNvi">
-              <node concept="37vLTw" id="1NoKjFbg1$E" role="25WWJ7">
-                <ref role="3cqZAo" node="1NoKjFbg1$p" resolve="commentLine" />
+              <node concept="3TrEf2" id="1u45$viTr9S" role="2OqNvi">
+                <ref role="3Tt5mk" to="tpee:7fQBo8T7qsS" resolve="line" />
               </node>
             </node>
           </node>
