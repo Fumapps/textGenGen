@@ -225,7 +225,7 @@
             <ref role="3cqZAo" node="45AuIz7SByp" resolve="actual" />
           </node>
           <node concept="26ycHw" id="45AuIz7X2vv" role="3tpDZB">
-            <property role="26ycAo" value="----&#10;element A element B&#10;" />
+            <property role="26ycAo" value="----&#10;element A element B" />
           </node>
         </node>
       </node>

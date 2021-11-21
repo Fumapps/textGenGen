@@ -25,6 +25,7 @@
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
+      <concept id="1186414976055" name="jetbrains.mps.lang.editor.structure.DrawBorderStyleClassItem" flags="ln" index="VPXOz" />
       <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
       <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
@@ -64,6 +65,9 @@
         <ref role="1NtTu8" to="w4f:45AuIz7VFdK" resolve="value" />
         <node concept="VechU" id="45AuIz7WMMb" role="3F10Kt">
           <property role="Vb096" value="g1_qRwE/darkGreen" />
+        </node>
+        <node concept="VPXOz" id="2OkP48BkFbf" role="3F10Kt">
+          <property role="VOm3f" value="true" />
         </node>
       </node>
       <node concept="3F0ifn" id="45AuIz7X2FC" role="3EZMnx">
