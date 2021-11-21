@@ -103,11 +103,17 @@
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
     </language>
     <language id="0cdfd95d-2a2e-4a75-bc35-936584bdb36d" name="MyTestLang">
-      <concept id="7019083283238895660" name="MyTestLang.structure.MyList" flags="ng" index="3jfCGy">
+      <concept id="3248454611839615755" name="MyTestLang.structure.VerticalList" flags="ng" index="aIHt9">
+        <child id="3248454611839615756" name="elementsVertical" index="aIHte" />
+      </concept>
+      <concept id="3248454611839615758" name="MyTestLang.structure.HorizontalList" flags="ng" index="aIHtc">
+        <child id="3248454611839615759" name="elementsHorizontal" index="aIHtd" />
+      </concept>
+      <concept id="7019083283238895660" name="MyTestLang.structure.VerticalAndHorizontalList" flags="ng" index="3jfCGy">
         <child id="7019083283238939874" name="elementsHorizontal" index="3jfyvG" />
         <child id="7019083283238895748" name="elementsVertical" index="3jfCIa" />
       </concept>
-      <concept id="7019083283238895661" name="MyTestLang.structure.MyElement" flags="ng" index="3jfCGz" />
+      <concept id="7019083283238895661" name="MyTestLang.structure.Element" flags="ng" index="3jfCGz" />
     </language>
     <language id="443f4c36-fcf5-4eb6-9500-8d06ed259e3e" name="jetbrains.mps.baseLanguage.classifiers">
       <concept id="1205752633985" name="jetbrains.mps.baseLanguage.classifiers.structure.ThisClassifierExpression" flags="nn" index="2WthIp" />
@@ -194,7 +200,7 @@
       <node concept="3Tm6S6" id="45AuIz7Uw0i" role="1B3o_S" />
     </node>
     <node concept="1LZb2c" id="45AuIz7S_0A" role="1SL9yI">
-      <property role="TrG5h" value="generate" />
+      <property role="TrG5h" value="generateVerticalAndHorizontal" />
       <node concept="3cqZAl" id="45AuIz7S_0B" role="3clF45" />
       <node concept="3clFbS" id="45AuIz7S_0F" role="3clF47">
         <node concept="3clFbF" id="45AuIz7Uskd" role="3cqZAp">
@@ -225,7 +231,81 @@
             <ref role="3cqZAo" node="45AuIz7SByp" resolve="actual" />
           </node>
           <node concept="26ycHw" id="45AuIz7X2vv" role="3tpDZB">
-            <property role="26ycAo" value="----&#10;element A element B" />
+            <property role="26ycAo" value="element A&#10;element B&#10;----&#10;element A  element B" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="2OkP48BoG8f" role="1SL9yI">
+      <property role="TrG5h" value="generateVertical" />
+      <node concept="3cqZAl" id="2OkP48BoG8g" role="3clF45" />
+      <node concept="3clFbS" id="2OkP48BoG8k" role="3clF47">
+        <node concept="3clFbF" id="2OkP48BoGaO" role="3cqZAp">
+          <node concept="2OqwBi" id="2OkP48BoGaP" role="3clFbG">
+            <node concept="2WthIp" id="2OkP48BoGaQ" role="2Oq$k0" />
+            <node concept="2XshWL" id="2OkP48BoGaR" role="2OqNvi">
+              <ref role="2WH_rO" node="45AuIz7UsdT" resolve="generateTextGen" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="2OkP48BoGaS" role="3cqZAp">
+          <node concept="3cpWsn" id="2OkP48BoGaT" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="2OkP48BoGaU" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="2OkP48BoGaV" role="33vP2m">
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <node concept="3xONca" id="2OkP48BoGaW" role="37wK5m">
+                <ref role="3xOPvv" node="2OkP48BFztG" resolve="nodeVertical" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="2OkP48BoGaX" role="3cqZAp">
+          <node concept="37vLTw" id="2OkP48BoGaY" role="3tpDZA">
+            <ref role="3cqZAo" node="2OkP48BoGaT" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="2OkP48BoGaZ" role="3tpDZB">
+            <property role="26ycAo" value="element A&#10;element B" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="2OkP48BFzAk" role="1SL9yI">
+      <property role="TrG5h" value="generateHorizontal" />
+      <node concept="3cqZAl" id="2OkP48BFzAl" role="3clF45" />
+      <node concept="3clFbS" id="2OkP48BFzAm" role="3clF47">
+        <node concept="3clFbF" id="2OkP48BFzAn" role="3cqZAp">
+          <node concept="2OqwBi" id="2OkP48BFzAo" role="3clFbG">
+            <node concept="2WthIp" id="2OkP48BFzAp" role="2Oq$k0" />
+            <node concept="2XshWL" id="2OkP48BFzAq" role="2OqNvi">
+              <ref role="2WH_rO" node="45AuIz7UsdT" resolve="generateTextGen" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="2OkP48BFzAr" role="3cqZAp">
+          <node concept="3cpWsn" id="2OkP48BFzAs" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="2OkP48BFzAt" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="2OkP48BFzAu" role="33vP2m">
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <node concept="3xONca" id="2OkP48BFzAv" role="37wK5m">
+                <ref role="3xOPvv" node="2OkP48BFzwm" resolve="nodeHorizontal" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="2OkP48BFzAw" role="3cqZAp">
+          <node concept="37vLTw" id="2OkP48BFzAx" role="3tpDZA">
+            <ref role="3cqZAo" node="2OkP48BFzAs" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="2OkP48BFzAy" role="3tpDZB">
+            <property role="26ycAo" value="element A  element B" />
           </node>
         </node>
       </node>
@@ -239,20 +319,39 @@
           <property role="TrG5h" value="B" />
         </node>
         <node concept="3xLA65" id="45AuIz7SBrY" role="lGtFl">
-          <property role="TrG5h" value="nodeVertical" />
+          <property role="TrG5h" value="nodeVerticalAndHorizontal" />
+        </node>
+        <node concept="3jfCGz" id="2OkP48BFzpx" role="3jfyvG">
+          <property role="TrG5h" value="A" />
+        </node>
+        <node concept="3jfCGz" id="2OkP48BFzq0" role="3jfyvG">
+          <property role="TrG5h" value="B" />
         </node>
       </node>
     </node>
     <node concept="1qefOq" id="2OkP48Bk_93" role="1SKRRt">
-      <node concept="3jfCGy" id="2OkP48Bk_a5" role="1qenE9">
-        <node concept="3xLA65" id="2OkP48Bk_a8" role="lGtFl">
-          <property role="TrG5h" value="nodeHorizontal" />
-        </node>
-        <node concept="3jfCGz" id="2OkP48Bk_bl" role="3jfyvG">
+      <node concept="aIHt9" id="2OkP48BFztz" role="1qenE9">
+        <node concept="3jfCGz" id="2OkP48BFzt_" role="aIHte">
           <property role="TrG5h" value="A" />
         </node>
-        <node concept="3jfCGz" id="2OkP48Bk_bn" role="3jfyvG">
+        <node concept="3jfCGz" id="2OkP48BFztB" role="aIHte">
           <property role="TrG5h" value="B" />
+        </node>
+        <node concept="3xLA65" id="2OkP48BFztG" role="lGtFl">
+          <property role="TrG5h" value="nodeVertical" />
+        </node>
+      </node>
+    </node>
+    <node concept="1qefOq" id="2OkP48BFztI" role="1SKRRt">
+      <node concept="aIHtc" id="2OkP48BFzwf" role="1qenE9">
+        <node concept="3jfCGz" id="2OkP48BFzwh" role="aIHtd">
+          <property role="TrG5h" value="A" />
+        </node>
+        <node concept="3jfCGz" id="2OkP48BFzwj" role="aIHtd">
+          <property role="TrG5h" value="B" />
+        </node>
+        <node concept="3xLA65" id="2OkP48BFzwm" role="lGtFl">
+          <property role="TrG5h" value="nodeHorizontal" />
         </node>
       </node>
     </node>

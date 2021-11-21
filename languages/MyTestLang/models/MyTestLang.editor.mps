@@ -14,6 +14,7 @@
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
       <concept id="1071666914219" name="jetbrains.mps.lang.editor.structure.ConceptEditorDeclaration" flags="ig" index="24kQdi" />
       <concept id="1140524381322" name="jetbrains.mps.lang.editor.structure.CellModel_ListWithRole" flags="ng" index="2czfm3">
+        <property id="1140524450557" name="separatorText" index="2czwfO" />
         <child id="1140524464360" name="cellLayout" index="2czzBx" />
       </concept>
       <concept id="1106270549637" name="jetbrains.mps.lang.editor.structure.CellLayout_Horizontal" flags="nn" index="2iRfu4" />
@@ -39,7 +40,7 @@
     </language>
   </registry>
   <node concept="24kQdi" id="65CMKUMl$0R">
-    <ref role="1XX52x" to="uanp:65CMKUMl$0H" resolve="MyElement" />
+    <ref role="1XX52x" to="uanp:65CMKUMl$0H" resolve="Element" />
     <node concept="3EZMnI" id="65CMKUMl$1N" role="2wV5jI">
       <node concept="2iRfu4" id="65CMKUMl$1O" role="2iSdaV" />
       <node concept="3F0ifn" id="65CMKUMl$0W" role="3EZMnx">
@@ -51,7 +52,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="65CMKUMl$2e">
-    <ref role="1XX52x" to="uanp:65CMKUMl$0G" resolve="MyList" />
+    <ref role="1XX52x" to="uanp:65CMKUMl$0G" resolve="VerticalAndHorizontalList" />
     <node concept="3EZMnI" id="65CMKUMlINH" role="2wV5jI">
       <node concept="2iRkQZ" id="65CMKUMlINI" role="2iSdaV" />
       <node concept="3F2HdR" id="65CMKUMl$34" role="3EZMnx">
@@ -62,9 +63,25 @@
         <property role="3F0ifm" value="----" />
       </node>
       <node concept="3F2HdR" id="65CMKUMlIO0" role="3EZMnx">
+        <property role="2czwfO" value=" " />
         <ref role="1NtTu8" to="uanp:65CMKUMlINy" resolve="elementsHorizontal" />
         <node concept="2iRfu4" id="65CMKUMlIO8" role="2czzBx" />
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="2OkP48BFwch">
+    <ref role="1XX52x" to="uanp:2OkP48BFwcb" resolve="VerticalList" />
+    <node concept="3F2HdR" id="2OkP48BFwcj" role="2wV5jI">
+      <ref role="1NtTu8" to="uanp:2OkP48BFwcc" resolve="elementsVertical" />
+      <node concept="2iRkQZ" id="2OkP48BFwck" role="2czzBx" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2OkP48BFwcn">
+    <ref role="1XX52x" to="uanp:2OkP48BFwce" resolve="HorizontalList" />
+    <node concept="3F2HdR" id="2OkP48BFwcp" role="2wV5jI">
+      <property role="2czwfO" value=" " />
+      <ref role="1NtTu8" to="uanp:2OkP48BFwcf" resolve="elementsHorizontal" />
+      <node concept="2iRfu4" id="2OkP48BFwcq" role="2czzBx" />
     </node>
   </node>
 </model>

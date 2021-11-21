@@ -38,7 +38,7 @@
   </registry>
   <node concept="1TIwiD" id="65CMKUMl$0G">
     <property role="EcuMT" value="7019083283238895660" />
-    <property role="TrG5h" value="MyList" />
+    <property role="TrG5h" value="VerticalAndHorizontalList" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="1TJgyj" id="65CMKUMl$24" role="1TKVEi">
@@ -46,22 +46,46 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="elementsVertical" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="65CMKUMl$0H" resolve="MyElement" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
     </node>
     <node concept="1TJgyj" id="65CMKUMlINy" role="1TKVEi">
       <property role="IQ2ns" value="7019083283238939874" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="elementsHorizontal" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="65CMKUMl$0H" resolve="MyElement" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
     </node>
   </node>
   <node concept="1TIwiD" id="65CMKUMl$0H">
     <property role="EcuMT" value="7019083283238895661" />
-    <property role="TrG5h" value="MyElement" />
+    <property role="TrG5h" value="Element" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="PrWs8" id="65CMKUMl$0I" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2OkP48BFwcb">
+    <property role="EcuMT" value="3248454611839615755" />
+    <property role="TrG5h" value="VerticalList" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="2OkP48BFwcc" role="1TKVEi">
+      <property role="IQ2ns" value="3248454611839615756" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="elementsVertical" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2OkP48BFwce">
+    <property role="EcuMT" value="3248454611839615758" />
+    <property role="TrG5h" value="HorizontalList" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="2OkP48BFwcf" role="1TKVEi">
+      <property role="IQ2ns" value="3248454611839615759" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="elementsHorizontal" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
     </node>
   </node>
 </model>
