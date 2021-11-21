@@ -1745,7 +1745,7 @@
           <node concept="3cpWsn" id="45AuIz7U7Q4" role="3cpWs9">
             <property role="TrG5h" value="result" />
             <node concept="3uibUv" id="45AuIz7U7Kq" role="1tU5fm">
-              <ref role="3uigEE" node="45AuIz7TE7m" resolve="Result" />
+              <ref role="3uigEE" node="45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
             </node>
             <node concept="2YIFZM" id="45AuIz7U7Q5" role="33vP2m">
               <ref role="37wK5l" node="45AuIz7TzDv" resolve="generateTextGen" />
@@ -2719,7 +2719,7 @@
       </node>
       <node concept="3Tm1VV" id="45AuIz7TwVS" role="1B3o_S" />
       <node concept="3uibUv" id="45AuIz7TGFc" role="3clF45">
-        <ref role="3uigEE" node="45AuIz7TE7m" resolve="Result" />
+        <ref role="3uigEE" node="45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
       </node>
     </node>
     <node concept="2tJIrI" id="45AuIz7TV2G" role="jymVt" />
@@ -2730,12 +2730,12 @@
           <node concept="3cpWsn" id="45AuIz7TXA2" role="3cpWs9">
             <property role="TrG5h" value="result" />
             <node concept="3uibUv" id="45AuIz7TXA3" role="1tU5fm">
-              <ref role="3uigEE" node="45AuIz7TE7m" resolve="Result" />
+              <ref role="3uigEE" node="45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
             </node>
             <node concept="2ShNRf" id="45AuIz7TXA4" role="33vP2m">
               <node concept="HV5vD" id="45AuIz7TXA5" role="2ShVmc">
                 <property role="373rjd" value="true" />
-                <ref role="HV5vE" node="45AuIz7TE7m" resolve="Result" />
+                <ref role="HV5vE" node="45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
               </node>
             </node>
           </node>
@@ -2778,7 +2778,7 @@
       </node>
       <node concept="3Tm6S6" id="45AuIz7TVxg" role="1B3o_S" />
       <node concept="3uibUv" id="45AuIz7TW_D" role="3clF45">
-        <ref role="3uigEE" node="45AuIz7TE7m" resolve="Result" />
+        <ref role="3uigEE" node="45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
       </node>
       <node concept="37vLTG" id="45AuIz7TX7G" role="3clF46">
         <property role="TrG5h" value="ok" />

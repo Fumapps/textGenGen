@@ -6,6 +6,8 @@
     <use id="f61473f9-130f-42f6-b98d-6c438812c2f6" name="jetbrains.mps.baseLanguage.unitTest" version="1" />
     <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="14" />
     <use id="0cdfd95d-2a2e-4a75-bc35-936584bdb36d" name="MyTestLang" version="0" />
+    <use id="31c91def-a131-41a1-9018-102874f49a12" name="de.slisson.mps.editor.multiline" version="0" />
+    <use id="96079a67-4e46-4b1b-97c9-8c28477d84d6" name="BaseLanguageMultiLineExtension" version="0" />
   </languages>
   <imports>
     <import index="ao3" ref="7124e466-fc92-4803-a656-d7a6b7eb3910/java:jetbrains.mps.text(MPS.TextGen/)" />
@@ -19,6 +21,7 @@
     <import index="z1c3" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.project(MPS.Core/)" />
     <import index="hypd" ref="r:aa31e43e-9240-4f4d-b6db-5c1c9a86c59e(jetbrains.mps.lang.project.structure)" />
     <import index="w1kc" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel(MPS.Core/)" />
+    <import index="jef7" ref="r:b34afbb0-553b-4e3b-8562-859e6864b1d6(de.slisson.mps.editor.multiline.editor)" />
   </imports>
   <registry>
     <language id="8585453e-6bfb-4d80-98de-b16074f1d86c" name="jetbrains.mps.lang.test">
@@ -42,6 +45,11 @@
       </concept>
       <concept id="1225978065297" name="jetbrains.mps.lang.test.structure.SimpleNodeTest" flags="ng" index="1LZb2c" />
     </language>
+    <language id="96079a67-4e46-4b1b-97c9-8c28477d84d6" name="BaseLanguageMultiLineExtension">
+      <concept id="4712589200295113096" name="BaseLanguageMultiLineExtension.structure.MultiLineStringExpression" flags="ng" index="26ycHw">
+        <property id="4712589200295113584" name="value" index="26ycAo" />
+      </concept>
+    </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
@@ -50,9 +58,6 @@
       </concept>
       <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
         <child id="1137022507850" name="body" index="2VODD2" />
-      </concept>
-      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
-        <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
@@ -99,6 +104,7 @@
     </language>
     <language id="0cdfd95d-2a2e-4a75-bc35-936584bdb36d" name="MyTestLang">
       <concept id="7019083283238895660" name="MyTestLang.structure.MyList" flags="ng" index="3jfCGy">
+        <child id="7019083283238939874" name="elementsHorizontal" index="3jfyvG" />
         <child id="7019083283238895748" name="elementsVertical" index="3jfCIa" />
       </concept>
       <concept id="7019083283238895661" name="MyTestLang.structure.MyElement" flags="ng" index="3jfCGz" />
@@ -215,11 +221,11 @@
           </node>
         </node>
         <node concept="3vlDli" id="45AuIz7SBDo" role="3cqZAp">
-          <node concept="Xl_RD" id="45AuIz7SBDW" role="3tpDZB">
-            <property role="Xl_RC" value="element A\nelement B\n----\n" />
-          </node>
           <node concept="37vLTw" id="45AuIz7SBHq" role="3tpDZA">
             <ref role="3cqZAo" node="45AuIz7SByp" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="45AuIz7X2vv" role="3tpDZB">
+            <property role="26ycAo" value="----&#10;element A element B&#10;" />
           </node>
         </node>
       </node>
@@ -233,7 +239,20 @@
           <property role="TrG5h" value="B" />
         </node>
         <node concept="3xLA65" id="45AuIz7SBrY" role="lGtFl">
-          <property role="TrG5h" value="node" />
+          <property role="TrG5h" value="nodeVertical" />
+        </node>
+      </node>
+    </node>
+    <node concept="1qefOq" id="2OkP48Bk_93" role="1SKRRt">
+      <node concept="3jfCGy" id="2OkP48Bk_a5" role="1qenE9">
+        <node concept="3xLA65" id="2OkP48Bk_a8" role="lGtFl">
+          <property role="TrG5h" value="nodeHorizontal" />
+        </node>
+        <node concept="3jfCGz" id="2OkP48Bk_bl" role="3jfyvG">
+          <property role="TrG5h" value="A" />
+        </node>
+        <node concept="3jfCGz" id="2OkP48Bk_bn" role="3jfyvG">
+          <property role="TrG5h" value="B" />
         </node>
       </node>
     </node>
