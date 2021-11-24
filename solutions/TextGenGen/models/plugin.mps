@@ -1633,7 +1633,7 @@
   </node>
   <node concept="sE7Ow" id="4M83bTH9ZrD">
     <property role="TrG5h" value="GenerateTextGenAction" />
-    <property role="2uzpH1" value="Generate TextGen" />
+    <property role="2uzpH1" value="Generate TextGen (fum)" />
     <property role="1WHSii" value="Generate TextGen from Editor" />
     <property role="72QZ$" value="true" />
     <node concept="2XrIbr" id="4M83bTHayH_" role="32lrUH">

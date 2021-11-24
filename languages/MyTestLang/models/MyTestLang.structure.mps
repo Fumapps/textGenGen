@@ -88,5 +88,17 @@
       <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
     </node>
   </node>
+  <node concept="1TIwiD" id="1CVayE9$JYK">
+    <property role="EcuMT" value="1890150830797160368" />
+    <property role="TrG5h" value="VerticalListWrappedInVerticalLayout" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="1CVayE9$JYL" role="1TKVEi">
+      <property role="IQ2ns" value="1890150830797160369" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="elementsVertical" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+  </node>
 </model>
 

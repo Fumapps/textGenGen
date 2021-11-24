@@ -35,6 +35,8 @@
     <dependency reexport="false">707c4fde-f79a-44b5-b3d7-b5cef8844ccf(jetbrains.mps.lang.test.runtime)</dependency>
     <dependency reexport="false">86ef8290-12bb-4ca7-947f-093788f263a9(jetbrains.mps.lang.project)</dependency>
     <dependency reexport="false">31c91def-a131-41a1-9018-102874f49a12(de.slisson.mps.editor.multiline)</dependency>
+    <dependency reexport="false">8f6725be-608d-433b-98fd-844f816eb05f(jetbrains.mps.ide.make)</dependency>
+    <dependency reexport="false">0cdfd95d-2a2e-4a75-bc35-936584bdb36d(MyTestLang)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:96079a67-4e46-4b1b-97c9-8c28477d84d6:BaseLanguageMultiLineExtension" version="0" />
@@ -71,6 +73,7 @@
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
     <module reference="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" version="0" />
     <module reference="7124e466-fc92-4803-a656-d7a6b7eb3910(MPS.TextGen)" version="0" />
+    <module reference="0cdfd95d-2a2e-4a75-bc35-936584bdb36d(MyTestLang)" version="0" />
     <module reference="920eaa0e-ecca-46bc-bee7-4e5c59213dd6(Testbench)" version="0" />
     <module reference="2429ba7e-dca6-48f7-8628-d00e9ac44245(TextGenGen)" version="0" />
     <module reference="31c91def-a131-41a1-9018-102874f49a12(de.slisson.mps.editor.multiline)" version="0" />
@@ -82,6 +85,7 @@
     <module reference="f61473f9-130f-42f6-b98d-6c438812c2f6(jetbrains.mps.baseLanguage.unitTest)" version="0" />
     <module reference="fdaaf35f-8ee3-4c37-b09d-9efaeaaa7a41(jetbrains.mps.core.tool.environment)" version="0" />
     <module reference="34e84b8f-afa8-4364-abcd-a279fddddbe7(jetbrains.mps.editor.runtime)" version="0" />
+    <module reference="8f6725be-608d-433b-98fd-844f816eb05f(jetbrains.mps.ide.make)" version="0" />
     <module reference="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" version="0" />
     <module reference="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" version="0" />
     <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />

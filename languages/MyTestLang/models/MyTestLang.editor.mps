@@ -79,9 +79,24 @@
   <node concept="24kQdi" id="2OkP48BFwcn">
     <ref role="1XX52x" to="uanp:2OkP48BFwce" resolve="HorizontalList" />
     <node concept="3F2HdR" id="2OkP48BFwcp" role="2wV5jI">
-      <property role="2czwfO" value=" " />
       <ref role="1NtTu8" to="uanp:2OkP48BFwcf" resolve="elementsHorizontal" />
       <node concept="2iRfu4" id="2OkP48BFwcq" role="2czzBx" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1CVayE9$JYM">
+    <ref role="1XX52x" to="uanp:1CVayE9$JYK" resolve="VerticalListWrappedInVerticalLayout" />
+    <node concept="3EZMnI" id="1CVayE9$JYO" role="2wV5jI">
+      <node concept="3F0ifn" id="1CVayE9$R8B" role="3EZMnx">
+        <property role="3F0ifm" value="before elements" />
+      </node>
+      <node concept="3F2HdR" id="1CVayE9$JYV" role="3EZMnx">
+        <ref role="1NtTu8" to="uanp:1CVayE9$JYL" resolve="elementsVertical" />
+        <node concept="2iRkQZ" id="1CVayE9$JYX" role="2czzBx" />
+      </node>
+      <node concept="3F0ifn" id="1CVayE9$R8F" role="3EZMnx">
+        <property role="3F0ifm" value="behind elements" />
+      </node>
+      <node concept="2iRkQZ" id="1CVayE9$JYR" role="2iSdaV" />
     </node>
   </node>
 </model>
