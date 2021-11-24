@@ -31,6 +31,9 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -40,6 +43,7 @@
     <property role="EcuMT" value="7019083283238895660" />
     <property role="TrG5h" value="VerticalAndHorizontalList" />
     <property role="19KtqR" value="true" />
+    <property role="3GE5qa" value="SimpleCollections" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="1TJgyj" id="65CMKUMl$24" role="1TKVEi">
       <property role="IQ2ns" value="7019083283238895748" />
@@ -67,6 +71,7 @@
   <node concept="1TIwiD" id="2OkP48BFwcb">
     <property role="EcuMT" value="3248454611839615755" />
     <property role="TrG5h" value="VerticalList" />
+    <property role="3GE5qa" value="SimpleCollections" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="1TJgyj" id="2OkP48BFwcc" role="1TKVEi">
       <property role="IQ2ns" value="3248454611839615756" />
@@ -79,6 +84,7 @@
   <node concept="1TIwiD" id="2OkP48BFwce">
     <property role="EcuMT" value="3248454611839615758" />
     <property role="TrG5h" value="HorizontalList" />
+    <property role="3GE5qa" value="SimpleCollections" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="1TJgyj" id="2OkP48BFwcf" role="1TKVEi">
       <property role="IQ2ns" value="3248454611839615759" />
@@ -91,11 +97,91 @@
   <node concept="1TIwiD" id="1CVayE9$JYK">
     <property role="EcuMT" value="1890150830797160368" />
     <property role="TrG5h" value="VerticalListWrappedInVerticalLayout" />
+    <property role="3GE5qa" value="SimpleCollections" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="1CVayE9$JYL" role="1TKVEi">
       <property role="IQ2ns" value="1890150830797160369" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="elementsVertical" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3fc6q8ZSzV">
+    <property role="EcuMT" value="58318537122351355" />
+    <property role="TrG5h" value="ComplexIndentLayoutContainer" />
+    <property role="3GE5qa" value="Indentation" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="3fc6q8ZSzW" role="1TKVEi">
+      <property role="IQ2ns" value="58318537122351356" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="singleElementA" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+    <node concept="1TJgyj" id="3fc6q8ZS$1" role="1TKVEi">
+      <property role="IQ2ns" value="58318537122351361" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="singleElementB" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+    <node concept="1TJgyj" id="3fc6q8ZS$5" role="1TKVEi">
+      <property role="IQ2ns" value="58318537122351365" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="optionalElement" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+    <node concept="1TJgyj" id="3fc6q8ZSzY" role="1TKVEi">
+      <property role="IQ2ns" value="58318537122351358" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="horizontalElements" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+    <node concept="1TJgyj" id="3fc6q8ZSHD" role="1TKVEi">
+      <property role="IQ2ns" value="58318537122351977" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="verticalElements" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3fc6q90emW">
+    <property role="EcuMT" value="58318537122440636" />
+    <property role="TrG5h" value="SingleElementIndentLayoutContainer" />
+    <property role="3GE5qa" value="Indentation" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3fc6q90emX" role="1TKVEi">
+      <property role="IQ2ns" value="58318537122440637" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="singleElement" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3fc6q90enX">
+    <property role="EcuMT" value="58318537122440701" />
+    <property role="TrG5h" value="HorizontalChildrenIndentLayoutContainer" />
+    <property role="3GE5qa" value="Indentation" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3fc6q90eof" role="1TKVEi">
+      <property role="IQ2ns" value="58318537122440719" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="horizontalElements" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3fc6q90enZ">
+    <property role="EcuMT" value="58318537122440703" />
+    <property role="TrG5h" value="VerticalChildrenIndentLayoutContainer" />
+    <property role="3GE5qa" value="Indentation" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3fc6q90eo2" role="1TKVEi">
+      <property role="IQ2ns" value="58318537122440706" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="verticalElements" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
     </node>

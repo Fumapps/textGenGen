@@ -100,6 +100,22 @@
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
     </language>
     <language id="0cdfd95d-2a2e-4a75-bc35-936584bdb36d" name="MyTestLang">
+      <concept id="58318537122351355" name="MyTestLang.structure.ComplexIndentLayoutContainer" flags="ng" index="28cbyt">
+        <child id="58318537122351358" name="horizontalElements" index="28cbyo" />
+        <child id="58318537122351356" name="singleElementA" index="28cbyq" />
+        <child id="58318537122351365" name="optionalElement" index="28cb_z" />
+        <child id="58318537122351361" name="singleElementB" index="28cb_B" />
+        <child id="58318537122351977" name="verticalElements" index="28cbGf" />
+      </concept>
+      <concept id="58318537122440703" name="MyTestLang.structure.VerticalChildrenIndentLayoutContainer" flags="ng" index="29NXmp">
+        <child id="58318537122440706" name="verticalElements" index="29NXp$" />
+      </concept>
+      <concept id="58318537122440701" name="MyTestLang.structure.HorizontalChildrenIndentLayoutContainer" flags="ng" index="29NXmr">
+        <child id="58318537122440719" name="horizontalElements" index="29NXpD" />
+      </concept>
+      <concept id="58318537122440636" name="MyTestLang.structure.SingleElementIndentLayoutContainer" flags="ng" index="29NXnq">
+        <child id="58318537122440637" name="singleElement" index="29NXnr" />
+      </concept>
       <concept id="3248454611839615755" name="MyTestLang.structure.VerticalList" flags="ng" index="aIHt9">
         <child id="3248454611839615756" name="elementsVertical" index="aIHte" />
       </concept>
@@ -153,7 +169,7 @@
     </language>
   </registry>
   <node concept="1lH9Xt" id="45AuIz7S$Zm">
-    <property role="TrG5h" value="TestTextGen" />
+    <property role="TrG5h" value="SimpleCollectionsTextGenTests" />
     <node concept="2XrIbr" id="45AuIz7UsdT" role="1qtyYc">
       <property role="TrG5h" value="generateTextGen" />
       <node concept="3cqZAl" id="45AuIz7UseK" role="3clF45" />
@@ -376,6 +392,174 @@
   </node>
   <node concept="2XOHcx" id="45AuIz7SBrW">
     <property role="2XOHcw" value="${project_home}" />
+  </node>
+  <node concept="1lH9Xt" id="3fc6q90dVi">
+    <property role="TrG5h" value="IndentationTextGenTests" />
+    <node concept="1LZb2c" id="3fc6q90dVC" role="1SL9yI">
+      <property role="TrG5h" value="generateSingleElementIndentation" />
+      <node concept="3cqZAl" id="3fc6q90dVD" role="3clF45" />
+      <node concept="3clFbS" id="3fc6q90dVE" role="3clF47">
+        <node concept="3cpWs8" id="3fc6q90dVJ" role="3cqZAp">
+          <node concept="3cpWsn" id="3fc6q90dVK" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="3fc6q90dVL" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="3fc6q90dVM" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="3fc6q90dVN" role="37wK5m">
+                <node concept="29NXnq" id="3fc6q90nis" role="2c44tc">
+                  <node concept="3jfCGz" id="3fc6q90nit" role="29NXnr">
+                    <property role="TrG5h" value="Element" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="3fc6q90dVT" role="3cqZAp">
+          <node concept="37vLTw" id="3fc6q90dVU" role="3tpDZA">
+            <ref role="3cqZAo" node="3fc6q90dVK" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="3fc6q90dVV" role="3tpDZB">
+            <property role="26ycAo" value="/* new-line */ {&#10;  element Element&#10;}&#10;/* on-new-line */ {&#10;  element Element&#10;}" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="3fc6q90vMo" role="1SL9yI">
+      <property role="TrG5h" value="generateHorizontalElementsIndentation" />
+      <node concept="3cqZAl" id="3fc6q90vMp" role="3clF45" />
+      <node concept="3clFbS" id="3fc6q90vMq" role="3clF47">
+        <node concept="3cpWs8" id="3fc6q90vMr" role="3cqZAp">
+          <node concept="3cpWsn" id="3fc6q90vMs" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="3fc6q90vMt" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="3fc6q90vMu" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="3fc6q90vMv" role="37wK5m">
+                <node concept="29NXmr" id="3fc6q90vQp" role="2c44tc">
+                  <node concept="3jfCGz" id="3fc6q90vR6" role="29NXpD">
+                    <property role="TrG5h" value="A" />
+                  </node>
+                  <node concept="3jfCGz" id="3fc6q90vRz" role="29NXpD">
+                    <property role="TrG5h" value="B" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="3fc6q90vMy" role="3cqZAp">
+          <node concept="37vLTw" id="3fc6q90vMz" role="3tpDZA">
+            <ref role="3cqZAo" node="3fc6q90vMs" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="3fc6q90vM$" role="3tpDZB">
+            <property role="26ycAo" value="/* new-line */ {&#10;  element A element B&#10;}&#10;/* on-new-line */ {&#10;  element A element B&#10;}" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="3fc6q90vUe" role="1SL9yI">
+      <property role="TrG5h" value="generateVerticalElementsIndentation" />
+      <node concept="3cqZAl" id="3fc6q90vUf" role="3clF45" />
+      <node concept="3clFbS" id="3fc6q90vUg" role="3clF47">
+        <node concept="3cpWs8" id="3fc6q90vUh" role="3cqZAp">
+          <node concept="3cpWsn" id="3fc6q90vUi" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="3fc6q90vUj" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="3fc6q90vUk" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="3fc6q90vUl" role="37wK5m">
+                <node concept="29NXmp" id="3fc6q90vXY" role="2c44tc">
+                  <node concept="3jfCGz" id="3fc6q90vYF" role="29NXp$">
+                    <property role="TrG5h" value="A" />
+                  </node>
+                  <node concept="3jfCGz" id="3fc6q90vZ8" role="29NXp$">
+                    <property role="TrG5h" value="B" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="3fc6q90vUp" role="3cqZAp">
+          <node concept="37vLTw" id="3fc6q90vUq" role="3tpDZA">
+            <ref role="3cqZAo" node="3fc6q90vUi" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="3fc6q90vUr" role="3tpDZB">
+            <property role="26ycAo" value="/* new-line */ {&#10;  element A&#10;  element B&#10;}&#10;/* on-new-line */ {&#10;  element A&#10;  element B&#10;}" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="3fc6q90eRm" role="1SL9yI">
+      <property role="TrG5h" value="generateComplexIndentation" />
+      <node concept="3cqZAl" id="3fc6q90eRn" role="3clF45" />
+      <node concept="3clFbS" id="3fc6q90eRo" role="3clF47">
+        <node concept="3cpWs8" id="3fc6q90eRp" role="3cqZAp">
+          <node concept="3cpWsn" id="3fc6q90eRq" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="3fc6q90eRr" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="3fc6q90eRs" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="3fc6q90eRt" role="37wK5m">
+                <node concept="28cbyt" id="3fc6q90eRu" role="2c44tc">
+                  <node concept="3jfCGz" id="3fc6q90eRv" role="28cbGf">
+                    <property role="TrG5h" value="V1" />
+                  </node>
+                  <node concept="3jfCGz" id="3fc6q90eRw" role="28cbGf">
+                    <property role="TrG5h" value="V2" />
+                  </node>
+                  <node concept="3jfCGz" id="3fc6q90eRx" role="28cbGf">
+                    <property role="TrG5h" value="V3" />
+                  </node>
+                  <node concept="3jfCGz" id="3fc6q90eRy" role="28cbyo">
+                    <property role="TrG5h" value="H1" />
+                  </node>
+                  <node concept="3jfCGz" id="3fc6q90eRz" role="28cbyo">
+                    <property role="TrG5h" value="H2" />
+                  </node>
+                  <node concept="3jfCGz" id="3fc6q90eR$" role="28cbyo">
+                    <property role="TrG5h" value="H3" />
+                  </node>
+                  <node concept="3jfCGz" id="3fc6q90eR_" role="28cbyq">
+                    <property role="TrG5h" value="A" />
+                  </node>
+                  <node concept="3jfCGz" id="3fc6q90eRA" role="28cb_B">
+                    <property role="TrG5h" value="B" />
+                  </node>
+                  <node concept="3jfCGz" id="3fc6q9U_kJ" role="28cb_z">
+                    <property role="TrG5h" value="Optional" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="3fc6q90eRB" role="3cqZAp">
+          <node concept="37vLTw" id="3fc6q90eRC" role="3tpDZA">
+            <ref role="3cqZAo" node="3fc6q90eRq" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="3fc6q90eRD" role="3tpDZB">
+            <property role="26ycAo" value="Title&#10;  indent &amp; on-new-line new-line&#10;  indent &amp; on-new-line &amp; new-line&#10;no-indent&#10;  indent&#10;  indent&#10;{&#10;  element A&#10;  element Optional &lt;-&gt; element B&#10;  element H1 element H2 element H3&#10;  element V1 element V2 element V3&#10;}" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="0EjCn" id="3fc6q90dWE" role="0EEgL">
+      <node concept="3clFbS" id="3fc6q90dWF" role="2VODD2" />
+    </node>
   </node>
 </model>
 
