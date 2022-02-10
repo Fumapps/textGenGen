@@ -12,7 +12,9 @@
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
+        <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
+        <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
@@ -21,6 +23,10 @@
         <property id="1096454100552" name="rootable" index="19KtqR" />
         <reference id="1071489389519" name="extends" index="1TJDcQ" />
         <child id="1169129564478" name="implements" index="PzmwI" />
+      </concept>
+      <concept id="1071489288299" name="jetbrains.mps.lang.structure.structure.PropertyDeclaration" flags="ig" index="1TJgyi">
+        <property id="241647608299431129" name="propertyId" index="IQ2nx" />
+        <reference id="1082985295845" name="dataType" index="AX2Wp" />
       </concept>
       <concept id="1071489288298" name="jetbrains.mps.lang.structure.structure.LinkDeclaration" flags="ig" index="1TJgyj">
         <property id="1071599776563" name="role" index="20kJfa" />
@@ -185,6 +191,63 @@
       <property role="20kJfa" value="verticalElements" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2xjNFUcHGox">
+    <property role="EcuMT" value="2905893502383998497" />
+    <property role="3GE5qa" value="Indentation" />
+    <property role="TrG5h" value="NestedIndentationWithMultipleChildren" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="2xjNFUcHGqE" role="1TKVEi">
+      <property role="IQ2ns" value="2905893502383998634" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="base" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+    <node concept="1TJgyj" id="2xjNFUcHGtg" role="1TKVEi">
+      <property role="IQ2ns" value="2905893502383998800" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="elements" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+    <node concept="1TJgyj" id="2xjNFUcI7CL" role="1TKVEi">
+      <property role="IQ2ns" value="2905893502384110129" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="nested" />
+      <ref role="20lvS9" node="2xjNFUcHGox" resolve="NestedIndentationWithMultipleChildren" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2xjNFUd4iKM">
+    <property role="EcuMT" value="2905893502389922866" />
+    <property role="3GE5qa" value="Indentation" />
+    <property role="TrG5h" value="IndentationWithComplexElements" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="2xjNFUd4iKW" role="1TKVEi">
+      <property role="IQ2ns" value="2905893502389922876" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="elements" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="2xjNFUd4jjN" resolve="ComplexElement" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2xjNFUd4jjN">
+    <property role="EcuMT" value="2905893502389925107" />
+    <property role="TrG5h" value="ComplexElement" />
+    <property role="34LRSv" value="complex element" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="2xjNFUd4jjO" role="1TKVEl">
+      <property role="IQ2nx" value="2905893502389925108" />
+      <property role="TrG5h" value="name" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="2xjNFUd4jjQ" role="1TKVEl">
+      <property role="IQ2nx" value="2905893502389925110" />
+      <property role="TrG5h" value="id" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
 </model>
