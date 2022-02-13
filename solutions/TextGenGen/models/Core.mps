@@ -4146,7 +4146,7 @@
                     <ref role="3cqZAo" node="9iv6A6iE$1" resolve="nonEmptyCellModelBuilder" />
                   </node>
                   <node concept="liA8E" id="2xjNFUcL7PJ" role="2OqNvi">
-                    <ref role="37wK5l" node="5uqoS$$Zgvb" resolve="appendIfStatement" />
+                    <ref role="37wK5l" node="2xjNFUcPPds" resolve="appendIfStatement" />
                     <node concept="2c44tf" id="2xjNFUd3qiv" role="37wK5m">
                       <node concept="2OqwBi" id="2xjNFUd3qiw" role="2c44tc">
                         <node concept="2OqwBi" id="2xjNFUd3qix" role="2Oq$k0">
@@ -4184,6 +4184,9 @@
                           </node>
                         </node>
                       </node>
+                    </node>
+                    <node concept="37vLTw" id="6mdmM7vMRqp" role="37wK5m">
+                      <ref role="3cqZAo" node="7rLNIDEbupc" resolve="style" />
                     </node>
                   </node>
                 </node>
