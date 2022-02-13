@@ -649,7 +649,7 @@
             <ref role="3cqZAo" node="2xjNFUd4zKZ" resolve="actual" />
           </node>
           <node concept="26ycHw" id="2xjNFUd4zLc" role="3tpDZB">
-            <property role="26ycAo" value="scope &#10;{ &#10;  complex element &#10;  { &#10;    name: A &#10;    id: 0 &#10;  } &#10;  complex element &#10;  { &#10;    name: B &#10;    id: 1 &#10;  } &#10;}" />
+            <property role="26ycAo" value="scope&#10;{&#10;  complex element&#10;  {&#10;    name: A&#10;    id: 0&#10;  }&#10;  complex element&#10;  {&#10;    name: B&#10;    id: 1&#10;  }&#10;}" />
           </node>
         </node>
       </node>
