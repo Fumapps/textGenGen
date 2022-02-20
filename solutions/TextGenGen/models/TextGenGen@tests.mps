@@ -132,6 +132,9 @@
         <child id="7019083283238895748" name="elementsVertical" index="3jfCIa" />
       </concept>
       <concept id="7019083283238895661" name="MyTestLang.structure.Element" flags="ng" index="3jfCGz" />
+      <concept id="7395444528207386940" name="MyTestLang.structure.IndentationWithComplexElementsAndSeparator" flags="ng" index="3XirMx">
+        <child id="7395444528207386941" name="elements" index="3XirMw" />
+      </concept>
     </language>
     <language id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures">
       <concept id="1199569711397" name="jetbrains.mps.baseLanguage.closures.structure.ClosureLiteral" flags="nn" index="1bVj0M">
@@ -659,8 +662,56 @@
         </node>
       </node>
     </node>
+    <node concept="1LZb2c" id="6qxTpQrUoCX" role="1SL9yI">
+      <property role="TrG5h" value="generateScopeWithComplexElementsAndSeparator" />
+      <node concept="3cqZAl" id="6qxTpQrUoCY" role="3clF45" />
+      <node concept="3clFbS" id="6qxTpQrUoCZ" role="3clF47">
+        <node concept="3cpWs8" id="6qxTpQrUoD0" role="3cqZAp">
+          <node concept="3cpWsn" id="6qxTpQrUoD1" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="6qxTpQrUoD2" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="6qxTpQrUoD3" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="6qxTpQrUoD4" role="37wK5m">
+                <node concept="3XirMx" id="6qxTpQrUoET" role="2c44tc">
+                  <node concept="2_gJDd" id="6qxTpQrUoEV" role="3XirMw">
+                    <property role="2_gJDa" value="A" />
+                    <property role="2_gJD8" value="0" />
+                  </node>
+                  <node concept="2_gJDd" id="6qxTpQrUoEX" role="3XirMw">
+                    <property role="2_gJDa" value="B" />
+                    <property role="2_gJD8" value="1" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="6qxTpQrUoD8" role="3cqZAp">
+          <node concept="37vLTw" id="6qxTpQrUoD9" role="3tpDZA">
+            <ref role="3cqZAo" node="6qxTpQrUoD1" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="6qxTpQrUoDa" role="3tpDZB">
+            <property role="26ycAo" value="scope&#10;{&#10;  complex element&#10;  {&#10;    name: A&#10;    id: 0&#10;  }&#10;&#10;  complex element&#10;  {&#10;    name: B&#10;    id: 1&#10;  }&#10;}" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="0EjCn" id="3fc6q90dWE" role="0EEgL">
       <node concept="3clFbS" id="3fc6q90dWF" role="2VODD2" />
+    </node>
+  </node>
+  <node concept="3XirMx" id="6qxTpQrVRZ2">
+    <node concept="2_gJDd" id="6qxTpQrVRZ3" role="3XirMw">
+      <property role="2_gJDa" value="A" />
+      <property role="2_gJD8" value="0" />
+    </node>
+    <node concept="2_gJDd" id="6qxTpQrVRZ4" role="3XirMw">
+      <property role="2_gJDa" value="B" />
+      <property role="2_gJD8" value="1" />
     </node>
   </node>
 </model>
