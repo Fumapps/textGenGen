@@ -583,5 +583,40 @@
       <node concept="l2Vlx" id="6qxTpQrU5D_" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="6qxTpQs2pCx">
+    <property role="3GE5qa" value="Indentation" />
+    <ref role="1XX52x" to="uanp:6qxTpQs2pxm" resolve="IndentedVerticalChildrenWithNewLineSeparator" />
+    <node concept="3EZMnI" id="6qxTpQs2pDq" role="2wV5jI">
+      <node concept="3F0ifn" id="6qxTpQs2pDx" role="3EZMnx">
+        <property role="3F0ifm" value="{" />
+        <node concept="ljvvj" id="6qxTpQs2pD$" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F2HdR" id="6qxTpQs2pDE" role="3EZMnx">
+        <ref role="1NtTu8" to="uanp:6qxTpQs2p$N" resolve="verticalElements" />
+        <node concept="2iRkQZ" id="6qxTpQs2pE7" role="2czzBx" />
+        <node concept="lj46D" id="6qxTpQs2pDL" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="ljvvj" id="6qxTpQs2pDN" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="2o9xnK" id="6qxTpQs2pEa" role="2gpyvW">
+          <node concept="3clFbS" id="6qxTpQs2pEb" role="2VODD2">
+            <node concept="3clFbF" id="6qxTpQs2pEg" role="3cqZAp">
+              <node concept="Xl_RD" id="6qxTpQs2pEf" role="3clFbG">
+                <property role="Xl_RC" value="\n" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="6qxTpQs2pDY" role="3EZMnx">
+        <property role="3F0ifm" value="}" />
+      </node>
+      <node concept="l2Vlx" id="6qxTpQs2pDt" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 
