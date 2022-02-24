@@ -278,5 +278,19 @@
       <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
     </node>
   </node>
+  <node concept="1TIwiD" id="6qxTpQsc0g_">
+    <property role="EcuMT" value="7395444528212083749" />
+    <property role="3GE5qa" value="Indentation" />
+    <property role="TrG5h" value="IndentedVerticalChildrenWithSpaceSeparator" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="6qxTpQsc0gA" role="1TKVEi">
+      <property role="IQ2ns" value="7395444528212083750" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="verticalElements" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+  </node>
 </model>
 

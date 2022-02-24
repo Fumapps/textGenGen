@@ -618,5 +618,32 @@
       <node concept="l2Vlx" id="6qxTpQs2pDt" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="6qxTpQsc0lT">
+    <property role="3GE5qa" value="Indentation" />
+    <ref role="1XX52x" to="uanp:6qxTpQsc0g_" resolve="IndentedVerticalChildrenWithSpaceSeparator" />
+    <node concept="3EZMnI" id="6qxTpQscqel" role="2wV5jI">
+      <node concept="3F0ifn" id="6qxTpQscqem" role="3EZMnx">
+        <property role="3F0ifm" value="{" />
+        <node concept="ljvvj" id="6qxTpQscqen" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F2HdR" id="6qxTpQscqeo" role="3EZMnx">
+        <property role="2czwfO" value=" " />
+        <ref role="1NtTu8" to="uanp:6qxTpQsc0gA" resolve="verticalElements" />
+        <node concept="2iRkQZ" id="6qxTpQscqep" role="2czzBx" />
+        <node concept="lj46D" id="6qxTpQscqeq" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="ljvvj" id="6qxTpQscqer" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="6qxTpQscqew" role="3EZMnx">
+        <property role="3F0ifm" value="}" />
+      </node>
+      <node concept="l2Vlx" id="6qxTpQscqex" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 
