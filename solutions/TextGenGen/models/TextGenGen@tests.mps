@@ -7,6 +7,8 @@
     <use id="0cdfd95d-2a2e-4a75-bc35-936584bdb36d" name="MyTestLang" version="0" />
     <use id="96079a67-4e46-4b1b-97c9-8c28477d84d6" name="BaseLanguageMultiLineExtension" version="0" />
     <use id="3a13115c-633c-4c5c-bbcc-75c4219e9555" name="jetbrains.mps.lang.quotation" version="5" />
+    <use id="446c26eb-2b7b-4bf0-9b35-f83fa582753e" name="jetbrains.mps.lang.modelapi" version="0" />
+    <use id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures" version="0" />
   </languages>
   <imports>
     <import index="ao3" ref="7124e466-fc92-4803-a656-d7a6b7eb3910/java:jetbrains.mps.text(MPS.TextGen/)" />
@@ -138,6 +140,7 @@
       <concept id="7395444528209565782" name="MyTestLang.structure.IndentedVerticalChildrenWithNewLineSeparator" flags="ng" index="3UE7Rb">
         <child id="7395444528209566003" name="verticalElements" index="3UE7MI" />
       </concept>
+      <concept id="7395444528215555713" name="MyTestLang.structure.HorizontalChildrenWithPunctuation" flags="ng" index="3ULhGs" />
       <concept id="7395444528207386940" name="MyTestLang.structure.IndentationWithComplexElementsAndSeparator" flags="ng" index="3XirMx">
         <child id="7395444528207386941" name="elements" index="3XirMw" />
       </concept>
@@ -203,7 +206,7 @@
               </node>
               <node concept="2OqwBi" id="45AuIz7UseS" role="10QFUP">
                 <node concept="37shsh" id="45AuIz7UseT" role="2Oq$k0">
-                  <node concept="1dCxOk" id="45AuIz7UseU" role="37shsm">
+                  <node concept="1dCxOk" id="5ssTDYYYXmi" role="37shsm">
                     <property role="1XweGW" value="0cdfd95d-2a2e-4a75-bc35-936584bdb36d" />
                     <property role="1XxBO9" value="MyTestLang" />
                   </node>
@@ -233,7 +236,7 @@
               <node concept="37vLTG" id="4QMo1Vt5XiO" role="1bW2Oz">
                 <property role="TrG5h" value="ignore" />
                 <node concept="3uibUv" id="4QMo1Vt5Xq0" role="1tU5fm">
-                  <ref role="3uigEE" to="f3iy:45AuIz7TE7m" resolve="Result" />
+                  <ref role="3uigEE" to="f3iy:45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
                 </node>
               </node>
               <node concept="3clFbS" id="4QMo1Vt5XbL" role="1bW5cS" />
@@ -788,5 +791,41 @@
       <node concept="3clFbS" id="3fc6q90dWF" role="2VODD2" />
     </node>
   </node>
+  <node concept="1lH9Xt" id="6qxTpQspg50">
+    <property role="TrG5h" value="PunctuationTextGenTests" />
+    <node concept="1LZb2c" id="6qxTpQspg51" role="1SL9yI">
+      <property role="TrG5h" value="generateHorizontalChildrenWithPunctuation" />
+      <node concept="3cqZAl" id="6qxTpQspg52" role="3clF45" />
+      <node concept="3clFbS" id="6qxTpQspg53" role="3clF47">
+        <node concept="3cpWs8" id="6qxTpQspg54" role="3cqZAp">
+          <node concept="3cpWsn" id="6qxTpQspg55" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="6qxTpQspg56" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="6qxTpQspg57" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="6qxTpQspg58" role="37wK5m">
+                <node concept="3ULhGs" id="6qxTpQspqw9" role="2c44tc" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="6qxTpQspg5b" role="3cqZAp">
+          <node concept="37vLTw" id="6qxTpQspg5c" role="3tpDZA">
+            <ref role="3cqZAo" node="6qxTpQspg55" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="6qxTpQspg5d" role="3tpDZB">
+            <property role="26ycAo" value="/* punctuation left constant */&#10;&#10;/* punctuation right  suffix */ B&#10;/* punctuation right  constant only */&#10;&#10;  /* indent punctuation left */&#10;  /* indent punctuation left  constant */&#10;&#10;   element&#10;  &lt;empty&gt; element" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="0EjCn" id="6qxTpQspg7b" role="0EEgL">
+      <node concept="3clFbS" id="6qxTpQspg7c" role="2VODD2" />
+    </node>
+  </node>
+  <node concept="3ULhGs" id="6qxTpQspLTq" />
 </model>
 

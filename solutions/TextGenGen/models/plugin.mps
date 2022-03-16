@@ -1448,7 +1448,7 @@
               <node concept="1eOMI4" id="2ulVZ9N$Ak3" role="2Oq$k0">
                 <node concept="2ShNRf" id="2ulVZ9N$Ak4" role="1eOMHV">
                   <node concept="1pGfFk" id="2ulVZ9N$Ak5" role="2ShVmc">
-                    <ref role="37wK5l" node="2ulVZ9N$q86" resolve="Action" />
+                    <ref role="37wK5l" node="2ulVZ9N$q86" resolve="ModelAccessCommandAction" />
                     <node concept="1bVj0M" id="2ulVZ9N$Ak6" role="37wK5m">
                       <node concept="3clFbS" id="2ulVZ9N$Ak7" role="1bW5cS">
                         <node concept="3clFbF" id="2ulVZ9N$Ak8" role="3cqZAp">
@@ -1553,7 +1553,7 @@
                   <node concept="1eOMI4" id="2ulVZ9N$Eur" role="2Oq$k0">
                     <node concept="2ShNRf" id="2ulVZ9N$Exw" role="1eOMHV">
                       <node concept="1pGfFk" id="2ulVZ9N$Fav" role="2ShVmc">
-                        <ref role="37wK5l" node="2ulVZ9N$q86" resolve="Action" />
+                        <ref role="37wK5l" node="2ulVZ9N$q86" resolve="ModelAccessCommandAction" />
                         <node concept="1bVj0M" id="2ulVZ9N$Fnr" role="37wK5m">
                           <node concept="3clFbS" id="2ulVZ9N$Fns" role="1bW5cS">
                             <node concept="3clFbF" id="2ulVZ9N$Fnt" role="3cqZAp">
@@ -1791,7 +1791,7 @@
               <node concept="37vLTG" id="4QMo1Vt5NhU" role="1bW2Oz">
                 <property role="TrG5h" value="result" />
                 <node concept="3uibUv" id="4QMo1Vt5NOn" role="1tU5fm">
-                  <ref role="3uigEE" node="45AuIz7TE7m" resolve="Result" />
+                  <ref role="3uigEE" node="45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
                 </node>
               </node>
               <node concept="3clFbS" id="4QMo1Vt5NcW" role="1bW5cS">
@@ -2283,14 +2283,14 @@
             <property role="3TUv4t" value="true" />
             <property role="TrG5h" value="result" />
             <node concept="3uibUv" id="2ulVZ9N$u6e" role="1tU5fm">
-              <ref role="3uigEE" node="2ulVZ9N$tcf" resolve="Wrapper" />
+              <ref role="3uigEE" node="2ulVZ9N$tcf" resolve="ModelAccessCommandAction.Wrapper" />
               <node concept="16syzq" id="2ulVZ9N$ufs" role="11_B2D">
                 <ref role="16sUi3" node="2ulVZ9N$pGw" resolve="R" />
               </node>
             </node>
             <node concept="2ShNRf" id="2ulVZ9N$vVo" role="33vP2m">
               <node concept="HV5vD" id="2ulVZ9N$wE$" role="2ShVmc">
-                <ref role="HV5vE" node="2ulVZ9N$tcf" resolve="Wrapper" />
+                <ref role="HV5vE" node="2ulVZ9N$tcf" resolve="ModelAccessCommandAction.Wrapper" />
                 <node concept="16syzq" id="2AOWw_u5CaY" role="HU9BZ">
                   <ref role="16sUi3" node="2ulVZ9N$pGw" resolve="R" />
                 </node>
@@ -2434,7 +2434,7 @@
         <node concept="3uibUv" id="4QMo1Vt4ifr" role="1tU5fm">
           <ref role="3uigEE" to="82uw:~Consumer" resolve="Consumer" />
           <node concept="3uibUv" id="4QMo1Vt4kDt" role="11_B2D">
-            <ref role="3uigEE" node="45AuIz7TE7m" resolve="Result" />
+            <ref role="3uigEE" node="45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
           </node>
         </node>
       </node>
@@ -2787,7 +2787,7 @@
                       <node concept="17QB3L" id="4Ro3Y6ZU4gI" role="1tU5fm" />
                       <node concept="2OqwBi" id="6qxTpQrCVYB" role="33vP2m">
                         <node concept="37vLTw" id="6qxTpQrCVYC" role="2Oq$k0">
-                          <ref role="3cqZAo" node="6qxTpQrCQNP" resolve="previousNodeToStringHelper" />
+                          <ref role="3cqZAo" node="6qxTpQrCQNP" resolve="previousNodesToStringHelper" />
                         </node>
                         <node concept="liA8E" id="6qxTpQrCVYD" role="2OqNvi">
                           <ref role="37wK5l" to="6pqh:6qxTpQrCn33" resolve="nodeToString" />
@@ -2822,7 +2822,7 @@
                         </node>
                       </node>
                       <node concept="37vLTw" id="2CKb5brERdW" role="37vLTx">
-                        <ref role="3cqZAo" node="4Ro3Y6ZU4gH" resolve="lhs" />
+                        <ref role="3cqZAo" node="4Ro3Y6ZU4gH" resolve="previousNodeContentString" />
                       </node>
                     </node>
                   </node>
@@ -3052,7 +3052,7 @@
               <ref role="3uigEE" to="6pqh:4Ro3Y6ZMRz8" resolve="NodeToStringHelper" />
             </node>
             <node concept="2YIFZM" id="6qxTpQrFPuj" role="33vP2m">
-              <ref role="37wK5l" to="6pqh:6qxTpQrFDlk" resolve="generateModel" />
+              <ref role="37wK5l" to="6pqh:6qxTpQrFDlk" resolve="forModel" />
               <ref role="1Pybhc" to="6pqh:4Ro3Y6ZMRz8" resolve="NodeToStringHelper" />
               <node concept="37vLTw" id="6qxTpQrFPwS" role="37wK5m">
                 <ref role="3cqZAo" node="4Ro3Y6ZTS8l" resolve="mpsProject" />
@@ -3066,7 +3066,7 @@
         <node concept="3clFbF" id="4Ro3Y6ZTS7q" role="3cqZAp">
           <node concept="2OqwBi" id="4Ro3Y6ZTS7r" role="3clFbG">
             <node concept="37vLTw" id="6qxTpQrDy5A" role="2Oq$k0">
-              <ref role="3cqZAo" node="6qxTpQrDy5m" resolve="seq" />
+              <ref role="3cqZAo" node="6qxTpQrDy5m" resolve="generatedTextGenNodes" />
             </node>
             <node concept="2es0OD" id="4Ro3Y6ZTS7F" role="2OqNvi">
               <node concept="1bVj0M" id="4Ro3Y6ZTS7G" role="23t8la">
@@ -3378,7 +3378,7 @@
               <ref role="3cqZAo" node="2CKb5brD8ak" resolve="action" />
             </node>
             <node concept="37vLTw" id="2CKb5brD8ay" role="37vLTx">
-              <ref role="3cqZAo" node="2CKb5brD8az" resolve="action1" />
+              <ref role="3cqZAo" node="2CKb5brD8az" resolve="runnable" />
             </node>
           </node>
         </node>
