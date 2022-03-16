@@ -28,7 +28,6 @@
     <import index="2omo" ref="r:de0d3c0c-d049-41cf-bbf9-a920ba513cd3(jetbrains.mps.lang.textGen.structure)" />
     <import index="6pqh" ref="r:68996da4-58e0-41be-91df-5a92958b0641(TextGenGen.Core)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
-    <import index="d2ft" ref="2429ba7e-dca6-48f7-8628-d00e9ac44245/java:org.jetbrains.editorToTextGen(TextGenGen/)" />
     <import index="zjhr" ref="2429ba7e-dca6-48f7-8628-d00e9ac44245/java:org.jetbrains.modelToText(TextGenGen/)" />
     <import index="w1kc" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel(MPS.Core/)" />
     <import index="82uw" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util.function(JDK/)" />
@@ -2601,12 +2600,15 @@
           <node concept="3cpWsn" id="45AuIz7TzDU" role="3cpWs9">
             <property role="TrG5h" value="userInput" />
             <node concept="3uibUv" id="45AuIz7TzDV" role="1tU5fm">
-              <ref role="3uigEE" to="d2ft:~UserInput" resolve="UserInput" />
+              <ref role="3uigEE" to="zjhr:~UserInput" resolve="UserInput" />
             </node>
             <node concept="2ShNRf" id="45AuIz7TzDW" role="33vP2m">
               <node concept="1pGfFk" id="45AuIz7TzDX" role="2ShVmc">
-                <ref role="37wK5l" to="d2ft:~UserInput(String)" resolve="UserInput" />
+                <ref role="37wK5l" to="zjhr:~UserInput(String,String)" resolve="UserInput" />
                 <node concept="Xl_RD" id="45AuIz7TzDY" role="37wK5m" />
+                <node concept="Xl_RD" id="5ssTDYZ1Mec" role="37wK5m">
+                  <property role="Xl_RC" value="" />
+                </node>
               </node>
             </node>
           </node>
@@ -2909,7 +2911,7 @@
                                 <ref role="3cqZAo" node="45AuIz7TzDU" resolve="userInput" />
                               </node>
                               <node concept="liA8E" id="6qxTpQrDy5z" role="2OqNvi">
-                                <ref role="37wK5l" to="d2ft:~UserInput.getExtension()" resolve="getExtension" />
+                                <ref role="37wK5l" to="zjhr:~UserInput.getExtension()" resolve="getExtension" />
                               </node>
                             </node>
                           </node>
