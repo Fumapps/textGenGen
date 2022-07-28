@@ -1,0 +1,6 @@
+textGenGen-fum
+Copyright 2022-2022 Fumapps
+
+This product includes software from https://github.com/Kripner/textGenGen (Apache 2.0)
+ * Copyright 2018 JetBrains; all rights reserved.
+ * Main modifications: extended the textGenGen for diff-detection and several indentation fixes
