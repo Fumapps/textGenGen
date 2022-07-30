@@ -5,7 +5,8 @@
       <modulePath path="$PROJECT_DIR$/languages/BaseLanguageMultiLineExtension/BaseLanguageMultiLineExtension.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/MyTestLang/MyTestLang.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/TextGenGen.build/TextGenGen.build.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/TextGenGen/TextGenGen.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/TextGenGen.plugin/TextGenGen.plugin.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/TextGenGen.tests/TextGenGen.tests.msd" folder="" />
     </projectModules>
   </component>
 </project>

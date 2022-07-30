@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:68996da4-58e0-41be-91df-5a92958b0641(TextGenGen.Core)">
+<model ref="r:68996da4-58e0-41be-91df-5a92958b0641(TextGenGen.plugin.Core)">
   <persistence version="9" />
   <languages>
     <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="19" />
