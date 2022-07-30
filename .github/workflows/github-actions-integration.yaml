@@ -1,0 +1,10 @@
+name: Integration Build
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  call-build-workflow:
+    uses: ./.github/workflows/workflow-build.yaml
