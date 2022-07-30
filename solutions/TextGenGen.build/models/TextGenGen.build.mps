@@ -263,8 +263,8 @@
           <property role="2Ry0Am" value="build" />
           <node concept="2Ry0Ak" id="21fCSXQNBXb" role="2Ry0An">
             <property role="2Ry0Am" value="mps-bundle" />
-            <node concept="2Ry0Ak" id="21fCSXQNBXe" role="2Ry0An">
-              <property role="2Ry0Am" value="" />
+            <node concept="2Ry0Ak" id="5jwXOfcTm$p" role="2Ry0An">
+              <property role="2Ry0Am" value="dependencies" />
             </node>
           </node>
         </node>
