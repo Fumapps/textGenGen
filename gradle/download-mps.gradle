@@ -1,0 +1,333 @@
+/*
+  Several gradle tasks to download MPS and the related JBR for the current OS.
+ */
+
+import groovy.json.JsonSlurper
+import org.apache.tools.ant.taskdefs.condition.Os
+
+// see: https://github.com/JetBrains/JetBrainsRuntime/tree/master#releases
+def jbrMappings = [
+        "2021.2": "11_0_13-b1504.49",
+        "2021.3": "11_0_14_1-b1751.46",
+        "2022.1": "11_0_15-b2043.56" ]
+
+
+if (!project.hasProperty("mpsVersion")) {
+    throw new RuntimeException("you need to set the property 'mpsVersion'")
+}
+def mpsMajorMinorVersion = mpsVersion.count(".") == 2 ? mpsVersion.substring(0, mpsVersion.lastIndexOf('.')) : mpsVersion
+
+
+// to find a plugin entry, search in https://plugins.jetbrains.com/ for the plugin name and obtain the ID from URL (e.g. 13242 for grammarcells)
+if (!project.hasProperty("mpsPlugins")) {
+    throw new RuntimeException("you need to set the property 'mpsPlugins' (map, e.g. [ \"de.itemis.mps.grammarcells\": 13242 ])")
+}
+
+def mpsZipFile = file("build/download/mps-${mpsVersion}.zip")
+def pluginsDirectory = file("build/download/plugins")
+def outputBundleDirectory = file("build/mps-bundle")
+
+def targetFolderName = "$outputBundleDirectory/mps"
+if (isMac()) {
+    targetFolderName = "$outputBundleDirectory/Contents"
+}
+
+task downloadMpsAndPluginsFromJetbrains {
+    group 'mps-download'
+    onlyIf {
+        !mpsZipFile.exists() || mpsPlugins.any { !file("$pluginsDirectory/mps-${getEffectivePluginName(it.key)}.zip").exists() }
+    }
+    doLast {
+        if (!mpsZipFile.exists()) {
+            mpsZipFile.parentFile.mkdirs()
+            def mpsDownloadLink = "https://download.jetbrains.com/mps/$mpsMajorMinorVersion/MPS-${mpsVersion}.zip"
+            println("downloading $mpsDownloadLink ... (might take few minutes, since it is ca. 400-500 MB)")
+            new URL(mpsDownloadLink).withInputStream { downloadInputStream -> mpsZipFile.withOutputStream { it << downloadInputStream } }
+        }
+
+        if (!mpsPlugins.isEmpty()) {
+            downloadPlugins(pluginsDirectory)
+        }
+    }
+}
+
+private def downloadPlugins(def pluginsDirectory) {
+    def mpsPluginDependencies = mpsPlugins.collectMany {
+        def pluginName = getEffectivePluginName(it.key)
+        def pluginId = it.value
+        def pluginVersion = getEffectivePluginVersion(it.key, mpsVersion)
+        collectDependencies(pluginName, pluginId, pluginVersion).entrySet()
+    }
+    mpsPlugins.putAll(mpsPluginDependencies)
+
+    mpsPlugins.each {
+        def pluginName = getEffectivePluginName(it.key)
+        def pluginId = it.value
+        def pluginVersion = getEffectivePluginVersion(it.key, mpsVersion)
+        def pluginZipFile = file("$pluginsDirectory/mps-${pluginName}.zip")
+        if (!pluginZipFile.exists()) {
+            pluginZipFile.parentFile.mkdirs()
+            def pluginDownloadLink = obtainDownloadLinkForPlugin(pluginName, pluginId, pluginVersion)
+            println("downloading $pluginDownloadLink ... ($pluginName)")
+            new URL(pluginDownloadLink).withInputStream { downloadInputStream -> pluginZipFile.withOutputStream { it << downloadInputStream } }
+        }
+    }
+}
+
+/*
+  Returns the pluginName,
+  or if required, removes the version from the configuredPluginName (e.g. 'LangDoc[2021.2]' -> 'LangDoc')
+ */
+private static String getEffectivePluginName(String configuredPluginName) {
+    def indexOfVersionBrackets = configuredPluginName.indexOf("[")
+    if (indexOfVersionBrackets >= 0) {
+        return configuredPluginName.substring(0, indexOfVersionBrackets)
+    }
+    return configuredPluginName
+}
+
+/*
+  Returns the mpsVersion,
+  or if available, extracts the version from the configuredPluginName (e.g. 'LangDoc[2021.2]' -> '2021.2')
+ */
+private static String getEffectivePluginVersion(String configuredPluginName, String mpsVersion) {
+    def indexOfVersionBrackets = configuredPluginName.indexOf("[")
+    if (indexOfVersionBrackets >= 0) {
+        return configuredPluginName.substring(indexOfVersionBrackets+1, configuredPluginName.size()-1)
+    }
+    return mpsVersion
+}
+
+task buildMpsZipBundle {
+    group 'mps-download'
+    dependsOn downloadMpsAndPluginsFromJetbrains
+    description "build a generic MPS $mpsVersion bundle which contains convenient plugins (see task 'listPlugins')"
+
+    onlyIf {
+        !file("$outputBundleDirectory").exists()
+    }
+    doLast {
+        println("preparing MPS Version $mpsVersion (major-minor: $mpsMajorMinorVersion)")
+
+        outputBundleDirectory.deleteDir()
+        outputBundleDirectory.mkdir()
+
+        println("unzipping $mpsZipFile into $outputBundleDirectory")
+        copy {
+            from zipTree(mpsZipFile)
+            into outputBundleDirectory
+        }
+        file("$outputBundleDirectory/MPS $mpsMajorMinorVersion").renameTo(targetFolderName)
+
+        addLocalPluginsPathToVmOptions("$targetFolderName")
+
+        copy {
+            fileTree(dir: pluginsDirectory, includes: ['**/*.zip']).each { zipFile ->
+                println("unzipping $zipFile into $targetFolderName/plugins")
+                from zipTree(zipFile)
+            }
+            into file("$outputBundleDirectory/dependencies")
+        }
+
+        println("finished prepare of MPS Version $mpsVersion")
+    }
+}
+
+private void addLocalPluginsPathToVmOptions(String targetFolderName) {
+    def dependenciesPath = "${file("$targetFolderName/../dependencies").absolutePath}"
+    println("> adding -Didea.plugins.path=$dependenciesPath to bin/*.vmoptions")
+    fileTree(dir: file("$targetFolderName/bin"), includes: ['*.vmoptions'])
+            .each {
+                it.append("-Didea.plugins.path=$dependenciesPath\n")
+            }
+}
+
+private static String obtainDownloadLinkForPlugin(String pluginName, int pluginId, String version) {
+    def updateId = obtainUpdateIdForPlugin(pluginName, pluginId, version)
+    return "https://plugins.jetbrains.com/plugin/download?rel=true&updateId=$updateId"
+}
+
+private static Map<String, Integer> collectDependencies(String pluginName, int pluginId, String version) {
+    def updateId = obtainUpdateIdForPlugin(pluginName, pluginId, version)
+    def dependenciesUrl = "https://plugins.jetbrains.com/api/updates/$updateId/dependencies"
+
+    def response = new URL(dependenciesUrl).text
+    if (response.contains("statusCode\":404")) {
+        throw new RuntimeException("couldn't find plugin dependencies for $pluginName")
+    }
+
+    def builtInDependencies = [ "jetbrains.mps.core", "jetbrains.mps.build" ].toSet()
+
+    def json = new JsonSlurper().parseText(response)
+    def dependencies = json
+            .findAll { it.plugin != null && !builtInDependencies.contains(it.name) }
+            .collectEntries { [it.name, it.plugin.id as Integer] }
+    def transitiveDependencies = dependencies
+            .collectMany { collectDependencies(it.key, it.value, version).entrySet() }
+    return dependencies + transitiveDependencies
+}
+
+private static String obtainUpdateIdForPlugin(String pluginName, int pluginId, String version) {
+    def url = new URL("https://plugins.jetbrains.com/api/plugins/$pluginId/updates?channel=&version=$version")
+    def response = url.text
+    if (response.contains("statusCode\":404")) {
+        throw new RuntimeException("couldn't find plugin $pluginName for MPS version $version, please ensure that it exists in the target version")
+    }
+
+    try {
+        def json = new JsonSlurper().parseText(response)
+        return json[0].id
+    } catch (Exception e) {
+        println("ERROR: couldn't retrieve the plugin $pluginName ($pluginId) with the url: $url")
+        throw e
+    }
+}
+
+task downloadJbrForCurrentPlatform {
+    group 'mps-download'
+
+    def currentOs = getOsJbrVariantName()
+    def jbrVersion = jbrMappings[mpsMajorMinorVersion]?.split("-")
+    if (jbrVersion == null) {
+        throw new RuntimeException("no JBR mapping defined for MPS $mpsMajorMinorVersion - please configure the variable 'jbrMappings' by looking up https://github.com/JetBrains/JetBrainsRuntime/tree/master#releases")
+    }
+    def jbrTarGzFile = file("build/download/${getJbrArchiveName(mpsMajorMinorVersion)}")
+
+    onlyIf {
+        !jbrTarGzFile.exists()
+    }
+    doLast {
+        def downloadLink = "https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-${jbrVersion[0]}-${currentOs}-${jbrVersion[1]}.tar.gz"
+        if (!jbrTarGzFile.exists()) {
+            jbrTarGzFile.parentFile.mkdirs()
+            println("downloading $downloadLink ... (to $jbrTarGzFile)")
+            new URL(downloadLink).withInputStream { downloadInputStream -> jbrTarGzFile.withOutputStream { it << downloadInputStream } }
+        }
+    }
+}
+
+task extractJbrToMpsBundle {
+    group 'mps-download'
+    dependsOn buildMpsZipBundle, downloadJbrForCurrentPlatform
+
+    onlyIf {
+        !file("$targetFolderName/jbr").exists()
+    }
+    doLast {
+        copy {
+            def jbrArchive = file("build/download/${getJbrArchiveName(mpsMajorMinorVersion)}")
+            from tarTree(jbrArchive)
+            into file("$targetFolderName")
+        }
+    }
+}
+
+task copyOsSpecificBinFiles {
+    group 'mps-download'
+    dependsOn buildMpsZipBundle
+
+    String binFolderName = ""
+    if (isWindows()) {
+        binFolderName = "win"
+    } else if (isMac()) {
+        binFolderName = "mac"
+    } else if (isLinux()) {
+        binFolderName = "linux" // not tested
+    }
+    onlyIf {
+        file("$targetFolderName/bin/$binFolderName").exists()
+    }
+    doLast {
+        copy {
+            from fileTree("$targetFolderName/bin/$binFolderName")
+            into file("$targetFolderName/bin")
+        }
+        if (binFolderName == "mac") {
+            file("$targetFolderName/bin/Contents").eachFile {
+                def subFile = file(it)
+                subFile.renameTo("$targetFolderName/$subFile.name")
+            }
+            file("$targetFolderName/bin/Contents").deleteDir()
+        }
+        file("$targetFolderName/bin/win").deleteDir()
+        file("$targetFolderName/bin/mac").deleteDir()
+        file("$targetFolderName/bin/linux").deleteDir()
+    }
+}
+
+task buildOsSpecificBundle {
+    group 'mps-download'
+    dependsOn buildMpsZipBundle, extractJbrToMpsBundle, copyOsSpecificBinFiles
+    description "build a MPS $mpsVersion bundle for ${getOsJbrVariantName()} which contains convenient plugins (see task 'listPlugins') and an internal JetBrainsRuntime (JVM)"
+
+    onlyIf {
+        !file(targetFolderName).exists()
+    }
+}
+
+task cleanMpsBundle(type: Delete) {
+    group 'mps-download'
+    delete file("build/download")
+    delete file("$outputBundleDirectory")
+}
+
+if (project.tasks.findByName('clean')) {
+    clean.dependsOn cleanMpsBundle
+}
+
+task listPlugins {
+    group 'mps-download'
+    description "list used plugins for this custom MPS $mpsVersion bundle"
+
+    doLast {
+        def primaryPlugins = mpsPlugins.keySet()
+        def mpsPluginDependencies = mpsPlugins.collectMany {
+            def pluginName = getEffectivePluginName(it.key)
+            def pluginId = it.value
+            def pluginVersion = getEffectivePluginVersion(it.key, mpsVersion)
+            collectDependencies(pluginName, pluginId, pluginVersion).keySet()
+        }.findAll { !primaryPlugins.contains(getEffectivePluginName(it)) }
+
+        println("============ Bundled Plugins ============")
+        primaryPlugins.each { println("plugin '${getEffectivePluginName(it)}'") }
+        println("============= Dependencies ==============")
+        mpsPluginDependencies.each { println("required dependency '$it'") }
+    }
+}
+
+private static String getJbrArchiveName(String mpsMajorMinorVersion) {
+    def currentOs = getOsJbrVariantName()
+    return "jbr-${mpsMajorMinorVersion}-${currentOs}.tar.gz"
+}
+
+private static String getOsJbrVariantName() {
+    def currentOs = ""
+    if (isWindows()) {
+        currentOs = "windows-x64"
+    } else if (isMac()) {
+        if (Os.isArch("aarch64")) {
+            currentOs = "osx-aarch64" // not tested
+        } else {
+            currentOs = "osx-x64"
+        }
+    } else if (isLinux()) {
+        currentOs = "linux-x64" // not tested
+    }
+    return currentOs
+}
+
+private static boolean isWindows() { return getOsFamily() == Os.FAMILY_WINDOWS }
+private static boolean isMac() { return getOsFamily() == Os.FAMILY_MAC }
+private static boolean isLinux() { return getOsFamily() == Os.FAMILY_UNIX }
+
+private static String getOsFamily() {
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        return Os.FAMILY_WINDOWS
+    } else if (Os.isFamily(Os.FAMILY_MAC)) {
+        return Os.FAMILY_MAC
+    } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+        return Os.FAMILY_UNIX
+    } else {
+        throw new RuntimeException("executing on unsupported OS family")
+    }
+}

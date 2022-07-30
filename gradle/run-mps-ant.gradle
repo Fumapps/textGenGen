@@ -1,0 +1,121 @@
+/*
+  Several Gradle tasks which make calls to ANT.
+
+  Note: calling ant directly will not work for some reasons with MPS.
+        So as a workaround, use the bundled JVM (JBR) and ANT libs which are downloaded with MPS (see download-mps.gradle)
+ */
+
+import org.apache.tools.ant.taskdefs.condition.Os
+
+def mpsHome = getMpsHome()
+def javaHome = getJbrHome()
+def antHome = "$mpsHome/lib/ant"
+
+def antLauncherJarPath = "$antHome/lib/ant-launcher.jar"
+def mpsUtilJarPath = "$mpsHome/lib/util.jar"
+
+task mpsAntGenerate(type: Exec) {
+    group 'mps-ant-wrapper'
+    commandLine "$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "-Dproject_home=$projectDir", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath, "generate"
+}
+
+task mpsAntBuild(type: Exec) {
+    group 'mps-ant-wrapper'
+    commandLine "$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "-Dproject_home=$projectDir", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath, "build"
+}
+
+task mpsAntCheck(type: Exec) {
+    group 'mps-ant-wrapper'
+    commandLine "$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "-Dproject_home=$projectDir", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath, "check"
+}
+
+task parseTestReportAfterAntCheck {
+    group 'mps-ant-wrapper'
+    dependsOn mpsAntCheck
+
+    def mpsTestsReportDir = file("$projectDir/build/mps-tests")
+    doFirst {
+        mpsTestsReportDir.deleteDir()
+    }
+    doLast {
+        def anyTaskFailed = false
+        fileTree(dir: projectDir, includes: ["TEST-jetbrains.mps.testbench.junit.*.xml"]).each {
+            def testsuite = new XmlSlurper().parse(it)
+            testsuite.testcase.each { testcase ->
+                def message = ""
+                def result = "PASS"
+                if (!testcase.failure.isEmpty()) {
+                    result = "FAIL"
+                    message = ": ${testcase.failure.@message}"
+                    anyTaskFailed = true
+                } else if (!testcase.error.isEmpty()) {
+                    result = "ERROR"
+                    message = ": ${testcase.error.@message}"
+                    anyTaskFailed = true
+                } else if (!testcase.skipped.isEmpty()) {
+                    result = "SKIP"
+                }
+
+                println("${result} ${testcase.@classname}#${testcase.@name}${message}")
+            }
+            mpsTestsReportDir.mkdirs()
+            it.renameTo(file("$mpsTestsReportDir/$it.name"))
+        }
+
+        if (anyTaskFailed) {
+            throw new GradleException("At least one MPS test failed")
+        }
+    }
+}
+
+task mpsAntCleanSources(type: Exec) {
+    group 'mps-ant-wrapper'
+    commandLine "$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath, "cleanSources"
+
+    doLast {
+        def dirsToDelete = collectGeneratedDirs(file("languages")) + collectGeneratedDirs(file("solutions"))
+        dirsToDelete.each { it.deleteDir() }
+    }
+}
+
+private List<File> collectGeneratedDirs(File baseDir) {
+    def dirs = []
+    file(baseDir).eachDirRecurse {
+        if (it.name.endsWith("_gen.caches") || it.name == "classes_gen" || it.name == "source_gen") {
+            dirs += it
+        }
+    }
+    return dirs
+}
+
+private static String getJbrHome() {
+    def mpsHome = getMpsHome()
+    if (Os.isFamily(Os.FAMILY_MAC)) {
+        return "$mpsHome/jbr/Contents/Home"
+    }
+    return "$mpsHome/jbr"
+}
+
+private static String getMpsHome() {
+    if (Os.isFamily(Os.FAMILY_MAC)) {
+        return 'build/mps-bundle/Contents'
+    }
+    return 'build/mps-bundle/mps'
+}
+
+task openProjectInMpsForCurrentOs(type: Exec) {
+    group 'mps-ant-wrapper'
+    dependsOn buildOsSpecificBundle
+
+    workingDir projectDir
+
+    environment "JAVA_HOME", "$projectDir/build/mps-bundle/mps/jbr/bin"
+
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        commandLine 'build/mps-bundle/mps/bin/mps.bat', projectDir
+    } else if (Os.isFamily(Os.FAMILY_MAC)) {
+        commandLine 'build/mps-bundle/Contents/MacOS/mps', projectDir
+    } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+        commandLine 'sh', 'build/mps-bundle/mps/bin/mps.sh', projectDir
+    }
+}
