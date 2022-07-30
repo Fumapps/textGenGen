@@ -1,3 +1,11 @@
+# Fork by Fumapps
+
+This fork is an extension of the TextGenGen MPS plugin.
+It mainly extends it by:
+
+* _unit tests_: several automated tests, which are used to fix several spacing issues
+* _generator-based contents check_: a (light) diff mechanism, which tries to detect if TextGen nodes have not really changed
+
 # TextGenGen
 
 TextGenGen is an MPS plugin for generation of TextGen definitions derived from Editor definitions,
