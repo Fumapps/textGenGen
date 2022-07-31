@@ -373,6 +373,12 @@
       <property role="TrG5h" value="TEXTGENGEN_HOME" />
       <node concept="55IIr" id="2dBEpNaDfXB" role="398pKh" />
     </node>
+    <node concept="398rNT" id="1fPx0bmcnRq" role="1l3spd">
+      <property role="TrG5h" value="mps.macro.project_home" />
+      <node concept="398BVA" id="1fPx0bmcnTq" role="398pKh">
+        <ref role="398BVh" node="21fCSXQM0pt" resolve="project_home" />
+      </node>
+    </node>
     <node concept="2sgV4H" id="5n$w_eSjdec" role="1l3spa">
       <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="5n$w_eSjded" role="2JcizS">

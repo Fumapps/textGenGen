@@ -9,6 +9,7 @@
   <property name="project_home" location="${basedir}" />
   <property name="dependencies_home" location="${basedir}/build/mps-bundle/dependencies" />
   <property name="TEXTGENGEN_HOME" location="${basedir}" />
+  <property name="mps.macro.project_home" location="${project_home}" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property name="artifacts.de.itemis.mps.extensions" location="${dependencies_home}" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />
@@ -683,6 +684,7 @@
       <macro name="project_home" path="${project_home}" />
       <macro name="dependencies_home" path="${dependencies_home}" />
       <macro name="TEXTGENGEN_HOME" path="${TEXTGENGEN_HOME}" />
+      <macro name="mps.macro.project_home" path="${mps.macro.project_home}" />
     </generate>
   </target>
   
@@ -1213,6 +1215,7 @@
       <sysproperty key="mps.libraries" value="${mps.libraries.path.string}" />
       <sysproperty key="mps.test.modules" value="${mps.tests.path.string}" />
       
+      <sysproperty key="mps.macro.project_home" value="${project_home}" />
       
       <test name="jetbrains.mps.testbench.junit.suites.AntModuleTestSuite0" outfile="TEST-jetbrains.mps.testbench.junit.suites.AntModuleTestSuite0-runModuleTests" />
       <formatter type="xml" />
