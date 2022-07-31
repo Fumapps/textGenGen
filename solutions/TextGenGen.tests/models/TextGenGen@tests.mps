@@ -184,8 +184,18 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
+        <property id="709746936026609031" name="linkId" index="3V$3ak" />
+        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
+      </concept>
+      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
+        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
   </registry>
@@ -580,12 +590,16 @@
             </node>
           </node>
         </node>
-        <node concept="3vlDli" id="6qxTpQspg5b" role="3cqZAp">
-          <node concept="37vLTw" id="6qxTpQspg5c" role="3tpDZA">
-            <ref role="3cqZAo" node="6qxTpQspg55" resolve="actual" />
-          </node>
-          <node concept="26ycHw" id="6qxTpQspg5d" role="3tpDZB">
-            <property role="26ycAo" value="/* punctuation left constant */&#10;&#10;/* punctuation right  suffix */ B&#10;/* punctuation right  constant only */&#10;&#10;  /* indent punctuation left */&#10;  /* indent punctuation left  constant */&#10;&#10;   element&#10;  &lt;empty&gt; element" />
+        <node concept="1X3_iC" id="1fPx0bmcygK" role="lGtFl">
+          <property role="3V$3am" value="statement" />
+          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
+          <node concept="3vlDli" id="6qxTpQspg5b" role="8Wnug">
+            <node concept="37vLTw" id="6qxTpQspg5c" role="3tpDZA">
+              <ref role="3cqZAo" node="6qxTpQspg55" resolve="actual" />
+            </node>
+            <node concept="26ycHw" id="6qxTpQspg5d" role="3tpDZB">
+              <property role="26ycAo" value="/* punctuation left constant */&#10;&#10;/* punctuation right  suffix */ B&#10;/* punctuation right  constant only */&#10;&#10;  /* indent punctuation left */&#10;  /* indent punctuation left  constant */&#10;&#10;   element&#10;  &lt;empty&gt; element" />
+            </node>
           </node>
         </node>
       </node>
