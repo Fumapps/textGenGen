@@ -31,6 +31,12 @@
       </concept>
     </language>
     <language id="3600cb0a-44dd-4a5b-9968-22924406419e" name="jetbrains.mps.build.mps.tests">
+      <concept id="4560297596904469357" name="jetbrains.mps.build.mps.tests.structure.BuildAspect_MpsTestModules" flags="nn" index="22LTRH">
+        <child id="4560297596904469360" name="modules" index="22LTRK" />
+      </concept>
+      <concept id="4560297596904469362" name="jetbrains.mps.build.mps.tests.structure.BuildMps_TestModule" flags="nn" index="22LTRM">
+        <reference id="4560297596904469363" name="module" index="22LTRN" />
+      </concept>
       <concept id="4005526075820600484" name="jetbrains.mps.build.mps.tests.structure.BuildModuleTestsPlugin" flags="ng" index="1gjT0q" />
     </language>
     <language id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build">
@@ -68,6 +74,7 @@
         <property id="5204048710541015587" name="internalBaseDirectory" index="2DA0ip" />
         <child id="6647099934206700656" name="plugins" index="10PD9s" />
         <child id="7389400916848080626" name="parts" index="3989C9" />
+        <child id="3542413272732620719" name="aspects" index="1hWBAP" />
         <child id="5617550519002745381" name="dependencies" index="1l3spa" />
         <child id="5617550519002745378" name="macros" index="1l3spd" />
         <child id="5617550519002745372" name="layout" index="1l3spN" />
@@ -114,6 +121,9 @@
       </concept>
     </language>
     <language id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps">
+      <concept id="6592112598314586625" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPluginGroup" flags="ng" index="m$f5U">
+        <reference id="6592112598314586626" name="group" index="m$f5T" />
+      </concept>
       <concept id="6592112598314498932" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPlugin" flags="ng" index="m$_wf">
         <property id="6592112598314498927" name="id" index="m$_wk" />
         <child id="1359186315025500371" name="xml" index="20twgj" />
@@ -127,9 +137,6 @@
       <concept id="6592112598314498926" name="jetbrains.mps.build.mps.structure.BuildMpsLayout_Plugin" flags="ng" index="m$_wl">
         <reference id="6592112598314801433" name="plugin" index="m_rDy" />
         <child id="3570488090019868128" name="packagingType" index="pUk7w" />
-      </concept>
-      <concept id="6592112598314499036" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPluginModule" flags="ng" index="m$_yB">
-        <reference id="6592112598314499037" name="target" index="m$_yA" />
       </concept>
       <concept id="6592112598314499027" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPluginDependency" flags="ng" index="m$_yC">
         <reference id="6592112598314499066" name="target" index="m$_y1" />
@@ -444,17 +451,11 @@
           <property role="3MwjfP" value="2021.2.4" />
         </node>
       </node>
-      <node concept="m$_yB" id="2rLdBzu$dZq" role="m$_yh">
-        <ref role="m$_yA" node="4sixjOa4Ifw" resolve="TextGenGen.plugin" />
-      </node>
-      <node concept="m$_yB" id="6gRuqpH7$7D" role="m$_yh">
-        <ref role="m$_yA" node="6gRuqpH7$1i" resolve="TextGenGen.javastubs" />
-      </node>
       <node concept="m$_yC" id="5n$w_eSjdes" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
       </node>
-      <node concept="m$_yC" id="7p$1uD_fM_U" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:6WtY9M1bDO_" resolve="jetbrains.mps.ide.java" />
+      <node concept="m$_yC" id="7WT2S5Nu8xe" role="m$_yJ">
+        <ref role="m$_y1" to="90a9:31bAEZ0srEa" resolve="de.slisson.mps.editor.multiline" />
       </node>
       <node concept="3_J27D" id="5n$w_eSjdet" role="m_cZH">
         <node concept="3Mxwew" id="5n$w_eSjdeu" role="3MwsjC">
@@ -465,6 +466,9 @@
         <node concept="3Mxwew" id="5n$w_eSjdiZ" role="3MwsjC">
           <property role="3MwjfP" value="Plugin for generation of the TextGen aspect from the Editor aspect aiming for generation of source code in the same form as the presentation rendered by the Editor." />
         </node>
+      </node>
+      <node concept="m$f5U" id="7WT2S5Nu8uS" role="m$_yh">
+        <ref role="m$f5T" node="5n$w_eSjdel" resolve="TextGenGen" />
       </node>
     </node>
     <node concept="2G$12M" id="5n$w_eSjdel" role="3989C9">
@@ -860,6 +864,12 @@
       </node>
     </node>
     <node concept="1gjT0q" id="3FvNfnZYpbx" role="10PD9s" />
+    <node concept="22LTRH" id="7q4Z34l1sh$" role="1hWBAP">
+      <property role="TrG5h" value="runModuleTests" />
+      <node concept="22LTRM" id="7q4Z34l1siU" role="22LTRK">
+        <ref role="22LTRN" node="4sixjOa4nDf" resolve="TextGenGen.tests" />
+      </node>
+    </node>
   </node>
 </model>
 
