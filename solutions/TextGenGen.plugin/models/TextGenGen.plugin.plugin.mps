@@ -1493,7 +1493,7 @@
             </node>
             <node concept="2ShNRf" id="3Jrp9glEu4h" role="33vP2m">
               <node concept="1pGfFk" id="3Jrp9glEuvV" role="2ShVmc">
-                <ref role="37wK5l" to="zjhr:~MainForm(String)" resolve="MainForm" />
+                <ref role="37wK5l" to="zjhr:~MainForm.&lt;init&gt;(java.lang.String)" resolve="MainForm" />
                 <node concept="37vLTw" id="2ulVZ9N$E0I" role="37wK5m">
                   <ref role="3cqZAo" node="2ulVZ9N$Ak1" resolve="modelName" />
                 </node>
@@ -2604,7 +2604,7 @@
             </node>
             <node concept="2ShNRf" id="45AuIz7TzDW" role="33vP2m">
               <node concept="1pGfFk" id="45AuIz7TzDX" role="2ShVmc">
-                <ref role="37wK5l" to="zjhr:~UserInput(String,String)" resolve="UserInput" />
+                <ref role="37wK5l" to="zjhr:~UserInput.&lt;init&gt;(java.lang.String,java.lang.String)" resolve="UserInput" />
                 <node concept="Xl_RD" id="45AuIz7TzDY" role="37wK5m" />
                 <node concept="Xl_RD" id="5ssTDYZ1Mec" role="37wK5m">
                   <property role="Xl_RC" value="" />

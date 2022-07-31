@@ -35,6 +35,9 @@
     </language>
     <language id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build">
       <concept id="5481553824944787378" name="jetbrains.mps.build.structure.BuildSourceProjectRelativePath" flags="ng" index="55IIr" />
+      <concept id="9126048691955220717" name="jetbrains.mps.build.structure.BuildLayout_File" flags="ng" index="28jJK3">
+        <child id="9126048691955220762" name="path" index="28jJRO" />
+      </concept>
       <concept id="7321017245476976379" name="jetbrains.mps.build.structure.BuildRelativePath" flags="ng" index="iG8Mu">
         <child id="7321017245477039051" name="compositePart" index="iGT6I" />
       </concept>
@@ -149,6 +152,9 @@
         <property id="8137134783396676838" name="extracted" index="1HemKv" />
         <property id="2889113830911481881" name="deployFolderName" index="3ZfqAx" />
         <child id="8137134783396676835" name="location" index="1HemKq" />
+      </concept>
+      <concept id="4278635856200826393" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyJar" flags="ng" index="1BurEX">
+        <child id="4278635856200826394" name="path" index="1BurEY" />
       </concept>
       <concept id="4278635856200794926" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyExtendLanguage" flags="ng" index="1Busua">
         <reference id="4278635856200794928" name="language" index="1Busuk" />
@@ -382,6 +388,20 @@
         <node concept="m$_wl" id="5n$w_eSjdez" role="39821P">
           <ref role="m_rDy" node="5n$w_eSjdem" resolve="TextGenGen" />
           <node concept="pUk6x" id="2sXbcw1Wl18" role="pUk7w" />
+          <node concept="28jJK3" id="50w0akqOmYZ" role="39821P">
+            <node concept="398BVA" id="50w0akqOmZf" role="28jJRO">
+              <ref role="398BVh" node="21fCSXQM0pt" resolve="project_home" />
+              <node concept="2Ry0Ak" id="50w0akqOmZx" role="iGT6I">
+                <property role="2Ry0Am" value="java_src" />
+                <node concept="2Ry0Ak" id="50w0akqOmZA" role="2Ry0An">
+                  <property role="2Ry0Am" value="lib" />
+                  <node concept="2Ry0Ak" id="50w0akqOmZF" role="2Ry0An">
+                    <property role="2Ry0Am" value="editorToText.jar" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
         </node>
       </node>
     </node>
@@ -484,6 +504,27 @@
             <node concept="3qWCbU" id="6gRuqpH7$3t" role="3LXTna">
               <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
             </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="50w0akqOLC9" role="3bR37C">
+          <node concept="1BurEX" id="50w0akqOLCa" role="1SiIV1">
+            <node concept="398BVA" id="50w0akqOLBX" role="1BurEY">
+              <ref role="398BVh" node="21fCSXQM0pt" resolve="project_home" />
+              <node concept="2Ry0Ak" id="50w0akqOLBY" role="iGT6I">
+                <property role="2Ry0Am" value="java_src" />
+                <node concept="2Ry0Ak" id="50w0akqOLBZ" role="2Ry0An">
+                  <property role="2Ry0Am" value="lib" />
+                  <node concept="2Ry0Ak" id="50w0akqOLC0" role="2Ry0An">
+                    <property role="2Ry0Am" value="editorToText.jar" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="4lOdHGLnsKY" role="3bR37C">
+          <node concept="3bR9La" id="4lOdHGLnsKZ" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
           </node>
         </node>
       </node>

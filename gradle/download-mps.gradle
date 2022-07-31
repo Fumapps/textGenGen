@@ -1,3 +1,5 @@
+/* This file is downloaded from https://github.com/vimotest/mps-gradle-scripts/raw/main/gradle/download-mps.gradle */
+
 /*
   Several gradle tasks to download MPS and the related JBR for the current OS.
  */

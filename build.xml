@@ -160,8 +160,11 @@
     <mkdir dir="${build.tmp}/default/TextGenGen.javastubs.jar/META-INF" />
     <echoxml file="${build.tmp}/default/TextGenGen.javastubs.jar/META-INF/module.xml">
       <module namespace="TextGenGen.javastubs" type="solution" uuid="c2d2f2e9-5f9b-403a-b789-a1fa58ff4e9b">
-        <dependencies />
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
+        </dependencies>
         <uses />
+        <library jar="../editorToText.jar" />
         <classpath>
           <entry path="." />
         </classpath>
@@ -170,7 +173,6 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/TextGenGen.zip/TextGenGen (fum)/languages/TextGenGen.javastubs.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/TextGenGen.javastubs" />
-      <fileset dir="${project_home}/java_src/EditorToText_IDEA/src" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${project_home}/solutions/TextGenGen.javastubs/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/TextGenGen.javastubs.jar" />
     </jar>
@@ -178,12 +180,6 @@
       <fileset dir="${project_home}/solutions/TextGenGen.javastubs/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/TextGenGen.zip/TextGenGen (fum)/languages/TextGenGen.javastubs-src.jar" duplicate="preserve">
-      <fileset dir="${project_home}/java_src/EditorToText_IDEA/src">
-        <exclude name="**/trace.info" />
-        <exclude name="**/exports" />
-        <exclude name="**/checkpoints" />
-        <exclude name="**/*.mps" />
-      </fileset>
       <fileset dir="${project_home}/solutions/TextGenGen.javastubs/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -194,6 +190,7 @@
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-TextGenGen.javastubs-models" prefix="module/models" />
     </jar>
     <zip destfile="${build.layout}/TextGenGen.zip">
+      <zipfileset file="${project_home}/java_src/lib/editorToText.jar" prefix="TextGenGen (fum)" />
       <fileset dir="${build.tmp}/default/TextGenGen.zip" />
     </zip>
     <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mpsBootstrapCore.version.major=${mpsBootstrapCore.version.major}${line.separator}mpsBootstrapCore.version.minor=${mpsBootstrapCore.version.minor}${line.separator}mpsBootstrapCore.version.bugfixNr=${mpsBootstrapCore.version.bugfixNr}${line.separator}mpsBootstrapCore.version.eap=${mpsBootstrapCore.version.eap}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}de.itemis.mps.extensions.versionNumber=${de.itemis.mps.extensions.versionNumber}</echo>
@@ -375,16 +372,16 @@
   <target name="module-tests" depends="assemble" />
   
   <target name="java.compile.TextGenGen.javastubs">
-    <mkdir dir="${project_home}/java_src/EditorToText_IDEA/src" />
     <mkdir dir="${project_home}/solutions/TextGenGen.javastubs/source_gen" />
     <mkdir dir="${build.tmp}/java/out/TextGenGen.javastubs" />
     <javac destdir="${build.tmp}/java/out/TextGenGen.javastubs" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${project_home}/java_src/EditorToText_IDEA/src" />
         <path location="${project_home}/solutions/TextGenGen.javastubs/source_gen" />
       </src>
-      <classpath />
+      <classpath>
+        <fileset file="${project_home}/java_src/lib/editorToText.jar" />
+      </classpath>
     </javac>
   </target>
   
@@ -423,6 +420,7 @@
         <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
+        <fileset file="${project_home}/java_src/lib/editorToText.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/util.jar" />

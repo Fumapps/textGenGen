@@ -1,3 +1,5 @@
+/* This file is downloaded from https://github.com/vimotest/mps-gradle-scripts/raw/main/gradle/run-mps-ant.gradle */
+
 /*
   Several Gradle tasks which make calls to ANT.
 
@@ -7,9 +9,9 @@
 
 import org.apache.tools.ant.taskdefs.condition.Os
 
-def mpsHome = getMpsHome()
-def javaHome = getJbrHome()
-def antHome = "$mpsHome/lib/ant"
+ext.mpsHome = getMpsHome()
+ext.javaHome = getJbrHome()
+ext.antHome = "$mpsHome/lib/ant"
 
 def antLauncherJarPath = "$antHome/lib/ant-launcher.jar"
 def mpsUtilJarPath = "$mpsHome/lib/util.jar"
