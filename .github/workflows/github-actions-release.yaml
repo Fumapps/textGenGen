@@ -6,7 +6,7 @@ on:
       - '*.*.*'
 
 env:
-  PROJECT_NAME: "Fumapps-textGenGen"
+  PROJECT_NAME: "TextGenGen"
   LANGUAGE_NAME: "TextGenGen"
 
 jobs:
