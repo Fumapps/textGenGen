@@ -237,7 +237,6 @@
     </node>
     <node concept="10PD9b" id="5n$w_eSjde9" role="10PD9s" />
     <node concept="3b7kt6" id="5n$w_eSjdea" role="10PD9s" />
-    <node concept="1gjT0q" id="3FvNfnZYpbx" role="10PD9s" />
     <node concept="398rNT" id="5n$w_eSjdeb" role="1l3spd">
       <property role="TrG5h" value="mps_home" />
       <node concept="55IIr" id="3bagCubOCol" role="398pKh">
@@ -428,8 +427,14 @@
       <node concept="m$_yB" id="2rLdBzu$dZq" role="m$_yh">
         <ref role="m$_yA" node="4sixjOa4Ifw" resolve="TextGenGen.plugin" />
       </node>
+      <node concept="m$_yB" id="6gRuqpH7$7D" role="m$_yh">
+        <ref role="m$_yA" node="6gRuqpH7$1i" resolve="TextGenGen.javastubs" />
+      </node>
       <node concept="m$_yC" id="5n$w_eSjdes" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
+      </node>
+      <node concept="m$_yC" id="7p$1uD_fM_U" role="m$_yJ">
+        <ref role="m$_y1" to="ffeo:6WtY9M1bDO_" resolve="jetbrains.mps.ide.java" />
       </node>
       <node concept="3_J27D" id="5n$w_eSjdet" role="m_cZH">
         <node concept="3Mxwew" id="5n$w_eSjdeu" role="3MwsjC">
@@ -444,6 +449,44 @@
     </node>
     <node concept="2G$12M" id="5n$w_eSjdel" role="3989C9">
       <property role="TrG5h" value="TextGenGen" />
+      <node concept="1E1JtA" id="6gRuqpH7$1i" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="TextGenGen.javastubs" />
+        <property role="3LESm3" value="c2d2f2e9-5f9b-403a-b789-a1fa58ff4e9b" />
+        <node concept="55IIr" id="6gRuqpH7$1l" role="3LF7KH">
+          <node concept="2Ry0Ak" id="6gRuqpH7$2R" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="6gRuqpH7$2W" role="2Ry0An">
+              <property role="2Ry0Am" value="TextGenGen.javastubs" />
+              <node concept="2Ry0Ak" id="6gRuqpH7$31" role="2Ry0An">
+                <property role="2Ry0Am" value="TextGenGen.javastubs.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1BupzO" id="6gRuqpH7$3r" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="6gRuqpH7$3s" role="1HemKq">
+            <node concept="398BVA" id="6gRuqpH7$3f" role="3LXTmr">
+              <ref role="398BVh" node="21fCSXQM0pt" resolve="project_home" />
+              <node concept="2Ry0Ak" id="6gRuqpH7$3g" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="6gRuqpH7$3h" role="2Ry0An">
+                  <property role="2Ry0Am" value="TextGenGen.javastubs" />
+                  <node concept="2Ry0Ak" id="6gRuqpH7$3i" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="6gRuqpH7$3t" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
+      </node>
       <node concept="1E1JtA" id="4sixjOa4Ifw" role="2G$12L">
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="TextGenGen.plugin" />
@@ -559,6 +602,11 @@
             <node concept="3qWCbU" id="4sixjOa4IhB" role="3LXTna">
               <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
             </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="6gRuqpH7$4A" role="3bR37C">
+          <node concept="3bR9La" id="6gRuqpH7$4B" role="1SiIV1">
+            <ref role="3bR37D" node="6gRuqpH7$1i" resolve="TextGenGen.javastubs" />
           </node>
         </node>
       </node>
@@ -770,6 +818,7 @@
         </node>
       </node>
     </node>
+    <node concept="1gjT0q" id="3FvNfnZYpbx" role="10PD9s" />
   </node>
 </model>
 

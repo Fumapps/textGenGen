@@ -48,6 +48,7 @@
         <description>Plugin for generation of the TextGen aspect from the Editor aspect aiming for generation of source code in the same form as the presentation rendered by the Editor.</description>
         <version>2021.2.4</version>
         <depends>jetbrains.mps.core</depends>
+        <depends>jetbrains.mps.ide.java</depends>
         <description>Editor to TextGen convertor</description>
         <vendor>JetBrains</vendor>
         <idea-version since-build="212.1" until-build="213.1" />
@@ -67,6 +68,7 @@
         <description>Plugin for generation of the TextGen aspect from the Editor aspect aiming for generation of source code in the same form as the presentation rendered by the Editor.</description>
         <version>2021.2.4</version>
         <depends>jetbrains.mps.core</depends>
+        <depends>jetbrains.mps.ide.java</depends>
         <description>Editor to TextGen convertor</description>
         <vendor>JetBrains</vendor>
         <idea-version since-build="212.1" until-build="213.1" />
@@ -105,6 +107,7 @@
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="cl" />
           <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" kind="cl" />
           <module ref="7124e466-fc92-4803-a656-d7a6b7eb3910(MPS.TextGen)" kind="cl" />
+          <module ref="c2d2f2e9-5f9b-403a-b789-a1fa58ff4e9b(TextGenGen.javastubs)" kind="cl" />
           <module ref="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" kind="cl" />
           <module ref="83888646-71ce-4f1c-9c53-c54016f6ad4f(jetbrains.mps.baseLanguage.collections)" kind="cl" />
           <module ref="34e84b8f-afa8-4364-abcd-a279fddddbe7(jetbrains.mps.editor.runtime)" kind="cl" />
@@ -136,7 +139,6 @@
     </echoxml>
     <jar destfile="${build.tmp}/default/TextGenGen.zip/TextGenGen (fum)/languages/TextGenGen.plugin.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/TextGenGen.plugin" />
-      <fileset dir="${project_home}/java_src/EditorToText_IDEA/src" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${project_home}/solutions/TextGenGen.plugin/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/TextGenGen.plugin.jar" />
     </jar>
@@ -144,12 +146,6 @@
       <fileset dir="${project_home}/solutions/TextGenGen.plugin/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/TextGenGen.zip/TextGenGen (fum)/languages/TextGenGen.plugin-src.jar" duplicate="preserve">
-      <fileset dir="${project_home}/java_src/EditorToText_IDEA/src">
-        <exclude name="**/trace.info" />
-        <exclude name="**/exports" />
-        <exclude name="**/checkpoints" />
-        <exclude name="**/*.mps" />
-      </fileset>
       <fileset dir="${project_home}/solutions/TextGenGen.plugin/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -158,6 +154,44 @@
       </fileset>
       <zipfileset file="${basedir}/solutions/TextGenGen.plugin/TextGenGen.plugin.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-TextGenGen.plugin-models" prefix="module/models" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/TextGenGen.zip/TextGenGen (fum)/languages" />
+    <mkdir dir="${build.tmp}/default/TextGenGen.javastubs.jar" />
+    <mkdir dir="${build.tmp}/default/TextGenGen.javastubs.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/TextGenGen.javastubs.jar/META-INF/module.xml">
+      <module namespace="TextGenGen.javastubs" type="solution" uuid="c2d2f2e9-5f9b-403a-b789-a1fa58ff4e9b">
+        <dependencies />
+        <uses />
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="TextGenGen.javastubs-src.jar" descriptor="TextGenGen.javastubs.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/TextGenGen.zip/TextGenGen (fum)/languages/TextGenGen.javastubs.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/TextGenGen.javastubs" />
+      <fileset dir="${project_home}/java_src/EditorToText_IDEA/src" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${project_home}/solutions/TextGenGen.javastubs/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/TextGenGen.javastubs.jar" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-TextGenGen.javastubs-models">
+      <fileset dir="${project_home}/solutions/TextGenGen.javastubs/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/TextGenGen.zip/TextGenGen (fum)/languages/TextGenGen.javastubs-src.jar" duplicate="preserve">
+      <fileset dir="${project_home}/java_src/EditorToText_IDEA/src">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <fileset dir="${project_home}/solutions/TextGenGen.javastubs/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/solutions/TextGenGen.javastubs/TextGenGen.javastubs.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-TextGenGen.javastubs-models" prefix="module/models" />
     </jar>
     <zip destfile="${build.layout}/TextGenGen.zip">
       <fileset dir="${build.tmp}/default/TextGenGen.zip" />
@@ -178,7 +212,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.TextGenGen.plugin, java.compile.TextGenGen.tests, java.compile.BaseLanguageMultiLineExtension, java.compile.BaseLanguageMultiLineExtension.generator, java.compile.MyTestLang, java.compile.MyTestLang.generator" />
+  <target name="compileJava" depends="java.compile.TextGenGen.javastubs, java.compile.TextGenGen.plugin, java.compile.TextGenGen.tests, java.compile.BaseLanguageMultiLineExtension, java.compile.BaseLanguageMultiLineExtension.generator, java.compile.MyTestLang, java.compile.MyTestLang.generator" />
   
   <target name="processResources" />
   
@@ -315,6 +349,7 @@
       <chunk>
         <module file="${basedir}/languages/BaseLanguageMultiLineExtension/BaseLanguageMultiLineExtension.mpl" />
         <module file="${basedir}/languages/MyTestLang/MyTestLang.mpl" />
+        <module file="${basedir}/solutions/TextGenGen.javastubs/TextGenGen.javastubs.msd" />
         <module file="${basedir}/solutions/TextGenGen.plugin/TextGenGen.plugin.msd" />
       </chunk>
       <chunk>
@@ -339,17 +374,30 @@
   
   <target name="module-tests" depends="assemble" />
   
-  <target name="java.compile.TextGenGen.plugin" depends="fetchDependencies">
+  <target name="java.compile.TextGenGen.javastubs">
     <mkdir dir="${project_home}/java_src/EditorToText_IDEA/src" />
+    <mkdir dir="${project_home}/solutions/TextGenGen.javastubs/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/TextGenGen.javastubs" />
+    <javac destdir="${build.tmp}/java/out/TextGenGen.javastubs" fork="true" encoding="utf8" includeantruntime="false" debug="true">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${project_home}/java_src/EditorToText_IDEA/src" />
+        <path location="${project_home}/solutions/TextGenGen.javastubs/source_gen" />
+      </src>
+      <classpath />
+    </javac>
+  </target>
+  
+  <target name="java.compile.TextGenGen.plugin" depends="java.compile.TextGenGen.javastubs, fetchDependencies">
     <mkdir dir="${project_home}/solutions/TextGenGen.plugin/source_gen" />
     <mkdir dir="${build.tmp}/java/out/TextGenGen.plugin" />
     <javac destdir="${build.tmp}/java/out/TextGenGen.plugin" fork="true" encoding="utf8" includeantruntime="false" debug="true">
       <compilerarg value="-Xlint:none" />
       <src>
-        <path location="${project_home}/java_src/EditorToText_IDEA/src" />
         <path location="${project_home}/solutions/TextGenGen.plugin/source_gen" />
       </src>
       <classpath>
+        <pathelement path="${build.tmp}/java/out/TextGenGen.javastubs" />
         <fileset file="${artifacts.mps}/lib/mps-core.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
@@ -673,6 +721,7 @@
     <delete dir="${project_home}/languages/BaseLanguageMultiLineExtension/generator/source_gen" />
     <delete dir="${project_home}/languages/MyTestLang/source_gen" />
     <delete dir="${project_home}/languages/MyTestLang/generator/source_gen" />
+    <delete dir="${project_home}/solutions/TextGenGen.javastubs/source_gen" />
     <delete dir="${project_home}/solutions/TextGenGen.plugin/source_gen" />
     <delete dir="${project_home}/solutions/TextGenGen.tests/source_gen" />
   </target>
