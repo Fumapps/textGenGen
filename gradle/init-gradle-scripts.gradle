@@ -1,0 +1,51 @@
+/* This file is downloaded from https://github.com/vimotest/mps-gradle-scripts/raw/main/gradle/init-gradle-scripts.gradle */
+
+def scripts = ["download-mps.gradle", "run-mps-ant.gradle", "init-gradle-scripts.gradle"]
+
+scripts.each {
+    def gradleScriptFile = file("$projectDir/gradle/$it")
+    if (gradleScriptFile.exists() && it != "init-gradle-scripts.gradle") {
+        apply from: gradleScriptFile
+    }
+}
+
+task downloadGradleScripts {
+    group 'mps-gradle'
+
+    doLast {
+        scripts.each {
+            def gradleScriptFile = file("$projectDir/gradle/$it")
+            gradleScriptFile.parentFile.mkdirs()
+            def url = new URL("https://github.com/vimotest/mps-gradle-scripts/raw/main/gradle/$it")
+            url.withInputStream {
+                inputStream -> gradleScriptFile.withOutputStream { outputStream -> outputStream << inputStream }
+            }
+            gradleScriptFile.text = "/* This file is downloaded from $url */\n\n${gradleScriptFile.text}"
+        }
+    }
+}
+
+def githubActionsFiles = ["github-actions-integration.yaml", "github-actions-release.yaml", "workflow-build.yaml"]
+task downloadGithubActionsScripts {
+    group 'mps-gradle'
+
+    doLast {
+        def languageNameForBuild = "MyLanguage"
+        if (project.hasProperty("languageName")) {
+            languageNameForBuild = project.languageName
+        }
+
+        githubActionsFiles.each {
+            def actionsFile = file("$projectDir/.github/workflows/$it")
+            actionsFile.parentFile.mkdirs()
+            def url = new URL("https://github.com/vimotest/mps-gradle-scripts/raw/main/.github/workflows/$it")
+            url.withInputStream {
+                inputStream -> actionsFile.withOutputStream { outputStream -> outputStream << inputStream }
+            }
+            actionsFile.text = "### This file is downloaded from $url\n\n${actionsFile.text}"
+            actionsFile.text = actionsFile.text
+                    .replaceAll("PROJECT_NAME: \"dummy-language\"", "PROJECT_NAME: \"$project.name\"")
+                    .replaceAll("LANGUAGE_NAME: \"MyDummyLanguage\"", "LANGUAGE_NAME: \"$languageNameForBuild\"")
+        }
+    }
+}

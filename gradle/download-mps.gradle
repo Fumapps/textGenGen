@@ -6,12 +6,15 @@
 
 import groovy.json.JsonSlurper
 import org.apache.tools.ant.taskdefs.condition.Os
+import java.nio.file.Files
 
-// see: https://github.com/JetBrains/JetBrainsRuntime/tree/master#releases
+// see: https://github.com/JetBrains/JetBrainsRuntime/tree/jbr11#releases
 def jbrMappings = [
         "2021.2": "11_0_13-b1504.49",
         "2021.3": "11_0_14_1-b1751.46",
-        "2022.1": "11_0_15-b2043.56" ]
+        "2022.1": "11_0_15-b2043.56",
+        "2022.2": "17.0.5-b469.71",
+        "2022.3": "17.0.5-b653.14" ]
 
 
 if (!project.hasProperty("mpsVersion")) {
@@ -34,10 +37,12 @@ if (isMac()) {
     targetFolderName = "$outputBundleDirectory/Contents"
 }
 
-task downloadMpsAndPluginsFromJetbrains {
+task downloadMpsAndPlugins {
     group 'mps-download'
     onlyIf {
-        !mpsZipFile.exists() || mpsPlugins.any { !file("$pluginsDirectory/mps-${getEffectivePluginName(it.key)}.zip").exists() }
+        !mpsZipFile.exists() ||
+        mpsPlugins.any { !file("$pluginsDirectory/mps-${getEffectivePluginName(it.key)}.zip").exists() } ||
+        project.hasProperty("customMpsPlugins") && customMpsPlugins.any { !file("$pluginsDirectory/mps-${it.key}.zip").exists() }
     }
     doLast {
         if (!mpsZipFile.exists()) {
@@ -49,6 +54,9 @@ task downloadMpsAndPluginsFromJetbrains {
 
         if (!mpsPlugins.isEmpty()) {
             downloadPlugins(pluginsDirectory)
+        }
+        if (project.hasProperty("customMpsPlugins") && !customMpsPlugins.isEmpty()) {
+            downloadCustomPlugins(pluginsDirectory)
         }
     }
 }
@@ -100,9 +108,22 @@ private static String getEffectivePluginVersion(String configuredPluginName, Str
     return mpsVersion
 }
 
+private def downloadCustomPlugins(def pluginsDirectory) {
+    customMpsPlugins.each {
+        def pluginName = it.key
+        def pluginZipFile = file("$pluginsDirectory/mps-${pluginName}.zip")
+        if (!pluginZipFile.exists()) {
+            pluginZipFile.parentFile.mkdirs()
+            def pluginDownloadLink = it.value
+            println("downloading custom plugin from URL $pluginDownloadLink ... ($pluginName)")
+            new URL(pluginDownloadLink).withInputStream { downloadInputStream -> pluginZipFile.withOutputStream { it << downloadInputStream } }
+        }
+    }
+}
+
 task buildMpsZipBundle {
     group 'mps-download'
-    dependsOn downloadMpsAndPluginsFromJetbrains
+    dependsOn downloadMpsAndPlugins
     description "build a generic MPS $mpsVersion bundle which contains convenient plugins (see task 'listPlugins')"
 
     onlyIf {
@@ -123,13 +144,16 @@ task buildMpsZipBundle {
 
         addLocalPluginsPathToVmOptions("$targetFolderName")
 
+        def outputDependenciesDirectory = file("$outputBundleDirectory/dependencies")
         copy {
             fileTree(dir: pluginsDirectory, includes: ['**/*.zip']).each { zipFile ->
                 println("unzipping $zipFile into $targetFolderName/plugins")
                 from zipTree(zipFile)
             }
-            into file("$outputBundleDirectory/dependencies")
+            into outputDependenciesDirectory
         }
+
+        moveNestedPluginsUp(outputDependenciesDirectory)
 
         println("finished prepare of MPS Version $mpsVersion")
     }
@@ -142,6 +166,20 @@ private void addLocalPluginsPathToVmOptions(String targetFolderName) {
             .each {
                 it.append("-Didea.plugins.path=$dependenciesPath\n")
             }
+}
+
+private def moveNestedPluginsUp(def outputDependenciesDirectory) {
+    def movedNestedPluginsCounters = [:]
+    fileTree(dir: outputDependenciesDirectory, includes: ['*/*/META-INF/plugin.xml']).each { nestedPluginXml ->
+        def nestedPluginDir = nestedPluginXml.parentFile.parentFile
+        def bundleDirectory = nestedPluginDir.parentFile
+        Files.move(nestedPluginDir.toPath(), outputDependenciesDirectory.toPath().resolve(nestedPluginDir.name))
+        movedNestedPluginsCounters.put(bundleDirectory.name, movedNestedPluginsCounters.get(bundleDirectory.name, 0) + 1)
+    }
+
+    movedNestedPluginsCounters.each { bundleName, count ->
+        println("moved $count nested plugins from $bundleName to $outputDependenciesDirectory")
+    }
 }
 
 private static String obtainDownloadLinkForPlugin(String pluginName, int pluginId, String version) {
@@ -158,7 +196,7 @@ private static Map<String, Integer> collectDependencies(String pluginName, int p
         throw new RuntimeException("couldn't find plugin dependencies for $pluginName")
     }
 
-    def builtInDependencies = [ "jetbrains.mps.core", "jetbrains.mps.build" ].toSet()
+    def builtInDependencies = [ "jetbrains.mps.core", "jetbrains.mps.build", "jetbrains.mps.vcs" ].toSet()
 
     def json = new JsonSlurper().parseText(response)
     def dependencies = json
@@ -196,7 +234,7 @@ task downloadJbrForCurrentPlatform {
     def jbrTarGzFile = file("build/download/${getJbrArchiveName(mpsMajorMinorVersion)}")
 
     onlyIf {
-        !jbrTarGzFile.exists()
+        !jbrTarGzFile.exists() && System.env.getOrDefault('PREINSTALLED_JAVA_PATH',"") == ""
     }
     doLast {
         def downloadLink = "https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-${jbrVersion[0]}-${currentOs}-${jbrVersion[1]}.tar.gz"
@@ -213,7 +251,7 @@ task extractJbrToMpsBundle {
     dependsOn buildMpsZipBundle, downloadJbrForCurrentPlatform
 
     onlyIf {
-        !file("$targetFolderName/jbr").exists()
+        !file("$targetFolderName/jbr").exists() && System.env.getOrDefault('PREINSTALLED_JAVA_PATH',"") == ""
     }
     doLast {
         copy {

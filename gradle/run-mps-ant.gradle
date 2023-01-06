@@ -10,11 +10,11 @@
 import org.apache.tools.ant.taskdefs.condition.Os
 
 ext.mpsHome = getMpsHome()
-ext.javaHome = getJbrHome()
+ext.javaHome = getJavaHome()
 ext.antHome = "$mpsHome/lib/ant"
 
 def antLauncherJarPath = "$antHome/lib/ant-launcher.jar"
-def mpsUtilJarPath = "$mpsHome/lib/util.jar"
+def mpsUtilJarPath = concatJavaClasspath("$mpsHome/lib/util.jar", "$mpsHome/lib/3rd-party-rt.jar")
 
 task mpsAntGenerate(type: Exec) {
     group 'mps-ant-wrapper'
@@ -29,6 +29,12 @@ task mpsAntBuild(type: Exec) {
 task mpsAntCheck(type: Exec) {
     group 'mps-ant-wrapper'
     commandLine "$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "-Dproject_home=$projectDir", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath, "check"
+}
+
+task mpsAntCommand(type: Exec) {
+    group 'mps-ant-wrapper'
+    description 'Run <antCmd> using ant. Example: gradlew mpsAntCommand -PantCmd=clean'
+    commandLine "$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "-Dproject_home=$projectDir", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath, findProperty('antCmd') ?: '-p'
 }
 
 task parseTestReportAfterAntCheck {
@@ -90,8 +96,11 @@ private List<File> collectGeneratedDirs(File baseDir) {
     return dirs
 }
 
-private static String getJbrHome() {
+private static String getJavaHome() {
     def mpsHome = getMpsHome()
+    if (System.env.getOrDefault('PREINSTALLED_JAVA_PATH', "") != "") {
+        return System.env['PREINSTALLED_JAVA_PATH']
+    }
     if (Os.isFamily(Os.FAMILY_MAC)) {
         return "$mpsHome/jbr/Contents/Home"
     }
@@ -103,6 +112,14 @@ private static String getMpsHome() {
         return 'build/mps-bundle/Contents'
     }
     return 'build/mps-bundle/mps'
+}
+
+private static String concatJavaClasspath(String... paths) {
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        return paths.join(";")
+    } else {
+        return paths.join(":")
+    }
 }
 
 task openProjectInMpsForCurrentOs(type: Exec) {
