@@ -670,7 +670,7 @@
     <ref role="1XX52x" to="uanp:6qxTpQspfU1" resolve="HorizontalChildrenWithPunctuation" />
     <node concept="3EZMnI" id="6qxTpQspfZm" role="2wV5jI">
       <node concept="3F0ifn" id="6qxTpQspfZn" role="3EZMnx">
-        <property role="3F0ifm" value="/* puncutation left */" />
+        <property role="3F0ifm" value="/* punctuation left */" />
         <node concept="11L4FC" id="6qxTpQspg1I" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -681,7 +681,7 @@
         </node>
       </node>
       <node concept="3F0ifn" id="3I6vV6a$iTd" role="3EZMnx">
-        <property role="3F0ifm" value="/* puncutation left  constant */" />
+        <property role="3F0ifm" value="/* punctuation left  constant */" />
         <node concept="11L4FC" id="3I6vV6a$iTe" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
