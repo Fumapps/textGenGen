@@ -550,9 +550,14 @@
       <plugin path="${artifacts.de.itemis.mps.extensions}/de.itemis.mps.celllayout" />
       <plugin path="${artifacts.de.itemis.mps.extensions}/de.slisson.mps.hacks" />
       <plugin path="${artifacts.de.itemis.mps.extensions}/mps-multiline" />
+      <plugin path="${artifacts.mps}/lib/mps-workbench.jar" />
+      <plugin path="${artifacts.mps}/plugins/git4idea" />
       <plugin path="${artifacts.mps}/plugins/mps-build" />
       <plugin path="${artifacts.mps}/plugins/mps-core" />
+      <plugin path="${artifacts.mps}/plugins/mps-git4idea" />
       <plugin path="${artifacts.mps}/plugins/mps-testing" />
+      <plugin path="${artifacts.mps}/plugins/mps-vcs" />
+      <plugin path="${artifacts.mps}/plugins/svn4idea" />
       <library file="${artifacts.mps}/languages/baseLanguage/closures.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/collections.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
@@ -584,6 +589,8 @@
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.templates.jar" />
       <library file="${artifacts.mps}/languages/editor/jetbrains.mps.editor.runtime.jar" />
       <library file="${artifacts.mps}/languages/editor/jetbrains.mps.editorlang.runtime.jar" />
+      <library file="${artifacts.mps}/languages/editor/jetbrains.mps.ide.editor.jar" />
+      <library file="${artifacts.mps}/languages/editor/typesystemIntegration.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.baseLanguage.lightweightdsl.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.actions.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.behavior.jar" />
@@ -642,6 +649,7 @@
       <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.baseLanguage.util.jar" />
       <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.platform.jar" />
       <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.refactoring.platform.jar" />
+      <library file="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.ui.jar" />
       <library file="${artifacts.mps}/languages/runtimes/jetbrains.mps.analyzers.runtime.jar" />
       <library file="${artifacts.mps}/languages/runtimes/jetbrains.mps.dataFlow.runtime.jar" />
       <library file="${artifacts.mps}/languages/runtimes/jetbrains.mps.findUsages.runtime.jar" />
@@ -661,12 +669,17 @@
       <library file="${artifacts.mps}/languages/tools/jetbrains.mps.tool.common.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.java.stub.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.kernel.jar" />
+      <library file="${artifacts.mps}/languages/util/jetbrains.mps.persistence.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.project.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.refactoring.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.runtime.jar" />
       <library file="${artifacts.mps}/languages/workbench-stub.jar" />
       <library file="${artifacts.mps}/languages/workbench/jetbrains.mps.lang.plugin.standalone.jar" />
       <library file="${artifacts.mps}/languages/xml/jetbrains.mps.core.xml.jar" />
+      <library file="${artifacts.mps}/plugins/mps-vcs/languages/jetbrains.mps.ide.vcs.modelmetadata.jar" />
+      <library file="${artifacts.mps}/plugins/mps-vcs/lib/jetbrains.mps.ide.vcs.core.jar" />
+      <library file="${artifacts.mps}/plugins/mps-vcs/lib/jetbrains.mps.ide.vcs.platform.jar" />
+      <library file="${artifacts.mps}/plugins/mps-vcs/lib/jetbrains.mps.vcs.mergehints.runtime.jar" />
       <chunk>
         <module file="${basedir}/languages/BaseLanguageMultiLineExtension/BaseLanguageMultiLineExtension.mpl" />
         <module file="${basedir}/languages/MyTestLang/MyTestLang.mpl" />
@@ -1077,6 +1090,8 @@
       <pathelement location="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.language-descriptor.jar" />
       <pathelement location="${artifacts.mps}/languages/editor/jetbrains.mps.editor.runtime.jar" />
       <pathelement location="${artifacts.mps}/languages/editor/jetbrains.mps.editorlang.runtime.jar" />
+      <pathelement location="${artifacts.mps}/languages/editor/jetbrains.mps.ide.editor.jar" />
+      <pathelement location="${artifacts.mps}/languages/editor/typesystemIntegration.jar" />
       <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.baseLanguage.lightweightdsl.jar" />
       <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.actions.jar" />
       <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.behavior.jar" />
@@ -1123,6 +1138,7 @@
       <pathelement location="${artifacts.mps}/languages/plaf/jetbrains.mps.baseLanguage.util.jar" />
       <pathelement location="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.platform.jar" />
       <pathelement location="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.refactoring.platform.jar" />
+      <pathelement location="${artifacts.mps}/languages/plaf/jetbrains.mps.ide.ui.jar" />
       <pathelement location="${artifacts.mps}/languages/runtimes/jetbrains.mps.analyzers.runtime.jar" />
       <pathelement location="${artifacts.mps}/languages/runtimes/jetbrains.mps.dataFlow.runtime.jar" />
       <pathelement location="${artifacts.mps}/languages/runtimes/jetbrains.mps.findUsages.runtime.jar" />
@@ -1142,15 +1158,21 @@
       <pathelement location="${artifacts.mps}/languages/tools/jetbrains.mps.tool.common.jar" />
       <pathelement location="${artifacts.mps}/languages/util/jetbrains.mps.java.stub.jar" />
       <pathelement location="${artifacts.mps}/languages/util/jetbrains.mps.kernel.jar" />
+      <pathelement location="${artifacts.mps}/languages/util/jetbrains.mps.persistence.jar" />
       <pathelement location="${artifacts.mps}/languages/util/jetbrains.mps.project.jar" />
       <pathelement location="${artifacts.mps}/languages/util/jetbrains.mps.refactoring.jar" />
       <pathelement location="${artifacts.mps}/languages/util/jetbrains.mps.runtime.jar" />
       <pathelement location="${artifacts.mps}/languages/workbench-stub.jar" />
       <pathelement location="${artifacts.mps}/languages/workbench/jetbrains.mps.lang.plugin.standalone.jar" />
+      <pathelement location="${artifacts.mps}/plugins/mps-git4idea/languages/jetbrains.mps.git4idea.stubs.jar" />
       <pathelement location="${artifacts.mps}/plugins/mps-testing/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.jar" />
       <pathelement location="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.jar" />
       <pathelement location="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.matcher.jar" />
       <pathelement location="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.runtime.jar" />
+      <pathelement location="${artifacts.mps}/plugins/mps-vcs/languages/jetbrains.mps.ide.vcs.modelmetadata.jar" />
+      <pathelement location="${artifacts.mps}/plugins/mps-vcs/lib/jetbrains.mps.ide.vcs.core.jar" />
+      <pathelement location="${artifacts.mps}/plugins/mps-vcs/lib/jetbrains.mps.ide.vcs.platform.jar" />
+      <pathelement location="${artifacts.mps}/plugins/mps-vcs/lib/jetbrains.mps.vcs.mergehints.runtime.jar" />
       <pathelement location="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/BaseLanguageMultiLineExtension.jar" />
       <pathelement location="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/MyTestLang.jar" />
       <pathelement location="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/TextGenGen.javastubs.jar" />
@@ -1162,9 +1184,14 @@
       <pathelement location="${artifacts.de.itemis.mps.extensions}/de.itemis.mps.celllayout" />
       <pathelement location="${artifacts.de.itemis.mps.extensions}/de.slisson.mps.hacks" />
       <pathelement location="${artifacts.de.itemis.mps.extensions}/mps-multiline" />
+      <pathelement location="${artifacts.mps}/lib/mps-workbench.jar" />
+      <pathelement location="${artifacts.mps}/plugins/git4idea" />
       <pathelement location="${artifacts.mps}/plugins/mps-build" />
       <pathelement location="${artifacts.mps}/plugins/mps-core" />
+      <pathelement location="${artifacts.mps}/plugins/mps-git4idea" />
       <pathelement location="${artifacts.mps}/plugins/mps-testing" />
+      <pathelement location="${artifacts.mps}/plugins/mps-vcs" />
+      <pathelement location="${artifacts.mps}/plugins/svn4idea" />
       <pathelement location="${build.tmp}/default/TextGenGen.zip/TextGenGen (fum)" />
     </path>
     <pathconvert pathsep="${path.separator}" property="mps.plugins.path.string" refid="mps.plugins.path" />
