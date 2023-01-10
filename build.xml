@@ -47,7 +47,7 @@
         <id>TextGenGen</id>
         <name>TextGenGen (fum)</name>
         <description>Plugin for generation of the TextGen aspect from the Editor aspect aiming for generation of source code in the same form as the presentation rendered by the Editor.</description>
-        <version>2021.2.4</version>
+        <version>2021.2.6</version>
         <depends>jetbrains.mps.core</depends>
         <depends>de.slisson.mps.editor.multiline</depends>
         <description>Editor to TextGen convertor</description>
@@ -67,7 +67,7 @@
         <id>TextGenGen</id>
         <name>TextGenGen (fum)</name>
         <description>Plugin for generation of the TextGen aspect from the Editor aspect aiming for generation of source code in the same form as the presentation rendered by the Editor.</description>
-        <version>2021.2.4</version>
+        <version>2021.2.6</version>
         <depends>jetbrains.mps.core</depends>
         <depends>de.slisson.mps.editor.multiline</depends>
         <description>Editor to TextGen convertor</description>
