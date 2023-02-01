@@ -1553,90 +1553,90 @@
             </node>
           </node>
         </node>
+        <node concept="3cpWs8" id="7rLNIDElMiZ" role="3cqZAp">
+          <node concept="3cpWsn" id="7rLNIDElMj0" role="3cpWs9">
+            <property role="TrG5h" value="theOnlyEditorCell" />
+            <node concept="3Tqbb2" id="7rLNIDElMj1" role="1tU5fm">
+              <ref role="ehGHo" to="tpc2:fBEYTCT" resolve="EditorCellModel" />
+            </node>
+            <node concept="2OqwBi" id="7rLNIDElMj2" role="33vP2m">
+              <node concept="2OqwBi" id="7rLNIDElMj3" role="2Oq$k0">
+                <node concept="37vLTw" id="7rLNIDElMj4" role="2Oq$k0">
+                  <ref role="3cqZAo" node="7rLNIDElMjF" resolve="editor" />
+                </node>
+                <node concept="3TrEf2" id="7rLNIDElMj5" role="2OqNvi">
+                  <ref role="3Tt5mk" to="tpc2:fIwV5gl" resolve="cellModel" />
+                </node>
+              </node>
+              <node concept="1$rogu" id="7rLNIDElMj6" role="2OqNvi" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="7rLNIDElMj7" role="3cqZAp" />
+        <node concept="3cpWs8" id="7rLNIDElMj8" role="3cqZAp">
+          <node concept="3cpWsn" id="7rLNIDElMj9" role="3cpWs9">
+            <property role="TrG5h" value="textGenBuilder" />
+            <node concept="3uibUv" id="7rLNIDElMja" role="1tU5fm">
+              <ref role="3uigEE" node="7rLNIDE74Wf" resolve="TextGenBuilder" />
+            </node>
+            <node concept="2ShNRf" id="7rLNIDElMjb" role="33vP2m">
+              <node concept="1pGfFk" id="7rLNIDElMjc" role="2ShVmc">
+                <ref role="37wK5l" node="I2lJUt41lR" resolve="OpenTextGenBuilder" />
+                <node concept="37vLTw" id="7rLNIDElMjd" role="37wK5m">
+                  <ref role="3cqZAo" node="7rLNIDElMiR" resolve="concept" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="7rLNIDElN1Q" role="3cqZAp">
+          <node concept="3cpWsn" id="7rLNIDElN1R" role="3cpWs9">
+            <property role="TrG5h" value="editorCellToTextGenConvertor" />
+            <node concept="3uibUv" id="7rLNIDElN1S" role="1tU5fm">
+              <ref role="3uigEE" node="7rLNIDEkvPh" resolve="EditorCellToTextGenConvertor" />
+            </node>
+            <node concept="2ShNRf" id="7rLNIDElN97" role="33vP2m">
+              <node concept="1pGfFk" id="5uZgeJQQnyL" role="2ShVmc">
+                <ref role="37wK5l" node="5uZgeJQQhEy" resolve="BasicEditorCellToTextGenConvertor" />
+                <node concept="37vLTw" id="5uZgeJQQRzF" role="37wK5m">
+                  <ref role="3cqZAo" node="5uZgeJQPVyF" resolve="allEditors" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="7rLNIDElMR$" role="3cqZAp" />
+        <node concept="3clFbF" id="7rLNIDElOmb" role="3cqZAp">
+          <node concept="2OqwBi" id="7rLNIDElOvJ" role="3clFbG">
+            <node concept="37vLTw" id="7rLNIDElOm9" role="2Oq$k0">
+              <ref role="3cqZAo" node="7rLNIDElN1R" resolve="editorCellToTextGenConvertor" />
+            </node>
+            <node concept="liA8E" id="7rLNIDElQmx" role="2OqNvi">
+              <ref role="37wK5l" node="7rLNIDEkB4M" resolve="processEditorCell" />
+              <node concept="37vLTw" id="7rLNIDElQnX" role="37wK5m">
+                <ref role="3cqZAo" node="7rLNIDElMj0" resolve="theOnlyEditorCell" />
+              </node>
+              <node concept="37vLTw" id="7rLNIDElQuF" role="37wK5m">
+                <ref role="3cqZAo" node="7rLNIDElMj9" resolve="textGenBuilder" />
+              </node>
+              <node concept="2ShNRf" id="7rLNIDElQx9" role="37wK5m">
+                <node concept="1pGfFk" id="7rLNIDElQxa" role="2ShVmc">
+                  <ref role="37wK5l" node="2G_6976bDXb" resolve="CustomStyleContainer" />
+                  <node concept="37vLTw" id="7rLNIDElQxb" role="37wK5m">
+                    <ref role="3cqZAo" node="7rLNIDElMj0" resolve="theOnlyEditorCell" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="7rLNIDElQHv" role="3cqZAp" />
         <node concept="Jncv_" id="7rLNIDElMiW" role="3cqZAp">
           <ref role="JncvD" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
           <node concept="37vLTw" id="7rLNIDElMiX" role="JncvB">
             <ref role="3cqZAo" node="7rLNIDElMiR" resolve="concept" />
           </node>
           <node concept="3clFbS" id="7rLNIDElMiY" role="Jncv$">
-            <node concept="3cpWs8" id="7rLNIDElMiZ" role="3cqZAp">
-              <node concept="3cpWsn" id="7rLNIDElMj0" role="3cpWs9">
-                <property role="TrG5h" value="theOnlyEditorCell" />
-                <node concept="3Tqbb2" id="7rLNIDElMj1" role="1tU5fm">
-                  <ref role="ehGHo" to="tpc2:fBEYTCT" resolve="EditorCellModel" />
-                </node>
-                <node concept="2OqwBi" id="7rLNIDElMj2" role="33vP2m">
-                  <node concept="2OqwBi" id="7rLNIDElMj3" role="2Oq$k0">
-                    <node concept="37vLTw" id="7rLNIDElMj4" role="2Oq$k0">
-                      <ref role="3cqZAo" node="7rLNIDElMjF" resolve="editor" />
-                    </node>
-                    <node concept="3TrEf2" id="7rLNIDElMj5" role="2OqNvi">
-                      <ref role="3Tt5mk" to="tpc2:fIwV5gl" resolve="cellModel" />
-                    </node>
-                  </node>
-                  <node concept="1$rogu" id="7rLNIDElMj6" role="2OqNvi" />
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbH" id="7rLNIDElMj7" role="3cqZAp" />
-            <node concept="3cpWs8" id="7rLNIDElMj8" role="3cqZAp">
-              <node concept="3cpWsn" id="7rLNIDElMj9" role="3cpWs9">
-                <property role="TrG5h" value="textGenBuilder" />
-                <node concept="3uibUv" id="7rLNIDElMja" role="1tU5fm">
-                  <ref role="3uigEE" node="7rLNIDE74Wf" resolve="TextGenBuilder" />
-                </node>
-                <node concept="2ShNRf" id="7rLNIDElMjb" role="33vP2m">
-                  <node concept="1pGfFk" id="7rLNIDElMjc" role="2ShVmc">
-                    <ref role="37wK5l" node="I2lJUt41lR" resolve="OpenTextGenBuilder" />
-                    <node concept="37vLTw" id="7rLNIDElMjd" role="37wK5m">
-                      <ref role="3cqZAo" node="7rLNIDElMiR" resolve="concept" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3cpWs8" id="7rLNIDElN1Q" role="3cqZAp">
-              <node concept="3cpWsn" id="7rLNIDElN1R" role="3cpWs9">
-                <property role="TrG5h" value="editorCellToTextGenConvertor" />
-                <node concept="3uibUv" id="7rLNIDElN1S" role="1tU5fm">
-                  <ref role="3uigEE" node="7rLNIDEkvPh" resolve="EditorCellToTextGenConvertor" />
-                </node>
-                <node concept="2ShNRf" id="7rLNIDElN97" role="33vP2m">
-                  <node concept="1pGfFk" id="5uZgeJQQnyL" role="2ShVmc">
-                    <ref role="37wK5l" node="5uZgeJQQhEy" resolve="BasicEditorCellToTextGenConvertor" />
-                    <node concept="37vLTw" id="5uZgeJQQRzF" role="37wK5m">
-                      <ref role="3cqZAo" node="5uZgeJQPVyF" resolve="allEditors" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbH" id="7rLNIDElMR$" role="3cqZAp" />
-            <node concept="3clFbF" id="7rLNIDElOmb" role="3cqZAp">
-              <node concept="2OqwBi" id="7rLNIDElOvJ" role="3clFbG">
-                <node concept="37vLTw" id="7rLNIDElOm9" role="2Oq$k0">
-                  <ref role="3cqZAo" node="7rLNIDElN1R" resolve="editorCellToTextGenConvertor" />
-                </node>
-                <node concept="liA8E" id="7rLNIDElQmx" role="2OqNvi">
-                  <ref role="37wK5l" node="7rLNIDEkB4M" resolve="processEditorCell" />
-                  <node concept="37vLTw" id="7rLNIDElQnX" role="37wK5m">
-                    <ref role="3cqZAo" node="7rLNIDElMj0" resolve="theOnlyEditorCell" />
-                  </node>
-                  <node concept="37vLTw" id="7rLNIDElQuF" role="37wK5m">
-                    <ref role="3cqZAo" node="7rLNIDElMj9" resolve="textGenBuilder" />
-                  </node>
-                  <node concept="2ShNRf" id="7rLNIDElQx9" role="37wK5m">
-                    <node concept="1pGfFk" id="7rLNIDElQxa" role="2ShVmc">
-                      <ref role="37wK5l" node="2G_6976bDXb" resolve="CustomStyleContainer" />
-                      <node concept="37vLTw" id="7rLNIDElQxb" role="37wK5m">
-                        <ref role="3cqZAo" node="7rLNIDElMj0" resolve="theOnlyEditorCell" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbH" id="7rLNIDElQHv" role="3cqZAp" />
             <node concept="3clFbJ" id="7rLNIDElMjl" role="3cqZAp">
               <node concept="3clFbS" id="7rLNIDElMjm" role="3clFbx">
                 <node concept="3clFbF" id="7rLNIDElMjn" role="3cqZAp">
@@ -1662,42 +1662,32 @@
                 </node>
               </node>
             </node>
-            <node concept="3clFbH" id="7rLNIDElQO3" role="3cqZAp" />
-            <node concept="3clFbF" id="16W1RiNSU7e" role="3cqZAp">
-              <node concept="2OqwBi" id="16W1RiNSUDp" role="3clFbG">
-                <node concept="37vLTw" id="16W1RiNSU7c" role="2Oq$k0">
-                  <ref role="3cqZAo" node="7rLNIDElMj9" resolve="textGenBuilder" />
-                </node>
-                <node concept="liA8E" id="16W1RiNSURr" role="2OqNvi">
-                  <ref role="37wK5l" node="16W1RiNpwcV" resolve="optimizeNewLines" />
-                </node>
-              </node>
-            </node>
-            <node concept="3cpWs6" id="7rLNIDElMjv" role="3cqZAp">
-              <node concept="2OqwBi" id="7rLNIDElMjw" role="3cqZAk">
-                <node concept="37vLTw" id="7rLNIDElMjx" role="2Oq$k0">
-                  <ref role="3cqZAo" node="7rLNIDElMj9" resolve="textGenBuilder" />
-                </node>
-                <node concept="liA8E" id="7rLNIDElMjy" role="2OqNvi">
-                  <ref role="37wK5l" node="7rLNIDEiuBU" resolve="getTextGen" />
-                </node>
-              </node>
-            </node>
           </node>
           <node concept="JncvC" id="7rLNIDElMjz" role="JncvA">
             <property role="TrG5h" value="conceptDeclaration" />
             <node concept="2jxLKc" id="7rLNIDElMj$" role="1tU5fm" />
           </node>
         </node>
-        <node concept="3clFbH" id="7rLNIDElMj_" role="3cqZAp" />
-        <node concept="2xdQw9" id="7rLNIDElMjA" role="3cqZAp">
-          <property role="2xdLsb" value="gZ5fksE/warn" />
-          <node concept="Xl_RD" id="7rLNIDElMjB" role="9lYJi">
-            <property role="Xl_RC" value="Unexpected concept type!" />
+        <node concept="3clFbH" id="7rLNIDElQO3" role="3cqZAp" />
+        <node concept="3clFbF" id="16W1RiNSU7e" role="3cqZAp">
+          <node concept="2OqwBi" id="16W1RiNSUDp" role="3clFbG">
+            <node concept="37vLTw" id="16W1RiNSU7c" role="2Oq$k0">
+              <ref role="3cqZAo" node="7rLNIDElMj9" resolve="textGenBuilder" />
+            </node>
+            <node concept="liA8E" id="16W1RiNSURr" role="2OqNvi">
+              <ref role="37wK5l" node="16W1RiNpwcV" resolve="optimizeNewLines" />
+            </node>
           </node>
         </node>
-        <node concept="3cpWs6" id="7rLNIDElMjC" role="3cqZAp">
-          <node concept="10Nm6u" id="7rLNIDElMjD" role="3cqZAk" />
+        <node concept="3cpWs6" id="7rLNIDElMjv" role="3cqZAp">
+          <node concept="2OqwBi" id="7rLNIDElMjw" role="3cqZAk">
+            <node concept="37vLTw" id="7rLNIDElMjx" role="2Oq$k0">
+              <ref role="3cqZAo" node="7rLNIDElMj9" resolve="textGenBuilder" />
+            </node>
+            <node concept="liA8E" id="7rLNIDElMjy" role="2OqNvi">
+              <ref role="37wK5l" node="7rLNIDEiuBU" resolve="getTextGen" />
+            </node>
+          </node>
         </node>
       </node>
       <node concept="3Tqbb2" id="7rLNIDElMjE" role="3clF45">

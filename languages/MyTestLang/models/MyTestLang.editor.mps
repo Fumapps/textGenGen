@@ -864,5 +864,17 @@
       <node concept="l2Vlx" id="6qxTpQspfZC" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="U5CqdlP$Uj">
+    <ref role="1XX52x" to="uanp:U5CqdlP$Ub" resolve="MyInterface" />
+    <node concept="3F0ifn" id="U5CqdlP$Ul" role="2wV5jI">
+      <property role="3F0ifm" value="Interface Concept Editor" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="U5CqdlTiLL">
+    <ref role="1XX52x" to="uanp:U5CqdlTiLD" resolve="MyAbstractElement" />
+    <node concept="3F0ifn" id="U5CqdlTiLN" role="2wV5jI">
+      <property role="3F0ifm" value="Abstract Concept Editor" />
+    </node>
+  </node>
 </model>
 
