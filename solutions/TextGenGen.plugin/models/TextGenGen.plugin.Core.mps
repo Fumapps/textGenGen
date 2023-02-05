@@ -1520,39 +1520,101 @@
     <node concept="3clFb_" id="7rLNIDElMiG" role="jymVt">
       <property role="TrG5h" value="processEditor" />
       <node concept="3clFbS" id="7rLNIDElMiI" role="3clF47">
-        <node concept="2xdQw9" id="7rLNIDElMiJ" role="3cqZAp">
-          <property role="2xdLsb" value="h1akgim/info" />
-          <node concept="3cpWs3" id="7rLNIDElMiK" role="9lYJi">
-            <node concept="2OqwBi" id="7rLNIDElMiL" role="3uHU7w">
-              <node concept="37vLTw" id="7rLNIDElMiM" role="2Oq$k0">
+        <node concept="3clFbF" id="4kObt7Kb9Bl" role="3cqZAp">
+          <node concept="1rXfSq" id="4kObt7Kb9Bk" role="3clFbG">
+            <ref role="37wK5l" node="4kObt7Kb0pR" resolve="processEditorForConcept" />
+            <node concept="2OqwBi" id="4kObt7KbbFB" role="37wK5m">
+              <node concept="37vLTw" id="4kObt7KbbpN" role="2Oq$k0">
                 <ref role="3cqZAo" node="7rLNIDElMjF" resolve="editor" />
               </node>
-              <node concept="3TrcHB" id="7rLNIDElMiN" role="2OqNvi">
+              <node concept="3TrEf2" id="4kObt7Kbcza" role="2OqNvi">
+                <ref role="3Tt5mk" to="tpc2:gXXX56I" resolve="conceptDeclaration" />
+              </node>
+            </node>
+            <node concept="37vLTw" id="4kObt7Kb9Ow" role="37wK5m">
+              <ref role="3cqZAo" node="7rLNIDElMjF" resolve="editor" />
+            </node>
+            <node concept="37vLTw" id="4kObt7KbdVl" role="37wK5m">
+              <ref role="3cqZAo" node="7rLNIDElMjH" resolve="fileExtension" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tqbb2" id="7rLNIDElMjE" role="3clF45">
+        <ref role="ehGHo" to="2omo:hWWtQdD" resolve="ConceptTextGenDeclaration" />
+      </node>
+      <node concept="37vLTG" id="7rLNIDElMjF" role="3clF46">
+        <property role="TrG5h" value="editor" />
+        <node concept="3Tqbb2" id="7rLNIDElMjG" role="1tU5fm">
+          <ref role="ehGHo" to="tpc2:fA4kQeF" resolve="ConceptEditorDeclaration" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="7rLNIDElMjH" role="3clF46">
+        <property role="TrG5h" value="fileExtension" />
+        <node concept="17QB3L" id="7rLNIDElMjI" role="1tU5fm" />
+      </node>
+      <node concept="3Tm1VV" id="7rLNIDElMjJ" role="1B3o_S" />
+      <node concept="2AHcQZ" id="7rLNIDElMzR" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="5uZgeJQPUxf" role="jymVt" />
+    <node concept="2tJIrI" id="5uZgeJQPU$5" role="jymVt" />
+    <node concept="3clFb_" id="4kObt7Kb0pR" role="jymVt">
+      <property role="TrG5h" value="processEditorForConcept" />
+      <node concept="37vLTG" id="4kObt7Kb0pS" role="3clF46">
+        <property role="TrG5h" value="concept" />
+        <node concept="3Tqbb2" id="4kObt7Kb0pT" role="1tU5fm">
+          <ref role="ehGHo" to="tpce:h0PkWnZ" resolve="AbstractConceptDeclaration" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="4kObt7Kb0pU" role="3clF46">
+        <property role="TrG5h" value="editor" />
+        <node concept="3Tqbb2" id="4kObt7Kb0pV" role="1tU5fm">
+          <ref role="ehGHo" to="tpc2:fA4kQeF" resolve="ConceptEditorDeclaration" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="4kObt7Kb0pW" role="3clF46">
+        <property role="TrG5h" value="fileExtension" />
+        <node concept="17QB3L" id="4kObt7Kb0pX" role="1tU5fm" />
+      </node>
+      <node concept="3Tm1VV" id="4kObt7Kb0pY" role="1B3o_S" />
+      <node concept="3Tqbb2" id="4kObt7Kb0q0" role="3clF45">
+        <ref role="ehGHo" to="2omo:hWWtQdD" resolve="ConceptTextGenDeclaration" />
+      </node>
+      <node concept="3clFbS" id="4kObt7Kb0qg" role="3clF47">
+        <node concept="2xdQw9" id="7rLNIDElMiJ" role="3cqZAp">
+          <property role="2xdLsb" value="h1akgim/info" />
+          <node concept="3cpWs3" id="4kObt7Kb6uG" role="9lYJi">
+            <node concept="2OqwBi" id="4kObt7Kb83P" role="3uHU7w">
+              <node concept="37vLTw" id="4kObt7Kb7gQ" role="2Oq$k0">
+                <ref role="3cqZAo" node="4kObt7Kb0pS" resolve="concept" />
+              </node>
+              <node concept="3TrcHB" id="4kObt7Kb8WC" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
               </node>
             </node>
-            <node concept="Xl_RD" id="7rLNIDElMiO" role="3uHU7B">
-              <property role="Xl_RC" value="Processing editor " />
+            <node concept="3cpWs3" id="4kObt7Kb4U_" role="3uHU7B">
+              <node concept="3cpWs3" id="7rLNIDElMiK" role="3uHU7B">
+                <node concept="Xl_RD" id="7rLNIDElMiO" role="3uHU7B">
+                  <property role="Xl_RC" value="Processing editor " />
+                </node>
+                <node concept="2OqwBi" id="7rLNIDElMiL" role="3uHU7w">
+                  <node concept="37vLTw" id="7rLNIDElMiM" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4kObt7Kb0pU" resolve="editor" />
+                  </node>
+                  <node concept="3TrcHB" id="7rLNIDElMiN" role="2OqNvi">
+                    <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                  </node>
+                </node>
+              </node>
+              <node concept="Xl_RD" id="4kObt7Kb5Cg" role="3uHU7w">
+                <property role="Xl_RC" value=" for " />
+              </node>
             </node>
           </node>
         </node>
         <node concept="3clFbH" id="7rLNIDElMiP" role="3cqZAp" />
-        <node concept="3cpWs8" id="7rLNIDElMiQ" role="3cqZAp">
-          <node concept="3cpWsn" id="7rLNIDElMiR" role="3cpWs9">
-            <property role="TrG5h" value="concept" />
-            <node concept="3Tqbb2" id="7rLNIDElMiS" role="1tU5fm">
-              <ref role="ehGHo" to="tpce:h0PkWnZ" resolve="AbstractConceptDeclaration" />
-            </node>
-            <node concept="2OqwBi" id="7rLNIDElMiT" role="33vP2m">
-              <node concept="37vLTw" id="7rLNIDElMiU" role="2Oq$k0">
-                <ref role="3cqZAo" node="7rLNIDElMjF" resolve="editor" />
-              </node>
-              <node concept="3TrEf2" id="7rLNIDElMiV" role="2OqNvi">
-                <ref role="3Tt5mk" to="tpc2:gXXX56I" resolve="conceptDeclaration" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3cpWs8" id="7rLNIDElMiZ" role="3cqZAp">
           <node concept="3cpWsn" id="7rLNIDElMj0" role="3cpWs9">
             <property role="TrG5h" value="theOnlyEditorCell" />
@@ -1562,7 +1624,7 @@
             <node concept="2OqwBi" id="7rLNIDElMj2" role="33vP2m">
               <node concept="2OqwBi" id="7rLNIDElMj3" role="2Oq$k0">
                 <node concept="37vLTw" id="7rLNIDElMj4" role="2Oq$k0">
-                  <ref role="3cqZAo" node="7rLNIDElMjF" resolve="editor" />
+                  <ref role="3cqZAo" node="4kObt7Kb0pU" resolve="editor" />
                 </node>
                 <node concept="3TrEf2" id="7rLNIDElMj5" role="2OqNvi">
                   <ref role="3Tt5mk" to="tpc2:fIwV5gl" resolve="cellModel" />
@@ -1583,7 +1645,7 @@
               <node concept="1pGfFk" id="7rLNIDElMjc" role="2ShVmc">
                 <ref role="37wK5l" node="I2lJUt41lR" resolve="OpenTextGenBuilder" />
                 <node concept="37vLTw" id="7rLNIDElMjd" role="37wK5m">
-                  <ref role="3cqZAo" node="7rLNIDElMiR" resolve="concept" />
+                  <ref role="3cqZAo" node="4kObt7Kb0pS" resolve="concept" />
                 </node>
               </node>
             </node>
@@ -1634,7 +1696,7 @@
         <node concept="Jncv_" id="7rLNIDElMiW" role="3cqZAp">
           <ref role="JncvD" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
           <node concept="37vLTw" id="7rLNIDElMiX" role="JncvB">
-            <ref role="3cqZAo" node="7rLNIDElMiR" resolve="concept" />
+            <ref role="3cqZAo" node="4kObt7Kb0pS" resolve="concept" />
           </node>
           <node concept="3clFbS" id="7rLNIDElMiY" role="Jncv$">
             <node concept="3clFbJ" id="7rLNIDElMjl" role="3cqZAp">
@@ -1647,7 +1709,7 @@
                     <node concept="liA8E" id="7rLNIDElMjq" role="2OqNvi">
                       <ref role="37wK5l" node="7rLNIDEjuZT" resolve="setupAsRootConcept" />
                       <node concept="37vLTw" id="7rLNIDElMjr" role="37wK5m">
-                        <ref role="3cqZAo" node="7rLNIDElMjH" resolve="fileExtension" />
+                        <ref role="3cqZAo" node="4kObt7Kb0pW" resolve="fileExtension" />
                       </node>
                     </node>
                   </node>
@@ -1690,26 +1752,10 @@
           </node>
         </node>
       </node>
-      <node concept="3Tqbb2" id="7rLNIDElMjE" role="3clF45">
-        <ref role="ehGHo" to="2omo:hWWtQdD" resolve="ConceptTextGenDeclaration" />
-      </node>
-      <node concept="37vLTG" id="7rLNIDElMjF" role="3clF46">
-        <property role="TrG5h" value="editor" />
-        <node concept="3Tqbb2" id="7rLNIDElMjG" role="1tU5fm">
-          <ref role="ehGHo" to="tpc2:fA4kQeF" resolve="ConceptEditorDeclaration" />
-        </node>
-      </node>
-      <node concept="37vLTG" id="7rLNIDElMjH" role="3clF46">
-        <property role="TrG5h" value="fileExtension" />
-        <node concept="17QB3L" id="7rLNIDElMjI" role="1tU5fm" />
-      </node>
-      <node concept="3Tm1VV" id="7rLNIDElMjJ" role="1B3o_S" />
-      <node concept="2AHcQZ" id="7rLNIDElMzR" role="2AJF6D">
-        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      <node concept="2AHcQZ" id="4kObt7Kb0qh" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" />
       </node>
     </node>
-    <node concept="2tJIrI" id="5uZgeJQPUxf" role="jymVt" />
-    <node concept="2tJIrI" id="5uZgeJQPU$5" role="jymVt" />
     <node concept="2tJIrI" id="5uZgeJQPUHa" role="jymVt" />
     <node concept="2tJIrI" id="5uZgeJQPUQh" role="jymVt" />
     <node concept="2tJIrI" id="5uZgeJQPUTd" role="jymVt" />
@@ -14080,6 +14126,67 @@
         </node>
         <node concept="TZ5HA" id="5uZgeJQM4RC" role="TZ5H$">
           <node concept="1dT_AC" id="5uZgeJQM4RD" role="1dT_Ay">
+            <property role="1dT_AB" value="parameter of a list of all editors." />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3clFb_" id="4kObt7KaWJk" role="jymVt">
+      <property role="TrG5h" value="processEditorForConcept" />
+      <node concept="37vLTG" id="4kObt7KaWPu" role="3clF46">
+        <property role="TrG5h" value="concept" />
+        <node concept="3Tqbb2" id="4kObt7KaZIn" role="1tU5fm">
+          <ref role="ehGHo" to="tpce:h0PkWnZ" resolve="AbstractConceptDeclaration" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="4kObt7KaWJl" role="3clF46">
+        <property role="TrG5h" value="editor" />
+        <node concept="3Tqbb2" id="4kObt7KaWJm" role="1tU5fm">
+          <ref role="ehGHo" to="tpc2:fA4kQeF" resolve="ConceptEditorDeclaration" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="4kObt7KaWJn" role="3clF46">
+        <property role="TrG5h" value="fileExtension" />
+        <node concept="17QB3L" id="4kObt7KaWJo" role="1tU5fm" />
+      </node>
+      <node concept="3Tm1VV" id="4kObt7KaWJp" role="1B3o_S" />
+      <node concept="3clFbS" id="4kObt7KaWJq" role="3clF47" />
+      <node concept="3Tqbb2" id="4kObt7KaWJr" role="3clF45">
+        <ref role="ehGHo" to="2omo:hWWtQdD" resolve="ConceptTextGenDeclaration" />
+      </node>
+      <node concept="P$JXv" id="4kObt7KaWJs" role="lGtFl">
+        <node concept="TZ5HA" id="4kObt7KaWJt" role="TZ5H$">
+          <node concept="1dT_AC" id="4kObt7KaWJu" role="1dT_Ay">
+            <property role="1dT_AB" value="Creates a concept's TextGen for the given concept's Editor and concept." />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="4kObt7KaWJv" role="TZ5H$">
+          <node concept="1dT_AC" id="4kObt7KaWJw" role="1dT_Ay">
+            <property role="1dT_AB" value="" />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="4kObt7KaWJx" role="TZ5H$">
+          <node concept="1dT_AC" id="4kObt7KaWJy" role="1dT_Ay">
+            <property role="1dT_AB" value="In case the concept is a root concept, the source file generated from the constructed TextGen will have the given" />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="4kObt7KaWJz" role="TZ5H$">
+          <node concept="1dT_AC" id="4kObt7KaWJ$" role="1dT_Ay">
+            <property role="1dT_AB" value="file extension. Otherwise the file extension argument is ignored." />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="4kObt7KaWJ_" role="TZ5H$">
+          <node concept="1dT_AC" id="4kObt7KaWJA" role="1dT_Ay">
+            <property role="1dT_AB" value="" />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="4kObt7KaWJB" role="TZ5H$">
+          <node concept="1dT_AC" id="4kObt7KaWJC" role="1dT_Ay">
+            <property role="1dT_AB" value="Sometimes it is necessary to look at another editor when processing a given editor - thus the &quot;allEditors&quot;" />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="4kObt7KaWJD" role="TZ5H$">
+          <node concept="1dT_AC" id="4kObt7KaWJE" role="1dT_Ay">
             <property role="1dT_AB" value="parameter of a list of all editors." />
           </node>
         </node>

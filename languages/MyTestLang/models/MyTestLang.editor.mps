@@ -32,6 +32,12 @@
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
+      <concept id="1078938745671" name="jetbrains.mps.lang.editor.structure.EditorComponentDeclaration" flags="ig" index="PKFIW">
+        <child id="7033942394258392116" name="overridenEditorComponent" index="1PM95z" />
+      </concept>
+      <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
+        <reference id="1078939183255" name="editorComponent" index="PMmxG" />
+      </concept>
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
@@ -60,6 +66,9 @@
         <child id="16410578721629643" name="emptyCellModel" index="2ruayu" />
       </concept>
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR" />
+      <concept id="7033942394256351208" name="jetbrains.mps.lang.editor.structure.EditorComponentDeclarationReference" flags="ng" index="1PE4EZ">
+        <reference id="7033942394256351817" name="editorComponent" index="1PE7su" />
+      </concept>
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
       </concept>
@@ -90,6 +99,9 @@
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
+        <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
@@ -865,15 +877,49 @@
     </node>
   </node>
   <node concept="24kQdi" id="U5CqdlP$Uj">
+    <property role="3GE5qa" value="Abstract" />
     <ref role="1XX52x" to="uanp:U5CqdlP$Ub" resolve="MyInterface" />
     <node concept="3F0ifn" id="U5CqdlP$Ul" role="2wV5jI">
       <property role="3F0ifm" value="Interface Concept Editor" />
     </node>
   </node>
   <node concept="24kQdi" id="U5CqdlTiLL">
+    <property role="3GE5qa" value="Abstract" />
     <ref role="1XX52x" to="uanp:U5CqdlTiLD" resolve="MyAbstractElement" />
     <node concept="3F0ifn" id="U5CqdlTiLN" role="2wV5jI">
       <property role="3F0ifm" value="Abstract Concept Editor" />
+    </node>
+  </node>
+  <node concept="PKFIW" id="4kObt7K93T3">
+    <property role="TrG5h" value="EditorComponentBase_EditorComponent" />
+    <property role="3GE5qa" value="EditorComponent" />
+    <ref role="1XX52x" to="uanp:4kObt7K93SV" resolve="EditorComponentBase" />
+    <node concept="3F0ifn" id="4kObt7K93T5" role="2wV5jI">
+      <property role="3F0ifm" value="&lt;EditorComponentBase_EditorComponent&gt;" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4kObt7K93Ty">
+    <property role="3GE5qa" value="EditorComponent" />
+    <ref role="1XX52x" to="uanp:4kObt7K93SV" resolve="EditorComponentBase" />
+    <node concept="3EZMnI" id="4kObt7K9x1B" role="2wV5jI">
+      <node concept="3F0ifn" id="4kObt7K9x1O" role="3EZMnx">
+        <property role="3F0ifm" value="Editor:" />
+      </node>
+      <node concept="2iRfu4" id="4kObt7K9x1C" role="2iSdaV" />
+      <node concept="PMmxH" id="4kObt7K93T$" role="3EZMnx">
+        <ref role="PMmxG" node="4kObt7K93T3" resolve="EditorComponentBase_EditorComponent" />
+      </node>
+    </node>
+  </node>
+  <node concept="PKFIW" id="4kObt7K93U_">
+    <property role="3GE5qa" value="EditorComponent" />
+    <property role="TrG5h" value="EditorComponentChildOverride_NoEditor_EditorComponent" />
+    <ref role="1XX52x" to="uanp:4kObt7K93U1" resolve="EditorComponentChildOverride_NoEditor" />
+    <node concept="3F0ifn" id="4kObt7K93V1" role="2wV5jI">
+      <property role="3F0ifm" value="&lt;EditorComponentChildOverride_NoEditor_EditorComponent&gt;" />
+    </node>
+    <node concept="1PE4EZ" id="4kObt7K93V4" role="1PM95z">
+      <ref role="1PE7su" node="4kObt7K93T3" resolve="EditorComponentBase_EditorComponent" />
     </node>
   </node>
 </model>

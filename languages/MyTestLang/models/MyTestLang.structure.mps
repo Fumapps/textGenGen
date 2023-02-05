@@ -317,12 +317,26 @@
   <node concept="PlHQZ" id="U5CqdlP$Ub">
     <property role="EcuMT" value="1046420211325357707" />
     <property role="TrG5h" value="MyInterface" />
+    <property role="3GE5qa" value="Abstract" />
   </node>
   <node concept="1TIwiD" id="U5CqdlTiLD">
     <property role="EcuMT" value="1046420211326332009" />
     <property role="TrG5h" value="MyAbstractElement" />
     <property role="R5$K7" value="true" />
+    <property role="3GE5qa" value="Abstract" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+  </node>
+  <node concept="1TIwiD" id="4kObt7K93SV">
+    <property role="EcuMT" value="4986661067106303547" />
+    <property role="TrG5h" value="EditorComponentBase" />
+    <property role="3GE5qa" value="EditorComponent" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+  </node>
+  <node concept="1TIwiD" id="4kObt7K93U1">
+    <property role="EcuMT" value="4986661067106303617" />
+    <property role="TrG5h" value="EditorComponentChildOverride_NoEditor" />
+    <property role="3GE5qa" value="EditorComponent" />
+    <ref role="1TJDcQ" node="4kObt7K93SV" resolve="EditorComponentBase" />
   </node>
 </model>
 

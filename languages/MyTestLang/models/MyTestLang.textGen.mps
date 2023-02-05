@@ -158,25 +158,67 @@
       <concept id="1176501494711" name="jetbrains.mps.baseLanguage.collections.structure.IsNotEmptyOperation" flags="nn" index="3GX2aA" />
     </language>
   </registry>
-  <node concept="WtQ9Q" id="U5CqdlVKKu">
+  <node concept="WtQ9Q" id="4kObt7K$0AR">
+    <property role="3GE5qa" value="Abstract" />
     <ref role="WuzLi" to="uanp:U5CqdlP$Ub" resolve="MyInterface" />
-    <node concept="11bSqf" id="U5CqdlVKKv" role="11c4hB">
-      <node concept="3clFbS" id="U5CqdlVKKw" role="2VODD2">
-        <node concept="lc7rE" id="U5CqdlVKKz" role="3cqZAp">
-          <node concept="la8eA" id="U5CqdlVKKy" role="lcghm">
+    <node concept="11bSqf" id="4kObt7K$0AS" role="11c4hB">
+      <node concept="3clFbS" id="4kObt7K$0AT" role="2VODD2">
+        <node concept="lc7rE" id="4kObt7K$0AW" role="3cqZAp">
+          <node concept="la8eA" id="4kObt7K$0AV" role="lcghm">
             <property role="lacIc" value="Interface Concept Editor" />
           </node>
         </node>
       </node>
     </node>
   </node>
-  <node concept="WtQ9Q" id="U5CqdlTqhX">
-    <ref role="WuzLi" to="uanp:U5CqdlTiLD" resolve="MyAbstractElement" />
-    <node concept="11bSqf" id="U5CqdlVKKS" role="11c4hB">
-      <node concept="3clFbS" id="U5CqdlVKKT" role="2VODD2">
-        <node concept="lc7rE" id="U5CqdlVKKW" role="3cqZAp">
-          <node concept="la8eA" id="U5CqdlVKKV" role="lcghm">
-            <property role="lacIc" value="Abstract Concept Editor" />
+  <node concept="WtQ9Q" id="4kObt7K$0CG">
+    <property role="3GE5qa" value="EditorComponent" />
+    <ref role="WuzLi" to="uanp:4kObt7K93U1" resolve="EditorComponentChildOverride_NoEditor" />
+    <node concept="11bSqf" id="4kObt7K$0CH" role="11c4hB">
+      <node concept="3clFbS" id="4kObt7K$0CI" role="2VODD2">
+        <node concept="lc7rE" id="4kObt7K$0CM" role="3cqZAp">
+          <node concept="la8eA" id="4kObt7K$0CL" role="lcghm">
+            <property role="lacIc" value="Editor:" />
+          </node>
+          <node concept="la8eA" id="4kObt7K$0D6" role="lcghm">
+            <property role="lacIc" value=" " />
+          </node>
+        </node>
+        <node concept="3SKdUt" id="4kObt7K$0D9" role="3cqZAp">
+          <node concept="1PaTwC" id="4kObt7K$0Db" role="1aUNEU">
+            <node concept="3oM_SD" id="4kObt7K$0Dc" role="1PaTwD">
+              <property role="3oM_SC" value="Editor" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7K$7hv" role="1PaTwD">
+              <property role="3oM_SC" value="component" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7K$7hw" role="1PaTwD">
+              <property role="3oM_SC" value="follows" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7K$7hx" role="1PaTwD">
+              <property role="3oM_SC" value="&gt;&gt;&gt;" />
+            </node>
+          </node>
+        </node>
+        <node concept="lc7rE" id="4kObt7K$0Df" role="3cqZAp">
+          <node concept="la8eA" id="4kObt7K$0De" role="lcghm">
+            <property role="lacIc" value="&lt;EditorComponentBase_EditorComponent&gt;" />
+          </node>
+        </node>
+        <node concept="3SKdUt" id="4kObt7K$0Dy" role="3cqZAp">
+          <node concept="1PaTwC" id="4kObt7K$0D$" role="1aUNEU">
+            <node concept="3oM_SD" id="4kObt7K$0D_" role="1PaTwD">
+              <property role="3oM_SC" value="&lt;&lt;&lt;" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7K$7hB" role="1PaTwD">
+              <property role="3oM_SC" value="Editor" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7K$7hC" role="1PaTwD">
+              <property role="3oM_SC" value="component" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7K$7hD" role="1PaTwD">
+              <property role="3oM_SC" value="ends" />
+            </node>
           </node>
         </node>
       </node>
@@ -3070,6 +3112,54 @@
             <node concept="117lpO" id="17udgDTemBX" role="2Oq$k0" />
             <node concept="2qgKlT" id="17udgDTemBY" role="2OqNvi">
               <ref role="37wK5l" to="tpcu:hEwIMiw" resolve="getPresentation" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="U5CqdlTqhX">
+    <property role="3GE5qa" value="Abstract" />
+    <ref role="WuzLi" to="uanp:U5CqdlTiLD" resolve="MyAbstractElement" />
+    <node concept="11bSqf" id="U5CqdlVKKS" role="11c4hB">
+      <node concept="3clFbS" id="U5CqdlVKKT" role="2VODD2">
+        <node concept="lc7rE" id="U5CqdlVKKW" role="3cqZAp">
+          <node concept="la8eA" id="U5CqdlVKKV" role="lcghm">
+            <property role="lacIc" value="Abstract Concept Editor" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="4kObt7K9CLb">
+    <property role="3GE5qa" value="EditorComponent" />
+    <ref role="WuzLi" to="uanp:4kObt7K93SV" resolve="EditorComponentBase" />
+    <node concept="11bSqf" id="4kObt7K9CLc" role="11c4hB">
+      <node concept="3clFbS" id="4kObt7K9CLd" role="2VODD2">
+        <node concept="lc7rE" id="4kObt7K9CLh" role="3cqZAp">
+          <node concept="la8eA" id="4kObt7K9CLg" role="lcghm">
+            <property role="lacIc" value="Editor:" />
+          </node>
+          <node concept="la8eA" id="4kObt7K9CL_" role="lcghm">
+            <property role="lacIc" value=" " />
+          </node>
+        </node>
+        <node concept="3SKdUt" id="4kObt7K9CLC" role="3cqZAp">
+          <node concept="1PaTwC" id="4kObt7K9CLE" role="1aUNEU">
+            <node concept="3oM_SD" id="4kObt7K9CLF" role="1PaTwD">
+              <property role="3oM_SC" value="Editor component follows &gt;&gt;&gt;" />
+            </node>
+          </node>
+        </node>
+        <node concept="lc7rE" id="4kObt7K9CLI" role="3cqZAp">
+          <node concept="la8eA" id="4kObt7K9CLH" role="lcghm">
+            <property role="lacIc" value="&lt;EditorComponentBase_EditorComponent&gt;" />
+          </node>
+        </node>
+        <node concept="3SKdUt" id="4kObt7K9CM1" role="3cqZAp">
+          <node concept="1PaTwC" id="4kObt7K9CM3" role="1aUNEU">
+            <node concept="3oM_SD" id="4kObt7K9CM4" role="1PaTwD">
+              <property role="3oM_SC" value="&lt;&lt;&lt; Editor component ends" />
             </node>
           </node>
         </node>
