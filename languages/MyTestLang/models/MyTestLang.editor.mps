@@ -922,5 +922,16 @@
       <ref role="1PE7su" node="4kObt7K93T3" resolve="EditorComponentBase_EditorComponent" />
     </node>
   </node>
+  <node concept="PKFIW" id="4kObt7KRfkP">
+    <property role="3GE5qa" value="EditorComponent" />
+    <property role="TrG5h" value="EditorComponentLevel2ChildOverride_NoEditor_EditorComponent" />
+    <ref role="1XX52x" to="uanp:4kObt7KRfjQ" resolve="EditorComponentLevel2ChildOverride_NoEditor" />
+    <node concept="3F0ifn" id="4kObt7KRfoN" role="2wV5jI">
+      <property role="3F0ifm" value="&lt;EditorComponentLevel2ChildOverride_NoEditor&gt;" />
+    </node>
+    <node concept="1PE4EZ" id="4kObt7KZ1KS" role="1PM95z">
+      <ref role="1PE7su" node="4kObt7K93T3" resolve="EditorComponentBase_EditorComponent" />
+    </node>
+  </node>
 </model>
 

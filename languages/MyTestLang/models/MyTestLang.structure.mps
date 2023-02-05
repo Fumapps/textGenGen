@@ -338,5 +338,11 @@
     <property role="3GE5qa" value="EditorComponent" />
     <ref role="1TJDcQ" node="4kObt7K93SV" resolve="EditorComponentBase" />
   </node>
+  <node concept="1TIwiD" id="4kObt7KRfjQ">
+    <property role="EcuMT" value="4986661067118408950" />
+    <property role="TrG5h" value="EditorComponentLevel2ChildOverride_NoEditor" />
+    <property role="3GE5qa" value="EditorComponent" />
+    <ref role="1TJDcQ" node="4kObt7K93U1" resolve="EditorComponentChildOverride_NoEditor" />
+  </node>
 </model>
 

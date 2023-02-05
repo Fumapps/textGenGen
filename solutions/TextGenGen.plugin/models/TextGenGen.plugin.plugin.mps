@@ -2956,6 +2956,40 @@
           </node>
         </node>
         <node concept="3clFbH" id="4kObt7Kbs5X" role="3cqZAp" />
+        <node concept="3SKdUt" id="4kObt7KS6C8" role="3cqZAp">
+          <node concept="1PaTwC" id="4kObt7KS6C9" role="1aUNEU">
+            <node concept="3oM_SD" id="4kObt7KS8SI" role="1PaTwD">
+              <property role="3oM_SC" value="check" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KS8Td" role="1PaTwD">
+              <property role="3oM_SC" value="also" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KS8TC" role="1PaTwD">
+              <property role="3oM_SC" value="concepts" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KS8TG" role="1PaTwD">
+              <property role="3oM_SC" value="which" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KS8TX" role="1PaTwD">
+              <property role="3oM_SC" value="derive" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KS8Uf" role="1PaTwD">
+              <property role="3oM_SC" value="editors," />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KS8Uy" role="1PaTwD">
+              <property role="3oM_SC" value="but" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KS8UE" role="1PaTwD">
+              <property role="3oM_SC" value="define" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KS8UZ" role="1PaTwD">
+              <property role="3oM_SC" value="overridden" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KS8V9" role="1PaTwD">
+              <property role="3oM_SC" value="EditorComponents" />
+            </node>
+          </node>
+        </node>
         <node concept="3cpWs8" id="4kObt7KbgzZ" role="3cqZAp">
           <node concept="3cpWsn" id="4kObt7Kbg$0" role="3cpWs9">
             <property role="TrG5h" value="conceptModel" />
@@ -3675,48 +3709,82 @@
     <node concept="2YIFZL" id="4kObt7Kdznw" role="jymVt">
       <property role="TrG5h" value="getInheritedEditor" />
       <node concept="3clFbS" id="4kObt7Kdznz" role="3clF47">
-        <node concept="1DcWWT" id="4kObt7KdAeZ" role="3cqZAp">
-          <node concept="3cpWsn" id="4kObt7KdAf0" role="1Duv9x">
+        <node concept="3clFbJ" id="4kObt7KVT13" role="3cqZAp">
+          <node concept="3clFbS" id="4kObt7KVT14" role="3clFbx">
+            <node concept="3cpWs6" id="4kObt7KVT15" role="3cqZAp">
+              <node concept="3EllGN" id="4kObt7KVT16" role="3cqZAk">
+                <node concept="37vLTw" id="4kObt7KVT17" role="3ElVtu">
+                  <ref role="3cqZAo" node="4kObt7Kd$0A" resolve="node" />
+                </node>
+                <node concept="37vLTw" id="4kObt7KVT18" role="3ElQJh">
+                  <ref role="3cqZAo" node="4kObt7KjbLD" resolve="conceptToEditorMap" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2OqwBi" id="4kObt7KVT19" role="3clFbw">
+            <node concept="37vLTw" id="4kObt7KVT1a" role="2Oq$k0">
+              <ref role="3cqZAo" node="4kObt7KjbLD" resolve="conceptToEditorMap" />
+            </node>
+            <node concept="2Nt0df" id="4kObt7KVT1b" role="2OqNvi">
+              <node concept="37vLTw" id="4kObt7KVT1c" role="38cxEo">
+                <ref role="3cqZAo" node="4kObt7Kd$0A" resolve="node" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="4kObt7KVYw2" role="3cqZAp" />
+        <node concept="1DcWWT" id="4kObt7KUkuT" role="3cqZAp">
+          <node concept="3cpWsn" id="4kObt7KUkuU" role="1Duv9x">
             <property role="TrG5h" value="superConcept" />
-            <node concept="3Tqbb2" id="4kObt7KdCAe" role="1tU5fm">
+            <node concept="3Tqbb2" id="4kObt7KUkuV" role="1tU5fm">
               <ref role="ehGHo" to="tpce:h0PkWnZ" resolve="AbstractConceptDeclaration" />
             </node>
           </node>
-          <node concept="3clFbS" id="4kObt7KdAf2" role="2LFqv$">
-            <node concept="3clFbJ" id="4kObt7Keg1G" role="3cqZAp">
-              <node concept="3clFbS" id="4kObt7Keg1I" role="3clFbx">
-                <node concept="3cpWs6" id="4kObt7Kzl69" role="3cqZAp">
-                  <node concept="3EllGN" id="4kObt7Kztxl" role="3cqZAk">
-                    <node concept="37vLTw" id="4kObt7KzyVj" role="3ElVtu">
-                      <ref role="3cqZAo" node="4kObt7KdAf0" resolve="superConcept" />
-                    </node>
-                    <node concept="37vLTw" id="4kObt7Kzqwl" role="3ElQJh">
-                      <ref role="3cqZAo" node="4kObt7KjbLD" resolve="conceptToEditorMap" />
-                    </node>
+          <node concept="3clFbS" id="4kObt7KUkuW" role="2LFqv$">
+            <node concept="3cpWs8" id="4kObt7KUSRV" role="3cqZAp">
+              <node concept="3cpWsn" id="4kObt7KUSRW" role="3cpWs9">
+                <property role="TrG5h" value="inheritedEditorBySuperConcept" />
+                <node concept="3Tqbb2" id="4kObt7KURZw" role="1tU5fm">
+                  <ref role="ehGHo" to="tpc2:fA4kQeF" resolve="ConceptEditorDeclaration" />
+                </node>
+                <node concept="1rXfSq" id="4kObt7KUSRX" role="33vP2m">
+                  <ref role="37wK5l" node="4kObt7Kdznw" resolve="getInheritedEditor" />
+                  <node concept="37vLTw" id="4kObt7KUSRY" role="37wK5m">
+                    <ref role="3cqZAo" node="4kObt7KUkuU" resolve="superConcept" />
+                  </node>
+                  <node concept="37vLTw" id="4kObt7KUSRZ" role="37wK5m">
+                    <ref role="3cqZAo" node="4kObt7KjbLD" resolve="conceptToEditorMap" />
                   </node>
                 </node>
               </node>
-              <node concept="2OqwBi" id="4kObt7KlPx_" role="3clFbw">
-                <node concept="37vLTw" id="4kObt7KlIwQ" role="2Oq$k0">
-                  <ref role="3cqZAo" node="4kObt7KjbLD" resolve="conceptToEditorMap" />
-                </node>
-                <node concept="2Nt0df" id="4kObt7KmBkj" role="2OqNvi">
-                  <node concept="37vLTw" id="4kObt7KmFR9" role="38cxEo">
-                    <ref role="3cqZAo" node="4kObt7KdAf0" resolve="superConcept" />
+            </node>
+            <node concept="3clFbJ" id="4kObt7KW_hC" role="3cqZAp">
+              <node concept="3clFbS" id="4kObt7KW_hE" role="3clFbx">
+                <node concept="3cpWs6" id="4kObt7KWX6j" role="3cqZAp">
+                  <node concept="37vLTw" id="4kObt7KX3j8" role="3cqZAk">
+                    <ref role="3cqZAo" node="4kObt7KUSRW" resolve="inheritedEditorBySuperConcept" />
                   </node>
                 </node>
+              </node>
+              <node concept="2OqwBi" id="4kObt7KWLb$" role="3clFbw">
+                <node concept="37vLTw" id="4kObt7KWE$9" role="2Oq$k0">
+                  <ref role="3cqZAo" node="4kObt7KUSRW" resolve="inheritedEditorBySuperConcept" />
+                </node>
+                <node concept="3x8VRR" id="4kObt7KWQOx" role="2OqNvi" />
               </node>
             </node>
           </node>
-          <node concept="2OqwBi" id="4kObt7Kd$L7" role="1DdaDG">
-            <node concept="37vLTw" id="4kObt7Kd$$R" role="2Oq$k0">
+          <node concept="2OqwBi" id="4kObt7KUkv7" role="1DdaDG">
+            <node concept="37vLTw" id="4kObt7KUkv8" role="2Oq$k0">
               <ref role="3cqZAo" node="4kObt7Kd$0A" resolve="node" />
             </node>
-            <node concept="2qgKlT" id="4kObt7Kd_9y" role="2OqNvi">
+            <node concept="2qgKlT" id="4kObt7KUkv9" role="2OqNvi">
               <ref role="37wK5l" to="tpcn:hMuxyK2" resolve="getImmediateSuperconcepts" />
             </node>
           </node>
         </node>
+        <node concept="3clFbH" id="4kObt7KUgjG" role="3cqZAp" />
         <node concept="3cpWs6" id="4kObt7KmL8y" role="3cqZAp">
           <node concept="10Nm6u" id="4kObt7KmLl2" role="3cqZAk" />
         </node>
@@ -3726,7 +3794,7 @@
         <ref role="ehGHo" to="tpc2:fA4kQeF" resolve="ConceptEditorDeclaration" />
       </node>
       <node concept="37vLTG" id="4kObt7Kd$0A" role="3clF46">
-        <property role="TrG5h" value="node" />
+        <property role="TrG5h" value="conceptNode" />
         <node concept="3Tqbb2" id="4kObt7Kd$0E" role="1tU5fm">
           <ref role="ehGHo" to="tpce:h0PkWnZ" resolve="AbstractConceptDeclaration" />
         </node>

@@ -132,6 +132,7 @@
       </concept>
       <concept id="4986661067106303617" name="MyTestLang.structure.EditorComponentChildOverride_NoEditor" flags="ng" index="2P41dg" />
       <concept id="4986661067106303547" name="MyTestLang.structure.EditorComponentBase" flags="ng" index="2P41fE" />
+      <concept id="4986661067118408950" name="MyTestLang.structure.EditorComponentLevel2ChildOverride_NoEditor" flags="ng" index="2PUd$B" />
       <concept id="7019083283238895660" name="MyTestLang.structure.VerticalAndHorizontalList" flags="ng" index="3jfCGy">
         <child id="7019083283238939874" name="elementsHorizontal" index="3jfyvG" />
         <child id="7019083283238895748" name="elementsVertical" index="3jfCIa" />
@@ -886,6 +887,35 @@
           </node>
           <node concept="26ycHw" id="4kObt7K9x2P" role="3tpDZB">
             <property role="26ycAo" value="Editor: &lt;EditorComponentChildOverride_NoEditor_EditorComponent&gt;" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="4kObt7KRSPT" role="1SL9yI">
+      <property role="TrG5h" value="generateNestedLevel2ChildWithoutEditorOverridingEC" />
+      <node concept="3cqZAl" id="4kObt7KRSPU" role="3clF45" />
+      <node concept="3clFbS" id="4kObt7KRSPV" role="3clF47">
+        <node concept="3cpWs8" id="4kObt7KRSPW" role="3cqZAp">
+          <node concept="3cpWsn" id="4kObt7KRSPX" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="4kObt7KRSPY" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="4kObt7KRSPZ" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="4kObt7KRSQ0" role="37wK5m">
+                <node concept="2PUd$B" id="4kObt7KRSTe" role="2c44tc" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="4kObt7KRSQ2" role="3cqZAp">
+          <node concept="37vLTw" id="4kObt7KRSQ3" role="3tpDZA">
+            <ref role="3cqZAo" node="4kObt7KRSPX" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="4kObt7KRSQ4" role="3tpDZB">
+            <property role="26ycAo" value="Editor: &lt;EditorComponentLevel2ChildOverride_NoEditor&gt;" />
           </node>
         </node>
       </node>
