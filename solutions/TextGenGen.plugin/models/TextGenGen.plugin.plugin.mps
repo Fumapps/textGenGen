@@ -3714,7 +3714,7 @@
             <node concept="3cpWs6" id="4kObt7KVT15" role="3cqZAp">
               <node concept="3EllGN" id="4kObt7KVT16" role="3cqZAk">
                 <node concept="37vLTw" id="4kObt7KVT17" role="3ElVtu">
-                  <ref role="3cqZAo" node="4kObt7Kd$0A" resolve="node" />
+                  <ref role="3cqZAo" node="4kObt7Kd$0A" resolve="conceptNode" />
                 </node>
                 <node concept="37vLTw" id="4kObt7KVT18" role="3ElQJh">
                   <ref role="3cqZAo" node="4kObt7KjbLD" resolve="conceptToEditorMap" />
@@ -3728,7 +3728,7 @@
             </node>
             <node concept="2Nt0df" id="4kObt7KVT1b" role="2OqNvi">
               <node concept="37vLTw" id="4kObt7KVT1c" role="38cxEo">
-                <ref role="3cqZAo" node="4kObt7Kd$0A" resolve="node" />
+                <ref role="3cqZAo" node="4kObt7Kd$0A" resolve="conceptNode" />
               </node>
             </node>
           </node>
@@ -3777,7 +3777,7 @@
           </node>
           <node concept="2OqwBi" id="4kObt7KUkv7" role="1DdaDG">
             <node concept="37vLTw" id="4kObt7KUkv8" role="2Oq$k0">
-              <ref role="3cqZAo" node="4kObt7Kd$0A" resolve="node" />
+              <ref role="3cqZAo" node="4kObt7Kd$0A" resolve="conceptNode" />
             </node>
             <node concept="2qgKlT" id="4kObt7KUkv9" role="2OqNvi">
               <ref role="37wK5l" to="tpcn:hMuxyK2" resolve="getImmediateSuperconcepts" />

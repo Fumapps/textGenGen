@@ -1765,7 +1765,7 @@
         </node>
       </node>
       <node concept="2AHcQZ" id="4kObt7Kb0qh" role="2AJF6D">
-        <ref role="2AI5Lk" to="wyt6:~Override" />
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
       </node>
     </node>
     <node concept="2tJIrI" id="5uZgeJQPUHa" role="jymVt" />
@@ -15452,7 +15452,7 @@
               <ref role="ehGHo" to="tpc2:fGPKFH7" resolve="EditorComponentDeclaration" />
             </node>
             <node concept="1rXfSq" id="4kObt7KDklj" role="33vP2m">
-              <ref role="37wK5l" node="4kObt7KDh_e" resolve="recursivelySearchInheritedEditorComponent" />
+              <ref role="37wK5l" node="4kObt7KDh_e" resolve="searchOverriddenEditorComponent" />
               <node concept="37vLTw" id="4kObt7KDklk" role="37wK5m">
                 <ref role="3cqZAo" node="4kObt7KAxf5" resolve="concept" />
               </node>
@@ -15551,7 +15551,7 @@
             <node concept="3cpWs6" id="4kObt7KDh_i" role="3cqZAp">
               <node concept="2OqwBi" id="4kObt7KDh_j" role="3cqZAk">
                 <node concept="37vLTw" id="4kObt7KDh_k" role="2Oq$k0">
-                  <ref role="3cqZAo" node="4kObt7KDhAi" resolve="component" />
+                  <ref role="3cqZAo" node="4kObt7KDhAi" resolve="baseComponentCellModel" />
                 </node>
                 <node concept="3TrEf2" id="4kObt7KDh_l" role="2OqNvi">
                   <ref role="3Tt5mk" to="tpc2:fGPMmyn" resolve="editorComponent" />
@@ -15566,7 +15566,7 @@
             <node concept="2OqwBi" id="4kObt7KDh_o" role="3uHU7B">
               <node concept="2OqwBi" id="4kObt7KDh_p" role="2Oq$k0">
                 <node concept="37vLTw" id="4kObt7KDh_q" role="2Oq$k0">
-                  <ref role="3cqZAo" node="4kObt7KDhAi" resolve="component" />
+                  <ref role="3cqZAo" node="4kObt7KDhAi" resolve="baseComponentCellModel" />
                 </node>
                 <node concept="3TrEf2" id="4kObt7KDh_r" role="2OqNvi">
                   <ref role="3Tt5mk" to="tpc2:fGPMmyn" resolve="editorComponent" />
@@ -15678,13 +15678,13 @@
           <node concept="3clFbS" id="4kObt7KFtT7" role="3clFbx">
             <node concept="3cpWs6" id="4kObt7KFBeS" role="3cqZAp">
               <node concept="37vLTw" id="4kObt7KFDo2" role="3cqZAk">
-                <ref role="3cqZAo" node="4kObt7KDh_I" resolve="node" />
+                <ref role="3cqZAo" node="4kObt7KDh_I" resolve="overriddenEditorComponentOfCurrentConcept" />
               </node>
             </node>
           </node>
           <node concept="2OqwBi" id="4kObt7KFyy0" role="3clFbw">
             <node concept="37vLTw" id="4kObt7KFwk8" role="2Oq$k0">
-              <ref role="3cqZAo" node="4kObt7KDh_I" resolve="node" />
+              <ref role="3cqZAo" node="4kObt7KDh_I" resolve="overriddenEditorComponentOfCurrentConcept" />
             </node>
             <node concept="3x8VRR" id="4kObt7KF$Nj" role="2OqNvi" />
           </node>
@@ -15723,7 +15723,7 @@
                     <ref role="3cqZAo" node="4kObt7KDxX1" resolve="superConcept" />
                   </node>
                   <node concept="37vLTw" id="4kObt7KErka" role="37wK5m">
-                    <ref role="3cqZAo" node="4kObt7KDhAi" resolve="component" />
+                    <ref role="3cqZAo" node="4kObt7KDhAi" resolve="baseComponentCellModel" />
                   </node>
                 </node>
               </node>

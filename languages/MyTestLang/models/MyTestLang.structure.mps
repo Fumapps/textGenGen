@@ -324,13 +324,13 @@
     <property role="TrG5h" value="MyAbstractElement" />
     <property role="R5$K7" value="true" />
     <property role="3GE5qa" value="Abstract" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="4kObt7K93SV">
     <property role="EcuMT" value="4986661067106303547" />
     <property role="TrG5h" value="EditorComponentBase" />
     <property role="3GE5qa" value="EditorComponent" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="4kObt7K93U1">
     <property role="EcuMT" value="4986661067106303617" />
