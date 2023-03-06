@@ -3734,6 +3734,15 @@
           </node>
         </node>
         <node concept="3clFbH" id="4kObt7KVYw2" role="3cqZAp" />
+        <node concept="3cpWs8" id="I_uBWR2uEh" role="3cqZAp">
+          <node concept="3cpWsn" id="I_uBWR2uEi" role="3cpWs9">
+            <property role="TrG5h" value="foundInheritedEditor" />
+            <node concept="3Tqbb2" id="I_uBWR2tW6" role="1tU5fm">
+              <ref role="ehGHo" to="tpc2:fA4kQeF" resolve="ConceptEditorDeclaration" />
+            </node>
+            <node concept="10Nm6u" id="I_uBWR35vM" role="33vP2m" />
+          </node>
+        </node>
         <node concept="1DcWWT" id="4kObt7KUkuT" role="3cqZAp">
           <node concept="3cpWsn" id="4kObt7KUkuU" role="1Duv9x">
             <property role="TrG5h" value="superConcept" />
@@ -3761,9 +3770,55 @@
             </node>
             <node concept="3clFbJ" id="4kObt7KW_hC" role="3cqZAp">
               <node concept="3clFbS" id="4kObt7KW_hE" role="3clFbx">
-                <node concept="3cpWs6" id="4kObt7KWX6j" role="3cqZAp">
-                  <node concept="37vLTw" id="4kObt7KX3j8" role="3cqZAk">
-                    <ref role="3cqZAo" node="4kObt7KUSRW" resolve="inheritedEditorBySuperConcept" />
+                <node concept="3clFbJ" id="I_uBWR3Ccb" role="3cqZAp">
+                  <node concept="3clFbS" id="I_uBWR3Ccd" role="3clFbx">
+                    <node concept="2xdQw9" id="I_uBWR3QDL" role="3cqZAp">
+                      <property role="2xdLsb" value="gZ5fksE/warn" />
+                      <node concept="3cpWs3" id="I_uBWR5gM_" role="9lYJi">
+                        <node concept="2OqwBi" id="I_uBWR5qp_" role="3uHU7w">
+                          <node concept="37vLTw" id="I_uBWR5kOn" role="2Oq$k0">
+                            <ref role="3cqZAo" node="4kObt7KUSRW" resolve="inheritedEditorBySuperConcept" />
+                          </node>
+                          <node concept="3TrcHB" id="I_uBWR5vOV" role="2OqNvi">
+                            <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                          </node>
+                        </node>
+                        <node concept="3cpWs3" id="I_uBWR53TP" role="3uHU7B">
+                          <node concept="3cpWs3" id="I_uBWR4OlD" role="3uHU7B">
+                            <node concept="Xl_RD" id="I_uBWR3QDN" role="3uHU7B">
+                              <property role="Xl_RC" value="Having multiple inherited Editor Components! This might lead to unwanted behavior: " />
+                            </node>
+                            <node concept="2OqwBi" id="I_uBWR4W_$" role="3uHU7w">
+                              <node concept="37vLTw" id="I_uBWR4RLJ" role="2Oq$k0">
+                                <ref role="3cqZAo" node="I_uBWR2uEi" resolve="foundInheritedEditor" />
+                              </node>
+                              <node concept="3TrcHB" id="I_uBWR50cK" role="2OqNvi">
+                                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="Xl_RD" id="I_uBWR57p6" role="3uHU7w">
+                            <property role="Xl_RC" value=" vs. " />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="2OqwBi" id="I_uBWR3J8R" role="3clFbw">
+                    <node concept="37vLTw" id="I_uBWR3Fki" role="2Oq$k0">
+                      <ref role="3cqZAo" node="I_uBWR2uEi" resolve="foundInheritedEditor" />
+                    </node>
+                    <node concept="3x8VRR" id="I_uBWR3MT9" role="2OqNvi" />
+                  </node>
+                </node>
+                <node concept="3clFbF" id="I_uBWR3iMa" role="3cqZAp">
+                  <node concept="37vLTI" id="I_uBWR3lRV" role="3clFbG">
+                    <node concept="37vLTw" id="I_uBWR3pbc" role="37vLTx">
+                      <ref role="3cqZAo" node="4kObt7KUSRW" resolve="inheritedEditorBySuperConcept" />
+                    </node>
+                    <node concept="37vLTw" id="I_uBWR3iM9" role="37vLTJ">
+                      <ref role="3cqZAo" node="I_uBWR2uEi" resolve="foundInheritedEditor" />
+                    </node>
                   </node>
                 </node>
               </node>
@@ -3786,7 +3841,9 @@
         </node>
         <node concept="3clFbH" id="4kObt7KUgjG" role="3cqZAp" />
         <node concept="3cpWs6" id="4kObt7KmL8y" role="3cqZAp">
-          <node concept="10Nm6u" id="4kObt7KmLl2" role="3cqZAk" />
+          <node concept="37vLTw" id="I_uBWR3awj" role="3cqZAk">
+            <ref role="3cqZAo" node="I_uBWR2uEi" resolve="foundInheritedEditor" />
+          </node>
         </node>
       </node>
       <node concept="3Tm6S6" id="4kObt7KdvPy" role="1B3o_S" />
