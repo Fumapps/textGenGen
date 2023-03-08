@@ -344,5 +344,11 @@
     <property role="3GE5qa" value="EditorComponent" />
     <ref role="1TJDcQ" node="4kObt7K93U1" resolve="EditorComponentChildOverride_NoEditor" />
   </node>
+  <node concept="1TIwiD" id="1XRk3e2lGPm">
+    <property role="EcuMT" value="2267369119564614998" />
+    <property role="TrG5h" value="VerticalListWithNestedIndentCollection" />
+    <property role="3GE5qa" value="SimpleCollections" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
 </model>
 

@@ -933,5 +933,21 @@
       <ref role="1PE7su" node="4kObt7K93T3" resolve="EditorComponentBase_EditorComponent" />
     </node>
   </node>
+  <node concept="24kQdi" id="1XRk3e2lGPx">
+    <property role="3GE5qa" value="SimpleCollections" />
+    <ref role="1XX52x" to="uanp:1XRk3e2lGPm" resolve="VerticalListWithNestedIndentCollection" />
+    <node concept="3EZMnI" id="1XRk3e2lGPz" role="2wV5jI">
+      <node concept="3EZMnI" id="1XRk3e2oIBw" role="3EZMnx">
+        <node concept="l2Vlx" id="1XRk3e2oIBx" role="2iSdaV" />
+        <node concept="3F0ifn" id="1XRk3e2lGPH" role="3EZMnx">
+          <property role="3F0ifm" value="first row" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="1XRk3e2lGPK" role="3EZMnx">
+        <property role="3F0ifm" value="second row" />
+      </node>
+      <node concept="2iRkQZ" id="1XRk3e2lGPA" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

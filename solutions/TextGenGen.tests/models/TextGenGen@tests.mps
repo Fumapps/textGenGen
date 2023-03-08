@@ -118,6 +118,7 @@
       <concept id="1890150830797160368" name="MyTestLang.structure.VerticalListWrappedInVerticalLayout" flags="ng" index="2jEtmq">
         <child id="1890150830797160369" name="elementsVertical" index="2jEtmr" />
       </concept>
+      <concept id="2267369119564614998" name="MyTestLang.structure.VerticalListWithNestedIndentCollection" flags="ng" index="2t8pP_" />
       <concept id="2905893502383998497" name="MyTestLang.structure.NestedIndentationWithMultipleChildren" flags="ng" index="2$Tgyv">
         <child id="2905893502383998634" name="base" index="2$Tgwk" />
         <child id="2905893502383998800" name="elements" index="2$TgBI" />
@@ -820,6 +821,35 @@
           </node>
           <node concept="26ycHw" id="1CVayE9$QVd" role="3tpDZB">
             <property role="26ycAo" value="before elements&#10;element A&#10;element B&#10;behind elements" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="1XRk3e2puRU" role="1SL9yI">
+      <property role="TrG5h" value="generateVerticalWithNestedIndentLayout" />
+      <node concept="3cqZAl" id="1XRk3e2puRV" role="3clF45" />
+      <node concept="3clFbS" id="1XRk3e2puRW" role="3clF47">
+        <node concept="3cpWs8" id="1XRk3e2puRX" role="3cqZAp">
+          <node concept="3cpWsn" id="1XRk3e2puRY" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="1XRk3e2puRZ" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="1XRk3e2puS0" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="1XRk3e2puS1" role="37wK5m">
+                <node concept="2t8pP_" id="1XRk3e2puZp" role="2c44tc" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="1XRk3e2puS5" role="3cqZAp">
+          <node concept="37vLTw" id="1XRk3e2puS6" role="3tpDZA">
+            <ref role="3cqZAo" node="1XRk3e2puRY" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="1XRk3e2puS7" role="3tpDZB">
+            <property role="26ycAo" value="first row&#10;second row" />
           </node>
         </node>
       </node>
