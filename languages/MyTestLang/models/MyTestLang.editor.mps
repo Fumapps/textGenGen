@@ -40,9 +40,11 @@
       </concept>
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
+        <child id="1223387335081" name="query" index="3n$kyP" />
       </concept>
       <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
       <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
+      <concept id="1223387125302" name="jetbrains.mps.lang.editor.structure.QueryFunction_Boolean" flags="in" index="3nzxsE" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
         <property id="1139852716018" name="noTargetText" index="1$x2rV" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
@@ -947,6 +949,65 @@
         <property role="3F0ifm" value="second row" />
       </node>
       <node concept="2iRkQZ" id="1XRk3e2lGPA" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="34SKe64hH0s">
+    <property role="3GE5qa" value="Indentation" />
+    <ref role="1XX52x" to="uanp:34SKe64hGZb" resolve="QueryBasedIndentLayoutContainer" />
+    <node concept="3EZMnI" id="34SKe64hH12" role="2wV5jI">
+      <node concept="3F0ifn" id="34SKe64hH19" role="3EZMnx">
+        <property role="3F0ifm" value="elements" />
+        <node concept="ljvvj" id="34SKe64hRaS" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+          <node concept="3nzxsE" id="34SKe64hRb3" role="3n$kyP">
+            <node concept="3clFbS" id="34SKe64hRb4" role="2VODD2">
+              <node concept="3clFbF" id="34SKe64hRbr" role="3cqZAp">
+                <node concept="2OqwBi" id="34SKe64hTvz" role="3clFbG">
+                  <node concept="2OqwBi" id="34SKe64hRok" role="2Oq$k0">
+                    <node concept="pncrf" id="34SKe64hRbq" role="2Oq$k0" />
+                    <node concept="3Tsc0h" id="34SKe64hR_f" role="2OqNvi">
+                      <ref role="3TtcxE" to="uanp:34SKe64hGZc" resolve="elements" />
+                    </node>
+                  </node>
+                  <node concept="3GX2aA" id="34SKe64hVpE" role="2OqNvi" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3F2HdR" id="34SKe64hLxK" role="3EZMnx">
+        <ref role="1NtTu8" to="uanp:34SKe64hGZc" resolve="elements" />
+        <node concept="l2Vlx" id="34SKe64hLxM" role="2czzBx" />
+        <node concept="ljvvj" id="34SKe64hQck" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="34SKe64hQWT" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="34SKe64hLGH" role="3EZMnx">
+        <property role="3F0ifm" value="end" />
+        <node concept="pVoyu" id="34SKe64hLI9" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+          <node concept="3nzxsE" id="34SKe64hLIb" role="3n$kyP">
+            <node concept="3clFbS" id="34SKe64hLIc" role="2VODD2">
+              <node concept="3clFbF" id="34SKe64hLIz" role="3cqZAp">
+                <node concept="2OqwBi" id="34SKe64hObg" role="3clFbG">
+                  <node concept="2OqwBi" id="34SKe64hLVs" role="2Oq$k0">
+                    <node concept="pncrf" id="34SKe64hLIy" role="2Oq$k0" />
+                    <node concept="3Tsc0h" id="34SKe64hM4G" role="2OqNvi">
+                      <ref role="3TtcxE" to="uanp:34SKe64hGZc" resolve="elements" />
+                    </node>
+                  </node>
+                  <node concept="3GX2aA" id="34SKe64hQ7l" role="2OqNvi" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="34SKe64hH15" role="2iSdaV" />
     </node>
   </node>
 </model>

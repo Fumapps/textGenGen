@@ -133,6 +133,9 @@
       </concept>
       <concept id="4986661067106303617" name="MyTestLang.structure.EditorComponentChildOverride_NoEditor" flags="ng" index="2P41dg" />
       <concept id="4986661067106303547" name="MyTestLang.structure.EditorComponentBase" flags="ng" index="2P41fE" />
+      <concept id="3546796781373673419" name="MyTestLang.structure.QueryBasedIndentLayoutContainer" flags="ng" index="2PvwWE">
+        <child id="3546796781373673420" name="elements" index="2PvwWH" />
+      </concept>
       <concept id="4986661067118408950" name="MyTestLang.structure.EditorComponentLevel2ChildOverride_NoEditor" flags="ng" index="2PUd$B" />
       <concept id="7019083283238895660" name="MyTestLang.structure.VerticalAndHorizontalList" flags="ng" index="3jfCGy">
         <child id="7019083283238939874" name="elementsHorizontal" index="3jfyvG" />
@@ -555,6 +558,71 @@
           </node>
           <node concept="26ycHw" id="6qxTpQscq8v" role="3tpDZB">
             <property role="26ycAo" value="{&#10;  element A&#10; &#10;  element B&#10; &#10;  element C&#10;}" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="34SKe64i3Al" role="1SL9yI">
+      <property role="TrG5h" value="generateIndentedWithQueryFalse" />
+      <node concept="3cqZAl" id="34SKe64i3Am" role="3clF45" />
+      <node concept="3clFbS" id="34SKe64i3An" role="3clF47">
+        <node concept="3cpWs8" id="34SKe64i3Ao" role="3cqZAp">
+          <node concept="3cpWsn" id="34SKe64i3Ap" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="34SKe64i3Aq" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="34SKe64i3Ar" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="34SKe64i3As" role="37wK5m">
+                <node concept="2PvwWE" id="34SKe64i3FK" role="2c44tc" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="34SKe64i3Ax" role="3cqZAp">
+          <node concept="37vLTw" id="34SKe64i3Ay" role="3tpDZA">
+            <ref role="3cqZAo" node="34SKe64i3Ap" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="34SKe64i3Az" role="3tpDZB">
+            <property role="26ycAo" value="elements &#10;end" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="34SKe64i3Lw" role="1SL9yI">
+      <property role="TrG5h" value="generateIndentedWithQueryTrue" />
+      <node concept="3cqZAl" id="34SKe64i3Lx" role="3clF45" />
+      <node concept="3clFbS" id="34SKe64i3Ly" role="3clF47">
+        <node concept="3cpWs8" id="34SKe64i3Lz" role="3cqZAp">
+          <node concept="3cpWsn" id="34SKe64i3L$" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="34SKe64i3L_" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="34SKe64i3LA" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="34SKe64i3LB" role="37wK5m">
+                <node concept="2PvwWE" id="34SKe64i3LC" role="2c44tc">
+                  <node concept="3jfCGz" id="34SKe64i3LD" role="2PvwWH">
+                    <property role="TrG5h" value="A" />
+                  </node>
+                  <node concept="3jfCGz" id="34SKe64i3LE" role="2PvwWH">
+                    <property role="TrG5h" value="B" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="34SKe64i3LF" role="3cqZAp">
+          <node concept="37vLTw" id="34SKe64i3LG" role="3tpDZA">
+            <ref role="3cqZAo" node="34SKe64i3L$" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="34SKe64i3LH" role="3tpDZB">
+            <property role="26ycAo" value="elements&#10;  element A element B&#10;end" />
           </node>
         </node>
       </node>

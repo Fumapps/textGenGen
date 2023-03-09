@@ -158,6 +158,91 @@
       <concept id="1176501494711" name="jetbrains.mps.baseLanguage.collections.structure.IsNotEmptyOperation" flags="nn" index="3GX2aA" />
     </language>
   </registry>
+  <node concept="WtQ9Q" id="34SKe64ibDb">
+    <property role="3GE5qa" value="Indentation" />
+    <ref role="WuzLi" to="uanp:34SKe64hGZb" resolve="QueryBasedIndentLayoutContainer" />
+    <node concept="11bSqf" id="34SKe64ibDc" role="11c4hB">
+      <node concept="3clFbS" id="34SKe64ibDd" role="2VODD2">
+        <node concept="lc7rE" id="34SKe64ibDh" role="3cqZAp">
+          <node concept="la8eA" id="34SKe64ibDg" role="lcghm">
+            <property role="lacIc" value="elements" />
+          </node>
+          <node concept="la8eA" id="34SKe64ibD_" role="lcghm">
+            <property role="lacIc" value=" " />
+          </node>
+        </node>
+        <node concept="2Gpval" id="34SKe64ibEM" role="3cqZAp">
+          <node concept="2GrKxI" id="34SKe64ibDH" role="2Gsz3X">
+            <property role="TrG5h" value="elem" />
+          </node>
+          <node concept="3clFbS" id="34SKe64ibEL" role="2LFqv$">
+            <node concept="3clFbJ" id="34SKe64ibE9" role="3cqZAp">
+              <node concept="2OqwBi" id="34SKe64ibDK" role="3clFbw">
+                <node concept="2OqwBi" id="34SKe64ibDL" role="2Oq$k0">
+                  <node concept="2GrUjf" id="34SKe64ibDJ" role="2Oq$k0">
+                    <ref role="2Gs0qQ" node="34SKe64ibDH" resolve="elem" />
+                  </node>
+                  <node concept="YBYNd" id="34SKe64ibDM" role="2OqNvi" />
+                </node>
+                <node concept="3w_OXm" id="34SKe64ibDN" role="2OqNvi" />
+              </node>
+              <node concept="3clFbS" id="34SKe64ibEc" role="3clFbx">
+                <node concept="11p84A" id="34SKe64ibDZ" role="3cqZAp" />
+                <node concept="11pn5k" id="34SKe64ibE0" role="3cqZAp" />
+              </node>
+            </node>
+            <node concept="lc7rE" id="34SKe64ibEf" role="3cqZAp">
+              <node concept="l9hG8" id="34SKe64ibEd" role="lcghm">
+                <node concept="2GrUjf" id="34SKe64ibEe" role="lb14g">
+                  <ref role="2Gs0qQ" node="34SKe64ibDH" resolve="elem" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbJ" id="34SKe64ibEH" role="3cqZAp">
+              <node concept="2OqwBi" id="34SKe64ibED" role="3clFbw">
+                <node concept="2OqwBi" id="34SKe64ibEE" role="2Oq$k0">
+                  <node concept="YCak7" id="34SKe64ibEF" role="2OqNvi" />
+                  <node concept="2GrUjf" id="34SKe64ibEC" role="2Oq$k0">
+                    <ref role="2Gs0qQ" node="34SKe64ibDH" resolve="elem" />
+                  </node>
+                </node>
+                <node concept="3x8VRR" id="34SKe64ibEG" role="2OqNvi" />
+              </node>
+              <node concept="3clFbS" id="34SKe64ibEK" role="3clFbx">
+                <node concept="3SKdUt" id="34SKe64ibEy" role="3cqZAp">
+                  <node concept="1PaTwC" id="34SKe64ibE$" role="1aUNEU">
+                    <node concept="3oM_SD" id="34SKe64ibE_" role="1PaTwD">
+                      <property role="3oM_SC" value="horizontal child collection: insert spaces between the elements" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="lc7rE" id="34SKe64ibEB" role="3cqZAp">
+                  <node concept="la8eA" id="34SKe64ibEA" role="lcghm">
+                    <property role="lacIc" value=" " />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2OqwBi" id="34SKe64ibDG" role="2GsD0m">
+            <node concept="117lpO" id="34SKe64ibDF" role="2Oq$k0" />
+            <node concept="3Tsc0h" id="34SKe64ibDC" role="2OqNvi">
+              <ref role="3TtcxE" to="uanp:34SKe64hGZc" resolve="elements" />
+            </node>
+          </node>
+        </node>
+        <node concept="lc7rE" id="34SKe64ibEN" role="3cqZAp">
+          <node concept="l8MVK" id="34SKe64ibEO" role="lcghm" />
+        </node>
+        <node concept="1bpajm" id="34SKe64ibF2" role="3cqZAp" />
+        <node concept="lc7rE" id="34SKe64ibES" role="3cqZAp">
+          <node concept="la8eA" id="34SKe64ibER" role="lcghm">
+            <property role="lacIc" value="end" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
   <node concept="WtQ9Q" id="6mdmM7w16wM">
     <ref role="WuzLi" to="uanp:65CMKUMl$0H" resolve="Element" />
     <node concept="11bSqf" id="6mdmM7w16wN" role="11c4hB">
