@@ -3134,13 +3134,19 @@
   <node concept="WtQ9Q" id="1XRk3e2lOSG">
     <property role="3GE5qa" value="SimpleCollections" />
     <ref role="WuzLi" to="uanp:1XRk3e2lGPm" resolve="VerticalListWithNestedIndentCollection" />
-    <node concept="11bSqf" id="1XRk3e2oQiU" role="11c4hB">
-      <node concept="3clFbS" id="1XRk3e2oQiV" role="2VODD2">
-        <node concept="lc7rE" id="1XRk3e2oQj0" role="3cqZAp">
-          <node concept="la8eA" id="1XRk3e2oQiZ" role="lcghm">
+    <node concept="11bSqf" id="34SKe64cgB5" role="11c4hB">
+      <node concept="3clFbS" id="34SKe64cgB6" role="2VODD2">
+        <node concept="lc7rE" id="34SKe64cgBb" role="3cqZAp">
+          <node concept="la8eA" id="34SKe64cgBa" role="lcghm">
             <property role="lacIc" value="first row" />
           </node>
-          <node concept="la8eA" id="1XRk3e2oQjl" role="lcghm">
+        </node>
+        <node concept="lc7rE" id="34SKe64cgBo" role="3cqZAp">
+          <node concept="l8MVK" id="34SKe64cgBp" role="lcghm" />
+        </node>
+        <node concept="1bpajm" id="34SKe64cgBF" role="3cqZAp" />
+        <node concept="lc7rE" id="34SKe64cgBx" role="3cqZAp">
+          <node concept="la8eA" id="34SKe64cgBw" role="lcghm">
             <property role="lacIc" value="second row" />
           </node>
         </node>

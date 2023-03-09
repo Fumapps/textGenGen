@@ -11697,6 +11697,12 @@
           <ref role="3uigEE" node="7rLNIDE74Wf" resolve="TextGenBuilder" />
         </node>
       </node>
+      <node concept="37vLTG" id="34SKe64a7$c" role="3clF46">
+        <property role="TrG5h" value="parentNodeStyle" />
+        <node concept="3uibUv" id="34SKe64a7$d" role="1tU5fm">
+          <ref role="3uigEE" node="2G_6976bDNN" resolve="CustomStyleContainer" />
+        </node>
+      </node>
       <node concept="3cqZAl" id="7rLNIDEkE_0" role="3clF45" />
       <node concept="3Tm1VV" id="7rLNIDEkE_1" role="1B3o_S" />
       <node concept="3clFbS" id="7rLNIDEkE_2" role="3clF47" />
@@ -11917,6 +11923,9 @@
                 </node>
                 <node concept="37vLTw" id="7rLNIDEldl8" role="37wK5m">
                   <ref role="3cqZAo" node="7rLNIDEldkz" resolve="auxBuilder" />
+                </node>
+                <node concept="37vLTw" id="34SKe64aDS$" role="37wK5m">
+                  <ref role="3cqZAo" node="7rLNIDEldnk" resolve="nodeStyle" />
                 </node>
               </node>
             </node>
@@ -12353,9 +12362,9 @@
             </node>
             <node concept="2ShNRf" id="7rLNIDEkX$E" role="33vP2m">
               <node concept="1pGfFk" id="7rLNIDEkX$F" role="2ShVmc">
-                <ref role="37wK5l" node="2G_6976bDXb" resolve="CustomStyleContainer" />
+                <ref role="37wK5l" node="1CVayE9Rnxl" resolve="CustomStyleContainer" />
                 <node concept="37vLTw" id="7rLNIDEkX$G" role="37wK5m">
-                  <ref role="3cqZAo" node="7rLNIDEkXCU" resolve="collection" />
+                  <ref role="3cqZAo" node="34SKe64af9f" resolve="parentNodeStyle" />
                 </node>
               </node>
             </node>
@@ -12791,6 +12800,12 @@
         <property role="TrG5h" value="textGenBuilder" />
         <node concept="3uibUv" id="7rLNIDEkXCX" role="1tU5fm">
           <ref role="3uigEE" node="7rLNIDE74Wf" resolve="TextGenBuilder" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="34SKe64af9f" role="3clF46">
+        <property role="TrG5h" value="parentNodeStyle" />
+        <node concept="3uibUv" id="34SKe64af9g" role="1tU5fm">
+          <ref role="3uigEE" node="2G_6976bDNN" resolve="CustomStyleContainer" />
         </node>
       </node>
       <node concept="3Tm1VV" id="7rLNIDEkXD5" role="1B3o_S" />
