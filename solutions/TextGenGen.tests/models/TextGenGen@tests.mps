@@ -586,7 +586,7 @@
             <ref role="3cqZAo" node="34SKe64i3Ap" resolve="actual" />
           </node>
           <node concept="26ycHw" id="34SKe64i3Az" role="3tpDZB">
-            <property role="26ycAo" value="elements &#10;end" />
+            <property role="26ycAo" value="elements&#10;---- end" />
           </node>
         </node>
       </node>
@@ -622,7 +622,7 @@
             <ref role="3cqZAo" node="34SKe64i3L$" resolve="actual" />
           </node>
           <node concept="26ycHw" id="34SKe64i3LH" role="3tpDZB">
-            <property role="26ycAo" value="elements&#10;  element A element B&#10;end" />
+            <property role="26ycAo" value="elements&#10;  element A element B&#10;---- &#10;end" />
           </node>
         </node>
       </node>
