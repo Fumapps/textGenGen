@@ -15,7 +15,7 @@
     <import index="z1c3" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.project(MPS.Core/)" />
     <import index="lui2" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.module(MPS.OpenAPI/)" />
     <import index="ao3" ref="7124e466-fc92-4803-a656-d7a6b7eb3910/java:jetbrains.mps.text(MPS.TextGen/)" />
-    <import index="f3iy" ref="r:18174dbd-0754-447b-a8db-d3eb6899efb7(TextGenGen.plugin)" />
+    <import index="f3iy" ref="r:18174dbd-0754-447b-a8db-d3eb6899efb7(TextGenGen.plugin.plugin)" />
     <import index="w1kc" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel(MPS.Core/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
@@ -118,6 +118,7 @@
       <concept id="1890150830797160368" name="MyTestLang.structure.VerticalListWrappedInVerticalLayout" flags="ng" index="2jEtmq">
         <child id="1890150830797160369" name="elementsVertical" index="2jEtmr" />
       </concept>
+      <concept id="2267369119564614998" name="MyTestLang.structure.VerticalListWithNestedIndentCollection" flags="ng" index="2t8pP_" />
       <concept id="2905893502383998497" name="MyTestLang.structure.NestedIndentationWithMultipleChildren" flags="ng" index="2$Tgyv">
         <child id="2905893502383998634" name="base" index="2$Tgwk" />
         <child id="2905893502383998800" name="elements" index="2$TgBI" />
@@ -130,6 +131,12 @@
         <property id="2905893502389925110" name="id" index="2_gJD8" />
         <property id="2905893502389925108" name="name" index="2_gJDa" />
       </concept>
+      <concept id="4986661067106303617" name="MyTestLang.structure.EditorComponentChildOverride_NoEditor" flags="ng" index="2P41dg" />
+      <concept id="4986661067106303547" name="MyTestLang.structure.EditorComponentBase" flags="ng" index="2P41fE" />
+      <concept id="3546796781373673419" name="MyTestLang.structure.QueryBasedIndentLayoutContainer" flags="ng" index="2PvwWE">
+        <child id="3546796781373673420" name="elements" index="2PvwWH" />
+      </concept>
+      <concept id="4986661067118408950" name="MyTestLang.structure.EditorComponentLevel2ChildOverride_NoEditor" flags="ng" index="2PUd$B" />
       <concept id="7019083283238895660" name="MyTestLang.structure.VerticalAndHorizontalList" flags="ng" index="3jfCGy">
         <child id="7019083283238939874" name="elementsHorizontal" index="3jfyvG" />
         <child id="7019083283238895748" name="elementsVertical" index="3jfCIa" />
@@ -555,6 +562,71 @@
         </node>
       </node>
     </node>
+    <node concept="1LZb2c" id="34SKe64i3Al" role="1SL9yI">
+      <property role="TrG5h" value="generateIndentedWithQueryFalse" />
+      <node concept="3cqZAl" id="34SKe64i3Am" role="3clF45" />
+      <node concept="3clFbS" id="34SKe64i3An" role="3clF47">
+        <node concept="3cpWs8" id="34SKe64i3Ao" role="3cqZAp">
+          <node concept="3cpWsn" id="34SKe64i3Ap" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="34SKe64i3Aq" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="34SKe64i3Ar" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="34SKe64i3As" role="37wK5m">
+                <node concept="2PvwWE" id="34SKe64i3FK" role="2c44tc" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="34SKe64i3Ax" role="3cqZAp">
+          <node concept="37vLTw" id="34SKe64i3Ay" role="3tpDZA">
+            <ref role="3cqZAo" node="34SKe64i3Ap" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="34SKe64i3Az" role="3tpDZB">
+            <property role="26ycAo" value="elements&#10;---- end" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="34SKe64i3Lw" role="1SL9yI">
+      <property role="TrG5h" value="generateIndentedWithQueryTrue" />
+      <node concept="3cqZAl" id="34SKe64i3Lx" role="3clF45" />
+      <node concept="3clFbS" id="34SKe64i3Ly" role="3clF47">
+        <node concept="3cpWs8" id="34SKe64i3Lz" role="3cqZAp">
+          <node concept="3cpWsn" id="34SKe64i3L$" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="34SKe64i3L_" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="34SKe64i3LA" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="34SKe64i3LB" role="37wK5m">
+                <node concept="2PvwWE" id="34SKe64i3LC" role="2c44tc">
+                  <node concept="3jfCGz" id="34SKe64i3LD" role="2PvwWH">
+                    <property role="TrG5h" value="A" />
+                  </node>
+                  <node concept="3jfCGz" id="34SKe64i3LE" role="2PvwWH">
+                    <property role="TrG5h" value="B" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="34SKe64i3LF" role="3cqZAp">
+          <node concept="37vLTw" id="34SKe64i3LG" role="3tpDZA">
+            <ref role="3cqZAo" node="34SKe64i3L$" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="34SKe64i3LH" role="3tpDZB">
+            <property role="26ycAo" value="elements&#10;  element A element B&#10;---- &#10;end" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="0EjCn" id="3fc6q90dWE" role="0EEgL">
       <node concept="3clFbS" id="3fc6q90dWF" role="2VODD2" />
     </node>
@@ -585,7 +657,7 @@
             <ref role="3cqZAo" node="6qxTpQspg55" resolve="actual" />
           </node>
           <node concept="26ycHw" id="6qxTpQspg5d" role="3tpDZB">
-            <property role="26ycAo" value="/* punctuation left */&#10;/* punctuation left  constant */&#10;&#10;/* punctuation right  suffix */ B&#10;/* punctuation right  constant only */&#10;&#10;  /* indent punctuation left */&#10;  /* indent punctuation left  constant */&#10;&#10;   element&#10;  &lt;empty&gt; element" />
+            <property role="26ycAo" value="/* punctuation left */&#10;/* punctuation left  constant */&#10;&#10;/* punctuation right  suffix */ B&#10;/* punctuation right  constant only */&#10;&#10;  /* indent punctuation left */&#10;  /* indent punctuation left  constant */&#10;&#10;   element&#10;  &lt;empty&gt; element&#10;  element&#10;  element&#10;  &lt;empty&gt;  element" />
           </node>
         </node>
       </node>
@@ -821,12 +893,134 @@
         </node>
       </node>
     </node>
+    <node concept="1LZb2c" id="1XRk3e2puRU" role="1SL9yI">
+      <property role="TrG5h" value="generateVerticalWithNestedIndentLayout" />
+      <node concept="3cqZAl" id="1XRk3e2puRV" role="3clF45" />
+      <node concept="3clFbS" id="1XRk3e2puRW" role="3clF47">
+        <node concept="3cpWs8" id="1XRk3e2puRX" role="3cqZAp">
+          <node concept="3cpWsn" id="1XRk3e2puRY" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="1XRk3e2puRZ" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="1XRk3e2puS0" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="1XRk3e2puS1" role="37wK5m">
+                <node concept="2t8pP_" id="1XRk3e2puZp" role="2c44tc" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="1XRk3e2puS5" role="3cqZAp">
+          <node concept="37vLTw" id="1XRk3e2puS6" role="3tpDZA">
+            <ref role="3cqZAo" node="1XRk3e2puRY" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="1XRk3e2puS7" role="3tpDZB">
+            <property role="26ycAo" value="first row&#10;second row" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="0EjCn" id="45AuIz7SC0P" role="0EEgL">
       <node concept="3clFbS" id="45AuIz7SC0Q" role="2VODD2" />
     </node>
   </node>
   <node concept="2XOHcx" id="45AuIz7SBrW">
     <property role="2XOHcw" value="${project_home}" />
+  </node>
+  <node concept="1lH9Xt" id="4kObt7K9wAf">
+    <property role="TrG5h" value="EditorComponentTextGenTests" />
+    <node concept="1LZb2c" id="4kObt7K9wAg" role="1SL9yI">
+      <property role="TrG5h" value="generateBaseWithEditorUsingEC" />
+      <node concept="3cqZAl" id="4kObt7K9wAh" role="3clF45" />
+      <node concept="3clFbS" id="4kObt7K9wAi" role="3clF47">
+        <node concept="3cpWs8" id="4kObt7K9wAj" role="3cqZAp">
+          <node concept="3cpWsn" id="4kObt7K9wAk" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="4kObt7K9wAl" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="4kObt7K9wAm" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="4kObt7K9wAn" role="37wK5m">
+                <node concept="2P41fE" id="4kObt7K9wZ8" role="2c44tc" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="4kObt7K9wAq" role="3cqZAp">
+          <node concept="37vLTw" id="4kObt7K9wAr" role="3tpDZA">
+            <ref role="3cqZAo" node="4kObt7K9wAk" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="4kObt7K9wAs" role="3tpDZB">
+            <property role="26ycAo" value="Editor: &lt;EditorComponentBase_EditorComponent&gt;" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="4kObt7K9x2E" role="1SL9yI">
+      <property role="TrG5h" value="generateChildWithoutEditorOverridingEC" />
+      <node concept="3cqZAl" id="4kObt7K9x2F" role="3clF45" />
+      <node concept="3clFbS" id="4kObt7K9x2G" role="3clF47">
+        <node concept="3cpWs8" id="4kObt7K9x2H" role="3cqZAp">
+          <node concept="3cpWsn" id="4kObt7K9x2I" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="4kObt7K9x2J" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="4kObt7K9x2K" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="4kObt7K9x2L" role="37wK5m">
+                <node concept="2P41dg" id="4kObt7K9x6d" role="2c44tc" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="4kObt7K9x2N" role="3cqZAp">
+          <node concept="37vLTw" id="4kObt7K9x2O" role="3tpDZA">
+            <ref role="3cqZAo" node="4kObt7K9x2I" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="4kObt7K9x2P" role="3tpDZB">
+            <property role="26ycAo" value="Editor: &lt;EditorComponentChildOverride_NoEditor_EditorComponent&gt;" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="4kObt7KRSPT" role="1SL9yI">
+      <property role="TrG5h" value="generateNestedLevel2ChildWithoutEditorOverridingEC" />
+      <node concept="3cqZAl" id="4kObt7KRSPU" role="3clF45" />
+      <node concept="3clFbS" id="4kObt7KRSPV" role="3clF47">
+        <node concept="3cpWs8" id="4kObt7KRSPW" role="3cqZAp">
+          <node concept="3cpWsn" id="4kObt7KRSPX" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="3uibUv" id="4kObt7KRSPY" role="1tU5fm">
+              <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+            </node>
+            <node concept="2YIFZM" id="4kObt7KRSPZ" role="33vP2m">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="2c44tf" id="4kObt7KRSQ0" role="37wK5m">
+                <node concept="2PUd$B" id="4kObt7KRSTe" role="2c44tc" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="4kObt7KRSQ2" role="3cqZAp">
+          <node concept="37vLTw" id="4kObt7KRSQ3" role="3tpDZA">
+            <ref role="3cqZAo" node="4kObt7KRSPX" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="4kObt7KRSQ4" role="3tpDZB">
+            <property role="26ycAo" value="Editor: &lt;EditorComponentLevel2ChildOverride_NoEditor&gt;" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="0EjCn" id="4kObt7K9wCq" role="0EEgL">
+      <node concept="3clFbS" id="4kObt7K9wCr" role="2VODD2" />
+    </node>
   </node>
 </model>
 
