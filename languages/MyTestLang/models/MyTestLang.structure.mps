@@ -317,12 +317,51 @@
   <node concept="PlHQZ" id="U5CqdlP$Ub">
     <property role="EcuMT" value="1046420211325357707" />
     <property role="TrG5h" value="MyInterface" />
+    <property role="3GE5qa" value="Abstract" />
   </node>
   <node concept="1TIwiD" id="U5CqdlTiLD">
     <property role="EcuMT" value="1046420211326332009" />
     <property role="TrG5h" value="MyAbstractElement" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <property role="3GE5qa" value="Abstract" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="4kObt7K93SV">
+    <property role="EcuMT" value="4986661067106303547" />
+    <property role="TrG5h" value="EditorComponentBase" />
+    <property role="3GE5qa" value="EditorComponent" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="4kObt7K93U1">
+    <property role="EcuMT" value="4986661067106303617" />
+    <property role="TrG5h" value="EditorComponentChildOverride_NoEditor" />
+    <property role="3GE5qa" value="EditorComponent" />
+    <ref role="1TJDcQ" node="4kObt7K93SV" resolve="EditorComponentBase" />
+  </node>
+  <node concept="1TIwiD" id="4kObt7KRfjQ">
+    <property role="EcuMT" value="4986661067118408950" />
+    <property role="TrG5h" value="EditorComponentLevel2ChildOverride_NoEditor" />
+    <property role="3GE5qa" value="EditorComponent" />
+    <ref role="1TJDcQ" node="4kObt7K93U1" resolve="EditorComponentChildOverride_NoEditor" />
+  </node>
+  <node concept="1TIwiD" id="1XRk3e2lGPm">
+    <property role="EcuMT" value="2267369119564614998" />
+    <property role="TrG5h" value="VerticalListWithNestedIndentCollection" />
+    <property role="3GE5qa" value="SimpleCollections" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="34SKe64hGZb">
+    <property role="EcuMT" value="3546796781373673419" />
+    <property role="TrG5h" value="QueryBasedIndentLayoutContainer" />
+    <property role="3GE5qa" value="Indentation" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="34SKe64hGZc" role="1TKVEi">
+      <property role="IQ2ns" value="3546796781373673420" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="elements" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
   </node>
 </model>
 
