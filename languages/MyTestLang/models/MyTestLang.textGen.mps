@@ -3396,59 +3396,6 @@
       </node>
     </node>
   </node>
-  <node concept="WtQ9Q" id="4kObt7K$0CG">
-    <property role="3GE5qa" value="EditorComponent" />
-    <ref role="WuzLi" to="uanp:4kObt7K93U1" resolve="EditorComponentChildOverride_NoEditor" />
-    <node concept="11bSqf" id="4kObt7KOoC_" role="11c4hB">
-      <node concept="3clFbS" id="4kObt7KOoCA" role="2VODD2">
-        <node concept="lc7rE" id="4kObt7KOoCE" role="3cqZAp">
-          <node concept="la8eA" id="4kObt7KOoCD" role="lcghm">
-            <property role="lacIc" value="Editor:" />
-          </node>
-          <node concept="la8eA" id="4kObt7KOoCY" role="lcghm">
-            <property role="lacIc" value=" " />
-          </node>
-        </node>
-        <node concept="3SKdUt" id="4kObt7KOoD1" role="3cqZAp">
-          <node concept="1PaTwC" id="4kObt7KOoD3" role="1aUNEU">
-            <node concept="3oM_SD" id="4kObt7KOoD4" role="1PaTwD">
-              <property role="3oM_SC" value="Editor" />
-            </node>
-            <node concept="3oM_SD" id="4kObt7KORHQ" role="1PaTwD">
-              <property role="3oM_SC" value="component" />
-            </node>
-            <node concept="3oM_SD" id="4kObt7KORHR" role="1PaTwD">
-              <property role="3oM_SC" value="follows" />
-            </node>
-            <node concept="3oM_SD" id="4kObt7KORHS" role="1PaTwD">
-              <property role="3oM_SC" value="&gt;&gt;&gt;" />
-            </node>
-          </node>
-        </node>
-        <node concept="lc7rE" id="4kObt7KOoD7" role="3cqZAp">
-          <node concept="la8eA" id="4kObt7KOoD6" role="lcghm">
-            <property role="lacIc" value="&lt;EditorComponentChildOverride_NoEditor_EditorComponent&gt;" />
-          </node>
-        </node>
-        <node concept="3SKdUt" id="4kObt7KOoDq" role="3cqZAp">
-          <node concept="1PaTwC" id="4kObt7KOoDs" role="1aUNEU">
-            <node concept="3oM_SD" id="4kObt7KOoDt" role="1PaTwD">
-              <property role="3oM_SC" value="&lt;&lt;&lt;" />
-            </node>
-            <node concept="3oM_SD" id="4kObt7KORHI" role="1PaTwD">
-              <property role="3oM_SC" value="Editor" />
-            </node>
-            <node concept="3oM_SD" id="4kObt7KORHJ" role="1PaTwD">
-              <property role="3oM_SC" value="component" />
-            </node>
-            <node concept="3oM_SD" id="4kObt7KORHK" role="1PaTwD">
-              <property role="3oM_SC" value="ends" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="WtQ9Q" id="4kObt7KXLWz">
     <property role="3GE5qa" value="EditorComponent" />
     <ref role="WuzLi" to="uanp:4kObt7KRfjQ" resolve="EditorComponentLevel2ChildOverride_NoEditor" />
@@ -3495,6 +3442,59 @@
               <property role="3oM_SC" value="component" />
             </node>
             <node concept="3oM_SD" id="4kObt7KZgdn" role="1PaTwD">
+              <property role="3oM_SC" value="ends" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="4kObt7K$0CG">
+    <property role="3GE5qa" value="EditorComponent" />
+    <ref role="WuzLi" to="uanp:4kObt7K93U1" resolve="EditorComponentChildOverride_NoEditor" />
+    <node concept="11bSqf" id="4kObt7KOoC_" role="11c4hB">
+      <node concept="3clFbS" id="4kObt7KOoCA" role="2VODD2">
+        <node concept="lc7rE" id="4kObt7KOoCE" role="3cqZAp">
+          <node concept="la8eA" id="4kObt7KOoCD" role="lcghm">
+            <property role="lacIc" value="Editor:" />
+          </node>
+          <node concept="la8eA" id="4kObt7KOoCY" role="lcghm">
+            <property role="lacIc" value=" " />
+          </node>
+        </node>
+        <node concept="3SKdUt" id="4kObt7KOoD1" role="3cqZAp">
+          <node concept="1PaTwC" id="4kObt7KOoD3" role="1aUNEU">
+            <node concept="3oM_SD" id="4kObt7KOoD4" role="1PaTwD">
+              <property role="3oM_SC" value="Editor" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KORHQ" role="1PaTwD">
+              <property role="3oM_SC" value="component" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KORHR" role="1PaTwD">
+              <property role="3oM_SC" value="follows" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KORHS" role="1PaTwD">
+              <property role="3oM_SC" value="&gt;&gt;&gt;" />
+            </node>
+          </node>
+        </node>
+        <node concept="lc7rE" id="4kObt7KOoD7" role="3cqZAp">
+          <node concept="la8eA" id="4kObt7KOoD6" role="lcghm">
+            <property role="lacIc" value="&lt;EditorComponentChildOverride_NoEditor_EditorComponent&gt;" />
+          </node>
+        </node>
+        <node concept="3SKdUt" id="4kObt7KOoDq" role="3cqZAp">
+          <node concept="1PaTwC" id="4kObt7KOoDs" role="1aUNEU">
+            <node concept="3oM_SD" id="4kObt7KOoDt" role="1PaTwD">
+              <property role="3oM_SC" value="&lt;&lt;&lt;" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KORHI" role="1PaTwD">
+              <property role="3oM_SC" value="Editor" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KORHJ" role="1PaTwD">
+              <property role="3oM_SC" value="component" />
+            </node>
+            <node concept="3oM_SD" id="4kObt7KORHK" role="1PaTwD">
               <property role="3oM_SC" value="ends" />
             </node>
           </node>

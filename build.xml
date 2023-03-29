@@ -54,12 +54,12 @@
         <id>TextGenGen</id>
         <name>TextGenGen (fum)</name>
         <description>Plugin for generation of the TextGen aspect from the Editor aspect aiming for generation of source code in the same form as the presentation rendered by the Editor.</description>
-        <version>2021.3.2</version>
+        <version>2022.2</version>
         <depends>jetbrains.mps.core</depends>
         <depends>de.slisson.mps.editor.multiline</depends>
         <description>Editor to TextGen convertor</description>
         <vendor>JetBrains</vendor>
-        <idea-version since-build="212.1" until-build="213.9999" />
+        <idea-version since-build="222" until-build="222.9999" />
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -74,12 +74,12 @@
         <id>TextGenGen</id>
         <name>TextGenGen (fum)</name>
         <description>Plugin for generation of the TextGen aspect from the Editor aspect aiming for generation of source code in the same form as the presentation rendered by the Editor.</description>
-        <version>2021.3.2</version>
+        <version>2022.2</version>
         <depends>jetbrains.mps.core</depends>
         <depends>de.slisson.mps.editor.multiline</depends>
         <description>Editor to TextGen convertor</description>
         <vendor>JetBrains</vendor>
-        <idea-version since-build="212.1" until-build="213.9999" />
+        <idea-version since-build="222" until-build="222.9999" />
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -132,6 +132,7 @@
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="7124e466-fc92-4803-a656-d7a6b7eb3910(MPS.TextGen)" kind="rt" />
           <module ref="86441d7a-e194-42da-81a5-2161ec62a379(MPS.Workbench)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
@@ -277,6 +278,7 @@
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="31c91def-a131-41a1-9018-102874f49a12(de.slisson.mps.editor.multiline)" kind="cl" />
           <module ref="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" kind="cl" />
+          <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
         </dependencies>
         <uses>
@@ -328,6 +330,7 @@
         <dependencies>
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="215c4c45-ba99-49f5-9ab7-4b6901a63cfd(MPS.Generator)" kind="rt" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
@@ -397,6 +400,7 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" kind="rt" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
+          <module ref="7124e466-fc92-4803-a656-d7a6b7eb3910(MPS.TextGen)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
@@ -409,6 +413,7 @@
           <module ref="9abaaae2-decf-4e97-bf80-9109e8b759cc(jetbrains.mps.lang.messages.api)" kind="rt" />
           <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" kind="rt" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
+          <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
         </dependencies>
         <uses>
@@ -460,6 +465,7 @@
         <dependencies>
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" kind="rt" />
+          <module ref="215c4c45-ba99-49f5-9ab7-4b6901a63cfd(MPS.Generator)" kind="rt" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
@@ -752,7 +758,6 @@
         <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-references.jar" />
         <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-boot-util.jar" />
         <fileset file="${artifacts.mps}/lib/mps-context.jar" />
         <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
@@ -766,12 +771,16 @@
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <fileset file="${project_home}/java_src/lib/editorToText.jar" />
-        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
-        <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/app.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
-        <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
+        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/util_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/forms_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/java-impl.jar" />
+        <fileset file="${artifacts.mps}/lib/jps-model.jar" />
+        <fileset file="${artifacts.mps}/lib/testFramework.jar" />
+        <fileset file="${artifacts.mps}/lib/stats.jar" />
+        <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.classifiers.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
@@ -812,7 +821,6 @@
         <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-references.jar" />
         <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-boot-util.jar" />
         <fileset file="${artifacts.mps}/lib/mps-context.jar" />
         <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
@@ -829,12 +837,16 @@
         <fileset file="${artifacts.mps}/lib/mps-test.jar" />
         <fileset file="${artifacts.mps}/lib/ant/lib/ant.jar" />
         <fileset file="${artifacts.mps}/lib/junit4.jar" />
-        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
-        <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/app.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
-        <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
+        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/util_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/forms_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/java-impl.jar" />
+        <fileset file="${artifacts.mps}/lib/jps-model.jar" />
+        <fileset file="${artifacts.mps}/lib/testFramework.jar" />
+        <fileset file="${artifacts.mps}/lib/stats.jar" />
+        <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.classifiers.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
@@ -875,21 +887,23 @@
         <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-references.jar" />
         <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-boot-util.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
         <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
         <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
-        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/app.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
-        <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
+        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/util_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/forms_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/java-impl.jar" />
+        <fileset file="${artifacts.mps}/lib/jps-model.jar" />
+        <fileset file="${artifacts.mps}/lib/testFramework.jar" />
+        <fileset file="${artifacts.mps}/lib/stats.jar" />
         <fileset file="${artifacts.de.itemis.mps.extensions}/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.runtime.jar" />
         <fileset file="${artifacts.de.itemis.mps.extensions}/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.styles.jar" />
         <fileset file="${artifacts.de.itemis.mps.extensions}/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.jar" />
@@ -941,22 +955,24 @@
         <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-references.jar" />
         <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-boot-util.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
         <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
         <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
         <pathelement path="${build.tmp}/java/out/BaseLanguageMultiLineExtension" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
-        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/app.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
-        <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
+        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/util_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/forms_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/java-impl.jar" />
+        <fileset file="${artifacts.mps}/lib/jps-model.jar" />
+        <fileset file="${artifacts.mps}/lib/testFramework.jar" />
+        <fileset file="${artifacts.mps}/lib/stats.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
@@ -993,21 +1009,24 @@
         <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-references.jar" />
         <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-boot-util.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
         <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
         <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
-        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/app.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
-        <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
+        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/util_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/forms_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/java-impl.jar" />
+        <fileset file="${artifacts.mps}/lib/jps-model.jar" />
+        <fileset file="${artifacts.mps}/lib/testFramework.jar" />
+        <fileset file="${artifacts.mps}/lib/stats.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
@@ -1043,22 +1062,25 @@
         <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-references.jar" />
         <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-boot-util.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
         <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
         <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
         <pathelement path="${build.tmp}/java/out/MyTestLang" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
-        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/app.jar" />
         <fileset file="${artifacts.mps}/lib/3rd-party-rt.jar" />
-        <fileset file="${artifacts.mps}/lib/3rd-party.jar" />
-        <fileset file="${artifacts.mps}/lib/eclipse.jar" />
+        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/util_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/forms_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/java-impl.jar" />
+        <fileset file="${artifacts.mps}/lib/jps-model.jar" />
+        <fileset file="${artifacts.mps}/lib/testFramework.jar" />
+        <fileset file="${artifacts.mps}/lib/stats.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
       </classpath>
@@ -1120,6 +1142,7 @@
       <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
       <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.dataFlow.jar" />
       <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
+      <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.jar" />
       <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.editor.jar" />
       <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.findUsages.jar" />
       <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.generator.generationContext.jar" />
@@ -1192,7 +1215,7 @@
       <pathelement location="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/TextGenGen.javastubs.jar" />
       <pathelement location="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/TextGenGen.plugin.jar" />
     </path>
-    <pathconvert pathsep="${path.separator}" property="mps.libraries.path.string" refid="mps.libraries.path" />
+    <pathconvert property="mps.libraries.path.string" refid="mps.libraries.path" />
     <path id="mps.plugins.path">
       <pathelement location="${artifacts.de.itemis.mps.extensions}/de-itemis-mps-selection" />
       <pathelement location="${artifacts.de.itemis.mps.extensions}/de.itemis.mps.celllayout" />
@@ -1208,14 +1231,9 @@
       <pathelement location="${artifacts.mps}/plugins/svn4idea" />
       <pathelement location="${build.tmp}/default/TextGenGen.zip/TextGenGen (fum)" />
     </path>
-    <pathconvert pathsep="${path.separator}" property="mps.plugins.path.string" refid="mps.plugins.path" />
+    <pathconvert property="mps.plugins.path.string" refid="mps.plugins.path" />
     <path location="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/TextGenGen.tests.jar" id="mps.tests.path" />
-    <pathconvert pathsep="${path.separator}" property="mps.tests.path.string" refid="mps.tests.path" />
-    <patternset id="plugin.deployed.jars">
-      <include name="lib/**/*.jar" />
-      <include name="languages/**/*.jar" />
-      <exclude name="**/*-src.jar" />
-    </patternset>
+    <pathconvert property="mps.tests.path.string" refid="mps.tests.path" />
     <path id="long.class.path">
       <fileset dir="${artifacts.mps}/lib">
         <include name="**/*.jar" />
@@ -1243,12 +1261,44 @@
       <jvmarg value="-XX:+HeapDumpOnOutOfMemoryError" />
       <jvmarg value="-Didea.config.path=${build.mps.config.path}" />
       <jvmarg value="-Didea.system.path=${build.mps.system.path}" />
+      <jvmarg value="--add-opens=java.base/java.io=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.base/java.lang=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.base/java.lang.reflect=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.base/java.net=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.base/java.nio=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.base/java.nio.charset=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.base/java.text=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.base/java.time=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.base/java.util=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.base/java.util.concurrent=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.base/jdk.internal.vm=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.base/sun.nio.ch=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.base/sun.security.ssl=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.base/sun.security.util=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/com.apple.eawt=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/com.apple.eawt.event=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/com.apple.laf=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/java.awt=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/java.awt.dnd.peer=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/java.awt.event=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/java.awt.image=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/java.awt.peer=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/javax.swing=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/javax.swing.text.html=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/sun.awt.datatransfer=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/sun.awt.image=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/sun.awt=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/sun.font=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/sun.java2d=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=java.desktop/sun.swing=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=jdk.attach/sun.tools.attach=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED" />
+      <jvmarg value="--add-opens=jdk.jdi/com.sun.tools.jdi=ALL-UNNAMED" />
       
-      <classpath>
-        <fileset dir="${build.tmp}">
-          <include name="mps.class.path.jar" />
-        </fileset>
-      </classpath>
+      <classpath location="${build.tmp}/mps.class.path.jar" />
       
       <env key="NO_FS_ROOTS_ACCESS_CHECK" value="true" />
       
