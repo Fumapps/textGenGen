@@ -38,6 +38,7 @@
       <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
         <reference id="1078939183255" name="editorComponent" index="PMmxG" />
       </concept>
+      <concept id="4323500428121233431" name="jetbrains.mps.lang.editor.structure.EditorCellId" flags="ng" index="2SqB2G" />
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
         <child id="1223387335081" name="query" index="3n$kyP" />
@@ -51,6 +52,7 @@
       </concept>
       <concept id="1073389214265" name="jetbrains.mps.lang.editor.structure.EditorCellModel" flags="ng" index="3EYTF0">
         <child id="1142887637401" name="renderingCondition" index="pqm2j" />
+        <child id="4323500428121274054" name="id" index="2SqHTX" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
         <child id="1106270802874" name="cellLayout" index="2iSdaV" />
@@ -1011,6 +1013,37 @@
         </node>
       </node>
       <node concept="l2Vlx" id="34SKe64hH15" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2zq5iUT9_pB">
+    <property role="3GE5qa" value="Ignore" />
+    <ref role="1XX52x" to="uanp:2zq5iUT9_oV" resolve="IgnoreTextGenGen" />
+    <node concept="3EZMnI" id="2zq5iUT9_pD" role="2wV5jI">
+      <node concept="3F0ifn" id="2zq5iUT9_pK" role="3EZMnx">
+        <property role="3F0ifm" value="ignore 1" />
+        <node concept="2SqB2G" id="2zq5iUT9_qw" role="2SqHTX">
+          <property role="TrG5h" value="ignoreTextGenGen" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="2zq5iUT9_pQ" role="3EZMnx">
+        <property role="3F0ifm" value="start" />
+      </node>
+      <node concept="3F0ifn" id="2zq5iUT9_q3" role="3EZMnx">
+        <property role="3F0ifm" value="ignore 2" />
+        <node concept="2SqB2G" id="2zq5iUT9_qy" role="2SqHTX">
+          <property role="TrG5h" value="ignoreTextGenGen" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="2zq5iUT9_qd" role="3EZMnx">
+        <property role="3F0ifm" value="end" />
+      </node>
+      <node concept="3F0ifn" id="2zq5iUT9_qp" role="3EZMnx">
+        <property role="3F0ifm" value="ignore3" />
+        <node concept="2SqB2G" id="2zq5iUT9_q$" role="2SqHTX">
+          <property role="TrG5h" value="ignoreTextGenGen" />
+        </node>
+      </node>
+      <node concept="2iRfu4" id="2zq5iUT9_pG" role="2iSdaV" />
     </node>
   </node>
 </model>

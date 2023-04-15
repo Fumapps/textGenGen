@@ -16,6 +16,7 @@
     <dependency reexport="false">8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)</dependency>
     <dependency reexport="false">7124e466-fc92-4803-a656-d7a6b7eb3910(MPS.TextGen)</dependency>
     <dependency reexport="false">2429ba7e-dca6-48f7-8628-d00e9ac44245(TextGenGen.plugin)</dependency>
+    <dependency reexport="false">0cdfd95d-2a2e-4a75-bc35-936584bdb36d(MyTestLang)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:96079a67-4e46-4b1b-97c9-8c28477d84d6:BaseLanguageMultiLineExtension" version="0" />
@@ -38,8 +39,10 @@
     <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
     <module reference="7124e466-fc92-4803-a656-d7a6b7eb3910(MPS.TextGen)" version="0" />
+    <module reference="0cdfd95d-2a2e-4a75-bc35-936584bdb36d(MyTestLang)" version="0" />
     <module reference="2429ba7e-dca6-48f7-8628-d00e9ac44245(TextGenGen.plugin)" version="0" />
     <module reference="d8ae93b1-2e40-410e-a11f-644a80ab5009(TextGenGen.tests)" version="0" />
+    <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
   </dependencyVersions>
 </solution>
 
