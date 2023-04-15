@@ -259,6 +259,11 @@ task extractJbrToMpsBundle {
             from tarTree(jbrArchive)
             into file("$targetFolderName")
         }
+        // the zip file might contain a folder like "jbr_jcef-17.0.5-x64-b469", but we always need "jbr"
+        def jbrFolder = file("$targetFolderName").listFiles().find { it.name.startsWith("jbr") && it.isDirectory() }
+        if (jbrFolder != null) {
+            jbrFolder.renameTo(file("$targetFolderName/jbr"))
+        }
     }
 }
 
