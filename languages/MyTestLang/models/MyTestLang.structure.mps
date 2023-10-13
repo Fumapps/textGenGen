@@ -405,10 +405,8 @@
     <property role="EcuMT" value="3001005799609552010" />
     <property role="TrG5h" value="ConstantGrammarCellElement" />
     <property role="3GE5qa" value="Grammarcells" />
+    <property role="34LRSv" value="my constant" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
-    <node concept="PrWs8" id="2A_HHZIBkMb" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
   </node>
   <node concept="1TIwiD" id="2A_HHZIC5$f">
     <property role="EcuMT" value="3001005799609751823" />
