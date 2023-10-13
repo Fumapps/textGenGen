@@ -148,6 +148,7 @@
         <property id="3001005799609752449" name="myFlag" index="371uPu" />
       </concept>
       <concept id="3001005799609552010" name="MyTestLang.structure.ConstantGrammarCellElement" flags="ng" index="37efDl" />
+      <concept id="3001005799609430069" name="MyTestLang.structure.WrapGrammarCellElement" flags="ng" index="37fGrE" />
       <concept id="7019083283238895660" name="MyTestLang.structure.VerticalAndHorizontalList" flags="ng" index="3jfCGy">
         <child id="7019083283238939874" name="elementsHorizontal" index="3jfyvG" />
         <child id="7019083283238895748" name="elementsVertical" index="3jfCIa" />
@@ -1512,6 +1513,45 @@
           </node>
           <node concept="26ycHw" id="2A_HHZJE0Yy" role="3tpDZB">
             <property role="26ycAo" value="my constant" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="2A_HHZJSqpP" role="1SL9yI">
+      <property role="TrG5h" value="generateGrammarWrapCell" />
+      <node concept="3cqZAl" id="2A_HHZJSqpQ" role="3clF45" />
+      <node concept="3clFbS" id="2A_HHZJSqpR" role="3clF47">
+        <node concept="3clFbF" id="2A_HHZJSqpS" role="3cqZAp">
+          <node concept="2OqwBi" id="2A_HHZJSqpT" role="3clFbG">
+            <node concept="2WthIp" id="2A_HHZJSqpU" role="2Oq$k0" />
+            <node concept="2XshWL" id="2A_HHZJSqpV" role="2OqNvi">
+              <ref role="2WH_rO" node="2A_HHZICX7M" resolve="generateTextGen" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="2A_HHZJSqpW" role="3cqZAp">
+          <node concept="3cpWsn" id="2A_HHZJSqpX" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="2OqwBi" id="2A_HHZJSqpY" role="33vP2m">
+              <node concept="2WthIp" id="2A_HHZJSqpZ" role="2Oq$k0" />
+              <node concept="2XshWL" id="2A_HHZJSqq0" role="2OqNvi">
+                <ref role="2WH_rO" node="2A_HHZICX9Q" resolve="generateToText" />
+                <node concept="2c44tf" id="2A_HHZJSqq1" role="2XxRq1">
+                  <node concept="37fGrE" id="2A_HHZJSqCA" role="2c44tc">
+                    <property role="TrG5h" value="my node" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="17QB3L" id="2A_HHZJSqq3" role="1tU5fm" />
+          </node>
+        </node>
+        <node concept="3vlDli" id="2A_HHZJSqq4" role="3cqZAp">
+          <node concept="37vLTw" id="2A_HHZJSqq5" role="3tpDZA">
+            <ref role="3cqZAo" node="2A_HHZJSqpX" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="2A_HHZJSqq6" role="3tpDZB">
+            <property role="26ycAo" value="my node" />
           </node>
         </node>
       </node>
