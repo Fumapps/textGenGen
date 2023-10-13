@@ -383,5 +383,74 @@
       <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
     </node>
   </node>
+  <node concept="1TIwiD" id="2A_HHZIAR0P">
+    <property role="EcuMT" value="3001005799609430069" />
+    <property role="TrG5h" value="WrapGrammarCellElement" />
+    <property role="3GE5qa" value="Grammarcells" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="2A_HHZIBhKs" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2A_HHZIBk4$">
+    <property role="EcuMT" value="3001005799609549092" />
+    <property role="TrG5h" value="SplittableGrammarCellElement" />
+    <property role="3GE5qa" value="Grammarcells" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="2A_HHZIBk4_" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2A_HHZIBkMa">
+    <property role="EcuMT" value="3001005799609552010" />
+    <property role="TrG5h" value="ConstantGrammarCellElement" />
+    <property role="3GE5qa" value="Grammarcells" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="2A_HHZIBkMb" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2A_HHZIC5$f">
+    <property role="EcuMT" value="3001005799609751823" />
+    <property role="TrG5h" value="FlagGrammarCellElement" />
+    <property role="3GE5qa" value="Grammarcells" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="2A_HHZIC5I1" role="1TKVEl">
+      <property role="IQ2nx" value="3001005799609752449" />
+      <property role="TrG5h" value="myFlag" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2A_HHZIC63A">
+    <property role="EcuMT" value="3001005799609753830" />
+    <property role="TrG5h" value="OptionalGrammarCellElement" />
+    <property role="3GE5qa" value="Grammarcells" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="2A_HHZIC6S2" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2A_HHZICw6B">
+    <property role="EcuMT" value="3001005799609860519" />
+    <property role="TrG5h" value="BracketGrammarCellElement" />
+    <property role="3GE5qa" value="Grammarcells" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="2A_HHZICw6C" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="2A_HHZICwBY" role="1TKVEi">
+      <property role="IQ2ns" value="3001005799609862654" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="element" />
+      <ref role="20lvS9" node="2A_HHZICwqL" resolve="DummyElement" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2A_HHZICwqL">
+    <property role="EcuMT" value="3001005799609861809" />
+    <property role="3GE5qa" value="Grammarcells" />
+    <property role="TrG5h" value="DummyElement" />
+    <property role="34LRSv" value="dummy" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+  </node>
 </model>
 
