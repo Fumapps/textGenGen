@@ -144,6 +144,9 @@
         <child id="3546796781373673420" name="elements" index="2PvwWH" />
       </concept>
       <concept id="4986661067118408950" name="MyTestLang.structure.EditorComponentLevel2ChildOverride_NoEditor" flags="ng" index="2PUd$B" />
+      <concept id="3001005799609751823" name="MyTestLang.structure.FlagGrammarCellElement" flags="ng" index="371uZg">
+        <property id="3001005799609752449" name="myFlag" index="371uPu" />
+      </concept>
       <concept id="7019083283238895660" name="MyTestLang.structure.VerticalAndHorizontalList" flags="ng" index="3jfCGy">
         <child id="7019083283238939874" name="elementsHorizontal" index="3jfyvG" />
         <child id="7019083283238895748" name="elementsVertical" index="3jfCIa" />
@@ -1333,6 +1336,181 @@
     </node>
     <node concept="0EjCn" id="2zq5iUT9_5L" role="0EEgL">
       <node concept="3clFbS" id="2zq5iUT9_5M" role="2VODD2" />
+    </node>
+  </node>
+  <node concept="1lH9Xt" id="2A_HHZICX7L">
+    <property role="TrG5h" value="GrammarCellsTextGenTests" />
+    <property role="3DII0k" value="2hh8MJdVwqX/command" />
+    <node concept="2XrIbr" id="2A_HHZICX7M" role="1qtyYc">
+      <property role="TrG5h" value="generateTextGen" />
+      <node concept="3cqZAl" id="2A_HHZICX7N" role="3clF45" />
+      <node concept="3clFbS" id="2A_HHZICX7O" role="3clF47">
+        <node concept="3cpWs8" id="2A_HHZICX7P" role="3cqZAp">
+          <node concept="3cpWsn" id="2A_HHZICX7Q" role="3cpWs9">
+            <property role="TrG5h" value="language" />
+            <node concept="3uibUv" id="2A_HHZICX7R" role="1tU5fm">
+              <ref role="3uigEE" to="w1kc:~Language" resolve="Language" />
+            </node>
+            <node concept="10QFUN" id="2A_HHZICX7S" role="33vP2m">
+              <node concept="3uibUv" id="2A_HHZICX7T" role="10QFUM">
+                <ref role="3uigEE" to="w1kc:~Language" resolve="Language" />
+              </node>
+              <node concept="2OqwBi" id="2A_HHZICX7U" role="10QFUP">
+                <node concept="37shsh" id="2A_HHZICX7V" role="2Oq$k0">
+                  <node concept="1dCxOk" id="2A_HHZICX7W" role="37shsm">
+                    <property role="1XweGW" value="0cdfd95d-2a2e-4a75-bc35-936584bdb36d" />
+                    <property role="1XxBO9" value="MyTestLang" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="2A_HHZICX7X" role="2OqNvi">
+                  <ref role="37wK5l" to="lui2:~SModuleReference.resolve(org.jetbrains.mps.openapi.module.SRepository)" resolve="resolve" />
+                  <node concept="2OqwBi" id="2A_HHZICX7Y" role="37wK5m">
+                    <node concept="1jxXqW" id="2A_HHZICX7Z" role="2Oq$k0" />
+                    <node concept="liA8E" id="2A_HHZICX80" role="2OqNvi">
+                      <ref role="37wK5l" to="z1c3:~Project.getRepository()" resolve="getRepository" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="2A_HHZICX81" role="3cqZAp">
+          <node concept="2YIFZM" id="2A_HHZICX82" role="3clFbG">
+            <ref role="37wK5l" to="f3iy:45AuIz7TzDv" resolve="generateTextGen" />
+            <ref role="1Pybhc" to="f3iy:45AuIz7TwwE" resolve="TextGenGenerationProcessor" />
+            <node concept="37vLTw" id="2A_HHZICX83" role="37wK5m">
+              <ref role="3cqZAo" node="2A_HHZICX7Q" resolve="language" />
+            </node>
+            <node concept="1jxXqW" id="2A_HHZICX84" role="37wK5m" />
+            <node concept="1bVj0M" id="2A_HHZICX85" role="37wK5m">
+              <node concept="37vLTG" id="2A_HHZICX86" role="1bW2Oz">
+                <property role="TrG5h" value="ignore" />
+                <node concept="3uibUv" id="2A_HHZICX87" role="1tU5fm">
+                  <ref role="3uigEE" to="f3iy:45AuIz7TE7m" resolve="Result" />
+                </node>
+              </node>
+              <node concept="3clFbS" id="2A_HHZICX88" role="1bW5cS" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm6S6" id="2A_HHZICX89" role="1B3o_S" />
+      <node concept="3uibUv" id="2A_HHZICX8a" role="Sfmx6">
+        <ref role="3uigEE" to="wyt6:~InterruptedException" resolve="InterruptedException" />
+      </node>
+    </node>
+    <node concept="1LZb2c" id="2A_HHZICX8b" role="1SL9yI">
+      <property role="TrG5h" value="generateFlagCell_false" />
+      <node concept="3cqZAl" id="2A_HHZICX8c" role="3clF45" />
+      <node concept="3clFbS" id="2A_HHZICX8d" role="3clF47">
+        <node concept="3clFbF" id="2A_HHZICX8e" role="3cqZAp">
+          <node concept="2OqwBi" id="2A_HHZICX8f" role="3clFbG">
+            <node concept="2WthIp" id="2A_HHZICX8g" role="2Oq$k0" />
+            <node concept="2XshWL" id="2A_HHZICX8h" role="2OqNvi">
+              <ref role="2WH_rO" node="2A_HHZICX7M" resolve="generateTextGen" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="2A_HHZICX8i" role="3cqZAp">
+          <node concept="3cpWsn" id="2A_HHZICX8j" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="2OqwBi" id="2A_HHZICX8k" role="33vP2m">
+              <node concept="2WthIp" id="2A_HHZICX8l" role="2Oq$k0" />
+              <node concept="2XshWL" id="2A_HHZICX8m" role="2OqNvi">
+                <ref role="2WH_rO" node="2A_HHZICX9Q" resolve="generateToText" />
+                <node concept="2c44tf" id="2A_HHZICX8n" role="2XxRq1">
+                  <node concept="371uZg" id="2A_HHZIDMs$" role="2c44tc">
+                    <property role="371uPu" value="false" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="17QB3L" id="2A_HHZICX8t" role="1tU5fm" />
+          </node>
+        </node>
+        <node concept="3vlDli" id="2A_HHZICX8u" role="3cqZAp">
+          <node concept="37vLTw" id="2A_HHZICX8v" role="3tpDZA">
+            <ref role="3cqZAo" node="2A_HHZICX8j" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="2A_HHZICX8w" role="3tpDZB">
+            <property role="26ycAo" value="f:  !f: myFlag f':  !f': &lt;custom&gt;" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="2A_HHZIEduC" role="1SL9yI">
+      <property role="TrG5h" value="generateFlagCell_true" />
+      <node concept="3cqZAl" id="2A_HHZIEduD" role="3clF45" />
+      <node concept="3clFbS" id="2A_HHZIEduE" role="3clF47">
+        <node concept="3clFbF" id="2A_HHZIEduF" role="3cqZAp">
+          <node concept="2OqwBi" id="2A_HHZIEduG" role="3clFbG">
+            <node concept="2WthIp" id="2A_HHZIEduH" role="2Oq$k0" />
+            <node concept="2XshWL" id="2A_HHZIEduI" role="2OqNvi">
+              <ref role="2WH_rO" node="2A_HHZICX7M" resolve="generateTextGen" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="2A_HHZIEduJ" role="3cqZAp">
+          <node concept="3cpWsn" id="2A_HHZIEduK" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="2OqwBi" id="2A_HHZIEduL" role="33vP2m">
+              <node concept="2WthIp" id="2A_HHZIEduM" role="2Oq$k0" />
+              <node concept="2XshWL" id="2A_HHZIEduN" role="2OqNvi">
+                <ref role="2WH_rO" node="2A_HHZICX9Q" resolve="generateToText" />
+                <node concept="2c44tf" id="2A_HHZIEduO" role="2XxRq1">
+                  <node concept="371uZg" id="2A_HHZIEduP" role="2c44tc">
+                    <property role="371uPu" value="true" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="17QB3L" id="2A_HHZIEduQ" role="1tU5fm" />
+          </node>
+        </node>
+        <node concept="3vlDli" id="2A_HHZIEduR" role="3cqZAp">
+          <node concept="37vLTw" id="2A_HHZIEduS" role="3tpDZA">
+            <ref role="3cqZAo" node="2A_HHZIEduK" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="2A_HHZIEduT" role="3tpDZB">
+            <property role="26ycAo" value="f: myFlag !f:  f': &lt;custom&gt; !f': " />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="0EjCn" id="2A_HHZICX9O" role="0EEgL">
+      <node concept="3clFbS" id="2A_HHZICX9P" role="2VODD2" />
+    </node>
+    <node concept="2XrIbr" id="2A_HHZICX9Q" role="1qtyYc">
+      <property role="TrG5h" value="generateToText" />
+      <node concept="17QB3L" id="2A_HHZICX9R" role="3clF45" />
+      <node concept="3clFbS" id="2A_HHZICX9S" role="3clF47">
+        <node concept="3clFbF" id="2A_HHZICX9T" role="3cqZAp">
+          <node concept="2OqwBi" id="2A_HHZICX9U" role="3clFbG">
+            <node concept="2YIFZM" id="2A_HHZICX9V" role="2Oq$k0">
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode)" resolve="generateText" />
+              <node concept="37vLTw" id="2A_HHZICX9W" role="37wK5m">
+                <ref role="3cqZAo" node="2A_HHZICXa1" resolve="node" />
+              </node>
+            </node>
+            <node concept="liA8E" id="2A_HHZICX9X" role="2OqNvi">
+              <ref role="37wK5l" to="wyt6:~String.replace(java.lang.CharSequence,java.lang.CharSequence)" resolve="replace" />
+              <node concept="Xl_RD" id="2A_HHZICX9Y" role="37wK5m">
+                <property role="Xl_RC" value="\r\n" />
+              </node>
+              <node concept="Xl_RD" id="2A_HHZICX9Z" role="37wK5m">
+                <property role="Xl_RC" value="\n" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm6S6" id="2A_HHZICXa0" role="1B3o_S" />
+      <node concept="37vLTG" id="2A_HHZICXa1" role="3clF46">
+        <property role="TrG5h" value="node" />
+        <node concept="3Tqbb2" id="2A_HHZICXa2" role="1tU5fm" />
+      </node>
     </node>
   </node>
 </model>

@@ -120,7 +120,10 @@
         <child id="5083944728298846681" name="option" index="_tjki" />
       </concept>
       <concept id="8207263695490893775" name="com.mbeddr.mpsutil.grammarcells.structure.CellBasedRule" flags="ng" index="2ElW$n" />
-      <concept id="7363578995839203705" name="com.mbeddr.mpsutil.grammarcells.structure.FlagCell" flags="sg" stub="1984422498400729024" index="1kHk_G" />
+      <concept id="7363578995839203705" name="com.mbeddr.mpsutil.grammarcells.structure.FlagCell" flags="sg" stub="1984422498400729024" index="1kHk_G">
+        <property id="5304871968609388228" name="inverted" index="2UvnoQ" />
+        <property id="7617962380315063287" name="flagText" index="ZjSer" />
+      </concept>
       <concept id="7363578995839435357" name="com.mbeddr.mpsutil.grammarcells.structure.WrapperCell" flags="ng" index="1kIj98">
         <child id="7363578995839435358" name="wrapped" index="1kIj9b" />
       </concept>
@@ -1167,8 +1170,36 @@
   <node concept="24kQdi" id="2A_HHZIC5NQ">
     <property role="3GE5qa" value="Grammarcells" />
     <ref role="1XX52x" to="uanp:2A_HHZIC5$f" resolve="FlagGrammarCellElement" />
-    <node concept="1kHk_G" id="2A_HHZIC5R8" role="2wV5jI">
-      <ref role="1NtTu8" to="uanp:2A_HHZIC5I1" resolve="myFlag" />
+    <node concept="3EZMnI" id="2A_HHZICY3R" role="2wV5jI">
+      <node concept="3F0ifn" id="2A_HHZIDohS" role="3EZMnx">
+        <property role="3F0ifm" value="f:" />
+      </node>
+      <node concept="2iRfu4" id="2A_HHZICY3S" role="2iSdaV" />
+      <node concept="1kHk_G" id="2A_HHZIC5R8" role="3EZMnx">
+        <ref role="1NtTu8" to="uanp:2A_HHZIC5I1" resolve="myFlag" />
+      </node>
+      <node concept="3F0ifn" id="2A_HHZJuYcP" role="3EZMnx">
+        <property role="3F0ifm" value="!f:" />
+      </node>
+      <node concept="1kHk_G" id="2A_HHZJuYgD" role="3EZMnx">
+        <property role="2UvnoQ" value="true" />
+        <ref role="1NtTu8" to="uanp:2A_HHZIC5I1" resolve="myFlag" />
+      </node>
+      <node concept="3F0ifn" id="2A_HHZJuYq_" role="3EZMnx">
+        <property role="3F0ifm" value="f':" />
+      </node>
+      <node concept="1kHk_G" id="2A_HHZJuYyx" role="3EZMnx">
+        <property role="ZjSer" value="&lt;custom&gt;" />
+        <ref role="1NtTu8" to="uanp:2A_HHZIC5I1" resolve="myFlag" />
+      </node>
+      <node concept="3F0ifn" id="2A_HHZJw6ym" role="3EZMnx">
+        <property role="3F0ifm" value="!f':" />
+      </node>
+      <node concept="1kHk_G" id="2A_HHZJw6yl" role="3EZMnx">
+        <property role="ZjSer" value="&lt;custom&gt;" />
+        <property role="2UvnoQ" value="true" />
+        <ref role="1NtTu8" to="uanp:2A_HHZIC5I1" resolve="myFlag" />
+      </node>
     </node>
   </node>
   <node concept="24kQdi" id="2A_HHZIC6d5">
