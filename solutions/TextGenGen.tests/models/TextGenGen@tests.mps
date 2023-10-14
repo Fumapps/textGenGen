@@ -162,6 +162,9 @@
       <concept id="4071062822760086804" name="MyTestLang.structure.OptionalGrammarCellElement_RefNode" flags="ng" index="1o_EW5">
         <child id="4071062822760088236" name="element" index="1o_l2X" />
       </concept>
+      <concept id="4071062822773928499" name="MyTestLang.structure.OptionalGrammarCellElement_RefCell" flags="ng" index="1pKA0y">
+        <reference id="4071062822775082873" name="elementRef" index="1pGpPC" />
+      </concept>
       <concept id="4071062822770769385" name="MyTestLang.structure.OptionalGrammarCellElement_RefNodeList" flags="ng" index="1pWUZS">
         <child id="4071062822770769386" name="elements" index="1pWUZV" />
       </concept>
@@ -1714,7 +1717,7 @@
             <ref role="3cqZAo" node="3xZkx5wVf3m" resolve="actual" />
           </node>
           <node concept="26ycHw" id="3xZkx5wVf3v" role="3tpDZB">
-            <property role="26ycAo" value="my ref " />
+            <property role="26ycAo" value="my child " />
           </node>
         </node>
       </node>
@@ -1753,7 +1756,7 @@
             <ref role="3cqZAo" node="3xZkx5wVf34" resolve="actual" />
           </node>
           <node concept="26ycHw" id="3xZkx5wVf3d" role="3tpDZB">
-            <property role="26ycAo" value="my ref = dummy" />
+            <property role="26ycAo" value="my child = dummy" />
           </node>
         </node>
       </node>
@@ -1790,7 +1793,7 @@
             <ref role="3cqZAo" node="3xZkx5xzKZo" resolve="actual" />
           </node>
           <node concept="26ycHw" id="3xZkx5xzKZx" role="3tpDZB">
-            <property role="26ycAo" value="my refs " />
+            <property role="26ycAo" value="my children " />
           </node>
         </node>
       </node>
@@ -1830,7 +1833,83 @@
             <ref role="3cqZAo" node="3xZkx5xzKZ5" resolve="actual" />
           </node>
           <node concept="26ycHw" id="3xZkx5xzKZf" role="3tpDZB">
-            <property role="26ycAo" value="my refs = dummy dummy" />
+            <property role="26ycAo" value="my children = dummy dummy" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="3xZkx5xJkg0" role="1SL9yI">
+      <property role="TrG5h" value="generateGrammarOptionalCellRefCell_hide" />
+      <node concept="3cqZAl" id="3xZkx5xJkg1" role="3clF45" />
+      <node concept="3clFbS" id="3xZkx5xJkg2" role="3clF47">
+        <node concept="3clFbF" id="3xZkx5xJkg3" role="3cqZAp">
+          <node concept="2OqwBi" id="3xZkx5xJkg4" role="3clFbG">
+            <node concept="2WthIp" id="3xZkx5xJkg5" role="2Oq$k0" />
+            <node concept="2XshWL" id="3xZkx5xJkg6" role="2OqNvi">
+              <ref role="2WH_rO" node="2A_HHZICX7M" resolve="generateTextGen" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="3xZkx5xJkg7" role="3cqZAp">
+          <node concept="3cpWsn" id="3xZkx5xJkg8" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="2OqwBi" id="3xZkx5xJkg9" role="33vP2m">
+              <node concept="2WthIp" id="3xZkx5xJkga" role="2Oq$k0" />
+              <node concept="2XshWL" id="3xZkx5xJkgb" role="2OqNvi">
+                <ref role="2WH_rO" node="2A_HHZICX9Q" resolve="generateToText" />
+                <node concept="2c44tf" id="3xZkx5xJkgc" role="2XxRq1">
+                  <node concept="1pKA0y" id="3xZkx5xPly4" role="2c44tc" />
+                </node>
+              </node>
+            </node>
+            <node concept="17QB3L" id="3xZkx5xJkge" role="1tU5fm" />
+          </node>
+        </node>
+        <node concept="3vlDli" id="3xZkx5xJkgf" role="3cqZAp">
+          <node concept="37vLTw" id="3xZkx5xJkgg" role="3tpDZA">
+            <ref role="3cqZAo" node="3xZkx5xJkg8" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="3xZkx5xJkgh" role="3tpDZB">
+            <property role="26ycAo" value="my ref " />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="3xZkx5xJkfG" role="1SL9yI">
+      <property role="TrG5h" value="generateGrammarOptionalCellRefCell_show" />
+      <node concept="3cqZAl" id="3xZkx5xJkfH" role="3clF45" />
+      <node concept="3clFbS" id="3xZkx5xJkfI" role="3clF47">
+        <node concept="3clFbF" id="3xZkx5xJkfJ" role="3cqZAp">
+          <node concept="2OqwBi" id="3xZkx5xJkfK" role="3clFbG">
+            <node concept="2WthIp" id="3xZkx5xJkfL" role="2Oq$k0" />
+            <node concept="2XshWL" id="3xZkx5xJkfM" role="2OqNvi">
+              <ref role="2WH_rO" node="2A_HHZICX7M" resolve="generateTextGen" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="3xZkx5xJkfN" role="3cqZAp">
+          <node concept="3cpWsn" id="3xZkx5xJkfO" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="2OqwBi" id="3xZkx5xJkfP" role="33vP2m">
+              <node concept="2WthIp" id="3xZkx5xJkfQ" role="2Oq$k0" />
+              <node concept="2XshWL" id="3xZkx5xJkfR" role="2OqNvi">
+                <ref role="2WH_rO" node="2A_HHZICX9Q" resolve="generateToText" />
+                <node concept="2c44tf" id="3xZkx5xJkfS" role="2XxRq1">
+                  <node concept="1pKA0y" id="3xZkx5xPlzD" role="2c44tc">
+                    <ref role="1pGpPC" node="2OpspXLlbj" resolve="testDummy" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="17QB3L" id="3xZkx5xJkfW" role="1tU5fm" />
+          </node>
+        </node>
+        <node concept="3vlDli" id="3xZkx5xJkfX" role="3cqZAp">
+          <node concept="37vLTw" id="3xZkx5xJkfY" role="3tpDZA">
+            <ref role="3cqZAo" node="3xZkx5xJkfO" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="3xZkx5xJkfZ" role="3tpDZB">
+            <property role="26ycAo" value="my ref testDummy" />
           </node>
         </node>
       </node>
@@ -1869,6 +1948,9 @@
         <node concept="3Tqbb2" id="2A_HHZICXa2" role="1tU5fm" />
       </node>
     </node>
+  </node>
+  <node concept="371V1I" id="2OpspXLlbj">
+    <property role="TrG5h" value="testDummy" />
   </node>
 </model>
 
