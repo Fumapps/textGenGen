@@ -421,7 +421,7 @@
   </node>
   <node concept="1TIwiD" id="2A_HHZIC63A">
     <property role="EcuMT" value="3001005799609753830" />
-    <property role="TrG5h" value="OptionalGrammarCellElement" />
+    <property role="TrG5h" value="OptionalGrammarCellElement_Property" />
     <property role="3GE5qa" value="Grammarcells" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="PrWs8" id="2A_HHZIC6S2" role="PzmwI">
@@ -449,6 +449,18 @@
     <property role="TrG5h" value="DummyElement" />
     <property role="34LRSv" value="dummy" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+  </node>
+  <node concept="1TIwiD" id="3xZkx5wUvOk">
+    <property role="EcuMT" value="4071062822760086804" />
+    <property role="TrG5h" value="OptionalGrammarCellElement_RefNode" />
+    <property role="3GE5qa" value="Grammarcells" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="3xZkx5wUwaG" role="1TKVEi">
+      <property role="IQ2ns" value="4071062822760088236" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="element" />
+      <ref role="20lvS9" node="2A_HHZICwqL" resolve="DummyElement" />
+    </node>
   </node>
 </model>
 

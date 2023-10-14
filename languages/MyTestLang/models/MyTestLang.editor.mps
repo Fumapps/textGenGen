@@ -1204,14 +1204,14 @@
   </node>
   <node concept="24kQdi" id="2A_HHZIC6d5">
     <property role="3GE5qa" value="Grammarcells" />
-    <ref role="1XX52x" to="uanp:2A_HHZIC63A" resolve="OptionalGrammarCellElement" />
+    <ref role="1XX52x" to="uanp:2A_HHZIC63A" resolve="OptionalGrammarCellElement_Property" />
     <node concept="3EZMnI" id="2A_HHZIC6tU" role="2wV5jI">
       <node concept="3F0ifn" id="2A_HHZIC6vI" role="3EZMnx">
         <property role="3F0ifm" value="my" />
       </node>
       <node concept="2iRfu4" id="2A_HHZIC6tV" role="2iSdaV" />
       <node concept="3F0ifn" id="2A_HHZIC6Fg" role="3EZMnx">
-        <property role="3F0ifm" value="value" />
+        <property role="3F0ifm" value="name" />
       </node>
       <node concept="_tjkj" id="2A_HHZIC6h_" role="3EZMnx">
         <node concept="3EZMnI" id="2A_HHZIC71n" role="_tjki">
@@ -1255,6 +1255,30 @@
     <ref role="1XX52x" to="uanp:2A_HHZICwqL" resolve="DummyElement" />
     <node concept="3F0ifn" id="2A_HHZICwyf" role="2wV5jI">
       <property role="3F0ifm" value="dummy" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3xZkx5wUwgV">
+    <property role="3GE5qa" value="Grammarcells" />
+    <ref role="1XX52x" to="uanp:3xZkx5wUvOk" resolve="OptionalGrammarCellElement_RefNode" />
+    <node concept="3EZMnI" id="3xZkx5wUwnt" role="2wV5jI">
+      <node concept="3F0ifn" id="3xZkx5wUwnu" role="3EZMnx">
+        <property role="3F0ifm" value="my" />
+      </node>
+      <node concept="2iRfu4" id="3xZkx5wUwnv" role="2iSdaV" />
+      <node concept="3F0ifn" id="3xZkx5wUwnw" role="3EZMnx">
+        <property role="3F0ifm" value="ref" />
+      </node>
+      <node concept="_tjkj" id="3xZkx5wUwnx" role="3EZMnx">
+        <node concept="3EZMnI" id="3xZkx5wUwny" role="_tjki">
+          <node concept="2iRfu4" id="3xZkx5wUwnz" role="2iSdaV" />
+          <node concept="3F0ifn" id="3xZkx5wUwn$" role="3EZMnx">
+            <property role="3F0ifm" value="=" />
+          </node>
+          <node concept="3F1sOY" id="3xZkx5wUwvx" role="3EZMnx">
+            <ref role="1NtTu8" to="uanp:3xZkx5wUwaG" resolve="element" />
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>
