@@ -152,6 +152,7 @@
       <concept id="3001005799609860519" name="MyTestLang.structure.BracketGrammarCellElement" flags="ng" index="371VtS">
         <child id="3001005799609862654" name="element" index="371VWx" />
       </concept>
+      <concept id="3001005799609549092" name="MyTestLang.structure.SplittableGrammarCellElement" flags="ng" index="37efvV" />
       <concept id="3001005799609552010" name="MyTestLang.structure.ConstantGrammarCellElement" flags="ng" index="37efDl" />
       <concept id="3001005799609430069" name="MyTestLang.structure.WrapGrammarCellElement" flags="ng" index="37fGrE" />
       <concept id="7019083283238895660" name="MyTestLang.structure.VerticalAndHorizontalList" flags="ng" index="3jfCGy">
@@ -1910,6 +1911,45 @@
           </node>
           <node concept="26ycHw" id="3xZkx5xJkfZ" role="3tpDZB">
             <property role="26ycAo" value="my ref testDummy" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="2OpspXTOH6" role="1SL9yI">
+      <property role="TrG5h" value="generateGrammarOptionalCellSplittable" />
+      <node concept="3cqZAl" id="2OpspXTOH7" role="3clF45" />
+      <node concept="3clFbS" id="2OpspXTOH8" role="3clF47">
+        <node concept="3clFbF" id="2OpspXTOH9" role="3cqZAp">
+          <node concept="2OqwBi" id="2OpspXTOHa" role="3clFbG">
+            <node concept="2WthIp" id="2OpspXTOHb" role="2Oq$k0" />
+            <node concept="2XshWL" id="2OpspXTOHc" role="2OqNvi">
+              <ref role="2WH_rO" node="2A_HHZICX7M" resolve="generateTextGen" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="2OpspXTOHd" role="3cqZAp">
+          <node concept="3cpWsn" id="2OpspXTOHe" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="2OqwBi" id="2OpspXTOHf" role="33vP2m">
+              <node concept="2WthIp" id="2OpspXTOHg" role="2Oq$k0" />
+              <node concept="2XshWL" id="2OpspXTOHh" role="2OqNvi">
+                <ref role="2WH_rO" node="2A_HHZICX9Q" resolve="generateToText" />
+                <node concept="2c44tf" id="2OpspXTOHi" role="2XxRq1">
+                  <node concept="37efvV" id="2OpspXTP58" role="2c44tc">
+                    <property role="TrG5h" value="test" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="17QB3L" id="2OpspXTOHk" role="1tU5fm" />
+          </node>
+        </node>
+        <node concept="3vlDli" id="2OpspXTOHl" role="3cqZAp">
+          <node concept="37vLTw" id="2OpspXTOHm" role="3tpDZA">
+            <ref role="3cqZAo" node="2OpspXTOHe" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="2OpspXTOHn" role="3tpDZB">
+            <property role="26ycAo" value="test" />
           </node>
         </node>
       </node>
