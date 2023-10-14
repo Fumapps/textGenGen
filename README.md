@@ -6,6 +6,7 @@ It mainly extends it by:
 * _unit tests_: several automated tests, which are used to fix several spacing issues
 * _generator-based contents check_: a (light) diff mechanism, which tries to detect if TextGen nodes have not really changed
 * _github actions_: contains GitHub actions workflows for integration or release builds
+* _GrammarCells_: support for generating mps-extensino grammarcells (without adding a dependency on it)
 
 # TextGenGen
 
