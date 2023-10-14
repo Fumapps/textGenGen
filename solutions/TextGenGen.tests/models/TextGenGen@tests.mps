@@ -162,6 +162,9 @@
       <concept id="4071062822760086804" name="MyTestLang.structure.OptionalGrammarCellElement_RefNode" flags="ng" index="1o_EW5">
         <child id="4071062822760088236" name="element" index="1o_l2X" />
       </concept>
+      <concept id="4071062822770769385" name="MyTestLang.structure.OptionalGrammarCellElement_RefNodeList" flags="ng" index="1pWUZS">
+        <child id="4071062822770769386" name="elements" index="1pWUZV" />
+      </concept>
       <concept id="4414386885229358415" name="MyTestLang.structure.HorizontalListWithFilter" flags="ng" index="3Ivy0O">
         <child id="4414386885229358416" name="elements" index="3Ivy0F" />
       </concept>
@@ -1751,6 +1754,83 @@
           </node>
           <node concept="26ycHw" id="3xZkx5wVf3d" role="3tpDZB">
             <property role="26ycAo" value="my ref = dummy" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="3xZkx5xzKZg" role="1SL9yI">
+      <property role="TrG5h" value="generateGrammarOptionalCellRefNodeList_hide" />
+      <node concept="3cqZAl" id="3xZkx5xzKZh" role="3clF45" />
+      <node concept="3clFbS" id="3xZkx5xzKZi" role="3clF47">
+        <node concept="3clFbF" id="3xZkx5xzKZj" role="3cqZAp">
+          <node concept="2OqwBi" id="3xZkx5xzKZk" role="3clFbG">
+            <node concept="2WthIp" id="3xZkx5xzKZl" role="2Oq$k0" />
+            <node concept="2XshWL" id="3xZkx5xzKZm" role="2OqNvi">
+              <ref role="2WH_rO" node="2A_HHZICX7M" resolve="generateTextGen" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="3xZkx5xzKZn" role="3cqZAp">
+          <node concept="3cpWsn" id="3xZkx5xzKZo" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="2OqwBi" id="3xZkx5xzKZp" role="33vP2m">
+              <node concept="2WthIp" id="3xZkx5xzKZq" role="2Oq$k0" />
+              <node concept="2XshWL" id="3xZkx5xzKZr" role="2OqNvi">
+                <ref role="2WH_rO" node="2A_HHZICX9Q" resolve="generateToText" />
+                <node concept="2c44tf" id="3xZkx5xzKZs" role="2XxRq1">
+                  <node concept="1pWUZS" id="3xZkx5xzLce" role="2c44tc" />
+                </node>
+              </node>
+            </node>
+            <node concept="17QB3L" id="3xZkx5xzKZu" role="1tU5fm" />
+          </node>
+        </node>
+        <node concept="3vlDli" id="3xZkx5xzKZv" role="3cqZAp">
+          <node concept="37vLTw" id="3xZkx5xzKZw" role="3tpDZA">
+            <ref role="3cqZAo" node="3xZkx5xzKZo" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="3xZkx5xzKZx" role="3tpDZB">
+            <property role="26ycAo" value="my refs " />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="3xZkx5xzKYX" role="1SL9yI">
+      <property role="TrG5h" value="generateGrammarOptionalCellRefNodeList_show" />
+      <node concept="3cqZAl" id="3xZkx5xzKYY" role="3clF45" />
+      <node concept="3clFbS" id="3xZkx5xzKYZ" role="3clF47">
+        <node concept="3clFbF" id="3xZkx5xzKZ0" role="3cqZAp">
+          <node concept="2OqwBi" id="3xZkx5xzKZ1" role="3clFbG">
+            <node concept="2WthIp" id="3xZkx5xzKZ2" role="2Oq$k0" />
+            <node concept="2XshWL" id="3xZkx5xzKZ3" role="2OqNvi">
+              <ref role="2WH_rO" node="2A_HHZICX7M" resolve="generateTextGen" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="3xZkx5xzKZ4" role="3cqZAp">
+          <node concept="3cpWsn" id="3xZkx5xzKZ5" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="2OqwBi" id="3xZkx5xzKZ6" role="33vP2m">
+              <node concept="2WthIp" id="3xZkx5xzKZ7" role="2Oq$k0" />
+              <node concept="2XshWL" id="3xZkx5xzKZ8" role="2OqNvi">
+                <ref role="2WH_rO" node="2A_HHZICX9Q" resolve="generateToText" />
+                <node concept="2c44tf" id="3xZkx5xzKZ9" role="2XxRq1">
+                  <node concept="1pWUZS" id="3xZkx5xzLgd" role="2c44tc">
+                    <node concept="371V1I" id="3xZkx5xzLhR" role="1pWUZV" />
+                    <node concept="371V1I" id="3xZkx5xzLio" role="1pWUZV" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="17QB3L" id="3xZkx5xzKZc" role="1tU5fm" />
+          </node>
+        </node>
+        <node concept="3vlDli" id="3xZkx5xzKZd" role="3cqZAp">
+          <node concept="37vLTw" id="3xZkx5xzKZe" role="3tpDZA">
+            <ref role="3cqZAo" node="3xZkx5xzKZ5" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="3xZkx5xzKZf" role="3tpDZB">
+            <property role="26ycAo" value="my refs = dummy dummy" />
           </node>
         </node>
       </node>

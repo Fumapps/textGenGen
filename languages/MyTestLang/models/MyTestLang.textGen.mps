@@ -4015,6 +4015,98 @@
       </node>
     </node>
   </node>
+  <node concept="WtQ9Q" id="3xZkx5x$1mx">
+    <property role="3GE5qa" value="Grammarcells" />
+    <ref role="WuzLi" to="uanp:3xZkx5xzfRD" resolve="OptionalGrammarCellElement_RefNodeList" />
+    <node concept="11bSqf" id="3xZkx5xDVjx" role="11c4hB">
+      <node concept="3clFbS" id="3xZkx5xDVjy" role="2VODD2">
+        <node concept="lc7rE" id="3xZkx5xDVjA" role="3cqZAp">
+          <node concept="la8eA" id="3xZkx5xDVj_" role="lcghm">
+            <property role="lacIc" value="my" />
+          </node>
+          <node concept="la8eA" id="3xZkx5xDVjU" role="lcghm">
+            <property role="lacIc" value=" " />
+          </node>
+          <node concept="la8eA" id="3xZkx5xDVjX" role="lcghm">
+            <property role="lacIc" value="refs" />
+          </node>
+          <node concept="la8eA" id="3xZkx5xDVki" role="lcghm">
+            <property role="lacIc" value=" " />
+          </node>
+        </node>
+        <node concept="3clFbJ" id="3xZkx5xDVlA" role="3cqZAp">
+          <node concept="2OqwBi" id="3xZkx5xDVkm" role="3clFbw">
+            <node concept="2OqwBi" id="3xZkx5xDVkn" role="2Oq$k0">
+              <node concept="117lpO" id="3xZkx5xDVkl" role="2Oq$k0" />
+              <node concept="Bykcj" id="3xZkx5xDVko" role="2OqNvi">
+                <node concept="1aIX9F" id="3xZkx5xDVkp" role="1xVPHs">
+                  <node concept="26LbJo" id="3xZkx5xDVkq" role="1aIX9E">
+                    <ref role="26LbJp" to="uanp:3xZkx5xzfRE" resolve="elements" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3GX2aA" id="3xZkx5xDVkr" role="2OqNvi" />
+          </node>
+          <node concept="3clFbS" id="3xZkx5xDVlD" role="3clFbx">
+            <node concept="lc7rE" id="3xZkx5xDVkw" role="3cqZAp">
+              <node concept="la8eA" id="3xZkx5xDVkv" role="lcghm">
+                <property role="lacIc" value="=" />
+              </node>
+              <node concept="la8eA" id="3xZkx5xDVkO" role="lcghm">
+                <property role="lacIc" value=" " />
+              </node>
+            </node>
+            <node concept="2Gpval" id="3xZkx5xDVlz" role="3cqZAp">
+              <node concept="2GrKxI" id="3xZkx5xDVkW" role="2Gsz3X">
+                <property role="TrG5h" value="elem" />
+              </node>
+              <node concept="3clFbS" id="3xZkx5xDVly" role="2LFqv$">
+                <node concept="lc7rE" id="3xZkx5xDVl0" role="3cqZAp">
+                  <node concept="l9hG8" id="3xZkx5xDVkY" role="lcghm">
+                    <node concept="2GrUjf" id="3xZkx5xDVkZ" role="lb14g">
+                      <ref role="2Gs0qQ" node="3xZkx5xDVkW" resolve="elem" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbJ" id="3xZkx5xDVlu" role="3cqZAp">
+                  <node concept="2OqwBi" id="3xZkx5xDVlq" role="3clFbw">
+                    <node concept="2OqwBi" id="3xZkx5xDVlr" role="2Oq$k0">
+                      <node concept="YCak7" id="3xZkx5xDVls" role="2OqNvi" />
+                      <node concept="2GrUjf" id="3xZkx5xDVlp" role="2Oq$k0">
+                        <ref role="2Gs0qQ" node="3xZkx5xDVkW" resolve="elem" />
+                      </node>
+                    </node>
+                    <node concept="3x8VRR" id="3xZkx5xDVlt" role="2OqNvi" />
+                  </node>
+                  <node concept="3clFbS" id="3xZkx5xDVlx" role="3clFbx">
+                    <node concept="3SKdUt" id="3xZkx5xDVlj" role="3cqZAp">
+                      <node concept="1PaTwC" id="3xZkx5xDVll" role="1aUNEU">
+                        <node concept="3oM_SD" id="3xZkx5xDVlm" role="1PaTwD">
+                          <property role="3oM_SC" value="horizontal child collection: insert spaces between the elements" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="lc7rE" id="3xZkx5xDVlo" role="3cqZAp">
+                      <node concept="la8eA" id="3xZkx5xDVln" role="lcghm">
+                        <property role="lacIc" value=" " />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="3xZkx5xDVkV" role="2GsD0m">
+                <node concept="117lpO" id="3xZkx5xDVkU" role="2Oq$k0" />
+                <node concept="3Tsc0h" id="3xZkx5xDVkR" role="2OqNvi">
+                  <ref role="3TtcxE" to="uanp:3xZkx5xzfRE" resolve="elements" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
   <node concept="WtQ9Q" id="2A_HHZJfkIP">
     <property role="3GE5qa" value="EditorComponent" />
     <ref role="WuzLi" to="uanp:4kObt7KRfjQ" resolve="EditorComponentLevel2ChildOverride_NoEditor" />
