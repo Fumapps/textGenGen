@@ -56,7 +56,6 @@
         <description>Plugin for generation of the TextGen aspect from the Editor aspect aiming for generation of source code in the same form as the presentation rendered by the Editor.</description>
         <version>2022.2</version>
         <depends>jetbrains.mps.core</depends>
-        <depends>de.slisson.mps.editor.multiline</depends>
         <description>Editor to TextGen convertor</description>
         <vendor>JetBrains</vendor>
         <idea-version since-build="222" until-build="222.9999" />
@@ -76,7 +75,6 @@
         <description>Plugin for generation of the TextGen aspect from the Editor aspect aiming for generation of source code in the same form as the presentation rendered by the Editor.</description>
         <version>2022.2</version>
         <depends>jetbrains.mps.core</depends>
-        <depends>de.slisson.mps.editor.multiline</depends>
         <description>Editor to TextGen convertor</description>
         <vendor>JetBrains</vendor>
         <idea-version since-build="222" until-build="222.9999" />
@@ -198,6 +196,11 @@
       <zipfileset file="${basedir}/solutions/TextGenGen.plugin/TextGenGen.plugin.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-TextGenGen.plugin-models" prefix="module/models" />
     </jar>
+    <zip destfile="${build.layout}/TextGenGen.zip">
+      <zipfileset file="${project_home}/java_src/lib/editorToText.jar" prefix="TextGenGen (fum)" />
+      <fileset dir="${build.tmp}/default/TextGenGen.zip1" />
+    </zip>
+    <mkdir dir="${build.layout}/Tests" />
     <mkdir dir="${build.tmp}/default/TextGenGen.tests.jar" />
     <mkdir dir="${build.tmp}/default/TextGenGen.tests.jar/META-INF" />
     <echoxml file="${build.tmp}/default/TextGenGen.tests.jar/META-INF/module.xml">
@@ -236,7 +239,7 @@
         <sources jar="TextGenGen.tests-src.jar" descriptor="TextGenGen.tests.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/TextGenGen.tests.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/Tests/TextGenGen.tests.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/TextGenGen.tests" />
       <fileset dir="${project_home}/solutions/TextGenGen.tests/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/TextGenGen.tests.jar" />
@@ -244,7 +247,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-TextGenGen.tests-models">
       <fileset dir="${project_home}/solutions/TextGenGen.tests/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/TextGenGen.tests-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/Tests/TextGenGen.tests-src.jar" duplicate="preserve">
       <fileset dir="${project_home}/solutions/TextGenGen.tests/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -318,7 +321,7 @@
         <sources jar="BaseLanguageMultiLineExtension-src.jar" descriptor="BaseLanguageMultiLineExtension.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/BaseLanguageMultiLineExtension.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/Tests/BaseLanguageMultiLineExtension.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/BaseLanguageMultiLineExtension" />
       <fileset dir="${project_home}/languages/BaseLanguageMultiLineExtension/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/BaseLanguageMultiLineExtension.jar" />
@@ -363,7 +366,7 @@
         <sources jar="BaseLanguageMultiLineExtension-src.jar" descriptor="BaseLanguageMultiLineExtension.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/BaseLanguageMultiLineExtension-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/Tests/BaseLanguageMultiLineExtension-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/BaseLanguageMultiLineExtension.generator" />
       <fileset dir="${project_home}/languages/BaseLanguageMultiLineExtension/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/BaseLanguageMultiLineExtension-generator.jar" />
@@ -374,7 +377,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-BaseLanguageMultiLineExtension-generator-templates">
       <fileset dir="${project_home}/languages/BaseLanguageMultiLineExtension/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/BaseLanguageMultiLineExtension-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/Tests/BaseLanguageMultiLineExtension-src.jar" duplicate="preserve">
       <fileset dir="${project_home}/languages/BaseLanguageMultiLineExtension/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -403,6 +406,8 @@
           <module ref="7124e466-fc92-4803-a656-d7a6b7eb3910(MPS.TextGen)" kind="rt" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" kind="rt" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" kind="rt" />
+          <module ref="7ac49bcb-77fb-4f0f-9036-e31b86b854b2(com.mbeddr.mpsutil.grammarcells.runtime)" kind="rt" />
+          <module ref="7037b32c-9607-4f8e-81bd-1f028a4c117b(de.slisson.mps.reflection.runtime)" kind="rt" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" kind="rt" />
           <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
           <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" kind="rt" />
@@ -417,6 +422,7 @@
           <module ref="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" kind="cl" />
         </dependencies>
         <uses>
+          <language id="l:9d69e719-78c8-4286-90db-fb19c107d049:com.mbeddr.mpsutil.grammarcells" />
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
           <language id="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
@@ -453,7 +459,7 @@
         <sources jar="MyTestLang-src.jar" descriptor="MyTestLang.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/MyTestLang.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/Tests/MyTestLang.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/MyTestLang" />
       <fileset dir="${project_home}/languages/MyTestLang/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/MyTestLang.jar" />
@@ -498,7 +504,7 @@
         <sources jar="MyTestLang-src.jar" descriptor="MyTestLang.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/MyTestLang-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/Tests/MyTestLang-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/MyTestLang.generator" />
       <fileset dir="${project_home}/languages/MyTestLang/generator/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/MyTestLang-generator.jar" />
@@ -509,7 +515,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-MyTestLang-generator-templates">
       <fileset dir="${project_home}/languages/MyTestLang/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/MyTestLang-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/Tests/MyTestLang-src.jar" duplicate="preserve">
       <fileset dir="${project_home}/languages/MyTestLang/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -526,10 +532,6 @@
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-MyTestLang-models" prefix="module/models" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-MyTestLang-generator-templates" prefix="module/generator/templates" />
     </jar>
-    <zip destfile="${build.layout}/TextGenGen.zip">
-      <zipfileset file="${project_home}/java_src/lib/editorToText.jar" prefix="TextGenGen (fum)" />
-      <fileset dir="${build.tmp}/default/TextGenGen.zip1" />
-    </zip>
     <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mpsBootstrapCore.version.major=${mpsBootstrapCore.version.major}${line.separator}mpsBootstrapCore.version.minor=${mpsBootstrapCore.version.minor}${line.separator}mpsBootstrapCore.version.bugfixNr=${mpsBootstrapCore.version.bugfixNr}${line.separator}mpsBootstrapCore.version.eap=${mpsBootstrapCore.version.eap}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}de.itemis.mps.extensions.versionNumber=${de.itemis.mps.extensions.versionNumber}</echo>
   </target>
   
@@ -562,14 +564,17 @@
       <settings refid="m2m-defaults" />
       <plugin path="${artifacts.de.itemis.mps.extensions}/de-itemis-mps-selection" />
       <plugin path="${artifacts.de.itemis.mps.extensions}/de.itemis.mps.celllayout" />
+      <plugin path="${artifacts.de.itemis.mps.extensions}/de.itemis.mps.grammarcells" />
       <plugin path="${artifacts.de.itemis.mps.extensions}/de.slisson.mps.hacks" />
       <plugin path="${artifacts.de.itemis.mps.extensions}/mps-multiline" />
+      <plugin path="${artifacts.de.itemis.mps.extensions}/mps-richtext" />
       <plugin path="${artifacts.mps}/lib/mps-workbench.jar" />
       <plugin path="${artifacts.mps}/plugins/git4idea" />
       <plugin path="${artifacts.mps}/plugins/mps-build" />
       <plugin path="${artifacts.mps}/plugins/mps-core" />
       <plugin path="${artifacts.mps}/plugins/mps-git4idea" />
       <plugin path="${artifacts.mps}/plugins/mps-testing" />
+      <plugin path="${artifacts.mps}/plugins/mps-tooltips" />
       <plugin path="${artifacts.mps}/plugins/mps-vcs" />
       <plugin path="${artifacts.mps}/plugins/svn4idea" />
       <library file="${artifacts.mps}/languages/baseLanguage/closures.runtime.jar" />
@@ -1027,6 +1032,8 @@
         <fileset file="${artifacts.mps}/lib/jps-model.jar" />
         <fileset file="${artifacts.mps}/lib/testFramework.jar" />
         <fileset file="${artifacts.mps}/lib/stats.jar" />
+        <fileset file="${artifacts.de.itemis.mps.extensions}/de.itemis.mps.grammarcells/languages/de.itemis.mps.grammarcells/com.mbeddr.mpsutil.grammarcells.runtime.jar" />
+        <fileset file="${artifacts.de.itemis.mps.extensions}/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
@@ -1092,6 +1099,8 @@
       <pathelement location="${artifacts.de.itemis.mps.extensions}/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
       <pathelement location="${artifacts.de.itemis.mps.extensions}/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.runtime.jar" />
       <pathelement location="${artifacts.de.itemis.mps.extensions}/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.styles.jar" />
+      <pathelement location="${artifacts.de.itemis.mps.extensions}/de.itemis.mps.grammarcells/languages/de.itemis.mps.grammarcells/com.mbeddr.mpsutil.grammarcells.runtime.jar" />
+      <pathelement location="${artifacts.de.itemis.mps.extensions}/de.itemis.mps.grammarcells/languages/de.itemis.mps.grammarcells/com.mbeddr.mpsutil.grammarcells.runtimelang.jar" />
       <pathelement location="${artifacts.de.itemis.mps.extensions}/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.hacks.editor.jar" />
       <pathelement location="${artifacts.de.itemis.mps.extensions}/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.runtime.jar" />
       <pathelement location="${artifacts.de.itemis.mps.extensions}/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.jar" />
@@ -1210,8 +1219,8 @@
       <pathelement location="${artifacts.mps}/plugins/mps-vcs/languages/jetbrains.mps.ide.vcs.modelmetadata.jar" />
       <pathelement location="${artifacts.mps}/plugins/mps-vcs/languages/jetbrains.mps.ide.vcs.platform.jar" />
       <pathelement location="${artifacts.mps}/plugins/mps-vcs/languages/jetbrains.mps.vcs.mergehints.runtime.jar" />
-      <pathelement location="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/BaseLanguageMultiLineExtension.jar" />
-      <pathelement location="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/MyTestLang.jar" />
+      <pathelement location="${build.layout}/Tests/BaseLanguageMultiLineExtension.jar" />
+      <pathelement location="${build.layout}/Tests/MyTestLang.jar" />
       <pathelement location="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/TextGenGen.javastubs.jar" />
       <pathelement location="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/TextGenGen.plugin.jar" />
     </path>
@@ -1219,20 +1228,23 @@
     <path id="mps.plugins.path">
       <pathelement location="${artifacts.de.itemis.mps.extensions}/de-itemis-mps-selection" />
       <pathelement location="${artifacts.de.itemis.mps.extensions}/de.itemis.mps.celllayout" />
+      <pathelement location="${artifacts.de.itemis.mps.extensions}/de.itemis.mps.grammarcells" />
       <pathelement location="${artifacts.de.itemis.mps.extensions}/de.slisson.mps.hacks" />
       <pathelement location="${artifacts.de.itemis.mps.extensions}/mps-multiline" />
+      <pathelement location="${artifacts.de.itemis.mps.extensions}/mps-richtext" />
       <pathelement location="${artifacts.mps}/lib/mps-workbench.jar" />
       <pathelement location="${artifacts.mps}/plugins/git4idea" />
       <pathelement location="${artifacts.mps}/plugins/mps-build" />
       <pathelement location="${artifacts.mps}/plugins/mps-core" />
       <pathelement location="${artifacts.mps}/plugins/mps-git4idea" />
       <pathelement location="${artifacts.mps}/plugins/mps-testing" />
+      <pathelement location="${artifacts.mps}/plugins/mps-tooltips" />
       <pathelement location="${artifacts.mps}/plugins/mps-vcs" />
       <pathelement location="${artifacts.mps}/plugins/svn4idea" />
       <pathelement location="${build.tmp}/default/TextGenGen.zip/TextGenGen (fum)" />
     </path>
     <pathconvert property="mps.plugins.path.string" refid="mps.plugins.path" />
-    <path location="${build.tmp}/default/TextGenGen.zip1/TextGenGen (fum)/languages/TextGenGen/TextGenGen.tests.jar" id="mps.tests.path" />
+    <path location="${build.layout}/Tests/TextGenGen.tests.jar" id="mps.tests.path" />
     <pathconvert property="mps.tests.path.string" refid="mps.tests.path" />
     <path id="long.class.path">
       <fileset dir="${artifacts.mps}/lib">
