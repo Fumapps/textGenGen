@@ -47,6 +47,7 @@
         <property id="1186414551515" name="flag" index="VOm3f" />
         <child id="1223387335081" name="query" index="3n$kyP" />
       </concept>
+      <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
       <concept id="1182191800432" name="jetbrains.mps.lang.editor.structure.QueryFunction_NodeListFilter" flags="in" index="107P5z" />
       <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
       <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
@@ -1364,6 +1365,89 @@
           <property role="3F0ifm" value=")" />
           <node concept="11L4FC" id="6DdX7AhIFaf" role="3F10Kt">
             <property role="VOm3f" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="3yck8d2rPTC">
+    <property role="3GE5qa" value="Spacing" />
+    <ref role="1XX52x" to="uanp:3yck8d2rP$o" resolve="ComplexConditionalShowElement" />
+    <node concept="3EZMnI" id="3yck8d2rPVi" role="2wV5jI">
+      <node concept="3F0ifn" id="3yck8d2rPZU" role="3EZMnx">
+        <property role="3F0ifm" value="struct" />
+      </node>
+      <node concept="3F0ifn" id="3yck8d2rQ1e" role="3EZMnx">
+        <property role="3F0ifm" value="A1" />
+      </node>
+      <node concept="3EZMnI" id="3yck8d2rQ2Y" role="3EZMnx">
+        <node concept="VPM3Z" id="3yck8d2rQ30" role="3F10Kt" />
+        <node concept="3F0ifn" id="3yck8d2rQ3$" role="3EZMnx">
+          <property role="3F0ifm" value=":" />
+        </node>
+        <node concept="3F0ifn" id="3yck8d2rQ5i" role="3EZMnx">
+          <property role="3F0ifm" value="B" />
+        </node>
+        <node concept="2iRfu4" id="3yck8d2rQ33" role="2iSdaV" />
+        <node concept="pkWqt" id="3yck8d2rQ8A" role="pqm2j">
+          <node concept="3clFbS" id="3yck8d2rQ8B" role="2VODD2">
+            <node concept="3clFbF" id="3yck8d2rQnh" role="3cqZAp">
+              <node concept="2OqwBi" id="3yck8d2rQBs" role="3clFbG">
+                <node concept="pncrf" id="3yck8d2rQng" role="2Oq$k0" />
+                <node concept="3TrcHB" id="3yck8d2rQNq" role="2OqNvi">
+                  <ref role="3TsBF5" to="uanp:3yck8d2rQfv" resolve="inheritsFromB" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="3yck8d2rRid" role="3EZMnx">
+        <property role="3F0ifm" value="struct" />
+        <node concept="pVoyu" id="3yck8d2rRlD" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="3yck8d2rRic" role="3EZMnx">
+        <property role="3F0ifm" value="A2" />
+      </node>
+      <node concept="PMmxH" id="3yck8d2rRxK" role="3EZMnx">
+        <ref role="PMmxG" node="3yck8d2rR09" resolve="ComplexConditionalShowElement_inheritance" />
+      </node>
+      <node concept="l2Vlx" id="3yck8d2rPVl" role="2iSdaV" />
+    </node>
+    <node concept="3EZMnI" id="3yck8d2sUFk" role="6VMZX">
+      <node concept="2iRfu4" id="3yck8d2sUFl" role="2iSdaV" />
+      <node concept="3F0ifn" id="3yck8d2sUOd" role="3EZMnx">
+        <property role="3F0ifm" value="inherit from B" />
+      </node>
+      <node concept="3F0A7n" id="3yck8d2sUQJ" role="3EZMnx">
+        <ref role="1NtTu8" to="uanp:3yck8d2rQfv" resolve="inheritsFromB" />
+      </node>
+    </node>
+  </node>
+  <node concept="PKFIW" id="3yck8d2rR09">
+    <property role="3GE5qa" value="Spacing" />
+    <property role="TrG5h" value="ComplexConditionalShowElement_inheritance" />
+    <ref role="1XX52x" to="uanp:3yck8d2rP$o" resolve="ComplexConditionalShowElement" />
+    <node concept="3EZMnI" id="3yck8d2rR1N" role="2wV5jI">
+      <node concept="VPM3Z" id="3yck8d2rR1O" role="3F10Kt" />
+      <node concept="3F0ifn" id="3yck8d2rR1P" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F0ifn" id="3yck8d2rR1Q" role="3EZMnx">
+        <property role="3F0ifm" value="B" />
+      </node>
+      <node concept="2iRfu4" id="3yck8d2rR1R" role="2iSdaV" />
+      <node concept="pkWqt" id="3yck8d2rR1S" role="pqm2j">
+        <node concept="3clFbS" id="3yck8d2rR1T" role="2VODD2">
+          <node concept="3clFbF" id="3yck8d2rR1U" role="3cqZAp">
+            <node concept="2OqwBi" id="3yck8d2rR1V" role="3clFbG">
+              <node concept="pncrf" id="3yck8d2rR1W" role="2Oq$k0" />
+              <node concept="3TrcHB" id="3yck8d2rR1X" role="2OqNvi">
+                <ref role="3TsBF5" to="uanp:3yck8d2rQfv" resolve="inheritsFromB" />
+              </node>
+            </node>
           </node>
         </node>
       </node>
