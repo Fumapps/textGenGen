@@ -17907,6 +17907,56 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbJ" id="6DdX7AhK9Fn" role="3cqZAp">
+          <node concept="3clFbS" id="6DdX7AhK9Fp" role="3clFbx">
+            <node concept="3clFbF" id="6DdX7AhKb$m" role="3cqZAp">
+              <node concept="2OqwBi" id="6DdX7AhKc9z" role="3clFbG">
+                <node concept="37vLTw" id="6DdX7AhKb$f" role="2Oq$k0">
+                  <ref role="3cqZAo" node="3xZkx5wAjOW" resolve="auxBuilder" />
+                </node>
+                <node concept="liA8E" id="6DdX7AhKd9E" role="2OqNvi">
+                  <ref role="37wK5l" node="3$WA3A2oefd" resolve="appendSpace" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1Wc70l" id="6DdX7AhKgoO" role="3clFbw">
+            <node concept="3fqX7Q" id="6DdX7AhKaLm" role="3uHU7B">
+              <node concept="2YIFZM" id="6DdX7AhKaLo" role="3fr31v">
+                <ref role="37wK5l" node="4s_An_Z7NeA" resolve="getBooleanConstantStyleValue" />
+                <ref role="1Pybhc" node="1EE3zMzqFQO" resolve="Utils" />
+                <node concept="2ShNRf" id="6DdX7AhKaLp" role="37wK5m">
+                  <node concept="1pGfFk" id="6DdX7AhKaLq" role="2ShVmc">
+                    <ref role="37wK5l" node="2G_6976bDXb" resolve="CustomStyleContainer" />
+                    <node concept="37vLTw" id="6DdX7AhKaLr" role="37wK5m">
+                      <ref role="3cqZAo" node="3xZkx5wAno8" resolve="left" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="35c_gC" id="6DdX7AhKaLs" role="37wK5m">
+                  <ref role="35c_gD" to="tpc2:hX1LMvx" resolve="PunctuationRightStyleClassItem" />
+                </node>
+              </node>
+            </node>
+            <node concept="3fqX7Q" id="6DdX7AhKgOR" role="3uHU7w">
+              <node concept="2YIFZM" id="6DdX7AhKgOS" role="3fr31v">
+                <ref role="37wK5l" node="4s_An_Z7NeA" resolve="getBooleanConstantStyleValue" />
+                <ref role="1Pybhc" node="1EE3zMzqFQO" resolve="Utils" />
+                <node concept="2ShNRf" id="6DdX7AhKgOT" role="37wK5m">
+                  <node concept="1pGfFk" id="6DdX7AhKgOU" role="2ShVmc">
+                    <ref role="37wK5l" node="2G_6976bDXb" resolve="CustomStyleContainer" />
+                    <node concept="37vLTw" id="6DdX7AhKgOV" role="37wK5m">
+                      <ref role="3cqZAo" node="3xZkx5wApYC" resolve="inner" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="35c_gC" id="6DdX7AhKgOW" role="37wK5m">
+                  <ref role="35c_gD" to="tpc2:hX1L4JR" resolve="PunctuationLeftStyleClassItem" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="3xZkx5wAueB" role="3cqZAp">
           <node concept="2OqwBi" id="3xZkx5wAueC" role="3clFbG">
             <node concept="37vLTw" id="3xZkx5wAueD" role="2Oq$k0">
@@ -17922,6 +17972,56 @@
               </node>
               <node concept="37vLTw" id="3xZkx5wAueH" role="37wK5m">
                 <ref role="3cqZAo" node="3xZkx5wAjOY" resolve="nodeStyle" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="6DdX7AhKdBt" role="3cqZAp">
+          <node concept="3clFbS" id="6DdX7AhKdBu" role="3clFbx">
+            <node concept="3clFbF" id="6DdX7AhKdBv" role="3cqZAp">
+              <node concept="2OqwBi" id="6DdX7AhKdBw" role="3clFbG">
+                <node concept="37vLTw" id="6DdX7AhKdBx" role="2Oq$k0">
+                  <ref role="3cqZAo" node="3xZkx5wAjOW" resolve="auxBuilder" />
+                </node>
+                <node concept="liA8E" id="6DdX7AhKdBy" role="2OqNvi">
+                  <ref role="37wK5l" node="3$WA3A2oefd" resolve="appendSpace" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1Wc70l" id="6DdX7AhKiaW" role="3clFbw">
+            <node concept="3fqX7Q" id="6DdX7AhKdBz" role="3uHU7B">
+              <node concept="2YIFZM" id="6DdX7AhKdB$" role="3fr31v">
+                <ref role="37wK5l" node="4s_An_Z7NeA" resolve="getBooleanConstantStyleValue" />
+                <ref role="1Pybhc" node="1EE3zMzqFQO" resolve="Utils" />
+                <node concept="2ShNRf" id="6DdX7AhKdB_" role="37wK5m">
+                  <node concept="1pGfFk" id="6DdX7AhKdBA" role="2ShVmc">
+                    <ref role="37wK5l" node="2G_6976bDXb" resolve="CustomStyleContainer" />
+                    <node concept="37vLTw" id="6DdX7AhKdBB" role="37wK5m">
+                      <ref role="3cqZAo" node="3xZkx5wAoYV" resolve="right" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="35c_gC" id="6DdX7AhKdBC" role="37wK5m">
+                  <ref role="35c_gD" to="tpc2:hX1L4JR" resolve="PunctuationLeftStyleClassItem" />
+                </node>
+              </node>
+            </node>
+            <node concept="3fqX7Q" id="6DdX7AhKjcG" role="3uHU7w">
+              <node concept="2YIFZM" id="6DdX7AhKjcH" role="3fr31v">
+                <ref role="37wK5l" node="4s_An_Z7NeA" resolve="getBooleanConstantStyleValue" />
+                <ref role="1Pybhc" node="1EE3zMzqFQO" resolve="Utils" />
+                <node concept="2ShNRf" id="6DdX7AhKjcI" role="37wK5m">
+                  <node concept="1pGfFk" id="6DdX7AhKjcJ" role="2ShVmc">
+                    <ref role="37wK5l" node="2G_6976bDXb" resolve="CustomStyleContainer" />
+                    <node concept="37vLTw" id="6DdX7AhKjcK" role="37wK5m">
+                      <ref role="3cqZAo" node="3xZkx5wApYC" resolve="inner" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="35c_gC" id="6DdX7AhKjcL" role="37wK5m">
+                  <ref role="35c_gD" to="tpc2:hX1LMvx" resolve="PunctuationRightStyleClassItem" />
+                </node>
               </node>
             </node>
           </node>

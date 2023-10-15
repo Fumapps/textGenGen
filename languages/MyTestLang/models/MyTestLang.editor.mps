@@ -1242,18 +1242,12 @@
       <node concept="drBAd" id="2A_HHZICwjF" role="1LiK7o">
         <node concept="3F0ifn" id="2A_HHZICwjH" role="drBA7">
           <property role="3F0ifm" value="(" />
-          <node concept="11LMrY" id="3xZkx5wF1A_" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
         </node>
         <node concept="3F1sOY" id="2A_HHZICwjJ" role="drBAU">
           <ref role="1NtTu8" to="uanp:2A_HHZICwBY" resolve="element" />
         </node>
         <node concept="3F0ifn" id="2A_HHZICwjL" role="drBAZ">
           <property role="3F0ifm" value=")" />
-          <node concept="11L4FC" id="3xZkx5wF1Cf" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
         </node>
       </node>
     </node>
@@ -1349,6 +1343,30 @@
         </node>
       </node>
       <node concept="2iRfu4" id="1EQ_sJ1jk_w" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="6DdX7AhIF8S">
+    <property role="3GE5qa" value="Grammarcells" />
+    <ref role="1XX52x" to="uanp:6DdX7AhIzLN" resolve="BracketGrammarCellElement_Punctuation" />
+    <node concept="1WcQYu" id="6DdX7AhIFa8" role="2wV5jI">
+      <node concept="2ElW$n" id="6DdX7AhIFa9" role="2El2Yn" />
+      <node concept="drBAd" id="6DdX7AhIFaa" role="1LiK7o">
+        <node concept="3F0ifn" id="6DdX7AhIFab" role="drBA7">
+          <property role="3F0ifm" value="(" />
+          <node concept="11LMrY" id="6DdX7AhIFac" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F1sOY" id="6DdX7AhIFad" role="drBAU">
+          <ref role="1NtTu8" to="uanp:6DdX7AhIzLP" resolve="element" />
+        </node>
+        <node concept="3F0ifn" id="6DdX7AhIFae" role="drBAZ">
+          <property role="3F0ifm" value=")" />
+          <node concept="11L4FC" id="6DdX7AhIFaf" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>

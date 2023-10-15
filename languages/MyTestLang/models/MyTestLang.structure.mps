@@ -492,5 +492,20 @@
       <ref role="20lvS9" node="2A_HHZICwqL" resolve="DummyElement" />
     </node>
   </node>
+  <node concept="1TIwiD" id="6DdX7AhIzLN">
+    <property role="EcuMT" value="7660047344200203379" />
+    <property role="TrG5h" value="BracketGrammarCellElement_Punctuation" />
+    <property role="3GE5qa" value="Grammarcells" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="PrWs8" id="6DdX7AhIzLO" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="6DdX7AhIzLP" role="1TKVEi">
+      <property role="IQ2ns" value="7660047344200203381" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="element" />
+      <ref role="20lvS9" node="2A_HHZICwqL" resolve="DummyElement" />
+    </node>
+  </node>
 </model>
 
