@@ -1457,7 +1457,7 @@
             <ref role="3cqZAo" node="2A_HHZICX8j" resolve="actual" />
           </node>
           <node concept="26ycHw" id="2A_HHZICX8w" role="3tpDZB">
-            <property role="26ycAo" value="f:  !f: myFlag f':  !f': &lt;custom&gt;" />
+            <property role="26ycAo" value="f: !f: myFlag f': !f': &lt;custom&gt;" />
           </node>
         </node>
       </node>
@@ -1496,7 +1496,7 @@
             <ref role="3cqZAo" node="2A_HHZIEduK" resolve="actual" />
           </node>
           <node concept="26ycHw" id="2A_HHZIEduT" role="3tpDZB">
-            <property role="26ycAo" value="f: myFlag !f:  f': &lt;custom&gt; !f': " />
+            <property role="26ycAo" value="f: myFlag !f: f': &lt;custom&gt; !f':" />
           </node>
         </node>
       </node>
@@ -1687,7 +1687,7 @@
             <ref role="3cqZAo" node="3xZkx5wJ2Qn" resolve="actual" />
           </node>
           <node concept="26ycHw" id="3xZkx5wJ2Qx" role="3tpDZB">
-            <property role="26ycAo" value="my name " />
+            <property role="26ycAo" value="my name" />
           </node>
         </node>
       </node>
@@ -1763,7 +1763,7 @@
             <ref role="3cqZAo" node="3xZkx5wVf3m" resolve="actual" />
           </node>
           <node concept="26ycHw" id="3xZkx5wVf3v" role="3tpDZB">
-            <property role="26ycAo" value="my child " />
+            <property role="26ycAo" value="my child" />
           </node>
         </node>
       </node>
@@ -1839,7 +1839,7 @@
             <ref role="3cqZAo" node="3xZkx5xzKZo" resolve="actual" />
           </node>
           <node concept="26ycHw" id="3xZkx5xzKZx" role="3tpDZB">
-            <property role="26ycAo" value="my children " />
+            <property role="26ycAo" value="my children" />
           </node>
         </node>
       </node>
@@ -1916,7 +1916,7 @@
             <ref role="3cqZAo" node="3xZkx5xJkg8" resolve="actual" />
           </node>
           <node concept="26ycHw" id="3xZkx5xJkgh" role="3tpDZB">
-            <property role="26ycAo" value="my ref " />
+            <property role="26ycAo" value="my ref" />
           </node>
         </node>
       </node>
