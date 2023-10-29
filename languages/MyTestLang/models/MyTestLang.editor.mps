@@ -1481,12 +1481,12 @@
       </node>
       <node concept="3F0ifn" id="3q_VDQuzhDN" role="3EZMnx">
         <property role="3F0ifm" value="A1" />
+        <node concept="ljvvj" id="5pVxUPgYp2y" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="PMmxH" id="3q_VDQuzhE2" role="3EZMnx">
         <ref role="PMmxG" node="3q_VDQuzi7h" resolve="ConditionalRenderingCondition_Prefix_modifier" />
-        <node concept="pVoyu" id="3q_VDQuzkvz" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
       </node>
       <node concept="3F0ifn" id="3q_VDQuzhDZ" role="3EZMnx">
         <property role="3F0ifm" value="struct" />
@@ -1586,9 +1586,6 @@
               </node>
             </node>
           </node>
-        </node>
-        <node concept="pVoyu" id="5pVxUPgvLYS" role="3F10Kt">
-          <property role="VOm3f" value="true" />
         </node>
       </node>
       <node concept="3F0ifn" id="5pVxUPgvLGh" role="3EZMnx">
