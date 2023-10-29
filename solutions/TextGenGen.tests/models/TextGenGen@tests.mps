@@ -99,6 +99,10 @@
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
     </language>
     <language id="0cdfd95d-2a2e-4a75-bc35-936584bdb36d" name="MyTestLang">
+      <concept id="6231723687846803766" name="MyTestLang.structure.ConditionalRenderingCondition_PrefixMultiple" flags="ng" index="61nUr">
+        <property id="6231723687846804494" name="isFinal" index="61nIz" />
+        <property id="6231723687846803767" name="isStatic" index="61nUq" />
+      </concept>
       <concept id="58318537122351355" name="MyTestLang.structure.ComplexIndentLayoutContainer" flags="ng" index="28cbyt">
         <child id="58318537122351358" name="horizontalElements" index="28cbyo" />
         <child id="58318537122351356" name="singleElementA" index="28cbyq" />
@@ -2159,6 +2163,69 @@
           </node>
           <node concept="26ycHw" id="3q_VDQu$rkV" role="3tpDZB">
             <property role="26ycAo" value="static struct A1&#10;static struct A2" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="5pVxUPgwLdF" role="1SL9yI">
+      <property role="TrG5h" value="generateConditionalElementSpacePrefixMultiple_showBoth" />
+      <node concept="3cqZAl" id="5pVxUPgwLdG" role="3clF45" />
+      <node concept="3clFbS" id="5pVxUPgwLdH" role="3clF47">
+        <node concept="3cpWs8" id="5pVxUPgwLdI" role="3cqZAp">
+          <node concept="3cpWsn" id="5pVxUPgwLdJ" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="17QB3L" id="5pVxUPgwLdK" role="1tU5fm" />
+            <node concept="2OqwBi" id="5pVxUPgwLdL" role="33vP2m">
+              <node concept="2WthIp" id="5pVxUPgwLdM" role="2Oq$k0" />
+              <node concept="2XshWL" id="5pVxUPgwLdN" role="2OqNvi">
+                <ref role="2WH_rO" node="3yck8d2sT9V" resolve="generateToText" />
+                <node concept="2c44tf" id="5pVxUPgwLdO" role="2XxRq1">
+                  <node concept="61nUr" id="5pVxUPgwLmm" role="2c44tc">
+                    <property role="61nUq" value="true" />
+                    <property role="61nIz" value="true" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="5pVxUPgwLdQ" role="3cqZAp">
+          <node concept="37vLTw" id="5pVxUPgwLdR" role="3tpDZA">
+            <ref role="3cqZAo" node="5pVxUPgwLdJ" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="5pVxUPgwLdS" role="3tpDZB">
+            <property role="26ycAo" value="static final struct A1&#10;static final struct A2" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="5pVxUPgwLyQ" role="1SL9yI">
+      <property role="TrG5h" value="generateConditionalElementSpacePrefixMultiple_showSecond" />
+      <node concept="3cqZAl" id="5pVxUPgwLyR" role="3clF45" />
+      <node concept="3clFbS" id="5pVxUPgwLyS" role="3clF47">
+        <node concept="3cpWs8" id="5pVxUPgwLyT" role="3cqZAp">
+          <node concept="3cpWsn" id="5pVxUPgwLyU" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="17QB3L" id="5pVxUPgwLyV" role="1tU5fm" />
+            <node concept="2OqwBi" id="5pVxUPgwLyW" role="33vP2m">
+              <node concept="2WthIp" id="5pVxUPgwLyX" role="2Oq$k0" />
+              <node concept="2XshWL" id="5pVxUPgwLyY" role="2OqNvi">
+                <ref role="2WH_rO" node="3yck8d2sT9V" resolve="generateToText" />
+                <node concept="2c44tf" id="5pVxUPgwLyZ" role="2XxRq1">
+                  <node concept="61nUr" id="5pVxUPgwLz0" role="2c44tc">
+                    <property role="61nIz" value="true" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="5pVxUPgwLz1" role="3cqZAp">
+          <node concept="37vLTw" id="5pVxUPgwLz2" role="3tpDZA">
+            <ref role="3cqZAo" node="5pVxUPgwLyU" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="5pVxUPgwLz3" role="3tpDZB">
+            <property role="26ycAo" value="final struct A1&#10;final struct A2" />
           </node>
         </node>
       </node>
