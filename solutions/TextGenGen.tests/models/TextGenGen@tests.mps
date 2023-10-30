@@ -99,6 +99,10 @@
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
     </language>
     <language id="0cdfd95d-2a2e-4a75-bc35-936584bdb36d" name="MyTestLang">
+      <concept id="6231723687846803766" name="MyTestLang.structure.ConditionalRenderingCondition_PrefixMultiple" flags="ng" index="61nUr">
+        <property id="6231723687846804494" name="isFinal" index="61nIz" />
+        <property id="6231723687846803767" name="isStatic" index="61nUq" />
+      </concept>
       <concept id="58318537122351355" name="MyTestLang.structure.ComplexIndentLayoutContainer" flags="ng" index="28cbyt">
         <child id="58318537122351358" name="horizontalElements" index="28cbyo" />
         <child id="58318537122351356" name="singleElementA" index="28cbyq" />
@@ -137,6 +141,9 @@
       <concept id="2905893502389925107" name="MyTestLang.structure.ComplexElement" flags="ng" index="2_gJDd">
         <property id="2905893502389925110" name="id" index="2_gJD8" />
         <property id="2905893502389925108" name="name" index="2_gJDa" />
+      </concept>
+      <concept id="3937815809942686437" name="MyTestLang.structure.ConditionalRenderingCondition_Prefix" flags="ng" index="2CaehS">
+        <property id="3937815809942686438" name="isStatic" index="2CaehV" />
       </concept>
       <concept id="4986661067106303617" name="MyTestLang.structure.EditorComponentChildOverride_NoEditor" flags="ng" index="2P41dg" />
       <concept id="4986661067106303547" name="MyTestLang.structure.EditorComponentBase" flags="ng" index="2P41fE" />
@@ -179,7 +186,7 @@
         <child id="7395444528209566003" name="verticalElements" index="3UE7MI" />
       </concept>
       <concept id="7395444528215555713" name="MyTestLang.structure.HorizontalChildrenWithPunctuation" flags="ng" index="3ULhGs" />
-      <concept id="4074720287548987672" name="MyTestLang.structure.ComplexConditionalShowElement" flags="ng" index="1USKAr">
+      <concept id="4074720287548987672" name="MyTestLang.structure.ConditionalRenderingCondition_Suffix" flags="ng" index="1USKAr">
         <property id="4074720287548990431" name="inheritsFromB" index="1USNds" />
       </concept>
       <concept id="7660047344200203379" name="MyTestLang.structure.BracketGrammarCellElement_Punctuation" flags="ng" index="3VXWwa">
@@ -729,7 +736,7 @@
             <ref role="3cqZAo" node="4NgzS1pxiv3" resolve="actual" />
           </node>
           <node concept="26ycHw" id="6qxTpQspg5d" role="3tpDZB">
-            <property role="26ycAo" value="/* punctuation left */&#10;/* punctuation left  constant */&#10;&#10;/* punctuation right  suffix */ B&#10;/* punctuation right  constant only */&#10;&#10;  /* indent punctuation left */&#10;  /* indent punctuation left  constant */&#10;&#10;   element&#10;  &lt;empty&gt; element&#10;  element&#10;  element&#10;  &lt;empty&gt;  element" />
+            <property role="26ycAo" value="/* punctuation left */&#10;/* punctuation left  constant */&#10;&#10;/* punctuation right  suffix */ B&#10;/* punctuation right  constant only */&#10;&#10;  /* indent punctuation left */&#10;  /* indent punctuation left  constant */&#10;&#10;  element&#10;  &lt;empty&gt; element&#10;  element&#10;  element&#10;  &lt;empty&gt;  element" />
           </node>
         </node>
       </node>
@@ -2096,6 +2103,129 @@
           </node>
           <node concept="26ycHw" id="3yck8d2sT_6" role="3tpDZB">
             <property role="26ycAo" value="struct A1 : B&#10;struct A2 : B" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="3q_VDQu$rkW" role="1SL9yI">
+      <property role="TrG5h" value="generateConditionalElementSpacePrefix_hidden" />
+      <node concept="3cqZAl" id="3q_VDQu$rkX" role="3clF45" />
+      <node concept="3clFbS" id="3q_VDQu$rkY" role="3clF47">
+        <node concept="3cpWs8" id="3q_VDQu$rkZ" role="3cqZAp">
+          <node concept="3cpWsn" id="3q_VDQu$rl0" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="17QB3L" id="3q_VDQu$rl1" role="1tU5fm" />
+            <node concept="2OqwBi" id="3q_VDQu$rl2" role="33vP2m">
+              <node concept="2WthIp" id="3q_VDQu$rl3" role="2Oq$k0" />
+              <node concept="2XshWL" id="3q_VDQu$rl4" role="2OqNvi">
+                <ref role="2WH_rO" node="3yck8d2sT9V" resolve="generateToText" />
+                <node concept="2c44tf" id="3q_VDQu$rl5" role="2XxRq1">
+                  <node concept="2CaehS" id="3q_VDQu$rvg" role="2c44tc" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="3q_VDQu$rl7" role="3cqZAp">
+          <node concept="37vLTw" id="3q_VDQu$rl8" role="3tpDZA">
+            <ref role="3cqZAo" node="3q_VDQu$rl0" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="3q_VDQu$rl9" role="3tpDZB">
+            <property role="26ycAo" value="struct A1&#10;struct A2" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="3q_VDQu$rkI" role="1SL9yI">
+      <property role="TrG5h" value="generateConditionalElementSpacePrefix_show" />
+      <node concept="3cqZAl" id="3q_VDQu$rkJ" role="3clF45" />
+      <node concept="3clFbS" id="3q_VDQu$rkK" role="3clF47">
+        <node concept="3cpWs8" id="3q_VDQu$rkL" role="3cqZAp">
+          <node concept="3cpWsn" id="3q_VDQu$rkM" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="17QB3L" id="3q_VDQu$rkN" role="1tU5fm" />
+            <node concept="2OqwBi" id="3q_VDQu$rkO" role="33vP2m">
+              <node concept="2WthIp" id="3q_VDQu$rkP" role="2Oq$k0" />
+              <node concept="2XshWL" id="3q_VDQu$rkQ" role="2OqNvi">
+                <ref role="2WH_rO" node="3yck8d2sT9V" resolve="generateToText" />
+                <node concept="2c44tf" id="3q_VDQu$rkR" role="2XxRq1">
+                  <node concept="2CaehS" id="3q_VDQu$rz5" role="2c44tc">
+                    <property role="2CaehV" value="true" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="3q_VDQu$rkT" role="3cqZAp">
+          <node concept="37vLTw" id="3q_VDQu$rkU" role="3tpDZA">
+            <ref role="3cqZAo" node="3q_VDQu$rkM" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="3q_VDQu$rkV" role="3tpDZB">
+            <property role="26ycAo" value="static struct A1&#10;static struct A2" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="5pVxUPgwLdF" role="1SL9yI">
+      <property role="TrG5h" value="generateConditionalElementSpacePrefixMultiple_showBoth" />
+      <node concept="3cqZAl" id="5pVxUPgwLdG" role="3clF45" />
+      <node concept="3clFbS" id="5pVxUPgwLdH" role="3clF47">
+        <node concept="3cpWs8" id="5pVxUPgwLdI" role="3cqZAp">
+          <node concept="3cpWsn" id="5pVxUPgwLdJ" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="17QB3L" id="5pVxUPgwLdK" role="1tU5fm" />
+            <node concept="2OqwBi" id="5pVxUPgwLdL" role="33vP2m">
+              <node concept="2WthIp" id="5pVxUPgwLdM" role="2Oq$k0" />
+              <node concept="2XshWL" id="5pVxUPgwLdN" role="2OqNvi">
+                <ref role="2WH_rO" node="3yck8d2sT9V" resolve="generateToText" />
+                <node concept="2c44tf" id="5pVxUPgwLdO" role="2XxRq1">
+                  <node concept="61nUr" id="5pVxUPgwLmm" role="2c44tc">
+                    <property role="61nUq" value="true" />
+                    <property role="61nIz" value="true" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="5pVxUPgwLdQ" role="3cqZAp">
+          <node concept="37vLTw" id="5pVxUPgwLdR" role="3tpDZA">
+            <ref role="3cqZAo" node="5pVxUPgwLdJ" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="5pVxUPgwLdS" role="3tpDZB">
+            <property role="26ycAo" value="static final struct A1&#10;static final struct A2" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="5pVxUPgwLyQ" role="1SL9yI">
+      <property role="TrG5h" value="generateConditionalElementSpacePrefixMultiple_showSecond" />
+      <node concept="3cqZAl" id="5pVxUPgwLyR" role="3clF45" />
+      <node concept="3clFbS" id="5pVxUPgwLyS" role="3clF47">
+        <node concept="3cpWs8" id="5pVxUPgwLyT" role="3cqZAp">
+          <node concept="3cpWsn" id="5pVxUPgwLyU" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="17QB3L" id="5pVxUPgwLyV" role="1tU5fm" />
+            <node concept="2OqwBi" id="5pVxUPgwLyW" role="33vP2m">
+              <node concept="2WthIp" id="5pVxUPgwLyX" role="2Oq$k0" />
+              <node concept="2XshWL" id="5pVxUPgwLyY" role="2OqNvi">
+                <ref role="2WH_rO" node="3yck8d2sT9V" resolve="generateToText" />
+                <node concept="2c44tf" id="5pVxUPgwLyZ" role="2XxRq1">
+                  <node concept="61nUr" id="5pVxUPgwLz0" role="2c44tc">
+                    <property role="61nIz" value="true" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="5pVxUPgwLz1" role="3cqZAp">
+          <node concept="37vLTw" id="5pVxUPgwLz2" role="3tpDZA">
+            <ref role="3cqZAo" node="5pVxUPgwLyU" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="5pVxUPgwLz3" role="3tpDZB">
+            <property role="26ycAo" value="final struct A1&#10;final struct A2" />
           </node>
         </node>
       </node>
