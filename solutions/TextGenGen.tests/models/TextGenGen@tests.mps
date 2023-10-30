@@ -103,6 +103,9 @@
         <property id="6231723687846804494" name="isFinal" index="61nIz" />
         <property id="6231723687846803767" name="isStatic" index="61nUq" />
       </concept>
+      <concept id="2850998759054758044" name="MyTestLang.structure.ConditionalRenderingCondition_Collection" flags="ng" index="76hzo">
+        <child id="2850998759054851269" name="elements" index="76Zi1" />
+      </concept>
       <concept id="58318537122351355" name="MyTestLang.structure.ComplexIndentLayoutContainer" flags="ng" index="28cbyt">
         <child id="58318537122351358" name="horizontalElements" index="28cbyo" />
         <child id="58318537122351356" name="singleElementA" index="28cbyq" />
@@ -736,7 +739,7 @@
             <ref role="3cqZAo" node="4NgzS1pxiv3" resolve="actual" />
           </node>
           <node concept="26ycHw" id="6qxTpQspg5d" role="3tpDZB">
-            <property role="26ycAo" value="/* punctuation left */&#10;/* punctuation left  constant */&#10;&#10;/* punctuation right  suffix */ B&#10;/* punctuation right  constant only */&#10;&#10;  /* indent punctuation left */&#10;  /* indent punctuation left  constant */&#10;&#10;  element&#10;  &lt;empty&gt; element&#10;  element&#10;  element&#10;  &lt;empty&gt;  element" />
+            <property role="26ycAo" value="/* punctuation left */&#10;/* punctuation left  constant */&#10;&#10;/* punctuation right  suffix */ B&#10;/* punctuation right  constant only */&#10;&#10;  /* indent punctuation left */&#10;  /* indent punctuation left  constant */&#10;&#10;   element&#10;  &lt;empty&gt; element&#10;  element&#10;  element&#10;  &lt;empty&gt;  element" />
           </node>
         </node>
       </node>
@@ -2226,6 +2229,68 @@
           </node>
           <node concept="26ycHw" id="5pVxUPgwLz3" role="3tpDZB">
             <property role="26ycAo" value="final struct A1&#10;final struct A2" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="2ugM4gwz6H_" role="1SL9yI">
+      <property role="TrG5h" value="generateConditionalCollectionPrefix_hide" />
+      <node concept="3cqZAl" id="2ugM4gwz6HA" role="3clF45" />
+      <node concept="3clFbS" id="2ugM4gwz6HB" role="3clF47">
+        <node concept="3cpWs8" id="2ugM4gwz6HC" role="3cqZAp">
+          <node concept="3cpWsn" id="2ugM4gwz6HD" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="17QB3L" id="2ugM4gwz6HE" role="1tU5fm" />
+            <node concept="2OqwBi" id="2ugM4gwz6HF" role="33vP2m">
+              <node concept="2WthIp" id="2ugM4gwz6HG" role="2Oq$k0" />
+              <node concept="2XshWL" id="2ugM4gwz6HH" role="2OqNvi">
+                <ref role="2WH_rO" node="3yck8d2sT9V" resolve="generateToText" />
+                <node concept="2c44tf" id="2ugM4gwz6HI" role="2XxRq1">
+                  <node concept="76hzo" id="2ugM4gw$bLX" role="2c44tc" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="2ugM4gwz6HK" role="3cqZAp">
+          <node concept="37vLTw" id="2ugM4gwz6HL" role="3tpDZA">
+            <ref role="3cqZAo" node="2ugM4gwz6HD" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="2ugM4gwz6HM" role="3tpDZB">
+            <property role="26ycAo" value="A&#10;B" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="2ugM4gw_aXa" role="1SL9yI">
+      <property role="TrG5h" value="generateConditionalCollectionPrefix_show" />
+      <node concept="3cqZAl" id="2ugM4gw_aXb" role="3clF45" />
+      <node concept="3clFbS" id="2ugM4gw_aXc" role="3clF47">
+        <node concept="3cpWs8" id="2ugM4gw_aXd" role="3cqZAp">
+          <node concept="3cpWsn" id="2ugM4gw_aXe" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="17QB3L" id="2ugM4gw_aXf" role="1tU5fm" />
+            <node concept="2OqwBi" id="2ugM4gw_aXg" role="33vP2m">
+              <node concept="2WthIp" id="2ugM4gw_aXh" role="2Oq$k0" />
+              <node concept="2XshWL" id="2ugM4gw_aXi" role="2OqNvi">
+                <ref role="2WH_rO" node="3yck8d2sT9V" resolve="generateToText" />
+                <node concept="2c44tf" id="2ugM4gw_aXj" role="2XxRq1">
+                  <node concept="76hzo" id="2ugM4gw_aXk" role="2c44tc">
+                    <node concept="3jfCGz" id="2ugM4gw_b5v" role="76Zi1">
+                      <property role="TrG5h" value="E1" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="2ugM4gw_aXl" role="3cqZAp">
+          <node concept="37vLTw" id="2ugM4gw_aXm" role="3tpDZA">
+            <ref role="3cqZAo" node="2ugM4gw_aXe" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="2ugM4gw_aXn" role="3tpDZB">
+            <property role="26ycAo" value="element E1 A&#10;element E1 B" />
           </node>
         </node>
       </node>
