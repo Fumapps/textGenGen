@@ -739,7 +739,7 @@
             <ref role="3cqZAo" node="4NgzS1pxiv3" resolve="actual" />
           </node>
           <node concept="26ycHw" id="6qxTpQspg5d" role="3tpDZB">
-            <property role="26ycAo" value="/* punctuation left */&#10;/* punctuation left  constant */&#10;&#10;/* punctuation right  suffix */ B&#10;/* punctuation right  constant only */&#10;&#10;  /* indent punctuation left */&#10;  /* indent punctuation left  constant */&#10;&#10;   element&#10;  &lt;empty&gt; element&#10;  element&#10;  element&#10;  &lt;empty&gt;  element" />
+            <property role="26ycAo" value="/* punctuation left */&#10;/* punctuation left  constant */&#10;&#10;/* punctuation right  suffix */ B&#10;/* punctuation right  constant only */&#10;&#10;  /* indent punctuation left */&#10;  /* indent punctuation left  constant */&#10;&#10;  element&#10;  &lt;empty&gt; element&#10;  element&#10;  element&#10;  &lt;empty&gt;  element" />
           </node>
         </node>
       </node>
