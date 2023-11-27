@@ -177,7 +177,9 @@
       <concept id="4278635856200794926" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyExtendLanguage" flags="ng" index="1Busua">
         <reference id="4278635856200794928" name="language" index="1Busuk" />
       </concept>
-      <concept id="3189788309731840247" name="jetbrains.mps.build.mps.structure.BuildMps_Solution" flags="ng" index="1E1JtA" />
+      <concept id="3189788309731840247" name="jetbrains.mps.build.mps.structure.BuildMps_Solution" flags="ng" index="1E1JtA">
+        <property id="269707337715731330" name="sourcesKind" index="aoJFB" />
+      </concept>
       <concept id="3189788309731840248" name="jetbrains.mps.build.mps.structure.BuildMps_Language" flags="ng" index="1E1JtD">
         <child id="9200313594498201639" name="generator" index="1TViLv" />
       </concept>
@@ -464,13 +466,13 @@
         <node concept="2pNUuL" id="6gVRE4aUuI3" role="2pNNFR">
           <property role="2pNUuO" value="since-build" />
           <node concept="2pMdtt" id="6gVRE4aUuI4" role="2pMdts">
-            <property role="2pMdty" value="222" />
+            <property role="2pMdty" value="232" />
           </node>
         </node>
         <node concept="2pNUuL" id="47a464IucXc" role="2pNNFR">
           <property role="2pNUuO" value="until-build" />
           <node concept="2pMdtt" id="47a464IucXd" role="2pMdts">
-            <property role="2pMdty" value="222.9999" />
+            <property role="2pMdty" value="232.9999" />
           </node>
         </node>
       </node>
@@ -481,7 +483,7 @@
       </node>
       <node concept="3_J27D" id="5n$w_eSjdep" role="m$_w8">
         <node concept="3Mxwew" id="5n$w_eSjdeq" role="3MwsjC">
-          <property role="3MwjfP" value="2022.2" />
+          <property role="3MwjfP" value="2023.2" />
         </node>
       </node>
       <node concept="m$_yC" id="5n$w_eSjdes" role="m$_yJ">
@@ -692,6 +694,7 @@
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="TextGenGen.tests" />
         <property role="3LESm3" value="d8ae93b1-2e40-410e-a11f-644a80ab5009" />
+        <property role="aoJFB" value="eYcmk9QOlj/sources_and_tests" />
         <node concept="55IIr" id="3xZkx5w$gEb" role="3LF7KH">
           <node concept="2Ry0Ak" id="3xZkx5w$gEc" role="iGT6I">
             <property role="2Ry0Am" value="solutions" />
