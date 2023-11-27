@@ -472,7 +472,7 @@
         <node concept="2pNUuL" id="47a464IucXc" role="2pNNFR">
           <property role="2pNUuO" value="until-build" />
           <node concept="2pMdtt" id="47a464IucXd" role="2pMdts">
-            <property role="2pMdty" value="232.9999" />
+            <property role="2pMdty" value="232.*" />
           </node>
         </node>
       </node>
