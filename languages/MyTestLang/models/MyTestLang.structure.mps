@@ -43,7 +43,7 @@
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
       </concept>
-      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ngI" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
     </language>
@@ -369,7 +369,7 @@
     <property role="TrG5h" value="IgnoreTextGenGen" />
     <property role="3GE5qa" value="Ignore" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="3P33nJjfiPf">
     <property role="EcuMT" value="4414386885229358415" />
@@ -388,7 +388,7 @@
     <property role="EcuMT" value="3001005799609430069" />
     <property role="TrG5h" value="WrapGrammarCellElement" />
     <property role="3GE5qa" value="Grammarcells" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="2A_HHZIBhKs" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -397,7 +397,7 @@
     <property role="EcuMT" value="3001005799609549092" />
     <property role="TrG5h" value="SplittableGrammarCellElement" />
     <property role="3GE5qa" value="Grammarcells" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="2A_HHZIBk4_" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -407,13 +407,13 @@
     <property role="TrG5h" value="ConstantGrammarCellElement" />
     <property role="3GE5qa" value="Grammarcells" />
     <property role="34LRSv" value="my constant" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="2A_HHZIC5$f">
     <property role="EcuMT" value="3001005799609751823" />
     <property role="TrG5h" value="FlagGrammarCellElement" />
     <property role="3GE5qa" value="Grammarcells" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="2A_HHZIC5I1" role="1TKVEl">
       <property role="IQ2nx" value="3001005799609752449" />
       <property role="TrG5h" value="myFlag" />
@@ -424,7 +424,7 @@
     <property role="EcuMT" value="3001005799609753830" />
     <property role="TrG5h" value="OptionalGrammarCellElement_Property" />
     <property role="3GE5qa" value="Grammarcells" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="2A_HHZIC6S2" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -433,7 +433,7 @@
     <property role="EcuMT" value="3001005799609860519" />
     <property role="TrG5h" value="BracketGrammarCellElement" />
     <property role="3GE5qa" value="Grammarcells" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="2A_HHZICw6C" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -450,7 +450,7 @@
     <property role="TrG5h" value="DummyElement" />
     <property role="34LRSv" value="dummy" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="1EQ_sJ1hrGu" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -459,7 +459,7 @@
     <property role="EcuMT" value="4071062822760086804" />
     <property role="TrG5h" value="OptionalGrammarCellElement_RefNode" />
     <property role="3GE5qa" value="Grammarcells" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="3xZkx5wUwaG" role="1TKVEi">
       <property role="IQ2ns" value="4071062822760088236" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -471,7 +471,7 @@
     <property role="EcuMT" value="4071062822770769385" />
     <property role="TrG5h" value="OptionalGrammarCellElement_RefNodeList" />
     <property role="3GE5qa" value="Grammarcells" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="3xZkx5xzfRE" role="1TKVEi">
       <property role="IQ2ns" value="4071062822770769386" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -485,7 +485,7 @@
     <property role="TrG5h" value="OptionalGrammarCellElement_RefCell" />
     <property role="3GE5qa" value="Grammarcells" />
     <property role="R4oN_" value="Note: for RefCell, we are not allowed to use a transformation text, maybe it's a bug in grammarcells. See mc04_cells transformation condition where it's checking &quot;isNull&quot; instead of &quot;isNotNull&quot;: 'node.getTransformationText().isNull &amp;&amp; node.getFirstNonConst().isInstanceOf(CellModel_RefNodeList)'" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="3xZkx5xNGXT" role="1TKVEi">
       <property role="IQ2ns" value="4071062822775082873" />
       <property role="20kJfa" value="elementRef" />
@@ -496,7 +496,7 @@
     <property role="EcuMT" value="7660047344200203379" />
     <property role="TrG5h" value="BracketGrammarCellElement_Punctuation" />
     <property role="3GE5qa" value="Grammarcells" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="6DdX7AhIzLO" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -511,7 +511,7 @@
     <property role="EcuMT" value="4074720287548987672" />
     <property role="TrG5h" value="ConditionalRenderingCondition_Suffix" />
     <property role="3GE5qa" value="Spacing" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="3yck8d2rQfv" role="1TKVEl">
       <property role="IQ2nx" value="4074720287548990431" />
       <property role="TrG5h" value="inheritsFromB" />
@@ -522,7 +522,7 @@
     <property role="EcuMT" value="3937815809942686437" />
     <property role="TrG5h" value="ConditionalRenderingCondition_Prefix" />
     <property role="3GE5qa" value="Spacing" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="3q_VDQuzgFA" role="1TKVEl">
       <property role="IQ2nx" value="3937815809942686438" />
       <property role="TrG5h" value="isStatic" />
@@ -549,7 +549,7 @@
     <property role="EcuMT" value="2850998759054758044" />
     <property role="3GE5qa" value="Spacing" />
     <property role="TrG5h" value="ConditionalRenderingCondition_Collection" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="2ugM4gwyNN5" role="1TKVEi">
       <property role="IQ2ns" value="2850998759054851269" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />

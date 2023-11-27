@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="TextGenGen.javastubs" uuid="c2d2f2e9-5f9b-403a-b789-a1fa58ff4e9b" moduleVersion="0" pluginKind="PLUGIN_OTHER" compileInMPS="true">
+<solution name="TextGenGen.javastubs" uuid="c2d2f2e9-5f9b-403a-b789-a1fa58ff4e9b" moduleVersion="0">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
@@ -9,14 +9,11 @@
     </modelRoot>
   </models>
   <facets>
-    <facet type="java">
+    <facet type="java" compile="mps" classes="mps" ext="yes">
       <classes generated="true" path="${module}/classes_gen" />
+      <library location="${project_home}/java_src/lib/editorToText.jar" />
     </facet>
   </facets>
-  <stubModelEntries>
-    <stubModelEntry path="${project_home}/java_src/lib/editorToText.jar" />
-  </stubModelEntries>
-  <sourcePath />
   <dependencies>
     <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
   </dependencies>

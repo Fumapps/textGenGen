@@ -86,14 +86,14 @@
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
-      <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
+      <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ngI" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
       </concept>
       <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
         <reference id="1107535924139" name="classifier" index="3uigEE" />
       </concept>
-      <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
+      <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ngI" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
@@ -207,7 +207,7 @@
     </language>
     <language id="443f4c36-fcf5-4eb6-9500-8d06ed259e3e" name="jetbrains.mps.baseLanguage.classifiers">
       <concept id="1205752633985" name="jetbrains.mps.baseLanguage.classifiers.structure.ThisClassifierExpression" flags="nn" index="2WthIp" />
-      <concept id="1205756064662" name="jetbrains.mps.baseLanguage.classifiers.structure.IMemberOperation" flags="ng" index="2WEnae">
+      <concept id="1205756064662" name="jetbrains.mps.baseLanguage.classifiers.structure.IMemberOperation" flags="ngI" index="2WEnae">
         <reference id="1205756909548" name="member" index="2WH_rO" />
       </concept>
       <concept id="1205769003971" name="jetbrains.mps.baseLanguage.classifiers.structure.DefaultClassifierMethodDeclaration" flags="ng" index="2XrIbr" />
@@ -240,7 +240,7 @@
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ngI" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
     </language>
@@ -1286,7 +1286,7 @@
               <node concept="37vLTG" id="2zq5iUT9_4u" role="1bW2Oz">
                 <property role="TrG5h" value="ignore" />
                 <node concept="3uibUv" id="2zq5iUT9_4v" role="1tU5fm">
-                  <ref role="3uigEE" to="f3iy:45AuIz7TE7m" resolve="Result" />
+                  <ref role="3uigEE" to="f3iy:45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
                 </node>
               </node>
               <node concept="3clFbS" id="2zq5iUT9_4w" role="1bW5cS" />
@@ -1420,7 +1420,7 @@
               <node concept="37vLTG" id="2A_HHZICX86" role="1bW2Oz">
                 <property role="TrG5h" value="ignore" />
                 <node concept="3uibUv" id="2A_HHZICX87" role="1tU5fm">
-                  <ref role="3uigEE" to="f3iy:45AuIz7TE7m" resolve="Result" />
+                  <ref role="3uigEE" to="f3iy:45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
                 </node>
               </node>
               <node concept="3clFbS" id="2A_HHZICX88" role="1bW5cS" />
@@ -1952,7 +1952,7 @@
                 <ref role="2WH_rO" node="2A_HHZICX9Q" resolve="generateToText" />
                 <node concept="2c44tf" id="3xZkx5xJkfS" role="2XxRq1">
                   <node concept="1pKA0y" id="3xZkx5xPlzD" role="2c44tc">
-                    <ref role="1pGpPC" node="2OpspXLlbj" resolve="testDummy" />
+                    <ref role="1pGpPC" node="2OpspXLlbj" />
                   </node>
                 </node>
               </node>
