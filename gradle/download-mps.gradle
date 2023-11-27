@@ -8,13 +8,16 @@ import groovy.json.JsonSlurper
 import org.apache.tools.ant.taskdefs.condition.Os
 import java.nio.file.Files
 
-// see: https://github.com/JetBrains/JetBrainsRuntime/tree/jbr11#releases
+// see: https://github.com/JetBrains/JetBrainsRuntime/tree/main#releases-based-on-jdk-17
 def jbrMappings = [
         "2021.2": "11_0_13-b1504.49",
         "2021.3": "11_0_14_1-b1751.46",
         "2022.1": "11_0_15-b2043.56",
         "2022.2": "17.0.5-b469.71",
-        "2022.3": "17.0.5-b653.14" ]
+        "2022.3": "17.0.6-b653.34",
+        "2023.1": "17.0.7-b829.16",
+        "2023.2": "17.0.9-b1000.46",
+        "2023.3": "17.0.9-b1087.3" ]
 
 
 if (!project.hasProperty("mpsVersion")) {
@@ -297,6 +300,16 @@ task copyOsSpecificBinFiles {
         file("$targetFolderName/bin/win").deleteDir()
         file("$targetFolderName/bin/mac").deleteDir()
         file("$targetFolderName/bin/linux").deleteDir()
+
+        // workaround: MPS-35648
+        if (mpsVersion == "2022.3" || mpsVersion.takeBefore(".").toInteger() >= 2023) {
+            def subDir = Os.isArch("aarch64") ? "aarch64" : "amd64"
+            println("Workaround for UnsatisfiedLinkError with jnidispatch.dll: copying jna files from subdir $subDir to $targetFolderName/lib/jna")
+            copy {
+                from fileTree("$targetFolderName/lib/jna/$subDir")
+                into file("$targetFolderName/lib/jna")
+            }
+        }
     }
 }
 
