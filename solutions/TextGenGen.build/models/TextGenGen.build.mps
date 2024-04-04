@@ -417,12 +417,18 @@
           <node concept="28jJK3" id="50w0akqOmYZ" role="39821P">
             <node concept="398BVA" id="50w0akqOmZf" role="28jJRO">
               <ref role="398BVh" node="21fCSXQM0pt" resolve="project_home" />
-              <node concept="2Ry0Ak" id="50w0akqOmZx" role="iGT6I">
-                <property role="2Ry0Am" value="java_src" />
-                <node concept="2Ry0Ak" id="50w0akqOmZA" role="2Ry0An">
-                  <property role="2Ry0Am" value="lib" />
-                  <node concept="2Ry0Ak" id="50w0akqOmZF" role="2Ry0An">
-                    <property role="2Ry0Am" value="editorToText.jar" />
+              <node concept="2Ry0Ak" id="7$YxcEA4HaS" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="7$YxcEA4Hct" role="2Ry0An">
+                  <property role="2Ry0Am" value="TextGenGen.javastubs" />
+                  <node concept="2Ry0Ak" id="7$YxcEA4HdE" role="2Ry0An">
+                    <property role="2Ry0Am" value="java_src" />
+                    <node concept="2Ry0Ak" id="7$YxcEA4Hej" role="2Ry0An">
+                      <property role="2Ry0Am" value="lib" />
+                      <node concept="2Ry0Ak" id="7$YxcEA4HeW" role="2Ry0An">
+                        <property role="2Ry0Am" value="editorToText.jar" />
+                      </node>
+                    </node>
                   </node>
                 </node>
               </node>
@@ -542,25 +548,31 @@
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="50w0akqOLC9" role="3bR37C">
-          <node concept="1BurEX" id="50w0akqOLCa" role="1SiIV1">
-            <node concept="398BVA" id="50w0akqOLBX" role="1BurEY">
+        <node concept="1SiIV0" id="4lOdHGLnsKY" role="3bR37C">
+          <node concept="3bR9La" id="4lOdHGLnsKZ" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7$YxcEA4FVD" role="3bR37C">
+          <node concept="1BurEX" id="7$YxcEA4FVE" role="1SiIV1">
+            <node concept="398BVA" id="7$YxcEA4FVh" role="1BurEY">
               <ref role="398BVh" node="21fCSXQM0pt" resolve="project_home" />
-              <node concept="2Ry0Ak" id="50w0akqOLBY" role="iGT6I">
-                <property role="2Ry0Am" value="java_src" />
-                <node concept="2Ry0Ak" id="50w0akqOLBZ" role="2Ry0An">
-                  <property role="2Ry0Am" value="lib" />
-                  <node concept="2Ry0Ak" id="50w0akqOLC0" role="2Ry0An">
-                    <property role="2Ry0Am" value="editorToText.jar" />
+              <node concept="2Ry0Ak" id="7$YxcEA4FVi" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="7$YxcEA4FVj" role="2Ry0An">
+                  <property role="2Ry0Am" value="TextGenGen.javastubs" />
+                  <node concept="2Ry0Ak" id="7$YxcEA4FVk" role="2Ry0An">
+                    <property role="2Ry0Am" value="java_src" />
+                    <node concept="2Ry0Ak" id="7$YxcEA4FVl" role="2Ry0An">
+                      <property role="2Ry0Am" value="lib" />
+                      <node concept="2Ry0Ak" id="7$YxcEA4FVm" role="2Ry0An">
+                        <property role="2Ry0Am" value="editorToText.jar" />
+                      </node>
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
-          </node>
-        </node>
-        <node concept="1SiIV0" id="4lOdHGLnsKY" role="3bR37C">
-          <node concept="3bR9La" id="4lOdHGLnsKZ" role="1SiIV1">
-            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
           </node>
         </node>
       </node>

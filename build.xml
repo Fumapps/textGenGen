@@ -196,7 +196,7 @@
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-TextGenGen.plugin-models" prefix="module/models" />
     </jar>
     <zip destfile="${build.layout}/TextGenGen.zip">
-      <zipfileset file="${project_home}/java_src/lib/editorToText.jar" prefix="TextGenGen (fum)" />
+      <zipfileset file="${project_home}/solutions/TextGenGen.javastubs/java_src/lib/editorToText.jar" prefix="TextGenGen (fum)" />
       <fileset dir="${build.tmp}/default/TextGenGen.zip" />
     </zip>
     <mkdir dir="${build.layout}/Tests" />
@@ -784,7 +784,7 @@
         <path location="${project_home}/solutions/TextGenGen.javastubs/source_gen" />
       </src>
       <classpath>
-        <fileset file="${project_home}/java_src/lib/editorToText.jar" />
+        <fileset file="${project_home}/solutions/TextGenGen.javastubs/java_src/lib/editorToText.jar" />
       </classpath>
     </javac>
   </target>
@@ -821,7 +821,7 @@
         <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
-        <fileset file="${project_home}/java_src/lib/editorToText.jar" />
+        <fileset file="${project_home}/solutions/TextGenGen.javastubs/java_src/lib/editorToText.jar" />
         <fileset file="${artifacts.mps}/lib/app.jar" />
         <fileset file="${artifacts.mps}/lib/app-client.jar" />
         <fileset file="${artifacts.mps}/lib/lib.jar" />
