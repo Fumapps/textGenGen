@@ -17,8 +17,8 @@ TEST-*.xml
 junit*.properties
 
 # IDEA
-java_src/EditorToText_IDEA/.idea/*
-!java_src/EditorToText_IDEA/.idea/libraries/
-java_src/EditorToText_IDEA/out/
+solutions/TextGenGen.javastubs/java_src/EditorToText_IDEA/.idea/*
+!solutions/TextGenGen.javastubs/java_src/EditorToText_IDEA/.idea/libraries/
+solutions/TextGenGen.javastubs/java_src/EditorToText_IDEA/out/
 
 *.iws

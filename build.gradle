@@ -13,13 +13,15 @@ task prepareMps {
 // due to MPS-33503 The "generate" task cannot handle java source stub models correctly (a minimalistic test case included)
 // we have to compile the java sources and include class files in MPS, to make our build from CLI work
 task assembleEditorToTextJar(type: Exec) {
-    def javaFiles = fileTree("$projectDir/java_src/EditorToText_IDEA").matching {
+    group 'mps'
+    def javaStubsModule = "$projectDir/solutions/TextGenGen.javastubs"
+    def javaFiles = fileTree("$javaStubsModule/java_src/EditorToText_IDEA").matching {
         include "**/*.java"
     }.collect { it.toString() }
     commandLine "$javaHome/bin/javac", "-d", "$buildDir/java_src"
     args javaFiles
     doLast {
-        ant.jar(destfile: "$projectDir/java_src/lib/editorToText.jar", basedir: "$buildDir/java_src")
+        ant.jar(destfile: "$javaStubsModule/java_src/lib/editorToText.jar", basedir: "$buildDir/java_src")
     }
 }
 

@@ -4,14 +4,14 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="${project_home}/java_src/lib/editorToText.jar!/" type="java_classes">
+    <modelRoot contentPath="${module}/java_src/lib/editorToText.jar!/" type="java_classes">
       <sourceRoot location="." />
     </modelRoot>
   </models>
   <facets>
     <facet type="java" compile="mps" classes="mps" ext="yes">
       <classes generated="true" path="${module}/classes_gen" />
-      <library location="${project_home}/java_src/lib/editorToText.jar" />
+      <library location="${module}/java_src/lib/editorToText.jar" />
     </facet>
   </facets>
   <dependencies>
