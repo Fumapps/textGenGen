@@ -1952,7 +1952,7 @@
                 <ref role="2WH_rO" node="2A_HHZICX9Q" resolve="generateToText" />
                 <node concept="2c44tf" id="3xZkx5xJkfS" role="2XxRq1">
                   <node concept="1pKA0y" id="3xZkx5xPlzD" role="2c44tc">
-                    <ref role="1pGpPC" node="2OpspXLlbj" />
+                    <ref role="1pGpPC" node="2OpspXLlbj" resolve="testDummy" />
                   </node>
                 </node>
               </node>

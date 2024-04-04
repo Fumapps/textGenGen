@@ -1,7 +1,7 @@
 ext.languageName = "TextGenGen"
-ext.mpsVersion = "2023.2"
+ext.mpsVersion = "2023.3"
 ext.mpsPlugins = [ ]
-ext.customMpsPlugins = [ "de.itemis.mps.extensions": "https://artifacts.itemis.cloud/repository/maven-mps/de/itemis/mps/extensions/2023.2.2675.b35f4bc/extensions-2023.2.2675.b35f4bc.zip" ]
+ext.customMpsPlugins = [ "de.itemis.mps.extensions": "https://artifacts.itemis.cloud/repository/maven-mps/de/itemis/mps/extensions/2023.2.2822.0952ae9/extensions-2023.2.2822.0952ae9.zip" ]
 
 apply from: 'gradle/init-gradle-scripts.gradle'
 
