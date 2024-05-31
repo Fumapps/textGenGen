@@ -187,6 +187,139 @@
       <concept id="1176501494711" name="jetbrains.mps.baseLanguage.collections.structure.IsNotEmptyOperation" flags="nn" index="3GX2aA" />
     </language>
   </registry>
+  <node concept="WtQ9Q" id="303_rny5J$S">
+    <property role="3GE5qa" value="Indentation" />
+    <ref role="WuzLi" to="uanp:303_rny3vE9" resolve="IntendLayoutChildrenContainer" />
+    <node concept="11bSqf" id="303_rny5J$T" role="11c4hB">
+      <node concept="3clFbS" id="303_rny5J$U" role="2VODD2">
+        <node concept="lc7rE" id="303_rny5J$Y" role="3cqZAp">
+          <node concept="la8eA" id="303_rny5J$X" role="lcghm">
+            <property role="lacIc" value="LineA" />
+          </node>
+        </node>
+        <node concept="lc7rE" id="303_rny5J_o" role="3cqZAp">
+          <node concept="l8MVK" id="303_rny5J_p" role="lcghm" />
+        </node>
+        <node concept="1bpajm" id="303_rny5J_t" role="3cqZAp" />
+        <node concept="lc7rE" id="303_rny5J_j" role="3cqZAp">
+          <node concept="la8eA" id="303_rny5J_i" role="lcghm">
+            <property role="lacIc" value="&lt;" />
+          </node>
+          <node concept="la8eA" id="303_rny5J_C" role="lcghm">
+            <property role="lacIc" value=" " />
+          </node>
+        </node>
+        <node concept="2Gpval" id="303_rny5JAn" role="3cqZAp">
+          <node concept="2GrKxI" id="303_rny5J_K" role="2Gsz3X">
+            <property role="TrG5h" value="elem" />
+          </node>
+          <node concept="3clFbS" id="303_rny5JAm" role="2LFqv$">
+            <node concept="lc7rE" id="303_rny5J_O" role="3cqZAp">
+              <node concept="l9hG8" id="303_rny5J_M" role="lcghm">
+                <node concept="2GrUjf" id="303_rny5J_N" role="lb14g">
+                  <ref role="2Gs0qQ" node="303_rny5J_K" resolve="elem" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbJ" id="303_rny5JAi" role="3cqZAp">
+              <node concept="2OqwBi" id="303_rny5JAe" role="3clFbw">
+                <node concept="2OqwBi" id="303_rny5JAf" role="2Oq$k0">
+                  <node concept="YCak7" id="303_rny5JAg" role="2OqNvi" />
+                  <node concept="2GrUjf" id="303_rny5JAd" role="2Oq$k0">
+                    <ref role="2Gs0qQ" node="303_rny5J_K" resolve="elem" />
+                  </node>
+                </node>
+                <node concept="3x8VRR" id="303_rny5JAh" role="2OqNvi" />
+              </node>
+              <node concept="3clFbS" id="303_rny5JAl" role="3clFbx">
+                <node concept="3SKdUt" id="303_rny5JA7" role="3cqZAp">
+                  <node concept="1PaTwC" id="303_rny5JA9" role="1aUNEU">
+                    <node concept="3oM_SD" id="303_rny5JAa" role="1PaTwD">
+                      <property role="3oM_SC" value="vertical child collection: insert new-lines between the elements" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="lc7rE" id="303_rny5JAb" role="3cqZAp">
+                  <node concept="l8MVK" id="303_rny5JAc" role="lcghm" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2OqwBi" id="303_rny5J_J" role="2GsD0m">
+            <node concept="117lpO" id="303_rny5J_I" role="2Oq$k0" />
+            <node concept="3Tsc0h" id="303_rny5J_F" role="2OqNvi">
+              <ref role="3TtcxE" to="uanp:303_rny3vJe" resolve="children" />
+            </node>
+          </node>
+        </node>
+        <node concept="1bpajm" id="303_rny5JAs" role="3cqZAp" />
+        <node concept="lc7rE" id="303_rny5JAr" role="3cqZAp">
+          <node concept="la8eA" id="303_rny5JAq" role="lcghm">
+            <property role="lacIc" value=" " />
+          </node>
+          <node concept="la8eA" id="303_rny5JAu" role="lcghm">
+            <property role="lacIc" value="LineB" />
+          </node>
+          <node concept="l8MVK" id="303_rny5JAT" role="lcghm" />
+        </node>
+        <node concept="2Gpval" id="303_rny5JB$" role="3cqZAp">
+          <node concept="2GrKxI" id="303_rny5JAU" role="2Gsz3X">
+            <property role="TrG5h" value="elem_2" />
+          </node>
+          <node concept="3clFbS" id="303_rny5JBz" role="2LFqv$">
+            <node concept="11p84A" id="303_rny5JB8" role="3cqZAp" />
+            <node concept="1bpajm" id="303_rny5JB9" role="3cqZAp" />
+            <node concept="lc7rE" id="303_rny5JAY" role="3cqZAp">
+              <node concept="l9hG8" id="303_rny5JAW" role="lcghm">
+                <node concept="2GrUjf" id="303_rny5JAX" role="lb14g">
+                  <ref role="2Gs0qQ" node="303_rny5JAU" resolve="elem_2" />
+                </node>
+              </node>
+            </node>
+            <node concept="11pn5k" id="303_rny5JBa" role="3cqZAp" />
+            <node concept="3clFbJ" id="303_rny5JBv" role="3cqZAp">
+              <node concept="2OqwBi" id="303_rny5JBr" role="3clFbw">
+                <node concept="2OqwBi" id="303_rny5JBs" role="2Oq$k0">
+                  <node concept="YCak7" id="303_rny5JBt" role="2OqNvi" />
+                  <node concept="2GrUjf" id="303_rny5JBq" role="2Oq$k0">
+                    <ref role="2Gs0qQ" node="303_rny5JAU" resolve="elem_2" />
+                  </node>
+                </node>
+                <node concept="3x8VRR" id="303_rny5JBu" role="2OqNvi" />
+              </node>
+              <node concept="3clFbS" id="303_rny5JBy" role="3clFbx">
+                <node concept="3SKdUt" id="303_rny5JBk" role="3cqZAp">
+                  <node concept="1PaTwC" id="303_rny5JBm" role="1aUNEU">
+                    <node concept="3oM_SD" id="303_rny5JBn" role="1PaTwD">
+                      <property role="3oM_SC" value="vertical child collection: insert new-lines between the elements" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="lc7rE" id="303_rny5JBo" role="3cqZAp">
+                  <node concept="l8MVK" id="303_rny5JBp" role="lcghm" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2OqwBi" id="303_rny5JAR" role="2GsD0m">
+            <node concept="117lpO" id="303_rny5JAQ" role="2Oq$k0" />
+            <node concept="3Tsc0h" id="303_rny5JAN" role="2OqNvi">
+              <ref role="3TtcxE" to="uanp:303_rny3vJe" resolve="children" />
+            </node>
+          </node>
+        </node>
+        <node concept="1bpajm" id="303_rny5JBD" role="3cqZAp" />
+        <node concept="lc7rE" id="303_rny5JBC" role="3cqZAp">
+          <node concept="la8eA" id="303_rny5JBB" role="lcghm">
+            <property role="lacIc" value=" " />
+          </node>
+          <node concept="la8eA" id="303_rny5JBF" role="lcghm">
+            <property role="lacIc" value="LineC" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
   <node concept="WtQ9Q" id="HbHUcXbUtx">
     <ref role="WuzLi" to="uanp:65CMKUMl$0H" resolve="Element" />
     <node concept="11bSqf" id="HbHUcXbUty" role="11c4hB">
@@ -6735,41 +6868,6 @@
       </node>
     </node>
   </node>
-  <node concept="WtQ9Q" id="HbHUcXbVY$">
-    <property role="3GE5qa" value="EditorComponent" />
-    <ref role="WuzLi" to="uanp:4kObt7KRfjQ" resolve="EditorComponentLevel2ChildOverride_NoEditor" />
-    <node concept="11bSqf" id="HbHUcXbVY_" role="11c4hB">
-      <node concept="3clFbS" id="HbHUcXbVYA" role="2VODD2">
-        <node concept="lc7rE" id="HbHUcXbVYE" role="3cqZAp">
-          <node concept="la8eA" id="HbHUcXbVYD" role="lcghm">
-            <property role="lacIc" value="Editor:" />
-          </node>
-          <node concept="la8eA" id="HbHUcXbVYY" role="lcghm">
-            <property role="lacIc" value=" " />
-          </node>
-        </node>
-        <node concept="3SKdUt" id="HbHUcXbVZ1" role="3cqZAp">
-          <node concept="1PaTwC" id="HbHUcXbVZ3" role="1aUNEU">
-            <node concept="3oM_SD" id="HbHUcXbVZ4" role="1PaTwD">
-              <property role="3oM_SC" value="Editor component follows &gt;&gt;&gt;" />
-            </node>
-          </node>
-        </node>
-        <node concept="lc7rE" id="HbHUcXbVZ7" role="3cqZAp">
-          <node concept="la8eA" id="HbHUcXbVZ6" role="lcghm">
-            <property role="lacIc" value="&lt;EditorComponentLevel2ChildOverride_NoEditor&gt;" />
-          </node>
-        </node>
-        <node concept="3SKdUt" id="HbHUcXbVZq" role="3cqZAp">
-          <node concept="1PaTwC" id="HbHUcXbVZs" role="1aUNEU">
-            <node concept="3oM_SD" id="HbHUcXbVZt" role="1PaTwD">
-              <property role="3oM_SC" value="&lt;&lt;&lt; Editor component ends" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="WtQ9Q" id="HbHUcXbVX$">
     <property role="3GE5qa" value="EditorComponent" />
     <ref role="WuzLi" to="uanp:4kObt7K93U1" resolve="EditorComponentChildOverride_NoEditor" />
@@ -6798,6 +6896,41 @@
         <node concept="3SKdUt" id="HbHUcXbVYq" role="3cqZAp">
           <node concept="1PaTwC" id="HbHUcXbVYs" role="1aUNEU">
             <node concept="3oM_SD" id="HbHUcXbVYt" role="1PaTwD">
+              <property role="3oM_SC" value="&lt;&lt;&lt; Editor component ends" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="HbHUcXbVY$">
+    <property role="3GE5qa" value="EditorComponent" />
+    <ref role="WuzLi" to="uanp:4kObt7KRfjQ" resolve="EditorComponentLevel2ChildOverride_NoEditor" />
+    <node concept="11bSqf" id="HbHUcXbVY_" role="11c4hB">
+      <node concept="3clFbS" id="HbHUcXbVYA" role="2VODD2">
+        <node concept="lc7rE" id="HbHUcXbVYE" role="3cqZAp">
+          <node concept="la8eA" id="HbHUcXbVYD" role="lcghm">
+            <property role="lacIc" value="Editor:" />
+          </node>
+          <node concept="la8eA" id="HbHUcXbVYY" role="lcghm">
+            <property role="lacIc" value=" " />
+          </node>
+        </node>
+        <node concept="3SKdUt" id="HbHUcXbVZ1" role="3cqZAp">
+          <node concept="1PaTwC" id="HbHUcXbVZ3" role="1aUNEU">
+            <node concept="3oM_SD" id="HbHUcXbVZ4" role="1PaTwD">
+              <property role="3oM_SC" value="Editor component follows &gt;&gt;&gt;" />
+            </node>
+          </node>
+        </node>
+        <node concept="lc7rE" id="HbHUcXbVZ7" role="3cqZAp">
+          <node concept="la8eA" id="HbHUcXbVZ6" role="lcghm">
+            <property role="lacIc" value="&lt;EditorComponentLevel2ChildOverride_NoEditor&gt;" />
+          </node>
+        </node>
+        <node concept="3SKdUt" id="HbHUcXbVZq" role="3cqZAp">
+          <node concept="1PaTwC" id="HbHUcXbVZs" role="1aUNEU">
+            <node concept="3oM_SD" id="HbHUcXbVZt" role="1PaTwD">
               <property role="3oM_SC" value="&lt;&lt;&lt; Editor component ends" />
             </node>
           </node>

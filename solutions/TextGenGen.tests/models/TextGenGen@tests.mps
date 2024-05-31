@@ -168,6 +168,9 @@
       <concept id="3001005799609549092" name="MyTestLang.structure.SplittableGrammarCellElement" flags="ng" index="37efvV" />
       <concept id="3001005799609552010" name="MyTestLang.structure.ConstantGrammarCellElement" flags="ng" index="37efDl" />
       <concept id="3001005799609430069" name="MyTestLang.structure.WrapGrammarCellElement" flags="ng" index="37fGrE" />
+      <concept id="3459773547164859017" name="MyTestLang.structure.IntendLayoutChildrenContainer" flags="ng" index="3i3AWW">
+        <child id="3459773547164859342" name="children" index="3i3ATV" />
+      </concept>
       <concept id="7019083283238895660" name="MyTestLang.structure.VerticalAndHorizontalList" flags="ng" index="3jfCGy">
         <child id="7019083283238939874" name="elementsHorizontal" index="3jfyvG" />
         <child id="7019083283238895748" name="elementsVertical" index="3jfCIa" />
@@ -676,6 +679,42 @@
           </node>
           <node concept="26ycHw" id="34SKe64i3LH" role="3tpDZB">
             <property role="26ycAo" value="elements&#10;  element A element B&#10;---- &#10;end" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="303_rny5wK2" role="1SL9yI">
+      <property role="TrG5h" value="generateChildrenIndentLayout" />
+      <node concept="3cqZAl" id="303_rny5wK3" role="3clF45" />
+      <node concept="3clFbS" id="303_rny5wK7" role="3clF47">
+        <node concept="3cpWs8" id="303_rny5wUd" role="3cqZAp">
+          <node concept="3cpWsn" id="303_rny5wUg" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="17QB3L" id="303_rny5wUh" role="1tU5fm" />
+            <node concept="2OqwBi" id="303_rny5wUi" role="33vP2m">
+              <node concept="2WthIp" id="303_rny5wUj" role="2Oq$k0" />
+              <node concept="2XshWL" id="303_rny5wUk" role="2OqNvi">
+                <ref role="2WH_rO" node="4NgzS1pxj1O" resolve="generateToText" />
+                <node concept="2c44tf" id="303_rny5wUl" role="2XxRq1">
+                  <node concept="3i3AWW" id="303_rny5wZB" role="2c44tc">
+                    <node concept="3jfCGz" id="303_rny5x09" role="3i3ATV">
+                      <property role="TrG5h" value="A" />
+                    </node>
+                    <node concept="3jfCGz" id="303_rny5x1E" role="3i3ATV">
+                      <property role="TrG5h" value="B" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="303_rny5x4w" role="3cqZAp">
+          <node concept="37vLTw" id="303_rny5x4x" role="3tpDZA">
+            <ref role="3cqZAo" node="303_rny5wUg" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="303_rny5x4y" role="3tpDZB">
+            <property role="26ycAo" value="LineA&#10;&lt; element A&#10;element B&#10;LineB&#10;  element A&#10;  element B&#10;LineC" />
           </node>
         </node>
       </node>
