@@ -5771,16 +5771,6 @@
                         <property role="TrG5h" value="verticalLayout" />
                         <node concept="10P_77" id="51Kp7DR9JT1" role="1tU5fm" />
                         <node concept="22lmx$" id="6mdmM7w7zYM" role="33vP2m">
-                          <node concept="2YIFZM" id="6mdmM7w7U$i" role="3uHU7w">
-                            <ref role="37wK5l" node="4s_An_Z7NeA" resolve="getBooleanConstantStyleValue" />
-                            <ref role="1Pybhc" node="1EE3zMzqFQO" resolve="Utils" />
-                            <node concept="37vLTw" id="6mdmM7w85He" role="37wK5m">
-                              <ref role="3cqZAo" node="7rLNIDEc4Kh" resolve="style" />
-                            </node>
-                            <node concept="35c_gC" id="6mdmM7w8ni$" role="37wK5m">
-                              <ref role="35c_gD" to="tpc2:i0pj6JX" resolve="IndentLayoutNewLineChildrenStyleClassItem" />
-                            </node>
-                          </node>
                           <node concept="22lmx$" id="3xLtoW8Ai0T" role="3uHU7B">
                             <node concept="2OqwBi" id="51Kp7DR9PUA" role="3uHU7B">
                               <node concept="2OqwBi" id="51Kp7DR9PUB" role="2Oq$k0">
@@ -5811,6 +5801,16 @@
                                   <ref role="cht4Q" to="tpc2:i2EHxdK" resolve="CellLayout_VerticalGrid" />
                                 </node>
                               </node>
+                            </node>
+                          </node>
+                          <node concept="2YIFZM" id="6mdmM7w7U$i" role="3uHU7w">
+                            <ref role="37wK5l" node="4s_An_Z7NeA" resolve="getBooleanConstantStyleValue" />
+                            <ref role="1Pybhc" node="1EE3zMzqFQO" resolve="Utils" />
+                            <node concept="37vLTw" id="6mdmM7w85He" role="37wK5m">
+                              <ref role="3cqZAo" node="7rLNIDEc4Kh" resolve="style" />
+                            </node>
+                            <node concept="35c_gC" id="6mdmM7w8ni$" role="37wK5m">
+                              <ref role="35c_gD" to="tpc2:i0pj6JX" resolve="IndentLayoutNewLineChildrenStyleClassItem" />
                             </node>
                           </node>
                         </node>
@@ -14163,6 +14163,13 @@
             </node>
           </node>
         </node>
+        <node concept="3cpWs8" id="4raegRD$vQB" role="3cqZAp">
+          <node concept="3cpWsn" id="4raegRD$vQE" role="3cpWs9">
+            <property role="TrG5h" value="previousWasIndentLayoutNewLineChildren" />
+            <node concept="10P_77" id="4raegRD$vQ_" role="1tU5fm" />
+            <node concept="3clFbT" id="4raegRD$X1j" role="33vP2m" />
+          </node>
+        </node>
         <node concept="3clFbH" id="7rLNIDEkX$H" role="3cqZAp" />
         <node concept="2Gpval" id="7rLNIDEkX$I" role="3cqZAp">
           <node concept="2GrKxI" id="7rLNIDEkX$J" role="2Gsz3X">
@@ -14546,6 +14553,120 @@
                 </node>
                 <node concept="2qgKlT" id="7rLNIDEkXAM" role="2OqNvi">
                   <ref role="37wK5l" to="tpcb:i0pN94$" resolve="isIndented" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbH" id="4raegRDAxFZ" role="3cqZAp" />
+            <node concept="3SKdUt" id="4raegRDKXId" role="3cqZAp">
+              <node concept="1PaTwC" id="4raegRDKXIe" role="1aUNEU">
+                <node concept="3oM_SD" id="4raegRDKXN3" role="1PaTwD">
+                  <property role="3oM_SC" value="IndentLayoutOnNewLineStyleClassItem" />
+                </node>
+                <node concept="3oM_SD" id="4raegRDKXN5" role="1PaTwD">
+                  <property role="3oM_SC" value="also" />
+                </node>
+                <node concept="3oM_SD" id="4raegRDKXOP" role="1PaTwD">
+                  <property role="3oM_SC" value="adds" />
+                </node>
+                <node concept="3oM_SD" id="4raegRDKXQ1" role="1PaTwD">
+                  <property role="3oM_SC" value="a" />
+                </node>
+                <node concept="3oM_SD" id="4raegRDKXQ6" role="1PaTwD">
+                  <property role="3oM_SC" value="new" />
+                </node>
+                <node concept="3oM_SD" id="4raegRDKXQc" role="1PaTwD">
+                  <property role="3oM_SC" value="line" />
+                </node>
+                <node concept="3oM_SD" id="4raegRDKXQj" role="1PaTwD">
+                  <property role="3oM_SC" value="for" />
+                </node>
+                <node concept="3oM_SD" id="4raegRDKXQZ" role="1PaTwD">
+                  <property role="3oM_SC" value="the" />
+                </node>
+                <node concept="3oM_SD" id="4raegRDKXR8" role="1PaTwD">
+                  <property role="3oM_SC" value="last" />
+                </node>
+                <node concept="3oM_SD" id="4raegRDKXRQ" role="1PaTwD">
+                  <property role="3oM_SC" value="element" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbJ" id="4raegRD_3Cu" role="3cqZAp">
+              <node concept="3clFbS" id="4raegRD_3Cw" role="3clFbx">
+                <node concept="3clFbF" id="4raegRD_oAC" role="3cqZAp">
+                  <node concept="2OqwBi" id="4raegRD_oAD" role="3clFbG">
+                    <node concept="37vLTw" id="4raegRD_oAE" role="2Oq$k0">
+                      <ref role="3cqZAo" node="7rLNIDEkX$P" resolve="nodeStyle" />
+                    </node>
+                    <node concept="liA8E" id="4raegRD_oAF" role="2OqNvi">
+                      <ref role="37wK5l" node="13l_p0fltKv" resolve="setBool" />
+                      <node concept="35c_gC" id="4raegRD_oAG" role="37wK5m">
+                        <ref role="35c_gD" to="tpc2:i0pVoAY" resolve="IndentLayoutOnNewLineStyleClassItem" />
+                      </node>
+                      <node concept="2ShNRf" id="4raegRD_oAH" role="37wK5m">
+                        <node concept="1pGfFk" id="4raegRD_oAI" role="2ShVmc">
+                          <ref role="37wK5l" node="5uqoS$$ZoC9" />
+                          <node concept="3uibUv" id="4raegRD_oAJ" role="1pMfVU">
+                            <ref role="3uigEE" to="wyt6:~Boolean" resolve="Boolean" />
+                          </node>
+                          <node concept="3clFbT" id="4raegRD_oAK" role="37wK5m">
+                            <property role="3clFbU" value="true" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbF" id="4raegRD_9Dn" role="3cqZAp">
+                  <node concept="37vLTI" id="4raegRD_e4H" role="3clFbG">
+                    <node concept="3clFbT" id="4raegRD_fJv" role="37vLTx" />
+                    <node concept="37vLTw" id="4raegRD_9Dl" role="37vLTJ">
+                      <ref role="3cqZAo" node="4raegRD$vQE" resolve="previousWasChildrenNewLine" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="37vLTw" id="4raegRD_6aO" role="3clFbw">
+                <ref role="3cqZAo" node="4raegRD$vQE" resolve="previousWasChildrenNewLine" />
+              </node>
+            </node>
+            <node concept="3clFbJ" id="4raegRD_$Xw" role="3cqZAp">
+              <node concept="3clFbS" id="4raegRD_$Xy" role="3clFbx">
+                <node concept="3clFbF" id="4raegRDAbPq" role="3cqZAp">
+                  <node concept="37vLTI" id="4raegRDAhlQ" role="3clFbG">
+                    <node concept="3clFbT" id="4raegRDAoeI" role="37vLTx">
+                      <property role="3clFbU" value="true" />
+                    </node>
+                    <node concept="37vLTw" id="4raegRDAbPo" role="37vLTJ">
+                      <ref role="3cqZAo" node="4raegRD$vQE" resolve="previousWasIndentLayoutNewLineChildren" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="4raegRDA2oM" role="3clFbw">
+                <node concept="1eOMI4" id="4raegRDA2oN" role="2Oq$k0">
+                  <node concept="10QFUN" id="4raegRDA2oO" role="1eOMHV">
+                    <node concept="3uibUv" id="4raegRDA2oP" role="10QFUM">
+                      <ref role="3uigEE" node="5uqoS$$Zm5A" resolve="Constant" />
+                      <node concept="3uibUv" id="4raegRDA2oQ" role="11_B2D">
+                        <ref role="3uigEE" to="wyt6:~Boolean" resolve="Boolean" />
+                      </node>
+                    </node>
+                    <node concept="2OqwBi" id="4raegRDA2oR" role="10QFUP">
+                      <node concept="37vLTw" id="4raegRDA2oS" role="2Oq$k0">
+                        <ref role="3cqZAo" node="7rLNIDEkX$P" resolve="nodeStyle" />
+                      </node>
+                      <node concept="liA8E" id="4raegRDA2oT" role="2OqNvi">
+                        <ref role="37wK5l" node="13l_p0flAKO" resolve="getBool" />
+                        <node concept="35c_gC" id="4raegRDA2oU" role="37wK5m">
+                          <ref role="35c_gD" to="tpc2:i0pj6JX" resolve="IndentLayoutNewLineChildrenStyleClassItem" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="4raegRDA2oV" role="2OqNvi">
+                  <ref role="37wK5l" node="5uqoS$_45HX" resolve="getValue" />
                 </node>
               </node>
             </node>
@@ -15523,14 +15644,26 @@
                       <node concept="22lmx$" id="6ZBb7lbsbLH" role="3uHU7B">
                         <node concept="22lmx$" id="7rLNIDErzhQ" role="3uHU7B">
                           <node concept="22lmx$" id="7rLNIDEkXBb" role="3uHU7B">
-                            <node concept="2YIFZM" id="7rLNIDEkXBf" role="3uHU7B">
-                              <ref role="1Pybhc" node="1EE3zMzqFQO" resolve="Utils" />
-                              <ref role="37wK5l" node="4s_An_Z7NeA" resolve="getBooleanConstantStyleValue" />
-                              <node concept="37vLTw" id="7rLNIDEsAl2" role="37wK5m">
-                                <ref role="3cqZAo" node="7rLNIDEszm$" resolve="styleStyle" />
+                            <node concept="22lmx$" id="4raegRDmIen" role="3uHU7B">
+                              <node concept="2YIFZM" id="7rLNIDEkXBf" role="3uHU7B">
+                                <ref role="1Pybhc" node="1EE3zMzqFQO" resolve="Utils" />
+                                <ref role="37wK5l" node="4s_An_Z7NeA" resolve="getBooleanConstantStyleValue" />
+                                <node concept="37vLTw" id="7rLNIDEsAl2" role="37wK5m">
+                                  <ref role="3cqZAo" node="7rLNIDEszm$" resolve="styleStyle" />
+                                </node>
+                                <node concept="35c_gC" id="7rLNIDEkXBh" role="37wK5m">
+                                  <ref role="35c_gD" to="tpc2:i0ljvrN" resolve="IndentLayoutNewLineStyleClassItem" />
+                                </node>
                               </node>
-                              <node concept="35c_gC" id="7rLNIDEkXBh" role="37wK5m">
-                                <ref role="35c_gD" to="tpc2:i0ljvrN" resolve="IndentLayoutNewLineStyleClassItem" />
+                              <node concept="2YIFZM" id="4raegRDmOIQ" role="3uHU7w">
+                                <ref role="1Pybhc" node="1EE3zMzqFQO" resolve="Utils" />
+                                <ref role="37wK5l" node="4s_An_Z7NeA" resolve="getBooleanConstantStyleValue" />
+                                <node concept="37vLTw" id="4raegRDmOIR" role="37wK5m">
+                                  <ref role="3cqZAo" node="7rLNIDEszm$" resolve="styleStyle" />
+                                </node>
+                                <node concept="35c_gC" id="4raegRDmOIS" role="37wK5m">
+                                  <ref role="35c_gD" to="tpc2:i0pj6JX" resolve="IndentLayoutNewLineChildrenStyleClassItem" />
+                                </node>
                               </node>
                             </node>
                             <node concept="2YIFZM" id="7rLNIDEkXBc" role="3uHU7w">
