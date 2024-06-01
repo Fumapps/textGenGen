@@ -719,6 +719,35 @@
         </node>
       </node>
     </node>
+    <node concept="1LZb2c" id="4raegRDRRA8" role="1SL9yI">
+      <property role="TrG5h" value="generateEmptyChildrenIndentLayout" />
+      <node concept="3cqZAl" id="4raegRDRRA9" role="3clF45" />
+      <node concept="3clFbS" id="4raegRDRRAa" role="3clF47">
+        <node concept="3cpWs8" id="4raegRDRRAb" role="3cqZAp">
+          <node concept="3cpWsn" id="4raegRDRRAc" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="17QB3L" id="4raegRDRRAd" role="1tU5fm" />
+            <node concept="2OqwBi" id="4raegRDRRAe" role="33vP2m">
+              <node concept="2WthIp" id="4raegRDRRAf" role="2Oq$k0" />
+              <node concept="2XshWL" id="4raegRDRRAg" role="2OqNvi">
+                <ref role="2WH_rO" node="4NgzS1pxj1O" resolve="generateToText" />
+                <node concept="2c44tf" id="4raegRDRRAh" role="2XxRq1">
+                  <node concept="3i3AWW" id="4raegRDRRAi" role="2c44tc" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="4raegRDRRAl" role="3cqZAp">
+          <node concept="37vLTw" id="4raegRDRRAm" role="3tpDZA">
+            <ref role="3cqZAo" node="4raegRDRRAc" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="4raegRDRRAn" role="3tpDZB">
+            <property role="26ycAo" value="LineA&#10;&lt; &#10;LineB&#10;&#10;LineC" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="0EjCn" id="3fc6q90dWE" role="0EEgL">
       <node concept="3clFbS" id="3fc6q90dWF" role="2VODD2" />
     </node>
