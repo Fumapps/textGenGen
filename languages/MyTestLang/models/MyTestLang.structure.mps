@@ -587,5 +587,19 @@
       <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
     </node>
   </node>
+  <node concept="1TIwiD" id="1Wk31GWuzDt">
+    <property role="EcuMT" value="2239428225828272733" />
+    <property role="3GE5qa" value="Indentation" />
+    <property role="TrG5h" value="IndentationWithComplexElementsAndConditionalLinebreak" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="1Wk31GWuzDu" role="1TKVEi">
+      <property role="IQ2ns" value="2239428225828272734" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="elements" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="65CMKUMl$0H" resolve="Element" />
+    </node>
+  </node>
 </model>
 
