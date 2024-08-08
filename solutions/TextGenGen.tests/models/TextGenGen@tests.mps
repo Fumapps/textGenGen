@@ -2565,7 +2565,7 @@
               <node concept="37vLTG" id="205CAYIHgC2" role="1bW2Oz">
                 <property role="TrG5h" value="ignore" />
                 <node concept="3uibUv" id="205CAYIHgC3" role="1tU5fm">
-                  <ref role="3uigEE" to="f3iy:45AuIz7TE7m" resolve="Result" />
+                  <ref role="3uigEE" to="f3iy:45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
                 </node>
               </node>
               <node concept="3clFbS" id="205CAYIHgC4" role="1bW5cS" />

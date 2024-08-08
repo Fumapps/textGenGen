@@ -365,7 +365,7 @@
           <node concept="2OqwBi" id="1Wk31GWyujE" role="3cqZAk">
             <node concept="117lpO" id="1Wk31GWyujF" role="2Oq$k0" />
             <node concept="2qgKlT" id="1Wk31GWyujG" role="2OqNvi">
-              <ref role="37wK5l" to="tpcu:hEwIMiw" />
+              <ref role="37wK5l" to="tpcu:hEwIMiw" resolve="getPresentation" />
             </node>
           </node>
         </node>

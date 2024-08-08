@@ -1803,7 +1803,7 @@
         <property role="3F0ifm" value="LineB" />
       </node>
       <node concept="3F2HdR" id="303_rny4EaZ" role="3EZMnx">
-        <ref role="1NtTu8" to="uanp:303_rny3vJe" />
+        <ref role="1NtTu8" to="uanp:303_rny3vJe" resolve="children" />
         <node concept="l2Vlx" id="303_rny4Eb0" role="2czzBx" />
         <node concept="pj6Ft" id="303_rny4Eb1" role="3F10Kt">
           <property role="VOm3f" value="true" />
@@ -1869,7 +1869,7 @@
     <property role="TrG5h" value="IndentationWithComplexElementsAndConditionalLinebreak_EC" />
     <ref role="1XX52x" to="uanp:1Wk31GWuzDt" resolve="IndentationWithComplexElementsAndConditionalLinebreak" />
     <node concept="3F2HdR" id="1Wk31GWxoMa" role="2wV5jI">
-      <ref role="1NtTu8" to="uanp:1Wk31GWuzDu" />
+      <ref role="1NtTu8" to="uanp:1Wk31GWuzDu" resolve="elements" />
       <node concept="l2Vlx" id="1Wk31GWxoMb" role="2czzBx" />
       <node concept="pj6Ft" id="1Wk31GWxoMc" role="3F10Kt">
         <property role="VOm3f" value="true" />
@@ -1880,7 +1880,7 @@
                 <node concept="2OqwBi" id="1Wk31GWxoMh" role="2Oq$k0">
                   <node concept="pncrf" id="1Wk31GWxoMi" role="2Oq$k0" />
                   <node concept="3Tsc0h" id="1Wk31GWxoMj" role="2OqNvi">
-                    <ref role="3TtcxE" to="uanp:1Wk31GWuzDu" />
+                    <ref role="3TtcxE" to="uanp:1Wk31GWuzDu" resolve="elements" />
                   </node>
                 </node>
                 <node concept="3GX2aA" id="1Wk31GWxoMk" role="2OqNvi" />
