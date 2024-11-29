@@ -191,6 +191,7 @@
       <concept id="4414386885229358415" name="MyTestLang.structure.HorizontalListWithFilter" flags="ng" index="3Ivy0O">
         <child id="4414386885229358416" name="elements" index="3Ivy0F" />
       </concept>
+      <concept id="6850866229014157332" name="MyTestLang.structure.NegativePaddingElements" flags="ng" index="3J2fat" />
       <concept id="7395444528212083749" name="MyTestLang.structure.IndentedVerticalChildrenWithSpaceSeparator" flags="ng" index="3U$u6S">
         <child id="7395444528212083750" name="verticalElements" index="3U$u6V" />
       </concept>
@@ -783,6 +784,35 @@
           </node>
           <node concept="26ycHw" id="1Wk31GWwxqf" role="3tpDZB">
             <property role="26ycAo" value="{&#10;  element A&#10;  element B&#10;}" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1LZb2c" id="5WjaCAK70Ko" role="1SL9yI">
+      <property role="TrG5h" value="generateNegativePaddingOrNoIndentCellMarker" />
+      <node concept="3cqZAl" id="5WjaCAK70Kp" role="3clF45" />
+      <node concept="3clFbS" id="5WjaCAK70Kq" role="3clF47">
+        <node concept="3cpWs8" id="5WjaCAK70Kr" role="3cqZAp">
+          <node concept="3cpWsn" id="5WjaCAK70Ks" role="3cpWs9">
+            <property role="TrG5h" value="actual" />
+            <node concept="17QB3L" id="5WjaCAK70Kt" role="1tU5fm" />
+            <node concept="2OqwBi" id="5WjaCAK70Ku" role="33vP2m">
+              <node concept="2WthIp" id="5WjaCAK70Kv" role="2Oq$k0" />
+              <node concept="2XshWL" id="5WjaCAK70Kw" role="2OqNvi">
+                <ref role="2WH_rO" node="4NgzS1pxj1O" resolve="generateToText" />
+                <node concept="2c44tf" id="5WjaCAK70Kx" role="2XxRq1">
+                  <node concept="3J2fat" id="5WjaCAK8_tl" role="2c44tc" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3vlDli" id="5WjaCAK70K_" role="3cqZAp">
+          <node concept="37vLTw" id="5WjaCAK70KA" role="3tpDZA">
+            <ref role="3cqZAo" node="5WjaCAK70Ks" resolve="actual" />
+          </node>
+          <node concept="26ycHw" id="5WjaCAK70KB" role="3tpDZB">
+            <property role="26ycAo" value="{&#10;    paddingMinus2&#10;  paddingMinus4&#10;paddingMinus6&#10;paddingMinus8&#10;noIndentTextGenGen&#10;    paddingMinus2&#10;  paddingMinus4&#10;paddingMinus6&#10;paddingMinus8&#10;noIndentTextGenGen&#10;}" />
           </node>
         </node>
       </node>
