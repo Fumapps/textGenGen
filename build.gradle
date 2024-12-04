@@ -1,5 +1,5 @@
 ext.languageName = "TextGenGen"
-ext.mpsVersion = "2024.1"
+ext.mpsVersion = "2024.1.1"
 ext.mpsPlugins = [
         "mps-grammar-cells[2023.3]": 13242,
         // we only need grammar cells, since there is no 2024.1 yet, we need to specify all transitive dependencies also for 2023.3
