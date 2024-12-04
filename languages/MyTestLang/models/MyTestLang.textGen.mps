@@ -7269,41 +7269,6 @@
       </node>
     </node>
   </node>
-  <node concept="WtQ9Q" id="HbHUcXbVX$">
-    <property role="3GE5qa" value="EditorComponent" />
-    <ref role="WuzLi" to="uanp:4kObt7K93U1" resolve="EditorComponentChildOverride_NoEditor" />
-    <node concept="11bSqf" id="HbHUcXbVX_" role="11c4hB">
-      <node concept="3clFbS" id="HbHUcXbVXA" role="2VODD2">
-        <node concept="lc7rE" id="HbHUcXbVXE" role="3cqZAp">
-          <node concept="la8eA" id="HbHUcXbVXD" role="lcghm">
-            <property role="lacIc" value="Editor:" />
-          </node>
-          <node concept="la8eA" id="HbHUcXbVXY" role="lcghm">
-            <property role="lacIc" value=" " />
-          </node>
-        </node>
-        <node concept="3SKdUt" id="HbHUcXbVY1" role="3cqZAp">
-          <node concept="1PaTwC" id="HbHUcXbVY3" role="1aUNEU">
-            <node concept="3oM_SD" id="HbHUcXbVY4" role="1PaTwD">
-              <property role="3oM_SC" value="Editor component follows &gt;&gt;&gt;" />
-            </node>
-          </node>
-        </node>
-        <node concept="lc7rE" id="HbHUcXbVY7" role="3cqZAp">
-          <node concept="la8eA" id="HbHUcXbVY6" role="lcghm">
-            <property role="lacIc" value="&lt;EditorComponentChildOverride_NoEditor_EditorComponent&gt;" />
-          </node>
-        </node>
-        <node concept="3SKdUt" id="HbHUcXbVYq" role="3cqZAp">
-          <node concept="1PaTwC" id="HbHUcXbVYs" role="1aUNEU">
-            <node concept="3oM_SD" id="HbHUcXbVYt" role="1PaTwD">
-              <property role="3oM_SC" value="&lt;&lt;&lt; Editor component ends" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="WtQ9Q" id="HbHUcXbVY$">
     <property role="3GE5qa" value="EditorComponent" />
     <ref role="WuzLi" to="uanp:4kObt7KRfjQ" resolve="EditorComponentLevel2ChildOverride_NoEditor" />
@@ -7332,6 +7297,41 @@
         <node concept="3SKdUt" id="HbHUcXbVZq" role="3cqZAp">
           <node concept="1PaTwC" id="HbHUcXbVZs" role="1aUNEU">
             <node concept="3oM_SD" id="HbHUcXbVZt" role="1PaTwD">
+              <property role="3oM_SC" value="&lt;&lt;&lt; Editor component ends" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="HbHUcXbVX$">
+    <property role="3GE5qa" value="EditorComponent" />
+    <ref role="WuzLi" to="uanp:4kObt7K93U1" resolve="EditorComponentChildOverride_NoEditor" />
+    <node concept="11bSqf" id="HbHUcXbVX_" role="11c4hB">
+      <node concept="3clFbS" id="HbHUcXbVXA" role="2VODD2">
+        <node concept="lc7rE" id="HbHUcXbVXE" role="3cqZAp">
+          <node concept="la8eA" id="HbHUcXbVXD" role="lcghm">
+            <property role="lacIc" value="Editor:" />
+          </node>
+          <node concept="la8eA" id="HbHUcXbVXY" role="lcghm">
+            <property role="lacIc" value=" " />
+          </node>
+        </node>
+        <node concept="3SKdUt" id="HbHUcXbVY1" role="3cqZAp">
+          <node concept="1PaTwC" id="HbHUcXbVY3" role="1aUNEU">
+            <node concept="3oM_SD" id="HbHUcXbVY4" role="1PaTwD">
+              <property role="3oM_SC" value="Editor component follows &gt;&gt;&gt;" />
+            </node>
+          </node>
+        </node>
+        <node concept="lc7rE" id="HbHUcXbVY7" role="3cqZAp">
+          <node concept="la8eA" id="HbHUcXbVY6" role="lcghm">
+            <property role="lacIc" value="&lt;EditorComponentChildOverride_NoEditor_EditorComponent&gt;" />
+          </node>
+        </node>
+        <node concept="3SKdUt" id="HbHUcXbVYq" role="3cqZAp">
+          <node concept="1PaTwC" id="HbHUcXbVYs" role="1aUNEU">
+            <node concept="3oM_SD" id="HbHUcXbVYt" role="1PaTwD">
               <property role="3oM_SC" value="&lt;&lt;&lt; Editor component ends" />
             </node>
           </node>
