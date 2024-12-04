@@ -2,6 +2,12 @@
 
 def scripts = ["download-mps.gradle", "run-mps-ant.gradle", "init-gradle-scripts.gradle"]
 
+def repositoryUrl = "https://github.com/vimotest/mps-gradle-scripts/raw/main"
+
+if (project.hasProperty("gradleScriptsRepoUrl")) {
+    repositoryUrl = project.gradleScriptsRepoUrl
+}
+
 scripts.each {
     def gradleScriptFile = file("$projectDir/gradle/$it")
     if (gradleScriptFile.exists() && it != "init-gradle-scripts.gradle") {
@@ -16,7 +22,7 @@ task downloadGradleScripts {
         scripts.each {
             def gradleScriptFile = file("$projectDir/gradle/$it")
             gradleScriptFile.parentFile.mkdirs()
-            def url = new URL("https://github.com/vimotest/mps-gradle-scripts/raw/main/gradle/$it")
+            def url = new URL("$repositoryUrl/gradle/$it")
             url.withInputStream {
                 inputStream -> gradleScriptFile.withOutputStream { outputStream -> outputStream << inputStream }
             }
@@ -61,7 +67,7 @@ task downloadGithubActionsScripts {
         githubActionsFiles.each {
             def actionsFile = file("$projectDir/.github/workflows/$it")
             actionsFile.parentFile.mkdirs()
-            def url = new URL("https://github.com/vimotest/mps-gradle-scripts/raw/main/.github/workflows/$it")
+            def url = new URL("$repositoryUrl/.github/workflows/$it")
             url.withInputStream {
                 inputStream -> actionsFile.withOutputStream { outputStream -> outputStream << inputStream }
             }

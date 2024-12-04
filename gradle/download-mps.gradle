@@ -201,7 +201,7 @@ private static Map<String, Integer> collectDependencies(String pluginName, int p
         throw new RuntimeException("couldn't find plugin dependencies for $pluginName")
     }
 
-    def builtInDependencies = [ "jetbrains.mps.core", "jetbrains.mps.build", "jetbrains.mps.vcs" ].toSet()
+    def builtInDependencies = [ "jetbrains.mps.core", "jetbrains.mps.build", "jetbrains.mps.vcs", "jetbrains.mps.testing" ].toSet()
 
     def json = new JsonSlurper().parseText(response)
     def dependencies = json
