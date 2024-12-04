@@ -1,14 +1,13 @@
 ext.languageName = "TextGenGen"
 ext.mpsVersion = "2024.1.1"
 ext.mpsPlugins = [
-        "mps-grammar-cells[2023.3]": 13242,
-        // we only need grammar cells, since there is no 2024.1 yet, we need to specify all transitive dependencies also for 2023.3
-        "de.itemis.mps.selection[2023.3]": 13230,
-        "de.itemis.mps.celllayout[2023.3]": 13239,
-        "de.slisson.mps.richtext[2023.3]": 13254,
-        "de.slisson.mps.hacks[2023.3]": 13235,
-        "de.slisson.mps.editor.multiline[2023.3]": 13253,
-        "de.itemis.mps.extensions.build[2023.3]": 17136,
+        "mps-grammar-cells[2024.1.1]": 13242,
+        "de.itemis.mps.selection[2024.1.1]": 13230,
+        "de.itemis.mps.celllayout[2024.1.1]": 13239,
+        "de.slisson.mps.richtext[2024.1.1]": 13254,
+        "de.slisson.mps.hacks[2024.1.1]": 13235,
+        "de.slisson.mps.editor.multiline[2024.1.1]": 13253,
+        "de.itemis.mps.extensions.build[2024.1.1]": 17136,
 ]
 ext.customMpsPlugins = [ ]
 
