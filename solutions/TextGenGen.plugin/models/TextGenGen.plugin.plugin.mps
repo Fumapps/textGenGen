@@ -2795,6 +2795,30 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbJ" id="47FPkO0Axjq" role="3cqZAp">
+          <node concept="3clFbS" id="47FPkO0Axjs" role="3clFbx">
+            <node concept="3cpWs6" id="47FPkO0RK2n" role="3cqZAp">
+              <node concept="3cpWs3" id="47FPkO12wrG" role="3cqZAk">
+                <node concept="37vLTw" id="47FPkO12wrH" role="3uHU7w">
+                  <ref role="3cqZAo" node="4Ro3Y6ZTS5C" resolve="textGenModel" />
+                </node>
+                <node concept="Xl_RD" id="47FPkO12wrI" role="3uHU7B">
+                  <property role="Xl_RC" value="Cannot modify readonly textGen model: " />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2OqwBi" id="47FPkO0AENk" role="3clFbw">
+            <node concept="2JrnkZ" id="47FPkO0ADj6" role="2Oq$k0">
+              <node concept="37vLTw" id="47FPkO0A$uV" role="2JrQYb">
+                <ref role="3cqZAo" node="4Ro3Y6ZTS5C" resolve="textGenModel" />
+              </node>
+            </node>
+            <node concept="liA8E" id="47FPkO0AGSk" role="2OqNvi">
+              <ref role="37wK5l" to="mhbf:~SModel.isReadOnly()" resolve="isReadOnly" />
+            </node>
+          </node>
+        </node>
         <node concept="3clFbH" id="4Ro3Y6ZTS5U" role="3cqZAp" />
         <node concept="3cpWs8" id="2CKb5brKars" role="3cqZAp">
           <node concept="3cpWsn" id="2CKb5brKart" role="3cpWs9">

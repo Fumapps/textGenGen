@@ -345,6 +345,7 @@
         <uses>
           <language id="l:96079a67-4e46-4b1b-97c9-8c28477d84d6:BaseLanguageMultiLineExtension" />
           <language id="l:0cdfd95d-2a2e-4a75-bc35-936584bdb36d:MyTestLang" />
+          <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
           <language id="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
           <language id="l:f61473f9-130f-42f6-b98d-6c438812c2f6:jetbrains.mps.baseLanguage.unitTest" />
           <language id="l:446c26eb-2b7b-4bf0-9b35-f83fa582753e:jetbrains.mps.lang.modelapi" />
