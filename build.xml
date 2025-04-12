@@ -8,8 +8,6 @@
   <property name="mps_home" location="${basedir}/build/mps-bundle/Contents" />
   <property name="project_home" location="${basedir}" />
   <property name="dependencies_home" location="${basedir}/build/mps-bundle/dependencies" />
-  <property name="TEXTGENGEN_HOME" location="${basedir}" />
-  <property name="mps.macro.project_home" location="${project_home}" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property name="artifacts.de.itemis.mps.extensions" location="${dependencies_home}" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />
@@ -56,7 +54,7 @@
         <id>TextGenGen</id>
         <name>TextGenGen (fum)</name>
         <description>Plugin for generation of the TextGen aspect from the Editor aspect aiming for generation of source code in the same form as the presentation rendered by the Editor.</description>
-        <version>2024.3.0</version>
+        <version>2024.3.0-SNAPSHOT</version>
         <depends>com.intellij.modules.platform</depends>
         <depends>jetbrains.mps.core</depends>
         <description>Editor to TextGen convertor</description>
@@ -621,8 +619,6 @@
       <macro name="mps_home" path="${mps_home}" />
       <macro name="project_home" path="${project_home}" />
       <macro name="dependencies_home" path="${dependencies_home}" />
-      <macro name="TEXTGENGEN_HOME" path="${TEXTGENGEN_HOME}" />
-      <macro name="mps.macro.project_home" path="${mps.macro.project_home}" />
     </generate>
   </target>
   
@@ -1100,7 +1096,6 @@
       <plugin id="Git4Idea" path="${artifacts.mps}/plugins/vcs-git" />
       <plugin id="Subversion" path="${artifacts.mps}/plugins/vcs-svn" />
       <plugin id="TextGenGen" path="${build.tmp}/default/TextGenGen.zip/TextGenGen (fum)" />
-      <macro name="project_home" path="${project_home}" />
       <project path="${basedir}" />
       <testmodules>        
         <path refid="mps.tests.path" />
