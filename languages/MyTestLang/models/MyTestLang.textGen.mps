@@ -3372,19 +3372,6 @@
       </node>
     </node>
   </node>
-  <node concept="WtQ9Q" id="HbHUcXbVvs">
-    <property role="3GE5qa" value="Abstract" />
-    <ref role="WuzLi" to="uanp:U5CqdlP$Ub" resolve="MyInterface" />
-    <node concept="11bSqf" id="HbHUcXbVvt" role="11c4hB">
-      <node concept="3clFbS" id="HbHUcXbVvu" role="2VODD2">
-        <node concept="lc7rE" id="HbHUcXbVvx" role="3cqZAp">
-          <node concept="la8eA" id="HbHUcXbVvw" role="lcghm">
-            <property role="lacIc" value="Interface Concept Editor" />
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="WtQ9Q" id="HbHUcXbVvP">
     <property role="3GE5qa" value="Abstract" />
     <ref role="WuzLi" to="uanp:U5CqdlTiLD" resolve="MyAbstractElement" />
