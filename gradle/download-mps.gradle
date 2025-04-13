@@ -17,9 +17,11 @@ def jbrMappings = [
         "2022.3": "17.0.6-b653.34",
         "2023.1": "17.0.10-b829.27",
         "2023.2": "17.0.10-b1000.50",
-        "2023.3": "17.0.10-b1087.23",
-        "2024.1": "17.0.11-b1207.24",
-        "2024.2": "17.0.11-b1312.2" ]
+        "2023.3": "17.0.12-b1087.25",
+        "2024.1": "17.0.12-b1207.37",
+        "2024.2": "17.0.11-b1312.2",
+        "2024.3": "21.0.6-b631.39",
+        "2025.1": "21.0.6-b895.97" ]
 
 
 if (!project.hasProperty("mpsVersion")) {
@@ -36,18 +38,17 @@ if (!project.hasProperty("mpsPlugins")) {
 def mpsZipFile = file("build/download/mps-${mpsVersion}.zip")
 def pluginsDirectory = file("build/download/plugins")
 def outputBundleDirectory = file("build/mps-bundle")
+def dependenciesDirectory = file("$outputBundleDirectory/dependencies")
 
 def targetFolderName = "$outputBundleDirectory/mps"
 if (isMac()) {
     targetFolderName = "$outputBundleDirectory/Contents"
 }
 
-task downloadMpsAndPlugins {
+task downloadMps {
     group 'mps-download'
     onlyIf {
-        !mpsZipFile.exists() ||
-        mpsPlugins.any { !file("$pluginsDirectory/mps-${getEffectivePluginName(it.key)}.zip").exists() } ||
-        project.hasProperty("customMpsPlugins") && customMpsPlugins.any { !file("$pluginsDirectory/mps-${it.key}.zip").exists() }
+        !mpsZipFile.exists()
     }
     doLast {
         if (!mpsZipFile.exists()) {
@@ -56,6 +57,31 @@ task downloadMpsAndPlugins {
             println("downloading $mpsDownloadLink ... (might take few minutes, since it is ca. 400-500 MB)")
             new URL(mpsDownloadLink).withInputStream { downloadInputStream -> mpsZipFile.withOutputStream { it << downloadInputStream } }
         }
+    }
+}
+
+/*
+  Gradle tasks to redownload plugins if necessary.
+ */
+task downloadPlugins() {
+    group 'mps-download'
+    dependsOn downloadMps
+
+    onlyIf {
+        requirePluginsToRedownload() ||
+                mpsPlugins.any { !file("$pluginsDirectory/mps-${getEffectivePluginName(it.key)}.zip").exists() } ||
+                project.hasProperty("customMpsPlugins") && customMpsPlugins.any { !file("$pluginsDirectory/mps-${it.key}.zip").exists() }
+    }
+
+    doLast {
+        if (pluginsDirectory.exists()) {
+            println("deleting old plugins in $pluginsDirectory")
+            pluginsDirectory.deleteDir()
+        }
+        if (dependenciesDirectory.exists()) {
+            println("deleting old dependencies in $dependenciesDirectory")
+            dependenciesDirectory.deleteDir()
+        }
 
         if (!mpsPlugins.isEmpty()) {
             downloadPlugins(pluginsDirectory)
@@ -63,6 +89,11 @@ task downloadMpsAndPlugins {
         if (project.hasProperty("customMpsPlugins") && !customMpsPlugins.isEmpty()) {
             downloadCustomPlugins(pluginsDirectory)
         }
+
+        if (file("$buildDir/mps-bundle").exists()) {
+            extractPlugins(pluginsDirectory, dependenciesDirectory)
+        }
+        writeDownloadedPluginsInfo(pluginsDirectory)
     }
 }
 
@@ -126,9 +157,43 @@ private def downloadCustomPlugins(def pluginsDirectory) {
     }
 }
 
+private boolean requirePluginsToRedownload() {
+    def downloadedPluginsInfoFile = file("$buildDir/download/plugins/downloaded.txt")
+    if (!downloadedPluginsInfoFile.exists()) {
+        return true
+    }
+
+    Set<String> downloadedPlugins = downloadedPluginsInfoFile.readLines().collect { it.trim() }.toSet()
+    return getAllPluginInfos().collect { it.trim() }.any {
+        if (!downloadedPlugins.contains(it)) {
+            println("plugin $it needs to be redownloaded")
+        }
+        !downloadedPlugins.contains(it)
+    }
+}
+
+private def writeDownloadedPluginsInfo(def pluginsDirectory) {
+    def downloadedPluginsInfoFile = file("$pluginsDirectory/downloaded.txt")
+    downloadedPluginsInfoFile.parentFile.mkdirs()
+    downloadedPluginsInfoFile.write(getAllPluginInfos().join("\n"))
+}
+
+private def getAllPluginInfos() {
+    def result = []
+    mpsPlugins.each {
+        result.add("$it.key|$it.value")
+    }
+    if (project.hasProperty("customMpsPlugins")) {
+        customMpsPlugins.each {
+            result.add("$it.key|$it.value")
+        }
+    }
+    return result
+}
+
 task buildMpsZipBundle {
     group 'mps-download'
-    dependsOn downloadMpsAndPlugins
+    dependsOn downloadMps, downloadPlugins
     description "build a generic MPS $mpsVersion bundle which contains convenient plugins (see task 'listPlugins')"
 
     onlyIf {
@@ -149,19 +214,22 @@ task buildMpsZipBundle {
 
         addLocalPluginsPathToVmOptions("$targetFolderName")
 
-        def outputDependenciesDirectory = file("$outputBundleDirectory/dependencies")
-        copy {
-            fileTree(dir: pluginsDirectory, includes: ['**/*.zip']).each { zipFile ->
-                println("unzipping $zipFile into $targetFolderName/plugins")
-                from zipTree(zipFile)
-            }
-            into outputDependenciesDirectory
-        }
-
-        moveNestedPluginsUp(outputDependenciesDirectory)
+        extractPlugins(pluginsDirectory, dependenciesDirectory)
 
         println("finished prepare of MPS Version $mpsVersion")
     }
+}
+
+private def extractPlugins(def pluginsDirectory, def outputDependenciesDirectory) {
+    copy {
+        fileTree(dir: pluginsDirectory, includes: ['**/*.zip']).each { zipFile ->
+            println("unzipping $zipFile into $pluginsDirectory")
+            from zipTree(zipFile)
+        }
+        into outputDependenciesDirectory
+    }
+
+    moveNestedPluginsUp(outputDependenciesDirectory)
 }
 
 private void addLocalPluginsPathToVmOptions(String targetFolderName) {
@@ -288,6 +356,27 @@ task copyOsSpecificBinFiles {
         file("$targetFolderName/bin/$binFolderName").exists()
     }
     doLast {
+        // from 2024.3, we need special handling for aarch64/amd64 folders
+        def isAtLeastMps2024_3 = mpsVersion.startsWith("2024.3") || mpsVersion.takeBefore(".").toInteger() >= 2025
+        if (isMac() && isAtLeastMps2024_3) {
+            def binSubDir = Os.isArch("aarch64") ? "aarch64" : "amd64"
+            copy {
+                from fileTree("$targetFolderName/bin/mac/$binSubDir")
+                into file("$targetFolderName/bin/mac")
+            }
+            file("$targetFolderName/bin/mac/aarch64").deleteDir()
+            file("$targetFolderName/bin/mac/amd64").deleteDir()
+
+            def executableName = Os.isArch("aarch64") ? "mps-aarch64" : "mps-x64"
+            file("$targetFolderName/bin/mac/Contents/MacOS/$executableName").renameTo("$targetFolderName/bin/mac/Contents/MacOS/mps")
+
+            // the product-info.json file is not included in the generic distribution, so we need to download it
+            def productInfoUrl = "https://github.com/JetBrains/MPS/raw/$mpsVersion/plugins/mps-build/solutions/mpsBuild/source_gen/jetbrains/mps/ide/build/product-info-macos-${binSubDir}.json"
+            def productInfoFile = file("$targetFolderName/bin/mac/Contents/Resources/product-info.json")
+            println("downloading $productInfoUrl ... (to $productInfoFile)")
+            new URL(productInfoUrl).withInputStream { downloadInputStream -> productInfoFile.withOutputStream { it << downloadInputStream } }
+        }
+
         copy {
             from fileTree("$targetFolderName/bin/$binFolderName")
             into file("$targetFolderName/bin")
@@ -310,6 +399,15 @@ task copyOsSpecificBinFiles {
             copy {
                 from fileTree("$targetFolderName/lib/jna/$subDir")
                 into file("$targetFolderName/lib/jna")
+            }
+        }
+
+        // for MacOS, create a symbolic link to the bundle
+        def os = System.getProperty("os.name").toLowerCase()
+        if (os.contains("mac") && !file("$buildDir/mps-bundle/mps").exists()) {
+            println "MacOS: Creating a symbolic link to the MPS bundle: ./build/mps-bundle/mps"
+            exec {
+                commandLine = ["ln", "-s", "$buildDir/mps-bundle/Contents", "$buildDir/mps-bundle/mps"]
             }
         }
     }

@@ -605,7 +605,7 @@
     <property role="EcuMT" value="6850866229014157332" />
     <property role="3GE5qa" value="Indentation" />
     <property role="TrG5h" value="NegativePaddingElements" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
 </model>
 

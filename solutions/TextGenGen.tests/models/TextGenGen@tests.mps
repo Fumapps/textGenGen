@@ -10,6 +10,7 @@
     <use id="446c26eb-2b7b-4bf0-9b35-f83fa582753e" name="jetbrains.mps.lang.modelapi" version="0" />
     <use id="3a13115c-633c-4c5c-bbcc-75c4219e9555" name="jetbrains.mps.lang.quotation" version="5" />
     <use id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures" version="0" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="12" />
   </languages>
   <imports>
     <import index="z1c3" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.project(MPS.Core/)" />
@@ -22,9 +23,6 @@
   <registry>
     <language id="8585453e-6bfb-4d80-98de-b16074f1d86c" name="jetbrains.mps.lang.test">
       <concept id="2325284917965760583" name="jetbrains.mps.lang.test.structure.BeforeTestsMethod" flags="ig" index="0EjCn" />
-      <concept id="5097124989038916362" name="jetbrains.mps.lang.test.structure.TestInfo" flags="ng" index="2XOHcx">
-        <property id="5097124989038916363" name="projectPath" index="2XOHcw" />
-      </concept>
       <concept id="1225467090849" name="jetbrains.mps.lang.test.structure.ProjectExpression" flags="nn" index="1jxXqW" />
       <concept id="1216913645126" name="jetbrains.mps.lang.test.structure.NodesTestCase" flags="lg" index="1lH9Xt">
         <property id="2616911529524314943" name="accessMode" index="3DII0k" />
@@ -51,6 +49,7 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
+      <concept id="1081236700938" name="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" flags="ig" index="2YIFZL" />
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
@@ -58,6 +57,7 @@
         <child id="1070534934091" name="type" index="10QFUM" />
         <child id="1070534934092" name="expression" index="10QFUP" />
       </concept>
+      <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
@@ -90,12 +90,16 @@
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
       </concept>
+      <concept id="1107461130800" name="jetbrains.mps.baseLanguage.structure.Classifier" flags="ng" index="3pOWGL">
+        <child id="5375687026011219971" name="member" index="jymVt" unordered="true" />
+      </concept>
       <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
         <reference id="1107535924139" name="classifier" index="3uigEE" />
       </concept>
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ngI" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
+      <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
     </language>
     <language id="0cdfd95d-2a2e-4a75-bc35-936584bdb36d" name="MyTestLang">
@@ -926,53 +930,11 @@
       <property role="TrG5h" value="generateTextGen" />
       <node concept="3cqZAl" id="45AuIz7UseK" role="3clF45" />
       <node concept="3clFbS" id="45AuIz7UsdV" role="3clF47">
-        <node concept="3cpWs8" id="45AuIz7UseN" role="3cqZAp">
-          <node concept="3cpWsn" id="45AuIz7UseO" role="3cpWs9">
-            <property role="TrG5h" value="language" />
-            <node concept="3uibUv" id="45AuIz7UseP" role="1tU5fm">
-              <ref role="3uigEE" to="w1kc:~Language" resolve="Language" />
-            </node>
-            <node concept="10QFUN" id="45AuIz7UseQ" role="33vP2m">
-              <node concept="3uibUv" id="45AuIz7UseR" role="10QFUM">
-                <ref role="3uigEE" to="w1kc:~Language" resolve="Language" />
-              </node>
-              <node concept="2OqwBi" id="45AuIz7UseS" role="10QFUP">
-                <node concept="37shsh" id="45AuIz7UseT" role="2Oq$k0">
-                  <node concept="1dCxOk" id="5ssTDYYYXmi" role="37shsm">
-                    <property role="1XweGW" value="0cdfd95d-2a2e-4a75-bc35-936584bdb36d" />
-                    <property role="1XxBO9" value="MyTestLang" />
-                  </node>
-                </node>
-                <node concept="liA8E" id="45AuIz7UseV" role="2OqNvi">
-                  <ref role="37wK5l" to="lui2:~SModuleReference.resolve(org.jetbrains.mps.openapi.module.SRepository)" resolve="resolve" />
-                  <node concept="2OqwBi" id="45AuIz7UseW" role="37wK5m">
-                    <node concept="1jxXqW" id="45AuIz7UseX" role="2Oq$k0" />
-                    <node concept="liA8E" id="45AuIz7UseY" role="2OqNvi">
-                      <ref role="37wK5l" to="z1c3:~Project.getRepository()" resolve="getRepository" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="45AuIz7UseZ" role="3cqZAp">
-          <node concept="2YIFZM" id="45AuIz7Usf0" role="3clFbG">
-            <ref role="37wK5l" to="f3iy:e9in3gzlCI" resolve="generateTextGen" />
-            <ref role="1Pybhc" to="f3iy:45AuIz7TwwE" resolve="TextGenGenerationProcessor" />
-            <node concept="37vLTw" id="45AuIz7Usf1" role="37wK5m">
-              <ref role="3cqZAo" node="45AuIz7UseO" resolve="language" />
-            </node>
-            <node concept="1jxXqW" id="45AuIz7Usf2" role="37wK5m" />
-            <node concept="1bVj0M" id="4QMo1Vt5XbJ" role="37wK5m">
-              <node concept="37vLTG" id="4QMo1Vt5XiO" role="1bW2Oz">
-                <property role="TrG5h" value="ignore" />
-                <node concept="3uibUv" id="4QMo1Vt5Xq0" role="1tU5fm">
-                  <ref role="3uigEE" to="f3iy:45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
-                </node>
-              </node>
-              <node concept="3clFbS" id="4QMo1Vt5XbL" role="1bW5cS" />
-            </node>
+        <node concept="3clFbF" id="47FPkO0Ao5a" role="3cqZAp">
+          <node concept="2YIFZM" id="47FPkO0Ao5b" role="3clFbG">
+            <ref role="37wK5l" node="47FPkO0AlCd" resolve="generateMyTestLangTextGen" />
+            <ref role="1Pybhc" node="47FPkO0Alt2" resolve="TextGenGenTestHelper" />
+            <node concept="1jxXqW" id="47FPkO0Ao5c" role="37wK5m" />
           </node>
         </node>
       </node>
@@ -1250,9 +1212,6 @@
       </node>
     </node>
   </node>
-  <node concept="2XOHcx" id="45AuIz7SBrW">
-    <property role="2XOHcw" value="${project_home}" />
-  </node>
   <node concept="1lH9Xt" id="4kObt7K9wAf">
     <property role="TrG5h" value="EditorComponentTextGenTests" />
     <property role="3DII0k" value="2hh8MJdVwqX/command" />
@@ -1384,53 +1343,11 @@
       <property role="TrG5h" value="generateTextGen" />
       <node concept="3cqZAl" id="2zq5iUT9_4b" role="3clF45" />
       <node concept="3clFbS" id="2zq5iUT9_4c" role="3clF47">
-        <node concept="3cpWs8" id="2zq5iUT9_4d" role="3cqZAp">
-          <node concept="3cpWsn" id="2zq5iUT9_4e" role="3cpWs9">
-            <property role="TrG5h" value="language" />
-            <node concept="3uibUv" id="2zq5iUT9_4f" role="1tU5fm">
-              <ref role="3uigEE" to="w1kc:~Language" resolve="Language" />
-            </node>
-            <node concept="10QFUN" id="2zq5iUT9_4g" role="33vP2m">
-              <node concept="3uibUv" id="2zq5iUT9_4h" role="10QFUM">
-                <ref role="3uigEE" to="w1kc:~Language" resolve="Language" />
-              </node>
-              <node concept="2OqwBi" id="2zq5iUT9_4i" role="10QFUP">
-                <node concept="37shsh" id="2zq5iUT9_4j" role="2Oq$k0">
-                  <node concept="1dCxOk" id="2zq5iUT9_4k" role="37shsm">
-                    <property role="1XweGW" value="0cdfd95d-2a2e-4a75-bc35-936584bdb36d" />
-                    <property role="1XxBO9" value="MyTestLang" />
-                  </node>
-                </node>
-                <node concept="liA8E" id="2zq5iUT9_4l" role="2OqNvi">
-                  <ref role="37wK5l" to="lui2:~SModuleReference.resolve(org.jetbrains.mps.openapi.module.SRepository)" resolve="resolve" />
-                  <node concept="2OqwBi" id="2zq5iUT9_4m" role="37wK5m">
-                    <node concept="1jxXqW" id="2zq5iUT9_4n" role="2Oq$k0" />
-                    <node concept="liA8E" id="2zq5iUT9_4o" role="2OqNvi">
-                      <ref role="37wK5l" to="z1c3:~Project.getRepository()" resolve="getRepository" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="2zq5iUT9_4p" role="3cqZAp">
-          <node concept="2YIFZM" id="2zq5iUT9_4q" role="3clFbG">
-            <ref role="37wK5l" to="f3iy:e9in3gzlCI" resolve="generateTextGen" />
-            <ref role="1Pybhc" to="f3iy:45AuIz7TwwE" resolve="TextGenGenerationProcessor" />
-            <node concept="37vLTw" id="2zq5iUT9_4r" role="37wK5m">
-              <ref role="3cqZAo" node="2zq5iUT9_4e" resolve="language" />
-            </node>
-            <node concept="1jxXqW" id="2zq5iUT9_4s" role="37wK5m" />
-            <node concept="1bVj0M" id="2zq5iUT9_4t" role="37wK5m">
-              <node concept="37vLTG" id="2zq5iUT9_4u" role="1bW2Oz">
-                <property role="TrG5h" value="ignore" />
-                <node concept="3uibUv" id="2zq5iUT9_4v" role="1tU5fm">
-                  <ref role="3uigEE" to="f3iy:45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
-                </node>
-              </node>
-              <node concept="3clFbS" id="2zq5iUT9_4w" role="1bW5cS" />
-            </node>
+        <node concept="3clFbF" id="47FPkO0Amig" role="3cqZAp">
+          <node concept="2YIFZM" id="47FPkO0AmjY" role="3clFbG">
+            <ref role="37wK5l" node="47FPkO0AlCd" resolve="generateMyTestLangTextGen" />
+            <ref role="1Pybhc" node="47FPkO0Alt2" resolve="TextGenGenTestHelper" />
+            <node concept="1jxXqW" id="47FPkO0AmlB" role="37wK5m" />
           </node>
         </node>
       </node>
@@ -1518,53 +1435,11 @@
       <property role="TrG5h" value="generateTextGen" />
       <node concept="3cqZAl" id="2A_HHZICX7N" role="3clF45" />
       <node concept="3clFbS" id="2A_HHZICX7O" role="3clF47">
-        <node concept="3cpWs8" id="2A_HHZICX7P" role="3cqZAp">
-          <node concept="3cpWsn" id="2A_HHZICX7Q" role="3cpWs9">
-            <property role="TrG5h" value="language" />
-            <node concept="3uibUv" id="2A_HHZICX7R" role="1tU5fm">
-              <ref role="3uigEE" to="w1kc:~Language" resolve="Language" />
-            </node>
-            <node concept="10QFUN" id="2A_HHZICX7S" role="33vP2m">
-              <node concept="3uibUv" id="2A_HHZICX7T" role="10QFUM">
-                <ref role="3uigEE" to="w1kc:~Language" resolve="Language" />
-              </node>
-              <node concept="2OqwBi" id="2A_HHZICX7U" role="10QFUP">
-                <node concept="37shsh" id="2A_HHZICX7V" role="2Oq$k0">
-                  <node concept="1dCxOk" id="2A_HHZICX7W" role="37shsm">
-                    <property role="1XweGW" value="0cdfd95d-2a2e-4a75-bc35-936584bdb36d" />
-                    <property role="1XxBO9" value="MyTestLang" />
-                  </node>
-                </node>
-                <node concept="liA8E" id="2A_HHZICX7X" role="2OqNvi">
-                  <ref role="37wK5l" to="lui2:~SModuleReference.resolve(org.jetbrains.mps.openapi.module.SRepository)" resolve="resolve" />
-                  <node concept="2OqwBi" id="2A_HHZICX7Y" role="37wK5m">
-                    <node concept="1jxXqW" id="2A_HHZICX7Z" role="2Oq$k0" />
-                    <node concept="liA8E" id="2A_HHZICX80" role="2OqNvi">
-                      <ref role="37wK5l" to="z1c3:~Project.getRepository()" resolve="getRepository" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="2A_HHZICX81" role="3cqZAp">
-          <node concept="2YIFZM" id="2A_HHZICX82" role="3clFbG">
-            <ref role="37wK5l" to="f3iy:e9in3gzlCI" resolve="generateTextGen" />
-            <ref role="1Pybhc" to="f3iy:45AuIz7TwwE" resolve="TextGenGenerationProcessor" />
-            <node concept="37vLTw" id="2A_HHZICX83" role="37wK5m">
-              <ref role="3cqZAo" node="2A_HHZICX7Q" resolve="language" />
-            </node>
-            <node concept="1jxXqW" id="2A_HHZICX84" role="37wK5m" />
-            <node concept="1bVj0M" id="2A_HHZICX85" role="37wK5m">
-              <node concept="37vLTG" id="2A_HHZICX86" role="1bW2Oz">
-                <property role="TrG5h" value="ignore" />
-                <node concept="3uibUv" id="2A_HHZICX87" role="1tU5fm">
-                  <ref role="3uigEE" to="f3iy:45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
-                </node>
-              </node>
-              <node concept="3clFbS" id="2A_HHZICX88" role="1bW5cS" />
-            </node>
+        <node concept="3clFbF" id="47FPkO0AndQ" role="3cqZAp">
+          <node concept="2YIFZM" id="47FPkO0AndR" role="3clFbG">
+            <ref role="37wK5l" node="47FPkO0AlCd" resolve="generateMyTestLangTextGen" />
+            <ref role="1Pybhc" node="47FPkO0Alt2" resolve="TextGenGenTestHelper" />
+            <node concept="1jxXqW" id="47FPkO0AndS" role="37wK5m" />
           </node>
         </node>
       </node>
@@ -2639,6 +2514,76 @@
         <node concept="3Tqbb2" id="205CAYIHgCj" role="1tU5fm" />
       </node>
     </node>
+  </node>
+  <node concept="312cEu" id="47FPkO0Alt2">
+    <property role="TrG5h" value="TextGenGenTestHelper" />
+    <node concept="2YIFZL" id="47FPkO0AlCd" role="jymVt">
+      <property role="TrG5h" value="generateMyTestLangTextGen" />
+      <node concept="3clFbS" id="47FPkO0AlCg" role="3clF47">
+        <node concept="3cpWs8" id="47FPkO0AlV7" role="3cqZAp">
+          <node concept="3cpWsn" id="47FPkO0AlV8" role="3cpWs9">
+            <property role="TrG5h" value="language" />
+            <node concept="3uibUv" id="47FPkO0AlV9" role="1tU5fm">
+              <ref role="3uigEE" to="w1kc:~Language" resolve="Language" />
+            </node>
+            <node concept="10QFUN" id="47FPkO0AlVa" role="33vP2m">
+              <node concept="3uibUv" id="47FPkO0AlVb" role="10QFUM">
+                <ref role="3uigEE" to="w1kc:~Language" resolve="Language" />
+              </node>
+              <node concept="2OqwBi" id="47FPkO0AlVc" role="10QFUP">
+                <node concept="37shsh" id="47FPkO0AlVd" role="2Oq$k0">
+                  <node concept="1dCxOk" id="47FPkO0AlVe" role="37shsm">
+                    <property role="1XweGW" value="0cdfd95d-2a2e-4a75-bc35-936584bdb36d" />
+                    <property role="1XxBO9" value="MyTestLang" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="47FPkO0AlVf" role="2OqNvi">
+                  <ref role="37wK5l" to="lui2:~SModuleReference.resolve(org.jetbrains.mps.openapi.module.SRepository)" resolve="resolve" />
+                  <node concept="2OqwBi" id="47FPkO0AlVg" role="37wK5m">
+                    <node concept="37vLTw" id="47FPkO0Am3j" role="2Oq$k0">
+                      <ref role="3cqZAo" node="47FPkO0AlQF" resolve="project" />
+                    </node>
+                    <node concept="liA8E" id="47FPkO0AlVi" role="2OqNvi">
+                      <ref role="37wK5l" to="z1c3:~Project.getRepository()" resolve="getRepository" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="47FPkO0AlVj" role="3cqZAp">
+          <node concept="2YIFZM" id="47FPkO0AlVk" role="3clFbG">
+            <ref role="37wK5l" to="f3iy:e9in3gzlCI" resolve="generateTextGen" />
+            <ref role="1Pybhc" to="f3iy:45AuIz7TwwE" resolve="TextGenGenerationProcessor" />
+            <node concept="37vLTw" id="47FPkO0AlVl" role="37wK5m">
+              <ref role="3cqZAo" node="47FPkO0AlV8" resolve="language" />
+            </node>
+            <node concept="37vLTw" id="47FPkO0Am8e" role="37wK5m">
+              <ref role="3cqZAo" node="47FPkO0AlQF" resolve="project" />
+            </node>
+            <node concept="1bVj0M" id="47FPkO0AlVn" role="37wK5m">
+              <node concept="37vLTG" id="47FPkO0AlVo" role="1bW2Oz">
+                <property role="TrG5h" value="ignore" />
+                <node concept="3uibUv" id="47FPkO0AlVp" role="1tU5fm">
+                  <ref role="3uigEE" to="f3iy:45AuIz7TE7m" resolve="TextGenGenerationProcessor.Result" />
+                </node>
+              </node>
+              <node concept="3clFbS" id="47FPkO0AlVq" role="1bW5cS" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="47FPkO0Alyp" role="1B3o_S" />
+      <node concept="3cqZAl" id="47FPkO0Al_F" role="3clF45" />
+      <node concept="37vLTG" id="47FPkO0AlQF" role="3clF46">
+        <property role="TrG5h" value="project" />
+        <node concept="3uibUv" id="47FPkO0AlQE" role="1tU5fm">
+          <ref role="3uigEE" to="z1c3:~Project" resolve="Project" />
+        </node>
+      </node>
+    </node>
+    <node concept="3Tm1VV" id="47FPkO0Alt3" role="1B3o_S" />
   </node>
 </model>
 
