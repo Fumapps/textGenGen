@@ -308,30 +308,6 @@
       </node>
     </node>
     <node concept="1l3spV" id="5n$w_eSjdev" role="1l3spN">
-      <node concept="m$_wl" id="47FPkO0tFdM" role="39821P">
-        <ref role="m_rDy" node="5n$w_eSjdem" />
-        <node concept="pUk6x" id="47FPkO0tFdN" role="pUk7w" />
-        <node concept="28jJK3" id="47FPkO0tFdO" role="39821P">
-          <node concept="398BVA" id="47FPkO0tFdP" role="28jJRO">
-            <ref role="398BVh" node="21fCSXQM0pt" resolve="project_home" />
-            <node concept="2Ry0Ak" id="47FPkO0tFdQ" role="iGT6I">
-              <property role="2Ry0Am" value="solutions" />
-              <node concept="2Ry0Ak" id="47FPkO0tFdR" role="2Ry0An">
-                <property role="2Ry0Am" value="TextGenGen.javastubs" />
-                <node concept="2Ry0Ak" id="47FPkO0tFdS" role="2Ry0An">
-                  <property role="2Ry0Am" value="java_src" />
-                  <node concept="2Ry0Ak" id="47FPkO0tFdT" role="2Ry0An">
-                    <property role="2Ry0Am" value="lib" />
-                    <node concept="2Ry0Ak" id="47FPkO0tFdU" role="2Ry0An">
-                      <property role="2Ry0Am" value="editorToText.jar" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
       <node concept="3981dG" id="5n$w_eSjdew" role="39821P">
         <node concept="3_J27D" id="5n$w_eSjdex" role="Nbhlr">
           <node concept="3Mxwew" id="5n$w_eSjdey" role="3MwsjC">
