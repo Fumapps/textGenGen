@@ -1,13 +1,13 @@
 ext.languageName = "TextGenGen"
-ext.mpsVersion = "2024.3.2"
+ext.mpsVersion = "2025.1"
 ext.mpsPlugins = [
-        "mps-grammar-cells[2024.3.2]": 13242,
-        "de.itemis.mps.selection[2024.3.2]": 13230,
-        "de.itemis.mps.celllayout[2024.3.2]": 13239,
-        "de.slisson.mps.richtext[2024.3.2]": 13254,
-        "de.slisson.mps.hacks[2024.3.2]": 13235,
-        "de.slisson.mps.editor.multiline[2024.3.2]": 13253,
-        "de.itemis.mps.extensions.build[2024.3.2]": 17136,
+        "mps-grammar-cells[2025.1]": 13242,
+        "de.itemis.mps.selection[2025.1]": 13230,
+        "de.itemis.mps.celllayout[2025.1]": 13239,
+        "de.slisson.mps.richtext[2025.1]": 13254,
+        "de.slisson.mps.hacks[2025.1]": 13235,
+        "de.slisson.mps.editor.multiline[2025.1]": 13253,
+        "de.itemis.mps.extensions.build[2025.1]": 17136,
 ]
 ext.customMpsPlugins = [ ]
 

@@ -54,12 +54,12 @@
         <id>TextGenGen</id>
         <name>TextGenGen (fum)</name>
         <description>Plugin for generation of the TextGen aspect from the Editor aspect aiming for generation of source code in the same form as the presentation rendered by the Editor.</description>
-        <version>2024.3.1-SNAPSHOT</version>
+        <version>2025.1.0-SNAPSHOT</version>
         <depends>com.intellij.modules.platform</depends>
         <depends>jetbrains.mps.core</depends>
         <description>Editor to TextGen convertor</description>
         <vendor>JetBrains</vendor>
-        <idea-version since-build="243" until-build="243.*" />
+        <idea-version since-build="251" until-build="259.*" />
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -601,6 +601,7 @@
       <plugin path="${artifacts.mps}/plugins/mps-vcs" id="jetbrains.mps.vcs" />
       <plugin path="${artifacts.mps}/plugins/vcs-git" id="Git4Idea" />
       <plugin path="${artifacts.mps}/plugins/vcs-svn" id="Subversion" />
+      <library file="${artifacts.mps}/languages/editor/jetbrains.mps.ide.editor.jar" />
       <library file="${artifacts.mps}/languages/workbench-stub.jar" />
       <library file="${artifacts.mps}/languages/workbench/jetbrains.mps.lang.plugin.standalone.jar" />
       <chunk>
@@ -1075,6 +1076,7 @@
       </jvmargs>
       
       
+      <library file="${artifacts.mps}/languages/editor/jetbrains.mps.ide.editor.jar" />
       <library file="${artifacts.mps}/languages/workbench-stub.jar" />
       <library file="${artifacts.mps}/languages/workbench/jetbrains.mps.lang.plugin.standalone.jar" />
       <library file="${build.layout}/Tests/BaseLanguageMultiLineExtension.jar" />

@@ -1755,7 +1755,7 @@
               <ref role="3cqZAo" node="7rLNIDElMjF" resolve="editor" />
             </node>
             <node concept="3TrEf2" id="47FPkO08lbO" role="2OqNvi">
-              <ref role="3Tt5mk" to="tpc2:gXXX56I" />
+              <ref role="3Tt5mk" to="tpc2:gXXX56I" resolve="conceptDeclaration" />
             </node>
           </node>
         </node>
@@ -4557,7 +4557,7 @@
                 <ref role="3cqZAo" node="4cgpC5zoMyl" resolve="textGen" />
               </node>
               <node concept="3TrEf2" id="4cgpC5zoOdq" role="2OqNvi">
-                <ref role="3Tt5mk" to="2omo:hWWuzPd" />
+                <ref role="3Tt5mk" to="2omo:hWWuzPd" resolve="conceptDeclaration" />
               </node>
             </node>
           </node>
