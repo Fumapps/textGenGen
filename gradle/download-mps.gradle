@@ -22,8 +22,16 @@ def jbrMappings = [
         "2024.2": "17.0.11-b1312.2",
         "2024.3": "21.0.6-b631.52",
         "2025.1": "21.0.7-b895.130",
-        "2025.2": "21.0.7-b1020.35" ]
+        "2025.2": "21.0.7-b1038.58",
+        "2025.3": "21.0.8-b1140.54" ]
 
+// Global cache directory in Gradle user home to avoid re-downloading across projects
+ext {
+    globalCacheDir = file("${gradle.gradleUserHomeDir}/caches/mps-downloads")
+    globalMpsCacheDir = new File(globalCacheDir, "mps")
+    globalJbrCacheDir = new File(globalCacheDir, "jbr")
+    globalPluginsCacheDir = new File(globalCacheDir, "plugins")
+}
 
 if (!project.hasProperty("mpsVersion")) {
     throw new RuntimeException("you need to set the property 'mpsVersion'")
@@ -48,16 +56,18 @@ if (isMac()) {
 
 task downloadMps {
     group 'mps-download'
+
+    // Declare inputs and outputs for Gradle caching
+    inputs.property('mpsVersion', mpsVersion)
+    outputs.file(mpsZipFile)
+
     onlyIf {
         !mpsZipFile.exists()
     }
     doLast {
-        if (!mpsZipFile.exists()) {
-            mpsZipFile.parentFile.mkdirs()
-            def mpsDownloadLink = "https://download.jetbrains.com/mps/$mpsMajorMinorVersion/MPS-${mpsVersion}.zip"
-            println("downloading $mpsDownloadLink ... (might take few minutes, since it is ca. 400-500 MB)")
-            new URL(mpsDownloadLink).withInputStream { downloadInputStream -> mpsZipFile.withOutputStream { it << downloadInputStream } }
-        }
+        def cachedMpsFile = file("$globalMpsCacheDir/mps-${mpsVersion}.zip")
+        def mpsDownloadLink = "https://download.jetbrains.com/mps/$mpsMajorMinorVersion/MPS-${mpsVersion}.zip"
+        downloadAndCacheFile(cachedMpsFile, mpsZipFile, mpsDownloadLink, "MPS (ca. 600 MB)")
     }
 }
 
@@ -67,6 +77,13 @@ task downloadMps {
 task downloadPlugins() {
     group 'mps-download'
     dependsOn downloadMps
+
+    // Declare inputs and outputs for Gradle caching
+    inputs.property('mpsPlugins', mpsPlugins.toString())
+    if (project.hasProperty("customMpsPlugins")) {
+        inputs.property('customMpsPlugins', customMpsPlugins.toString())
+    }
+    outputs.dir(pluginsDirectory)
 
     onlyIf {
         requirePluginsToRedownload() ||
@@ -112,11 +129,11 @@ private def downloadPlugins(def pluginsDirectory) {
         def pluginId = it.value
         def pluginVersion = getEffectivePluginVersion(it.key, mpsVersion)
         def pluginZipFile = file("$pluginsDirectory/mps-${pluginName}.zip")
+        def cachedPluginFile = file("$globalPluginsCacheDir/mps-${pluginName}-${pluginVersion}.zip")
+
         if (!pluginZipFile.exists()) {
-            pluginZipFile.parentFile.mkdirs()
             def pluginDownloadLink = obtainDownloadLinkForPlugin(pluginName, pluginId, pluginVersion)
-            println("downloading $pluginDownloadLink ... ($pluginName)")
-            new URL(pluginDownloadLink).withInputStream { downloadInputStream -> pluginZipFile.withOutputStream { it << downloadInputStream } }
+            downloadAndCacheFile(cachedPluginFile, pluginZipFile, pluginDownloadLink, "plugin $pluginName")
         }
     }
 }
@@ -326,16 +343,18 @@ task downloadJbrForCurrentPlatform {
     }
     def jbrTarGzFile = file("build/download/${getJbrArchiveName(mpsMajorMinorVersion)}")
 
+    // Declare inputs and outputs for Gradle caching
+    inputs.property('mpsMajorMinorVersion', mpsMajorMinorVersion)
+    inputs.property('currentOs', currentOs)
+    outputs.file(jbrTarGzFile)
+
     onlyIf {
         !jbrTarGzFile.exists() && System.env.getOrDefault('PREINSTALLED_JAVA_PATH',"") == ""
     }
     doLast {
+        def cachedJbrFile = file("$globalJbrCacheDir/${getJbrArchiveName(mpsMajorMinorVersion)}")
         def downloadLink = "https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-${jbrVersion[0]}-${currentOs}-${jbrVersion[1]}.tar.gz"
-        if (!jbrTarGzFile.exists()) {
-            jbrTarGzFile.parentFile.mkdirs()
-            println("downloading $downloadLink ... (to $jbrTarGzFile)")
-            new URL(downloadLink).withInputStream { downloadInputStream -> jbrTarGzFile.withOutputStream { it << downloadInputStream } }
-        }
+        downloadAndCacheFile(cachedJbrFile, jbrTarGzFile, downloadLink, "JBR (ca. 200 MB)")
     }
 }
 
@@ -507,5 +526,45 @@ private static String getOsFamily() {
         return Os.FAMILY_UNIX
     } else {
         throw new RuntimeException("executing on unsupported OS family")
+    }
+}
+
+/**
+ * Helper function to download a file to cache and link/copy it to target location.
+ * Avoids code duplication for MPS, JBR, and plugin downloads.
+ *
+ * @param cachedFile The file in the global cache directory
+ * @param targetFile The target file in the local build directory
+ * @param downloadUrl The URL to download from if not in cache
+ * @param description Description for logging (e.g., "MPS", "JBR", plugin name)
+ */
+private void downloadAndCacheFile(File cachedFile, File targetFile, String downloadUrl, String description) {
+    if (cachedFile.exists()) {
+        println("using cached $description from $cachedFile")
+        targetFile.parentFile.mkdirs()
+        linkOrCopyFile(cachedFile, targetFile)
+    } else {
+        cachedFile.parentFile.mkdirs()
+        targetFile.parentFile.mkdirs()
+
+        println("downloading $downloadUrl ... $description")
+        new URL(downloadUrl).withInputStream { downloadInputStream ->
+            cachedFile.withOutputStream { it << downloadInputStream }
+        }
+
+        linkOrCopyFile(cachedFile, targetFile)
+    }
+}
+
+/**
+ * Creates a hard link from source to target, falls back to copy if linking fails.
+ */
+private void linkOrCopyFile(File sourceFile, File targetFile) {
+    try {
+        Files.createLink(targetFile.toPath(), sourceFile.toPath())
+        println("created hard link from cache")
+    } catch (Exception e) {
+        Files.copy(sourceFile.toPath(), targetFile.toPath())
+        println("copied from cache")
     }
 }
