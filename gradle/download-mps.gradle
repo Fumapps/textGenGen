@@ -8,7 +8,7 @@ import groovy.json.JsonSlurper
 import org.apache.tools.ant.taskdefs.condition.Os
 import java.nio.file.Files
 
-// see: https://github.com/JetBrains/JetBrainsRuntime/tree/main#releases-based-on-jdk-17
+// see: https://github.com/JetBrains/JetBrainsRuntime/tree/main#releases-based-on-jdk-21
 def jbrMappings = [
         "2021.2": "11_0_13-b1504.49",
         "2021.3": "11_0_14_1-b1751.46",
@@ -22,8 +22,8 @@ def jbrMappings = [
         "2024.2": "17.0.11-b1312.2",
         "2024.3": "21.0.6-b631.52",
         "2025.1": "21.0.7-b895.130",
-        "2025.2": "21.0.7-b1038.58",
-        "2025.3": "21.0.8-b1140.54" ]
+        "2025.2": "21.0.8-b1038.71",
+        "2025.3": "21.0.8-b1163.69" ]
 
 // Global cache directory in Gradle user home to avoid re-downloading across projects
 ext {
@@ -228,7 +228,7 @@ task buildMpsZipBundle {
             from zipTree(mpsZipFile)
             into outputBundleDirectory
         }
-        file("$outputBundleDirectory/MPS $mpsMajorMinorVersion").renameTo(targetFolderName)
+        renameExtractedMpsDir(mpsMajorMinorVersion, outputBundleDirectory, targetFolderName)
 
         addLocalPluginsPathToVmOptions("$targetFolderName")
 
@@ -236,6 +236,17 @@ task buildMpsZipBundle {
 
         println("finished prepare of MPS Version $mpsVersion")
     }
+}
+
+private void renameExtractedMpsDir(String mpsMajorMinorVersion, File outputBundleDirectory, GString targetFolderName) {
+    def innerMpsDirName = "MPS $mpsMajorMinorVersion"
+    if (!file(innerMpsDirName).exists()) {
+        innerMpsDirName = "MPS $mpsVersion"
+    }
+    if (!file("$outputBundleDirectory/$innerMpsDirName").exists()) {
+        throw new RuntimeException("couldn't find the inner MPS folder in the zip file, expected either 'MPS $mpsMajorMinorVersion' or 'MPS $mpsVersion'. You probably need to adapt gradle/download-mps.gradle")
+    }
+    file("$outputBundleDirectory/$innerMpsDirName").renameTo(targetFolderName)
 }
 
 private def extractPlugins(def pluginsDirectory, def outputDependenciesDirectory) {
@@ -341,7 +352,8 @@ task downloadJbrForCurrentPlatform {
     if (jbrVersion == null) {
         throw new RuntimeException("no JBR mapping defined for MPS $mpsMajorMinorVersion - please configure the variable 'jbrMappings' by looking up https://github.com/JetBrains/JetBrainsRuntime/tree/master#releases")
     }
-    def jbrTarGzFile = file("build/download/${getJbrArchiveName(mpsMajorMinorVersion)}")
+    def jbrVersionString = jbrMappings[mpsMajorMinorVersion]
+    def jbrTarGzFile = file("build/download/${getJbrArchiveName(jbrVersionString)}")
 
     // Declare inputs and outputs for Gradle caching
     inputs.property('mpsMajorMinorVersion', mpsMajorMinorVersion)
@@ -352,7 +364,7 @@ task downloadJbrForCurrentPlatform {
         !jbrTarGzFile.exists() && System.env.getOrDefault('PREINSTALLED_JAVA_PATH',"") == ""
     }
     doLast {
-        def cachedJbrFile = file("$globalJbrCacheDir/${getJbrArchiveName(mpsMajorMinorVersion)}")
+        def cachedJbrFile = file("$globalJbrCacheDir/${getJbrArchiveName(jbrVersionString)}")
         def downloadLink = "https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-${jbrVersion[0]}-${currentOs}-${jbrVersion[1]}.tar.gz"
         downloadAndCacheFile(cachedJbrFile, jbrTarGzFile, downloadLink, "JBR (ca. 200 MB)")
     }
@@ -366,8 +378,9 @@ task extractJbrToMpsBundle {
         !file("$targetFolderName/jbr").exists() && System.env.getOrDefault('PREINSTALLED_JAVA_PATH',"") == ""
     }
     doLast {
+        def jbrVersionString = jbrMappings[mpsMajorMinorVersion]
         copy {
-            def jbrArchive = file("build/download/${getJbrArchiveName(mpsMajorMinorVersion)}")
+            def jbrArchive = file("build/download/${getJbrArchiveName(jbrVersionString)}")
             from tarTree(jbrArchive)
             into file("$targetFolderName")
         }
@@ -492,9 +505,9 @@ task listPlugins {
     }
 }
 
-private static String getJbrArchiveName(String mpsMajorMinorVersion) {
+private static String getJbrArchiveName(String jbrVersion) {
     def currentOs = getOsJbrVariantName()
-    return "jbr-${mpsMajorMinorVersion}-${currentOs}.tar.gz"
+    return "jbr-${jbrVersion}-${currentOs}.tar.gz"
 }
 
 private static String getOsJbrVariantName() {
