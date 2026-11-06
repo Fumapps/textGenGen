@@ -1,5 +1,3 @@
-/* This file is downloaded from https://github.com/vimotest/mps-gradle-scripts/raw/main/gradle/init-gradle-scripts.gradle */
-
 def scripts = ["download-mps.gradle", "run-mps-ant.gradle", "init-gradle-scripts.gradle"]
 
 def repositoryUrl = "https://github.com/vimotest/mps-gradle-scripts/raw/main"
