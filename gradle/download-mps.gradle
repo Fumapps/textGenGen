@@ -258,6 +258,15 @@ private def extractPlugins(def pluginsDirectory, def outputDependenciesDirectory
     }
 
     moveNestedPluginsUp(outputDependenciesDirectory)
+
+    def legacyDeps = file("$buildDir/dependencies")
+    if (!legacyDeps.exists()) {
+        try {
+            java.nio.file.Files.createSymbolicLink(legacyDeps.toPath(), outputDependenciesDirectory.toPath())
+        } catch (Exception e) {
+            // ignore if symlink creation fails on Windows without privileges
+        }
+    }
 }
 
 private void addLocalPluginsPathToVmOptions(String targetFolderName) {

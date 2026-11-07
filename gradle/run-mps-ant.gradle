@@ -14,26 +14,99 @@ ext.antHome = "$mpsHome/lib/ant"
 def antLauncherJarPath = "$antHome/lib/ant-launcher.jar"
 def mpsUtilJarPath = getConcatenatedMpsUtilJarPaths()
 
+def getAntBuildFileArgs() {
+    if (project.hasProperty('antBuildFile')) {
+        return ["-buildfile", project.property('antBuildFile')]
+    }
+    return []
+}
+
 task mpsAntGenerate(type: Exec) {
     group 'mps-ant-wrapper'
-    commandLine "$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "-Dproject_home=$projectDir", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath, "generate"
+    commandLine(["$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "-Dproject_home=$projectDir", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath] + getAntBuildFileArgs() + ["generate"])
 }
 
 task mpsAntBuild(type: Exec) {
     group 'mps-ant-wrapper'
-    commandLine "$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "-Dproject_home=$projectDir", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath, "build"
+    commandLine(["$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "-Dproject_home=$projectDir", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath] + getAntBuildFileArgs() + ["build"])
     mustRunAfter mpsAntGenerate
 }
 
 task mpsAntCheck(type: Exec) {
     group 'mps-ant-wrapper'
-    commandLine "$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "-Dproject_home=$projectDir", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath, "check"
+    doFirst {
+        file("$buildDir/system").deleteDir()
+        file("$buildDir/config").deleteDir()
+    }
+    commandLine(["$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "-Dproject_home=$projectDir", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath] + getAntBuildFileArgs() + ["check"])
 }
 
 task mpsAntCommand(type: Exec) {
     group 'mps-ant-wrapper'
     description 'Run <antCmd> using ant. Example: gradlew mpsAntCommand -PantCmd=clean'
-    commandLine "$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "-Dproject_home=$projectDir", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath, findProperty('antCmd') ?: '-p'
+    commandLine(["$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "-Dproject_home=$projectDir", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath] + getAntBuildFileArgs() + [findProperty('antCmd') ?: '-p'])
+}
+
+task mpsAntMigrate {
+    group 'mps-ant-wrapper'
+    description 'Headlessly runs MPS project migrations on the current repository'
+
+    doLast {
+        def mpsDir = file("$projectDir/.mps")
+        if (!mpsDir.exists()) {
+            println "No .mps directory found in $projectDir; skipping MPS model migration."
+            return
+        }
+
+        def migrationBuildFile = file("$buildDir/mps-migration.xml")
+        migrationBuildFile.parentFile.mkdirs()
+        def depsPath = file("$projectDir/build/mps-bundle/dependencies").absolutePath
+        def projectPath = projectDir.absolutePath
+        def mpsHomePath = file(mpsHome).absolutePath
+
+        migrationBuildFile.text = """<project name="mps-headless-migration" default="migrate">
+  <path id="mps.ant.path">
+    <fileset dir="${mpsHomePath}/lib/ant/lib">
+      <include name="*.jar"/>
+    </fileset>
+    <fileset dir="${mpsHomePath}/lib">
+      <include name="util-8.jar"/>
+      <include name="util_rt.jar"/>
+      <include name="util.jar"/>
+      <include name="3rd-party-rt.jar"/>
+    </fileset>
+  </path>
+  
+  <taskdef name="mps-migrate" classname="jetbrains.mps.build.ant.MigrationTask" classpathref="mps.ant.path"/>
+  
+  <target name="migrate">
+    <echo message="Running headless MPS migration for ${projectPath}..."/>
+    <mps-migrate mpshome="${mpsHomePath}" project="${projectPath}" autoplugindiscovery="true" haltonprecheckfailure="false" haltondependencyerror="false">
+      <jvmargs>
+        <arg value="-Xmx2048m"/>
+        <arg value="-Didea.plugins.path=${depsPath}"/>
+      </jvmargs>
+    </mps-migrate>
+  </target>
+</project>"""
+
+        project.exec {
+            commandLine "$javaHome/bin/java",
+                "-classpath", antLauncherJarPath,
+                "-Dmps_home=$mpsHome",
+                "-Dproject_home=$projectDir",
+                "org.apache.tools.ant.launch.Launcher",
+                "-cp", mpsUtilJarPath,
+                "-buildfile", migrationBuildFile.absolutePath,
+                "migrate"
+        }
+    }
+}
+
+task mpsMigrate {
+    group 'mps'
+    description 'Headlessly migrates models in the project to the current MPS version'
+    dependsOn 'mpsAntMigrate'
 }
 
 task parseTestReportAfterAntCheck {
@@ -140,10 +213,13 @@ task mpsOpenProjectInMpsForCurrentOs(type: Exec) {
     environment "JAVA_HOME", "$projectDir/build/mps-bundle/mps/jbr/bin"
 
     if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        environment "MPS_VM_OPTIONS", "$projectDir/build/mps-bundle/mps/bin/mps64.exe.vmoptions"
         commandLine 'build/mps-bundle/mps/bin/mps.bat', projectDir
     } else if (Os.isFamily(Os.FAMILY_MAC)) {
+        environment "MPS_VM_OPTIONS", "$projectDir/build/mps-bundle/Contents/bin/mps64.vmoptions"
         commandLine 'build/mps-bundle/Contents/MacOS/mps', projectDir
     } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+        environment "MPS_VM_OPTIONS", "$projectDir/build/mps-bundle/mps/bin/mps64.vmoptions"
         commandLine 'sh', 'build/mps-bundle/mps/bin/mps.sh', projectDir
     }
 }
