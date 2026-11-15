@@ -22,7 +22,8 @@ def jbrMappings = [
         "2025.1": "21.0.7-b895.130",
         "2025.2": "21.0.8-b1038.71",
         "2025.3": "21.0.8-b1163.69",
-        "2026.1": "25.0.3-b329.124" ]
+        "2026.1": "25.0.3-b329.124",
+        "2026.2": "25.0.4.1-b508.41" ]
 
 // Global cache directory in Gradle user home to avoid re-downloading across projects
 ext {

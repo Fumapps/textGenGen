@@ -1,5 +1,5 @@
 ext.languageName = "TextGenGen"
-ext.mpsVersion = "2026.1"
+ext.mpsVersion = "2026.2"
 ext.mpsPlugins = [ ]
 ext.customMpsPlugins = [
         "de.itemis.mps.extensions": "https://artifacts.itemis.cloud/repository/maven-mps/de/itemis/mps/extensions/2026.1.3712.45fabf4/extensions-2026.1.3712.45fabf4.zip"
